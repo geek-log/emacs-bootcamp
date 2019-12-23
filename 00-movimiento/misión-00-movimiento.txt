@@ -1,0 +1,90 @@
+NO TOQUES nada aún!!!
+NO seas tan mono, sigue leyendo hasta que recibas tus ÓRDENES.
+HAZ SOLO lo que te digan que hagas.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+
+ALPHA
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #00: Mueve ese culo soldado!!!
+----------------------------------------------------------------------------
+
+1) Moverse una línea abajo:
+
+   Teclazo: C-n => Mueve el punto una línea abajo.
+
+   Tus ÓRDENES: Sigue presionando C-n hasta que alcances la línea que
+   contiene la palabra BRAVO. ¡¡¡CORRE RÁPIDO SOLDADO!!!
+
+BRAVO
+
+2) Moverse una línea arriba:
+
+   Teclazo: C-p => Mueve el punto una línea arriba.
+
+   Tus ÓRDENES: Ahora presiona C-p hasta que regreses a la línea que contiene
+   la palabra ALPHA y luego, presiona C-n de nuevo hasta que alcances la
+   línea donde dice CHARLIE.
+
+
+CHARLIE
+
+3) Moverse al final de una línea:
+
+   Teclazo: C-e => Vaya al final de la línea.
+
+   Tus ÓRDENES: En la línea CHARLIE, presione C-e para ir al final de esa
+   línea.
+
+4) Moverse al principio de una línea:
+
+   Teclazo: C-a => Ir al principio de la línea.
+
+   Tus ÓRDENES: Presiona C-a sobre la línea CHARLIE para ir al inicio de esa
+   línea, luego usa C-n para llegar hasta la línea DELTA.
+
+5) Moverse un caracter a la derecha:
+
+   Teclazo: C-f => Mueve el punto un caracter a la derecha.
+
+   Tus ÓRDENES: En la línea DELTA, presiona C-a para ir al principio de la
+   línea y luego presiona C-f hasta que alcances el último caracter de esa
+   línea (y NO TE PASES).
+
+DELTA
+
+6) Moverse un caracter a la izquierda:
+
+   Teclazo: C-b => Mueve el punto un caracter a la izquierda.
+
+   Tus ÓRDENES: En la línea DELTA, presiona C-b hasta que alcances el inicio
+   de esa línea (y NO TE PASES), luego presiona C-n hasta llegar a ECHO.
+
+   ECHO FOXTROT
+
+7) Moverse al primer caracter que no es espacio:
+
+   Categoría: Gema oculta de Emacs.
+
+   Teclazo: M-m => Mueve el punto al primer caracter que no sea un espacio.
+
+   Tus ÓRDENES: EN la línea ECHO, use C-e para llegar al final de la línea y
+   presiona M-m para poner el punto encima de la letra E, ¡CORRE RÁPIDO
+   SOLDADO!!!
+
+8) Centrar la vista en el cursor:
+
+   Teclazo: C-l => Centrar la vista en el punto (cursor).
+
+   Tus ÓRDENES: Oprime C-l para centrar la vista.
+
+9) Salir de Emacs:
+
+   Teclazo: C-x C-c => Salir de Emacs.
+
+   Tus ÓRDENES: Buen trabajo soldado, ahora puedes descansar 5 minutos, continúa
+   y sal del Editor ...

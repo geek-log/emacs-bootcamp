@@ -1,0 +1,110 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #12: ¡¡¡Mate un montón de ellos!!!
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderemos como matar usando arguemntos númericos, ambos
+positivos y negativos.
+
+Cuando usamos comandos de edición, es posible pasarles argumentos
+numéricos, esto hará que se ejecuten múltiples veces (de manera similar a
+los comandos de movimiento).
+
+Si pasas un argumento negativo al comando, entonces se ejecutará en la
+dirección opuesta. Puedes usar el símbolo '-' para indicar un valor de '-1',
+usar un valor explícito como '-2'.
+
+Definiciones
+...........................................................................
+
+Tempo: El 'Tempo de Emacs' es la habilidad de usar el movimiento mínimo de
+       manos cuando se usan comandos Emacs, piensa en un pianista que
+       mantiene las manos muy cerca de las teclas para ejecución óptima.
+
+Misión
+...........................................................................
+
+01) Pasando argumentos númericos positivos a un comando:
+
+    ÓRDENES:
+      - Primero lea todas las instrucciones.
+
+      - Vaya a la línea ALPHA y oprima C-a.
+
+      - Inspeccionemos el comando 'M-@' que es usado para seleccionar
+        palabras. La primera parte del comando es 'M-' (sin el '@'), presione
+        'M-2' AHORA y OBSERVE el minibuffer, el texto 'C-u 2-' se despliega
+        en él, si lo recuerdas de misiones previas, el teclazo 'C-u' es el
+        "Argumento Universal", este es el argumento usado para decirle a
+        Emacs el número de veces que debe de ejecutar un comando.
+
+      - Presione M-@, las palabras ALPHA y BRAVO deben estar seleccionadas
+        ahora.
+
+      - Presione C-g para cancelar.
+
+      - Presione M-f para saltar la palabra DELTA.
+
+      - Ahora, inspeccionemos el comando 'C-M-k' que mata una expresión
+        balanceada (s-expression), la primera parte del comando es 'C-M-'
+        (sin la 'k'), presione 'C-M-2' AHORA y OBSERVE el minibuffer, el
+        texto 'C-u 2-' se muestra de nuevo, ¿Lo ves?, existen varias maneras
+        de pasar un argumento y debes usar el que nos permita mantener
+        nuestro tempo en Emacs.
+
+      - Oprima C-M-k ahora para matar los señuelos A y B.
+
+      - Oprima C-x u para deshacer el texto matado.
+
+    NOTAS: Para mantener tu 'tempo de Emacs' cuando uses argumentos
+           ASEGÚRATE de usar el mismo teclazo para pasar el argumento
+           numérico que para ejecutar el comando.
+
+ALPHA BRAVO CHARLIE
+
+DELTA (Señuelo A) (Señuelo B) (Señuelo C) (Señuelo D)
+
+02) Pasando argumentos negativos a un comando:
+
+    Descripción: Para pasar un argumento negativo a un comando de Emacs,
+                 debes usar la primera parte del comando (como hicimos
+                 en las ÓRDENES #01) pero en lugar de digitar un número,
+                 digitamos el símbolo '-' primero, y luego digitamos
+                 un número (primero el signo, segundo el número).
+
+    ÓRDENES:
+      - Lee todas las instrucciones primero.
+
+      - En la línea DELTA oprime C-e.
+
+      - Presiona 'C-M--' (esto es Control-Alt-Menos) y observe el minibuffer,
+        el texto 'C-u --' aparece en el minibuffer.
+
+      - Presione el número '2', el texto 'C-u -2-' se despliega en el
+        minibuffer.
+
+      - Presione C-M-k para matar los señuelos C y D.
+
+      - Presione C-x para deshacer lo matado.
+
+      - En la línea DELTA presione C-e y luego presione 'C-M--' de nuevo.
+
+      - Esta vez no digites ningún número sino que presiona C-M-k. El
+        señuelo D es matado, cuando solamente escribes el símbolo '-' es
+        equivalente a escribir '-1'.
+
+Buen trabajo soldado, ahora puedes descansar 3 minutos ...

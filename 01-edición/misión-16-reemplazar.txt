@@ -1,0 +1,209 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #16: Búsqueda y Reemplazo
+----------------------------------------------------------------------------
+
+En esta misión aprenderemos como usar la búsqueda y reemplazo de texto.
+
+Misión
+...........................................................................
+
+01) Búsqueda y reemplazo:
+
+    Teclazo: M-% => Búsqueda y reeplazo interactivo en la región activa, o
+                    desde la posición del punto al final del  buffer si
+                    no existe región activa.
+
+    Cuando la búsqueda se abre:
+
+           'y' => Cambie la coincidencia actual (decir sí) y moverse a la
+                  próxima coincidencia.
+
+           'n' => No cambie la coincidencia actual (decir no) y moverse a
+                  la próxima.
+
+           '!' => Cambie todas las coincidencias que encuentre (sí a todo).
+
+           'q' => Quitar la búsqueda y reemplazo.
+
+    ÓRDENES:
+      - Vaya a la línea ALPHA.
+
+      - Presione M-% y observe el minibuffer, el texto 'Reemplazo a buscar:'
+        se despliega en él.
+
+      - Digite el texto 'mata', presione RET y observe el minibuffer, el
+        texto 'Reemplazar mata con:' se despliega en él, digite el texto
+        'vaya y mata' y presione RET, la palabra 'mata' bajo la línea
+        ALPHA es seleccionada.
+
+      - Presione la tecla 'y', la palabra 'mata' es reemplazada con
+        'vaya mata' y el punto se mueve a la próxima coincidencia de
+        búsqueda.
+
+      - Presione 'y' de nuevo para cambiar la palabra 'matando' por
+        'vaya mantando' y moverse a la próxima coincidencia.
+
+      - ESTA VEZ presione 'n' para mantener la palabra 'matados' justo
+        como está.
+
+      - AHORA presione '!' para cambiar las palabras 'matador' a
+        'vaya matador' y 'matan' a 'vaya matan'. ¿Lo ves? La tecla '!'
+        actúa como un 'Sí a todo'.
+
+ALPHA
+mata
+matando
+matados
+matador
+matan
+
+02) Búsqueda y reemplazo usando una expresión regular:
+
+    Teclazo: C-M-% => Búsqueda y reemplazo interactivo usando una expresión
+                      regular, en la región activa, o desde el punto al
+                      final del buffer si no existe una región activa.
+
+    Cuando la búsqueda se abre:
+
+           'y' => Cambie la coincidencia actual (decir sí) y moverse a la
+                  próxima coincidencia.
+
+           'n' => No cambie la coincidencia actual (decir no) y moverse a
+                  la próxima.
+
+           '!' => Cambie todas las coincidencias que encuentre (sí a todo).
+
+           'q' => Quitar la búsqueda y reemplazo.
+
+    ÓRDENES:
+      - Vaya a la línea BRAVO. Note los errores ortográficos en las palabras
+        de las siguientes líneas.
+
+      - Presione C-M-%, el texto 'Reemplazo a buscar con regexp:' se
+        muestra en el minibuffer.
+
+      - Digite 'dish.*' y presione RET, ahora el texto
+        'Reemplazar dish.* usando un regexp con:' es desplegado en el
+        minibuffer.
+
+      - Digite el texto 'dis' y presione RET.
+
+      - Presione el caracter '!' para decir SÍ A TODO, todas las líneas
+        son cambiadas al texto 'dis', esto apesta, arreglémoslo.
+
+      - Presione C-x u para deshacer el reemplazo.
+
+      - En la línea BRAVO presione C-M-% de nuevo.
+
+      - Digite el texto 'dish\(.*\)$' en la primera pregunta del minibuffer
+        y oprima RET, con el paréntesis aquí estamos usando
+        GRUPO DE CAPTURA el cual es un espacio para guardar el resto del
+        texto de la línea (y evitar poner solamente dis en cada línea).
+
+      - Digite el texto 'vaya dis\1' en el minibuffer y presione RET.
+
+      - Cuando Emacs te pregunte por el cambio presione la tecla '!' para
+        DECIR SÍ A TODO. Ahora todas las palabras son reemplazadas
+        correctamente.
+
+
+BRAVO
+dishpare
+dishparando
+dishpara
+dishparos
+dishpáreles
+
+03) Manipulando text:
+
+    Teclazo: M-x d-du => Borra todas las líneas duplicadas en la región
+                         activa o desde el punto hasta el final del buffer
+                         si no existe región activa.
+
+             Ó
+
+             M-x delete-duplicate-lines
+
+    Teclazo: M-x flu => Borra todas las líneas que coinciden con una
+                        expresión regular en la región activa o desde
+                        la posición del punto hasta el final del buffer
+                        si no existe región activa.
+
+             Ó
+
+             M-x flush-lines
+
+    Teclazo: M-x kee => Mantiene solamente las líneas que coinciden con una
+                        expresión regular.
+
+             Ó
+
+             M-x keep-lines
+
+    ÓRDENES:
+      - Vaya a la línea CHARLIE, debajo de esta línea hay un reporte de
+        evento de ejempo en JSON, note que la llave "userName" aparece
+        tres veces, esto está MAL porque debe existir solamente un usuario.
+
+      - Presione M-x, digite el texto 'd-du' y presione RET, ahora solo hay
+        un nombre de usuario.
+
+      - Vaya a la línea DELTA y presione C-a.
+
+      - Presione C-M-S-b para seleccionar toda la unidad sintáctica que
+        conforma el reporte.
+
+      - Ahora vamos a borrar el texto que contiene el texto 'user', oprima
+        M-x, digite 'flu' y presione RET, el texto
+        'Eliminar líneas que coinciden con la regexp:' se despliega en
+        el minibuffer.
+
+      - Digite el texto 'user' y presione RET. Ahora la información del
+        usuario se ha ido.
+
+      - Vaya a la línea CHARLIE, presione C-a y luego presione C-n.
+
+      - Presione C-M-S-n, presione M-x, digite 'kee' en el minibuffer y
+        oprima RET, el texto 'Mantener líneas que coinciden con el regexp:'
+        se muestra en el minibuffer.
+
+      - Escriba el texto 'event' y presione RET. Ahora solamente la
+        información se despliega, GENIAL.
+
+CHARLIE
+{"Records": [{
+    "eventVersion": "1.0",
+    "userIdentity": {
+        "accessKeyId": "EXAMPLE_KEY_ID",
+        "accountId": "123456789012",
+        "userName": "Alice"
+        "userName": "Alice"
+        "userName": "Alice"
+    },
+    "eventTime": "2014-03-06T21:22:54Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "StartInstances",
+    "userAgent": "ec2-api-tools 1.6.12.2",
+    "responseElements": {"instancesSet": {"items": [{
+        "instanceId": "i-ebeaf9e2",
+        "currentState": {
+            "code": 0,
+            "name": "pending"
+        },
+    }]}}
+}]}
+DELTA
+
+Buen trabajo soldado, ahora puedes tomar 20 segundos para estirar ...

@@ -1,0 +1,351 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #15: Change them
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to use more editing commands.
+
+Mission
+............................................................................
+
+01) Changing the case:
+
+    Keybinding: M-u => Change next word to uppercase.
+
+    Keybinding: M-l => Change next word to lowercase.
+
+    Keybinding: M-c => Capitalize next word.
+
+    ORDERS:
+      - On the ALPHA line, press C-a and then press M-f one time.
+
+      - Press M-u three times.
+
+      - Go to the BETA line, press C-a and then press M-f one time.
+
+      - Press M-l three times.
+
+      - Go to the CHARLIE line, press C-a and then press M-f one time.
+
+      - Press M-c three times.
+
+ALPHA Uppercase this shit
+BETA LOWERCASE THIS SHIT
+CHARLIE cAPITALIZE THis sHit
+
+02) Counting words and lines:
+
+    Keybinding: M-x cou-w RET => Count the number of words in the
+                buffer.
+
+                OR
+
+                M-x count-words
+
+    Keybinding: M-x cou-w-r RET => Count the number of words in the
+                selected region.
+
+                OR
+
+                M-x count-words-region
+
+    Keybinding: C-x l => Count lines on the buffer.
+
+    ORDERS:
+      - Press M-x, type 'cou-w', press RET and watch the minibuffer.
+
+      - Go to the ALPHA line and press C-a, then press C-S-n three times.
+
+      - Press M-x cou-w-r RET and watch the minibuffer.
+
+      - Press C-x l, watch the minibuffer.
+
+03) Adding newlines:
+
+    Keybinding: C-j => Adds a newline and move the point to the newly added
+                       line.
+
+    Keybinding: C-o => Adds a newline and maintains the point on the original
+                       line.
+
+    ORDERS:
+      - Go to the DELTA line, press C-a and then press M-f.
+
+      - Press C-j to add a newline and move to the next line.
+
+      - Go to the FOXTROT line and press C-e.
+
+      - Press C-o three times.
+
+DELTA ECHO
+FOXTROT
+
+04) Deleting empty lines:
+
+    Keybinding: C-x C-o => Deletes all blank lines after the current line
+                           until a non-empty line is found or util the
+                           end of the buffer is reached.
+
+    ORDERS:
+      - Go to the GOLF line.
+      - Press C-x C-o to delete the next blank lines.
+
+GOLF
+
+
+
+
+
+
+
+HOTEL
+
+05) Moving to the beginning and end of the current line:
+
+    Keybinding: M-a => Go to the beginning of the current line or to the
+                       beginning of the previous line if you are at
+                       the beginning of the current.
+
+    Keybinding: M-e => Go to the end of the current line or to the end
+                       of the next line if you are at the end of the
+                       current line.
+
+    ORDERS:
+      - Press C-e on the JULIET line.
+
+      - Press M-a to jump to to the beginning of the JULIET line.
+
+      - Press M-a one more time to get to the beginning of the INDIA line.
+
+      - Press M-e two times to return to the end of the JULIET line.
+
+INDIA The deadliest weapon in the world is a Marine and his rifle. It is
+your killer instinct which must be harnessed if you expect to survive in
+combat.
+
+JULIET
+
+06) Indenting text:
+
+    Keybinding: TAB => Indent the current line.
+
+    Keybinding: M-C-\ => Indent a region.
+
+                OR
+
+                M-x indent-region
+
+    Keybinding: C-x TAB => Manually indent as a block of text.
+
+    ORDERS:
+      - On the KILO line press C-a.
+
+      - Press TAB to indent that line.
+
+      - Press C-x u to undo the indenting.
+
+      - Press and HOLD C-S.
+
+      - Press three times the key 'n', release C-S.
+
+      - Press C-x TAB, now you can use the left and right arrows to
+        indent the block of text, press the right arrow four times.
+
+      - Press C-g.
+
+KILO Your rifle is only a tool. It is a hard heart that kills.
+If your killer instincts are not clean and strong you will
+hesitate at the moment of truth.
+
+07) Zapping:
+
+    Keybinding: M-z => Zap, kills the text from the point to an arbitrary
+                       character.
+
+    ORDERS:
+      - Go to the LIMA line and press C-a.
+
+      - Press M-z and observe the minibuffer, the text 'Zap to char:' is
+        displayed on it, Emacs is asking you to provide a character
+        to use as last character to ZAP.
+
+      - Type the character '@' and observe what happens.
+
+      - Press C-y to paste the killed text.
+
+LIMA You will not kill. @||||| You will become dead marines and then you
+will be in a world of shit because marines are not allowed to die without
+permission. Do you maggots understand?
+
+08) Selecting blocks of text:
+
+    Keybinding: C-S-<DOWN> => Selects the next block of text.
+
+    Keybinding: C-S-<UP> => Selects the previous block of text.
+
+    ORDERS:
+      - Go to the MIKE line and press C-a.
+
+      - Press C-S-<DOWN>.
+
+      - Press C-g.
+
+      - Now press C-S-<UP>.
+
+MIKE From now on you will speak only when spoken to,
+and the first and last words out of your filthy sewers will be 'Sir'.
+Do you maggots understand that?
+
+09) Ordering lines:
+
+    Keybinding: M-x so-l => Order lines alphabetically.
+
+                OR
+
+                M-x sort-lines
+
+    Keybinding: M-x so-f => Order lines lexicographically.
+
+                OR
+
+                M-x sort-fields
+
+    Keybinding: M-x so-n => Order lines numerically.
+
+                OR
+
+                M-x sort-numeric
+
+    Keybinding: M-x rev-r => Reverse the ordering.
+
+                OR
+
+                M-x reverse-region
+
+    Keybinding: M-x so-c => Order lines by column.
+
+                OR
+
+                M-x sort-columns
+
+    ORDERS:
+      - Read all instructions.
+
+      - Go to the QUEBEC line and press C-a.
+
+      - Press C-S-<DOWN> to select the block of text.
+
+      - Press M-x so-l RET to order the lines alphabetically.
+
+      - Go to the ROME line, press C-a and then press C-n.
+
+      - Press C-S-<DOWN>.
+
+      - Press M-x so-f RET to order the lines lexicographically.
+
+      - Go to the SIERRA line, press C-a, then press C-n.
+
+      - Press C-S-<DOWN>.
+
+      - Press M-x so-n RET to oder the lines numerically.
+
+      - Go to the SIERRA line, press C-a, then press C-n.
+
+      - Press C-S-<DOWN>.
+
+      - Press M-x rev-r RET to reverse the order of the numbers.
+
+      - Go to the TANGO line, press C-a and then press C-n.
+
+      - Press C-S-<DOWN>.
+
+      - To order by the third field (type of blood), use the numeric
+        argument 'M-3' and then press 'M-x so-f RET'.
+
+QUEBEC
+PAPA
+OSCAR
+NOVEMBER
+
+ROME
+Peter 01
+Peter 03
+Peter 02
+Jhon  03
+Jhon  16
+
+SIERRA
+03
+02
+01
+00
+
+TANGO
+Peter 01 A
+Peter 03 B
+Peter 02 AB
+Jhon  03 O
+Jhon  16 A
+
+10) Expanding abreviations:
+
+    Description: Emacs Abbrev allow to expand words but is not too smart,
+                 it searches for the words on the same buffer.
+
+    Keybinding: M-/ => Expand the word in the buffer before the point as a
+                       dynamic abbrev.
+
+    Keybinding: C-M-/ => Complete the word before point as a dynamic abbrev.
+
+    ORDERS:
+      - Go to the UNIFORM line and press C-e, then press C-n.
+
+      - Press M-/, the word 'Miss' is expanded to 'Mission'.
+
+      - Press C-n, then press M-/ again.
+
+      - Press C-n.
+
+      - Now press M-/ one time, the word 'kill' becomes 'killed'.
+
+      - Press M-/ again, the word 'killed' becomes 'kills'.
+
+      - Press M-/ once more, the word 'kills' become 'killer', here
+        we are cycling through the expand matches.
+
+      - Press M-/ to get back to the original 'kill' word.
+
+      - Go to the VICTOR line and press C-e, then press C-n.
+
+      - Press C-M-/ and observe the minibuffer, a list of options matching
+        the word 'kill' is shown.
+
+      - Press C-x o to jump to the results buffer.
+
+      - Use C-n to move the point to the 'killer' word and press RET to
+        select that option.
+
+    NOTE: To close the results buffer you can press ESC ESC ESC.
+
+UNIFORM
+Miss
+Keyb
+kill
+
+VICTOR Von Doom
+kill
+
+Good Job soldier, you can now take 30 seconds off ...

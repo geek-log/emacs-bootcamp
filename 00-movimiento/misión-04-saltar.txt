@@ -1,0 +1,374 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs
+
+Misión #04: Salta soldado, salta!!!
+----------------------------------------------------------------------------
+
+01) Moverse al final de la línea:
+
+   Teclazo: C-e => Ir al final de la línea.
+
+   ÓRDENES: Vaya a la línea ALPHA y oprima C-e.
+
+02) Moverse al inicio de una línea:
+
+   Teclazo: C-a => Ir al inicio de la línea.
+
+   ÓRDENES: En la línea ALPHA oprima C-a.
+
+ALPHA
+
+03) Moverse hacia adelante por palabras:
+
+   Teclazo: M-f => Moverse una palabra hacia adelante.
+
+   ÓRDENES:
+     - Vaya a la línea BRAVO y presione C-a.
+
+     - Ahora presione M-f para moverse una palabra hacia adelante.
+
+     - Presione M-f dos veces para moverse dos palabras más hacia adelante.
+
+BRAVO CHARLIE DELTA
+
+04) Moverse hacia atrás por palabras:
+
+   Teclazo: M-b => Moverse una palabra hacia atrás.
+
+   ÓRDENES:
+     - Vaya a la línea BRAVO y oprima C-e.
+
+     - Ahora presione M-b para moverse una palabra hacia atrás.
+
+     - Presione M-b dos veces más para moverse dos palabras hacia atrás.
+
+05) Moverse hacia adelante en una expresión balanceada:
+
+   Descripción: Una expresión balanceada incluye símbolos individuales,
+   números e hileras constantes, así también como piezas de código
+   que se encuentre entre un par de delimitadores que concuerdan.
+
+   Teclazo: C-M-f => Moverse hacia adelante en una expresión balanceada.
+
+   ORDERS:
+     - Vaya a la línea ECHO y presione C-a.
+
+     - Presione M-f para saltarse la palabra ECHO.
+
+     - Presione C-M-f para saltar al paréntesis de cierre, este es el final
+       de la expresión balanceada que estamos atravesando.
+
+ECHO { Esto es solamente un señuelo }
+
+06) Moverse hacia atrás en una expresión balanceada:
+
+   Teclazo: C-M-b => Moverse hacia atrás en una expresión balanceada.
+
+   ÓRDENES:
+     - Vaya a la línea ECHO y presione C-e.
+
+     - Presione C-M-b para saltar al paréntesis de apertura de la expresión
+       balanceada.
+
+07) Saltando al próximo párrafo:
+
+   Teclazo: M-} => Saltar al próximo párrafo.
+
+   ÓRDENES: Vaya a la línea FOXTROT y presione C-a y luego oprima M-} tres
+            veces.
+
+FOXTROT
+Este es solamente un párrafo señuelo para empezar, la idea de todo este
+texto que ud está leyendo ahora mismo es tener un cuerpo de texto para
+darte la idea de como Emacs trata a un párrafo y, por supuesto, para
+entretenerte.
+
+Desde ahora ud solo hablará cuando le digan que hable, y las primeras y
+últimas palabras que saldrán de tus sucias cloacas serán 'Señor, sí Señor'.
+¿Está todo claro gusanos?
+
+GOLF
+Estos días que estamos viviendo son grandioso, primo. Somos los gigantes
+verdes que caminamos sobre la Tierra - con armas. Esta gente con la que
+acabamos hoy aquí son los mejores seres humanos que jamás conoceremos.
+Luego de que regresemos al mundo, extrañaremos no tener a nadie que sea
+tan digno de matar.
+
+08) Saltando al párrafo previo:
+
+   Teclazo: M-{ => Saltar al párrafo previo.
+
+   ÓRDENES: VAYA a la línea GOLF y presione C-a, luego presione M-{ tres
+            veces.
+
+09) Moviéndose una pantalla abajo:
+
+   Teclazo: C-v => Moverse una pantalla hacia adelante (hacia abajo).
+
+   ÓRDENES:
+     - Vaya a la línea HOTEL y presione C-a.
+     - Continúe presionando C-v hasta que alcane la línea INDIA.
+
+HOTEL
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido 
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+Todo el trabajo y nada de juego hacen de Jack un chico aburrido
+INDIA
+
+10) Moverse una pantalla arriba:
+
+   Teclazo: M-v => Moverse una pantalla arriba (regresar una pantalla).
+
+   ÓRDENES: Vaya a la línea INDIA y continúe presionando M-v hasta que veas
+            la línea HOTEL, luego continúe presionando C-v hasta que
+            regreses aquí de nuevo.
+
+11) Moverse al final del buffer:
+
+   Teclazo: M-> => Ir al final del buffer.
+
+   ÓRDENES:
+     - Lea todas las instrucciones.
+     - Presione M-> para ir al final de este buffer.
+     - Regrese a ESTA LÍNEA.
+
+12) Moverse al principio del buffer:
+
+   Teclazo: M-< => Ir al principio del buffer.
+
+   ÓRDENES:
+     - Lea todas las instrucciones.
+     - Presione M-< para ir al principio del buffer.
+     - Presione M-> para ir al final del buffer.
+     - Regrese a ESTA LÍNEA.
+
+13) Ir a un número de línea:
+
+    Teclazo: M-g g => Ir al número de línea especificado.
+
+    ÓRDENES:
+     - Presione M-g g.
+     - Escriba el número 339 y presione RET.
+
+14) Haciendo scroll hacia abajo en 'la otra' ventana:
+
+   Teclazo: C-M-v => Hacer scroll hacia abajo en la otra ventan.
+
+   ÓRDENES:
+     - Presione C-x 2 para dividir el Marco en dos ventanas.
+
+     - Ahora presione C-M-v dos veces para hacer scroll hacia abajo en la
+       otra ventana.
+
+     - Oprima C-x 1 para mostar solamente una ventana.
+
+15) Haciendo scroll hacia arriba en 'la otra' ventana:
+
+   Teclazo: C-M-S-v => Hacer scroll hacia arriba en la otra ventana.
+
+   Descripción: Si eres pianista tal vez logres ejecutar este movimiento con
+                una sola mano, de otra manera probablemente tengas que usar
+                tu mano derecha para oprimir la tecla 'v' (somos el ejército).
+
+   ÓRDENES:
+     - Presione C-x 2 para dividir el Marco en dos ventanas.
+
+     - Ahora presiones C-M-S-v cuatro veces para hacer scroll hacia arriba
+       en la otra ventana.
+
+     - Presione C-x 1 para mostrar solo una ventana.
+
+Buen trabajo soldado, ahora puedes descansar 1 minuto ...

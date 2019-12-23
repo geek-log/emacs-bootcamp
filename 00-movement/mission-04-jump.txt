@@ -1,0 +1,364 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #04: Jump soldier, jump!!!
+----------------------------------------------------------------------------
+
+01) Moving to the end of a line:
+
+   Keybinding: C-e => Go to the end of a line.
+
+   ORDERS: Go to the ALPHA line and press C-e.
+
+02) Moving to the beggining of a line:
+
+   Keybinding: C-a => Go to the beggining of a line.
+
+   ORDERS: On the ALPHA line press C-a.
+
+ALPHA
+
+03) Moving forward by words:
+
+   Keybinding: M-f => Move one word forward.
+
+   ORDERS:
+     - Go to the BRAVO line and press C-a.
+
+     - Now press M-f to move one word forward.
+
+     - Press M-f two more times to move two more words forward.
+
+BRAVO CHARLIE DELTA
+
+04) Moving backwards by words:
+
+   Keybinding: M-b => Move one word backwards.
+
+   ORDERS:
+     - Go to the BRAVO line and press C-e.
+
+     - Now press M-b to move one word backwards.
+
+     - Press M-b two more times to move two more words backwards.
+
+05) Moving forward on a balanced expression:
+
+   Description: A balanced expression include individual symbols, numbers,
+   and string constants, as well as pieces of code enclosed in a matching
+   pair of delimiters.
+
+   Keybinding: C-M-f => Move forward on a balanced expression.
+
+   ORDERS:
+     - Go to the ECHO line and press C-a.
+
+     - Press M-f to skip the ECHO word.
+
+     - Press C-M-f to jump to the closing parentheses, this is the end of
+       the balanced expression that we are traversing.
+
+ECHO { this is just a decoy }
+
+06) Moving backwards on a balanced expression:
+
+   Keybinding: C-M-b => Move backwards on a balanced expression.
+
+   ORDERS:
+     - Go to the ECHO line and press C-e.
+
+     - Press C-M-b to jump to the opening parentheses of the balanced
+       expression.
+
+07) Jumping to next paragraph:
+
+   Keybinding: M-} => Jump to the next paragraph.
+
+   ORDERS: Go to the FOXTROT line press C-a and then press M-} three times.
+
+FOXTROT
+This is just a decoy paragraph to get started, the idea of this
+whole text that you are reading is to contain text to give you the idea
+of how Emacs treats a paragraph and, of course, to entertain you.
+
+From now on you will speak only when spoken to, and the first and last words
+out of your filthy sewers will be 'Sir.' Do you maggots understand that?
+
+GOLF
+These are great days we're living, bros. We are jolly green giants,
+walking the Earth — with guns. These people we wasted here today are the
+finest human beings we will ever know. After we rotate back to the world,
+we're gonna miss not having anyone around that's worth shooting.
+
+08) Jumping to the previous paragraph:
+
+   Keybinding: M-{ => Jump to the previous paragraph.
+
+   ORDERS: GO to the GOLF line and press C-a, then press M-{ three times.
+
+09) Moving one screen forward:
+
+   Keybinding: C-v => Move one screen forward (down).
+
+   ORDERS:
+     - GO to the HOTEL line and press C-a.
+     - Keep pressing C-v until you reach the INDIA line.
+
+HOTEL
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy 
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+All Work and No Play Makes Jack a Dull Boy
+INDIA
+
+10) Moving one screen up:
+
+   Keybinding: M-v => Move one screen up (return one screen).
+
+   ORDERS: GO to the INDIA line and keep pressing M-v until you see the
+           HOTEL line, then keep pressing C-v until you return here again.
+
+11) Moving to the end of the buffer:
+
+   Keybinding: M-> => Go to the end of the buffer.
+
+   ORDERS:
+    - Read all instructions first.
+    - Press M-> to go to the end of this buffer.
+    - Return to THIS LINE.
+
+12) Moving to the beggining of the buffer:
+
+   Keybinding: M-< => Go to the beggining of the buffer.
+
+   ORDERS:
+     - Read all instructions first.
+     - Press M-< to go to the beggining of the buffer.
+     - Press M-> to go to the end of the buffer.
+     - Return to THIS LINE.
+
+13) Go to a line number:
+
+   Keybinding: M-g g => Go to specified line number.
+
+   ORDERS:
+     - Press M-g g.
+     - Type the number 339 and press RET.
+
+14) Scrolling 'the other' windows down:
+
+   Keybinding: C-M-v => Scrolls down the other window.
+
+   ORDERS:
+     - Press C-x 2 to divide the Frame in two windows.
+
+     - Now press C-M-v two times to scroll down the other window.
+
+     - Press C-x 1 to show only one window.
+
+15) Scrolling 'the other' window up:
+
+   Keybinding: C-M-S-v => Scrolls up the other window.
+
+   Description: If you are a piano player you maybe handle to make this
+                movement with one hand, otherwise you probably had to use
+                your right hand to press the 'v' key (yes this is the army).
+
+   ORDERS:
+      - Press C-x 2 to divide the Frame in two windows.
+
+      - Now press C-M-S-v four times to scroll up the other window.
+
+      - Press C-x 1 to show only one window.
+
+Good Job soldier, you can now have 1 minute off ...

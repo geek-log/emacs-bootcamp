@@ -1,0 +1,111 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #10: ¡¡¡Busque ayuda SOLDADO!!!
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderemos como consultar a Emacs por ayuda o información.
+
+"La meta de largo plazo para cualquier usuario Emacs es alcanzar el punto
+donde pueda buscar respuestas a las preguntas que tiene al preguntarle
+a Emacs. Eventualmente metes en la memoria muscular los comandos que usas
+más frecuentemente, y el resto, bueno siempre puedes buscarlos" - Materizando
+Emacs.
+
+Misión
+...........................................................................
+
+01) Usando el menu de ayuda:
+
+    Teclazo: C-h C-h => Muestra el menú de ayuda.
+
+    Cuando el 'punto' está en un buffer de menú de ayuda:
+
+    Teclazo: <SPC> => Bajar una página del menú de ayuda.
+
+    Teclazo: DEL => Subir una página del menú de ayuda.
+
+    Teclazo: c <Escribir teclazo> => Muestra el comando que un teclazo
+                                     ejecuta (al presionar un teclazo).
+
+    Teclazo: a <COMANDO> => Muestra información sobre un comando (al
+                            escribir el nombre del comando).
+
+    Teclazo: k <COMANDO> => Muestra documentación que describe un comando
+                            (al presionar un teclazo).
+
+    Teclazo: q => Quita el menú de ayuda.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+
+      - Presione C-h C-h para desplegar el menú de ayuda en la parte
+        inferior de Emacs, el punto se posicionará en el buffer del menú
+        de ayuda.
+
+      - Presione <SPC> una vez para hacer scroll hacia abajo en el menú
+        de ayuda.
+
+      - Presione DEL para hacer scroll arriba en el menú de ayuda.
+
+      - Oprima 'q' para cerrar el menú de ayuda.
+
+      - Oprima C-h C-h para desplegar el menú de ayuda.
+
+      - Presione 'c', cuando lo hagas el buffer de menú de ayuda se cerrará,
+        y el texto 'Describa la próxima combinación ...' aparecerá en el
+        minibuffer.
+
+      - Presione el teclazo 'C-a', el texto
+        'ejecutar el comando move-beginning-of-line' aparecerá en el
+        minibuffer.
+
+      - Presione C-h C-h de nuevo.
+
+      - Presione 'a', el buffer de menú de ayuda se cerrará y el texto
+        'Buscar información para el comando ...' se desplegará en el
+        minibuffer.
+
+      - Digite el texto 'move-beginning-of-line' y presione RET, se
+        mostrará información sobre ese comando.
+
+      - Presione C-x 1 para cerrar esa ventana y volver a esta.
+
+      - Presione C-h C-h una vez más.
+
+      - Oprima 'b' para desplegar la lista de todos los teclazos activos.
+        Puedes usar C-M-v para hacer scroll hacia abjo en ese ('la otra')
+        ventana.
+
+      - Presione C-x 1 para desplegar solamente esta ventana.
+
+      - Presione C-h C-h aún una vez más.
+
+      - Oprima 'k' y luego presione el teclazo 'C-a'.
+
+      - Presione C-x 1 para desplegar esta ventana.
+
+      - Puedes usar teclazo atajo para los comandos previos, al usar
+        el prefijo de comandos 'C-h', AHORA PRESIONE 'C-h k' y luego
+        PRESIONE 'C-a' para desplegar información sobre el comando
+        'move-to-beginning-of-line'.
+
+      - Presione C-x 1 para dejar solamente una ventana.
+
+    NOTA: EL comando 'C-h a' es conocido como 'apropos' y es sumamente
+          popular en el mundo Emacs.
+
+Buen trabajo soldado, ahora puedes descansar 10 minutos ...

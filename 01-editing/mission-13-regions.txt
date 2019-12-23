@@ -1,0 +1,191 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #13: Firing Squad
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to copy regions and how to use the
+kill ring.
+
+Definitions
+............................................................................
+
+Region: Text contained between the point and the mark (selected text).
+
+Kill Ring: Special area where every killed text is added.
+
+Mission
+............................................................................
+
+01) Cycling through the kill ring
+
+    Keybinding: M-y => Cycle the kill ring entries.
+
+    ORDERS:
+      - Read all orders.
+
+      - Go to the ALPHA line and press C-a.
+
+|     - Press M-d to kill the ALPHA word.
+
+      - Go to the BRAVO line and press C-a.
+
+      - Press M-d to kill the BRAVO word.
+
+      - Go to the CHARLIE line and press C-a.
+
+      - Press M-d to kill the CHARLIE word.
+
+      - Go to the DELTA line and press C-e.
+
+      - Press C-y to paste the last killed text, in this case the text
+        'CHARLIE'.
+
+      - Press M-y once and observe what happens, What happens? The word
+        'BRAVO' is displayed instead of 'CHARLIE', that happens because
+        we are cycling through the kill ring (circular stack).
+
+      - Press M-y again to display the word 'ALPHA'.
+
+      - And press M-y one more to time to display 'CHARLIE' again, here we
+        reach the end of the kill ring and start from the beginning.
+
+ALPHA this is trash
+
+BRAVO
+
+CHARLIE
+
+DELTA
+
+02) The kill ring current entry:
+
+    Description: Consider your last sequence of movements: You killed the
+                 word ALPHA with M-d and then went down one line down with
+                 C-n, then killed the word BRAVO with M-d again and went
+                 down another line with C-n, and so on.
+
+                 The combination of those two commands (M-d and C-n) adds
+                 a new entry on the kill ring, each one of this entries
+                 were the ones we cycle with M-y on the previous ORDERS.
+
+                 But, Could we add all words to a single entry on the kill
+                 ring? Could we add an enormous amount of text to a single
+                 entry on the kill ring? YES WE CAN.
+
+    Keybinding: C-M-w => Append to the kill ring current entry.
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Go to the ECHO line.
+
+      - Press C-S-<BACKSPACE> to kill the current line, now on the kill ring
+        there is a NEW entry with the text 'ECHO'.
+
+      - Press C-S-<BACKSPACE> again to kill the word 'FOXTROT', on the kill
+        ring entry the text is now 'ECHO FOXTROT'.
+
+      - Press C-S-<BACKSPACE> to kill the word 'GOLF', on the kill ring entry
+        the text now is 'ECHO FOXTROT GOLF'.
+
+      - Press C-y and observe what happens, What happens? All the
+        three words were pasted together and not separated as on the
+        previous ORDERS. Why is that? Emacs appends any text killed
+        by succesive kill commands calls on a SINGLE ENTRY, but if you
+        DO ANY command that is NOT a kill command (like moving one line down
+        with C-n), then Emacs will create a new entry on the kill ring.
+
+      - To kill the next line (HOTEL) you will have to press C-n to
+        move to the next line, BUT DOING THAT WILL CREATE A NEW entry
+        on the KILL RING (like before) and what WE WANT HERE is to use
+        a SINGLE ENTRY on the kill ring. We want to use the same entry
+        that currently holds the text 'ECHO FOXTROT GOLF' and append
+        the text 'HOTEL' to it. In order to to that, press C-n to
+        move to the HOTEL line.
+
+      - NOW we gonna tell Emacs that we want to append text to the
+        current entry on the kill ring and knowing that, Emacs WILL NOT
+        create a new entry but append to the existing one. Press C-M-w
+        now and watch the minibuffer, the text 'If the next command is
+        a kill, it will append' appears on it. That's the way to tell
+        Emacs to append and not to create a new entry.
+
+      - Press C-S-<BACKSPACE> to kill the HOTEL line.
+
+      - Now press C-y to yank all lines together, note that the HOTEL
+        line was appended to the other three lines and not added to a new
+        entry on the kill ring.
+
+ECHO
+FOXTROT
+GOLF
+
+HOTEL
+
+03) Copying the active region:
+
+    Keybinding: M-w => Copy the active (selected) region.
+
+    ORDERS:
+      - Go to the INDIA line and press C-a.
+
+      - Press C-<SPC> to set and activate the mark. The text
+        'Mark activated' must appear on the minibuffer.
+
+      - Press C-n three times, the whole paragraph must be selected.
+
+      - Press A-w to copy the active (selected) region.
+
+      - Go to the JULIET line and press M-f to skip the 'JULIET' word.
+
+      - Press C-y to paste the copied text.
+
+
+INDIA This is my rifle. There are many others like it, but this one is mine.
+My rifle is my best friend. It is my life. I must master it as I must master
+my life. Without me, my rifle is useless. Without my rifle, I am useless.
+
+
+JULIET 
+
+04) Cutting the active region:
+
+    Keybinding: C-w => Cut the active region.
+
+    ORDERS:
+      - Go to the KILO line and press C-a.
+
+      - Press C-<SPC> to set and activate the mark.
+
+      - Press C-5 C-n to mark five lines.
+
+      - Press C-w to kill the region.
+
+      - Go to the LIMA line and press C-e.
+
+      - Press C-y to paste the killed text.
+
+
+KILO I must fire my rifle true. I must shoot straighter than my enemy, who is
+trying to kill me. I must shoot him before he shoots me. I will. Before
+God I swear this creed: my rifle and myself are defenders of my country,
+we are the masters of our enemy, we are the saviors of my life. So be it,
+until there is no enemy, but peace. Amen.
+
+
+LIMA
+
+Good Job soldier, you can now take 2 minutes off ...

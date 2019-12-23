@@ -1,0 +1,124 @@
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #22: Special Summary
+----------------------------------------------------------------------------
+
+Keybindings
+............................................................................
+
+The list of all the keybindings used on the special missions is shown below:
+
+Emacs Keybindings
+............................................................................
+
+C-x C-f => Find a file.
+
+C-x C-r => Find a file as read-only.
+
+C-x C-q => Toggle read-only.
+
+M-x kee => Keep only lines that matches a regular expression.
+
+M-s o => List only lines that matches a regular expression.
+
+M-s h p => Highlight a phrase.
+
+M-s h r => Highlight by a regular expression.
+
+M-s h . => Highlight the symbol under the point.
+
+M-s h u => Undo the higlighting under the point.
+
+M-x term => Opens a 'term' terminal buffer.
+
+M-x shell => Opens a 'shell' terminal buffer.
+
+M-x eshell => Opens a 'eshell' terminal buffer.
+
+M-x eww => Opens EWW web browser.
+
+M-x a-re-m => Refresh the buffer when the file is changed.
+
+OR
+
+M-x auto-revert-mode
+
+C-x d => Starts Dired.
+
+C-x C-f /ssh:user@remotehost:/file.txt => Starts TRAMP connection.
+
+
+On a 'term' terminal buffer
+
+C-c C-j => Enables term-line-mode.
+
+C-c C-k => Enables term-char-mode.
+
+
+On an EWW buffer
+
+M-<RET> => Opens the URL under the point on a new buffer.
+
+b => Save bookmark.
+
+B => List all bookmarks.
+
+d => Download the URL under the point.
+
+g => Reload the page.
+
+S => List all open EWW buffers.
+
+w => Copy the current URL to the kill ring.
+
+M-C (Capital C and not Control) => Toggle colors.
+
+
+When the point is on a Dired buffer
+
++ => Create a new directory.
+
+m => Marks a file or directory.
+
+u => Unmarks a file or directory.
+
+U => Unmarks everything.
+
+C => Copy the marked items.
+
+d => Set delete flag.
+
+D => Deletes marked items.
+
+x => Deletes flagged items.
+
+*m => Marks a region.
+
+*u => Unmarks the region.
+
+*% => Marks files whose name matches with a regular expression.
+
+*t => Toggle mark.
+
+*c => Changes the mark symbol from the old to a new one.
+
+g => Refresh the Dired buffer.
+
+R => Renames the marked items.
+
+O => Executes chown on the marked items.
+
+G => Executes chgrp on the marked items.
+
+M => Executes chmod on the marked items.
+
+D => Deletes the marked items.
+
+F => Visit the marked items. This command REQUIRES 'dired-x'.
+
+
+Great job soldier, you achieve one rank up and are qualified to advance
+to the air force training missions.

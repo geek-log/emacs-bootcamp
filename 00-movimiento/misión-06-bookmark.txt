@@ -1,0 +1,164 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs
+
+Misión #06: Bookmarks y Registros.
+----------------------------------------------------------------------------
+
+Definiciones
+...........................................................................
+
+Bookmark: Piensa como en los bookmarks de tu navegador web pero que pueden
+          incluir: páginas, directorios, archivos, páginas man y otros. Los
+          bookmarks son permanentes y están almacenados en el archivo
+          ~/.emacs.d/bookmarks.
+
+Registro: Los registros permiten almacenar texto y posiciones dentro del
+          buffer y a diferencia de los bookmarks, son trascientes, quiere
+          decir que desaparecen al cerrar Emacs. Los registros son
+          almacenamiento 'de un SOLO caracter'. Pueden almacenar posiciones
+          dentro del buffer, regiones de texto (texto seleccionado) y
+          números.
+
+Misión
+...........................................................................
+
+01) Guardando un Bookmark:
+
+   Teclazo: C-x r m => Crear un bookmark.
+
+   ÓRDENES: 
+     - Vaya a la línea ALPHA.
+
+     - Presione C-x r m, el texto 'Poner bookmark incodicionalmente' debe de
+       aparecer en el minibuffer.
+
+     - Escriba el nombre 'alpha' y presione RET para crear un bookmark.
+
+     - Vaya a la línea BRAVO.
+
+     - Presione C-x r m, escriba el texto 'bravo' como nombre para el
+       bookmark y presione RET para guardar otro bookmark.
+
+02) Listando los bookmarks:
+
+    Teclazo: C-x r l => Mostrar la lista de bookmarks.
+
+    ÓRDENES:
+      - Lea todos los pasos.
+
+      - Presione C-x r l para mostrar la lista de bookmarks. Esto abrirá
+        un nuevo buffer con la lista de bookmarks en él.
+
+      - En la lista de bookmarks presione C-x k RET para matar ese buffer y
+        volver a este.
+
+ALPHA
+
+BRAVO
+
+03) Saltando a un bookmark:
+
+    Teclazo: C-x r b => Saltar a un bookmark.
+
+    ÓRDENES:
+      - Vaya a la línea CHARLIE.
+
+      - Presione C-x r b.
+
+      - Escriba el nombre 'alpha' en el minibuffer.
+
+      - Presione RET para saltar al bookmark 'alpha'.
+
+CHARLIE
+
+04) Borrando un bookmark (Corriendo un comando por nombre):
+
+    Descripción: Cuando un comando no tiene un teclazo asociado, este debe
+                 de ser llamado por nombre.
+
+    Teclazo: M-x (escriba el nombre del comando) RET => Ejecutar comando.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+
+      - Press M-x, el minibuffer debe de mostrar el texto 'M-x'.
+
+      - Presione C-g para cancelar.
+
+      - Presione M-x de nuevo.
+
+      - Escriba en el minibuffer el texto 'bookmark-delete'.
+
+      - Presione RET.
+
+      - El texto 'Borrar bookmark' debe de mostrarse en el minibuffer,
+        digite el texto 'bravo' y presione RET.
+
+      - Presione C-x r l para mostrar la lista de bookmarks, el bookmark
+        'bravo' no debe aparecer en esta lista ahora.
+
+      - Presione C-x k RET para regresar a este buffer.
+
+05) Guardando un registro:
+
+    Descripción: Los registro son 'de un solo caracter'.
+
+    Teclazo: C-x r <SPC> => Almacena la posición del punto en un registro.
+
+    ÓRDENES:
+      - Vaya a la línea DELTA.
+
+      - Presione C-x r <SPC>. El texto 'Punto a registrar' debe de mostrarse
+        en el minibuffer.
+
+      - Digite el caracter 'a' como el nombre del registro.
+
+06) Listando los registro guardados:
+
+    Descripción: Para este comando siguient debes de esperar unos dos o tres
+                 segundos para que la información se despliegue (pequeño
+                 retraso).
+
+    Teclazo: C-x r j (esperar tres segundos) => Listar los registros guardados.
+
+    ÓRDENES:
+      - Presione C-x r j.
+
+      - Cuente hasta tres.
+
+      - Observe el minibuffer, la lista de registros se despliega.
+
+      - Presione C-g para cancelar.
+
+DELTA
+
+07) Saltando a un registro:
+
+    Teclazo: C-x r j <digite un caracter> RET => Saltar al registro.
+
+    ÓRDENES:
+      - Vaya a la línea ECHO.
+
+      - Presione C-x r j.
+
+      - Digite el caracter 'a' (como el nombre del registro).
+
+      - Presione RET para saltar al registro 'a'.
+
+ECHO
+
+08) Borrando un registro:
+
+    Descripción: No hay tal cosa como borrar un registro, puedes
+                 sobreescribirlo usando C-x r <SPC> y digitando el
+                 caracter que quieres reescribir como el nombre del registro
+                 en el minibuffer.
+
+Buen trabajo soldado, ahora tienes 20 segundos para estirar ...

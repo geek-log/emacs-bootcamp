@@ -1,0 +1,176 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #11: ¡¡¡Mátelos soldado!!!
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderemos como cortar y pegar texto.
+
+En Emacs (por razones históricas), el comando para cortar se conoce como
+'kill' (matar).
+
+En Emacs, el comando para pegar se conoce como 'yank' (pegar).
+
+La diferencia que existe entre cortar y matar es que un 'cortar' corta el
+texto seleccionado y un 'kill' corta el texto seleccionado y además
+agrega el texto 'matado' a un espacio conocido como el 'anillo kill' (o
+kill ring en inglés).
+
+El 'anillo kill' es un buffer especial donde cada texto 'matado' es añadido,
+de esta manera podemos reutilizarlo luego, esto es similar al 'anillo undo'
+que se usó en la misión #01.
+
+De todos los comandos incluídos en esta misión, los dos primeros NO MATAN
+texto sino que lo borran, esto significa que no agregan ningún texto al
+'anillo kill'.
+
+Continúa soldado matando y yankeando.
+
+Misión
+...........................................................................
+
+01)  Borrando un caracter:
+
+     Nota: Este comando no agrega nada al 'anillo kill'.
+
+     Teclazo: C-d => Borra el caracter bajo el punto.
+
+     ÓRDENES: Vaya a la línea ALPHA y oprima C-a para ir al inicio de la
+              línea, luego presione C-d para borrar el primer caracter 'A'.
+
+02) Borrando el caracter previo:
+
+    Nota: Este comando no agrega nada al 'anillo kill'.
+
+    Teclazo: <BACKSPACE> => Borra el caracter previo.
+
+    ÓRDENES: Vaya a la línea ALPHA y presione C-e para ir al final de la
+             línea, luego presione <BACKSPACE> para borrar el último
+             caracter 'A'.
+
+ALPHA
+
+03) Agregando una línea nueva:
+
+    Nota: Este comando no borra, mata o copia, simplemente agrega una
+          nueva línea.
+
+    Teclazo: C-j => Agrega una nueva línea.
+
+    ÓRDENES: En la línea ALPHA presione C-e y luego presione C-j.
+
+04) Tu primer muerto, matando una palabra:
+
+    Teclazo: M-d => Mata la próxima palabra.
+
+    ÓRDENES: En la línea bravo presione C-a, luego presione M-d para matar
+             la palabra BRAVO y no presiones nada más.
+
+BRAVO
+
+05) 'Yankeando', tu primera restauración:
+
+    Teclazo: C-y => Pega ('yanks') texto.
+
+    ÓRDENES: Presione C-y dos veces. ¿Ves lo que pasa? El texto que acabas
+             de matar se pega.
+
+06) Matando la palabra anterior:
+
+    Teclazo: C-<BACKSPACE> => Mata la palabra previa.
+
+    ÓRDENES:
+      - En la línea CHARLIE presione C-e.
+
+      - Presione M-<BACKSPACE> para matar la palabra CHARLIE.
+
+      - Presione C-y para pegarla de nuevo.
+
+CHARLIE DELTA
+
+07) Matando el resto de la línea:
+
+    Teclazo: C-k => Mata el texto desde la posición de punto hasta el
+                    final de esa misma línea.
+
+    ÓRDENES:
+      - Vaya a la línea ECHO y presione C-a.
+
+      - Presione M-f dos veces para saltar las palabras ECHO y FOXTROT.
+
+      - Presione C-k para matar el resto de la línea.
+
+      - Presione C-n para bajar una línea.
+
+      - Presione C-y para pegar la porción de la línea que recién mataste.
+
+ECHO FOXTROT Este es solamente un texto señuelo de prueba para que lo mates.
+
+08) Matando el resto de la oración.
+
+    Teclazo: M-k => Mata el texto desde la posición del punto hasta el fin
+                    de la oración.
+
+    ÓRDENES:
+      - Vaya a la línea GOLF y presione C-a.
+
+      - Presione M-f para saltarse la palabra GOLF.
+
+      - Oprima C-k para matar el resto de la línea.
+
+      - Presione C-x u para deshacer el 'kill'.
+
+      - Presione M-k para matar el resto de la oración.
+
+      - Presione C-x u.
+
+GOLF "Hijo, lo único que le pido a mis soldados es que obedezcan mis órdenes
+como si fueran palabra de Dios."
+
+09) Matando una expresión sintáctica balanceada:
+
+    Teclazo: C-M-k => Mata la próxima expresión sintáctica balanceada.
+
+    ÓRDENES:
+      - Vaya a la línea HOTEL.
+
+      - Presione C-a y luego presione M-f para saltarse la palabra HOTEL.
+
+      - Ahora presione C-M-k para matar la próxima expresión balancead la
+        cual es todo el texto incluído entre paréntesis y los paréntesis
+        mismos.
+
+      - Presione C-x u para cancelar el borrado.
+
+HOTEL (Este es solamente un señuelo para que le dispares) esto es basura.
+
+10) Matando la línea actual:
+
+    Teclazo: C-S-<BACKSPACE> => Mata la línea actual.
+
+    ÓRDENES:
+      - Vaya a la línea INDIA y presione C-a.
+
+      - Presione M-f tres veces.
+
+      - Presione C-S-<BACKSPACE> para matar la línea actual.
+
+      - Presione C-x u para cancelar.
+
+INDIA Aquí tienes otro señuelo para que lo mates, puedes matar esto para que
+avances con tus habilidades.
+
+Buen trabajo soldado, ahora puedes descansar 5 minutos ...

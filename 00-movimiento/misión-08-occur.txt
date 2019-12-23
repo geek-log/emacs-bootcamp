@@ -1,0 +1,180 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #08: ¡¡¡Búsquelo en la trinchera soldado!!!
+----------------------------------------------------------------------------
+
+Definiciones
+............................................................................
+
+Modo de Emacs: Un modo es un conjunto de reglas que hace que Emacs se
+               comporte de una manera particular.
+
+Modo Occur: El modo Occur es un grep para Emacs.
+
+Misión
+...........................................................................
+
+ALPHA
+
+01) Buscando con el modo occur:
+
+    Descripción: En contraste con la búsqueda incremental, el modo occur
+                 muestra los resultados en un buffer diferente.
+
+    Teclazo: M-x occur RET => Inicia el modo occur.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+
+      - Vaya a la línea ALPHA.
+
+      - Presiones M-x occur RET para activar el modo occur, se te pedirá
+        escribir una expresión regular.
+
+      - En el minibuffer digite la siguiente regexp: brav.*
+
+      - Oprima RET, ¿qué pasa? El marco se divide en dos ventanas y la
+        ventana inferior contiene los resultados de la búsqueda. Puedes
+        verificar que el buffer inferior está en el modo Occur porque en su
+        minibuffer debe decir *Occur*.
+
+      - NO cierres el buffer 'occur' y ve a seguir las próximas ÓRDENES.
+
+BRAVO
+
+bravo
+
+Bravo
+
+02) Saltando a la próxima coincidencia de 'occur':
+
+    Teclazo: M-n => Múevase a la próxima coincidencia de occur.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+      - Presione C-x o para saltar al buffer occur.
+      - Presione M-n dos veces y observe lo que sucede.
+      - Presione C-x o para volver a este buffer y vaya a las próxima
+        ÓRDENES.
+
+03) Saltando a la coincidencia previa de 'occur':
+
+    Teclazo: M-p => Moverse a la próxima coincidencia de occur.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+      - Presione C-x o para saltar al buffer occur.
+      - Presione M-p dos veces y observa lo que sucede.
+      - Oprime C-x o para saltar a este buffer y ve a las próximas ÓRDENES.
+
+04) Saltando al final del buffer 'occur':
+
+    Teclazo: > => Salta al final de un buffer occur.
+
+    ÓRDENES:
+      - Presione C-x o para saltar al buffer occur inferior.
+      - Presione > para ir al final del buffer occur.
+      - Presione C-x o para saltar a este buffer y ve a las próximas ÓRDENES.
+
+05) Saltando al principio de un buffer 'occur':
+
+    Teclazo: < => Salta al principio de un buffer occur.
+
+    ÓRDENES:
+      - Presione C-x o para saltar al buffer occur inferior.
+      - Presione > para ir al final del buffer occur.
+      - Presione < para ir al principio del buffer occur.
+      - Presione C-x o para volver a este buffer.
+
+06) Refrescando los resultados:
+
+    Teclazo: g => Refresca los resultados de la búsqueda occur.
+
+    ÓRDENES:
+      - Presione C-x o para saltar al buffer occur inferior.
+      - Presione g en el buffer occur para refrescar los resultados.
+      - Presione C-x o para regresar aquí.
+
+07) Usando el modo de edición occur:
+
+    Categoría: Gema de Emacs.
+
+    Descripción: Con este comando puedes editar los comandos de la búsqueda
+                 occur.
+
+    Teclazo: e => Habilitar el modo de edición occur.
+
+    ÓRDENES:
+      - Lea todos los pasos.
+      - Presione C-x o para saltar al buffer occur.
+      - Presione < para ir al principio del buffer occur.
+      - Presione M-n tres veces.
+      - Presione e para cambiarse al 'modo EDICIÓN de occur'. El texto
+        'Editando ...' debe mostrarse.
+      - Borre la palabra 'bravo' y escriba la palabra 'OVARB', observe
+        lo que pasa.
+      - Oprima C-c C-c para cambiarse de vuelta del 'modo EDICIÓN de occur',
+        al 'modo Occur', el texto 'Cambiándose al modo Occur' debe aparecer.
+      - Oprima C-x o para saltar a este buffer de nuevo.
+      - Presione C-x u dos veces para deshacer los cambios hechos con el modo
+        occur.
+
+08) Cerrando el modo occur:
+
+    Teclazo: q => Quita el modo occur.
+
+    ÓRDENES:
+      - Presione C-x o para saltar al buffer occur.
+      - Presione g para actualizar los resultados y observe lo que pasa.
+      - Presione q para cerrar el modo occur (y el buffer occur).
+
+09) Usando el modo multi-occur:
+
+    Descripción: El modo multi-occur permite buscar en múltiples buffers.
+
+    Notas:
+      - Para este conjunto de ÓRDENES necesitarás el archivo
+        'misión-07-buscar.txt'.
+
+      - Puedes usar TAB en el minibuffer para autocompletar nombres.
+
+    Teclazo: M-x multi-occur-in-matching-buffers => Inicia multi-occur.
+
+    ÓRDENES:
+      - Lea todos los pasos.
+
+      - Presione C-x C-f y encuentre el archivo 'misión-07-buscar.txt'.
+
+      - En el buffer 'misión-07-buscar.txt' presione C-x b RET para
+        regresar aquí.
+
+      - Presione M-x y digite 'multi-occur-in-matching-buffers'. Se te
+        pedirá que digites dos expresiones regulares, la primera coincidirá
+        con los nombres de los buffers en los que buscar, y la segunda
+        coincidirá con el texto a buscar.
+
+      - Digite como primera expresión regular
+        (Liste las líneas en buffers ...) el siguiente texto: misión.*
+
+      - Oprima RET.
+
+      - Para la segunda expresión regular
+        (Liste las líneas que concuerdan ...) digite el texto: BRAVO.
+
+      - Oprima RET y observe lo que pasa. Una segunda ventana se abre
+        en la parte de abajo del editor, puedes ver que ambos archivos
+        misión-07-buscar y misión-08-occur están incluidos en los resultados.
+
+      - Presione C-x o para saltar al buffer occur.
+
+      - Presione q para cerrar el buffer occur.
+
+Buen trabajo soldado, ahora puedes descansar 10 minutos ...

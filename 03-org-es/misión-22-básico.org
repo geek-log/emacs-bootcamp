@@ -1,0 +1,364 @@
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Aérea donde aprenderás a VOLAR
+usando org-mode.
+
+Misión #22: Primeros pasos con Org-Mode
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+Note que este archivo tiene una extensión ".org" y no una ".txt" como los
+archivos de misión previos, esto es porque este es un "archivo Org".
+
+Los archivos Org son editados usando el Modo Mayor de Emacs llamdo "Org Mode"
+o "modo organizacional". Si te fijas en la línea del Modo (el área de texto
+sobre el minibuffer), verás que dice "(Org)".
+
+Este modo nos permite usar Emacs para escribir y manejar información de una
+manera ágil, de manera que vaya de acuerdo al flujo cambiante de nuestros
+pensamientos (mente como agua y todo eso).
+
+Org Mode tiene muchas funcionalidades, algunas de ellas son:
+
+- Maneja listas de ítems.
+
+- Maneja listas de TODO.
+
+- Maneja árboles y subárboles de información de una manera dinámica.
+
+- Maneja un diario.
+
+- Maneja una agenda.
+
+- Maneja un calendario y eventos de calendario.
+  
+- Usa recordatorios de eventos.
+
+- Exporta a muchos formatos.
+
+- Incluye bloques de código funcionales en muchos lenguajes.
+
+- Permite insertar multimedia.
+
+- Permite manejar información tabulada.
+
+Mission
+............................................................................
+
+1) Ciclando estados de encabezado:
+
+   * Descripción
+
+     Org-mode se trata sobre árboles (o subárboles) de información,
+     cada nodo en un subárbol de información corresponde a un encabezado
+     en un "documento Org".
+
+     Existen múltiples maneras de definir un encabezado, la manera más
+     común es usar el símbolo '*', otra opción puede ser usar números para
+     definir una lista númerica.
+     
+   * Teclazos
+
+     - TAB => Ciclar a través de los estados de encabezado: doblado > hijo >
+              subárbol.
+
+     - C-u C-u RET => Reinicia la visibilidad inicial.
+
+     - C-u C-u C-u RET => Muestra todo incluídos los cajones.
+
+   * ÓRDENES
+    
+     - Lea todas las instrucciones primero.
+
+     - Ponga el punto sobre la línea que contiene el número '1'.
+
+     - Presione TAB, el texto en estas ÓRDENES se esconderá y solamente el
+       encabezado es visible, este es el estado 'doblado'.
+
+     - Si presionas TAB de nuevo, más texto es visible pero en algunas
+       líneas el texto no se despliega por completo y tres punto (...) se
+       despliegan para indicar que existe más texto.
+
+     - Si presionas TAB una tercera vez, entonces todo el texto se muestra,
+       este es el estado 'subárbol'.
+
+     - Ahora que sabes como doblar cosas doble el conjunto de instrucciones
+       1 y vaya al conjunto 2.
+        
+2) Insertando ítems:
+
+   * Teclazos
+
+     - M-RET => Inserta un nuevo encabezado, ítem o fila.
+
+     - C-RET => Inserta un nuevo encabezado al final.
+
+     - M-UP / M-DOWN => Intercambiar el ítem actual con el previo/siguiente.
+
+     - M-LEFT => Promueve el encabezado actual un nivel hacia arriba.
+
+     - M-RIGHT => Degrada el encabezado actual un nivel hacia abajo.
+
+   * ÓRDENES
+
+     - Lea todas las instrucciones primero.
+
+     - Presione C-RET para insertar un nuevo encabezado al final.
+
+     - Presione C-x u para deshacer.
+
+     - Vaya a la línea ALPHA y presione C-a line, luego presione M-RET.
+
+     - Presione C-x u para deshacer.
+
+     - Vaya a la línea ALPHA y presione C-e, luego presione M-RET.
+
+     - Presione C-x u para deshacer.
+
+     - Vaya a la línea BRAVO y presione C-e, luego presione M-RET.
+
+     - Presione C-x u para deshacer.
+
+     - En la línea BRAVO presione M-UP y luego presione M-DOWN.
+
+     - En la línea ALPHA presione M-RIGHT y luego presione M-LEFT.
+
+     - En la línea ALPHA presione M-S-RIGHT y luego presione M-S-LEFT dos
+       veces luego presione M-S-RIGHT una vez más.
+
+   * ALPHA
+
+     - BRAVO
+
+     - CHARLIE
+
+3) Manipulación de entradas:
+
+   * Teclazo
+
+     C-c ^ => Ordena entradas del mismo nivel.
+
+     C-c * => Convierte una línea normal en un encabezado.
+
+   * ÓRDENES
+
+     - Vaya a la línea FOXTROT.
+
+     - Presione C-c ^, Emacs te preguntará qué tipo de ordenamiento quieres,
+       digite el caracter 'a' para aplicar un ordenamiento alfabético y
+       presiona RET, las entradas son ordenadas.
+
+     - Vaya a la línea ECHO y presione C-c *.
+
+     - Presione C-x u para deshacer.
+
+     - En la línea ECHO presione C-n y luego presione C-a.
+
+     - Luego digite el texto '* TODO explain todo' (sin las comillas simples)
+       en la nueva entrada, esto le dirá a Org Mode que esta es una
+       'entrada TODO' y Org Mode la manejará apropiadamente.
+
+     - Presione C-e para ir al final de esa línea y presione M-S-RET para
+       agregar una nueva entrada TODO.
+
+   * DELTA
+
+     - FOXTROT
+
+     - ECHO
+
+4) Árboles esparcidos:
+
+   * Descripción
+
+     Org Mode permite construir árboles esparcidos de información desde
+     múltiples fuentes de información.
+
+   * Teclazo
+
+     C-c / => Construir un árbol esparcido.
+
+     M-g n => Saltar al próximo árbol esparcido.
+
+     M-g p => Saltar al árbol esparcido previo.
+
+     C-c C-c => Remove highlights.
+
+   * ÓRDENES
+
+     - Presione C-c /, un menú se mostrará con todas las the opciones para
+       construir un árbol esparcido.
+
+     - Presione la tecla 'r' para decirle a Emacs que queremos construir
+       un árbol esparcido usando una expresión regular.
+
+     - Cuando Emacs te pregunte por una expresión regular, digite el texto
+       '[0-9]+)' y presione RET, esto resaltará el número en cada conjunto
+       de instrucciones en el buffer actual (ej: 1), 2), 3), etc).
+
+     - Para ir a los tres subárboles próximos (o coincidencias de la
+       expresión regular), presione M-g n tres veces.
+
+     - Presione M-g p dos veces para regresar en los subárboles.
+
+     - Finalmente presione C-c C-c y observe como el resaltado se ha ido.
+
+5) Listas planas:
+
+   * Descripción
+
+     Existen múltiple tipos de listas que puedes crear usando org-mode:
+
+     - No-ordenada: Empieza con '-', '+' o '*'.
+
+     - Ordenada: Empieza con un número seguido de un punto ('.') o por
+       un parentésis (')').
+
+   * Teclazos
+
+     - M-RET => Inserta un nuevo encabezado, ítem o fila.
+
+     - C-S-RET => Inserta un nuevo ítem con casilla de verificación
+                  (checklist).
+
+     - S-UP/S-DOWN => Salte al previo/próximo ítem en la lista.
+       
+     - S-LEFT, S-RIGHT => Cambia el tipo de lista.
+
+     - M-LEFT, M-RIGHT => Incrementa o decrementa el nivel de indentación.
+
+     - C-c ^ => Ordena las entradas del mismo nivel.
+       
+     - M-UP / M-DOWN => Intercambia el ítem actual con el previo/siguiente.
+          
+   * ÓRDENES
+
+     - Vaya a la línea HOTEL.
+
+     - Presione M-RET.
+
+     - Presione C-x u para deshacer.
+
+     - Presione S-DOWN dos veces.
+
+     - Presione S-UP dos veces.
+
+     - En la línea HOTEL presione S-LEFT cinco veces.
+     
+     - Presione M-LEFT para promover la línea.
+
+     - Presione M-RIGHT para degradar la línea.
+
+     - Presione M-DOWN para intercambiar las líneas, luego presione M-UP
+       para intercambiarlas de vuelta.
+
+   * GOLF
+
+     - HOTEL De ahora en adelante solo hablaran cuando les hablen, y la
+       primera y última de las palabras que salga de sus inmundas cloacas
+       será 'Señor.' ¿Entienden eso gusanos?
+
+     - UNO Hijo, todo lo que alguna vez les pedí a mis soldados es que
+       obedezcan mis órdenes como si fueran palabra de Dios.
+
+     - DOS Señor, sí señor.
+
+6) Cajones:
+
+   * Descripción
+
+     Un cajón es un espacio en el que guardas información que quieres
+     conservar pero que no quieres que sea visible.
+
+     Un cajón puede crearse usando la siguiente sintaxis (sin las comillas):
+
+     ':DRAWERNAME:
+       Esta información está en el cajón
+     :END:'
+     
+   * Teclazo
+
+     C-c C-x d => Inserta un nuevo cajón.
+
+   * ÓRDENES
+
+     - Vaya a la línea INDIA y presione C-e.
+
+     - Presione C-c C-x d, Emacs te preguntará el nombre del cajón.
+
+     - Digite la palabra 'doom' y presione RET. Un nuevo cajón es insertado.
+
+   * INDIA
+
+7) Bloques:
+
+   * Descripción
+
+     Un bloque es usado para incluir código fuente y para capturar
+     información de bitácora.
+
+     Un bloque es creado usando la siguiente sintaxis:
+
+     #+BEGIN
+       Your text here.
+     #+END
+
+     Para código fuente puedes usar el siguiente formato:
+
+     #+BEGIN_SRC emacs-lisp
+       (princ (format "Hola, %s!\n" "Mundo"))
+     #+END_SRC
+
+   * Teclazos:
+
+     - <c TAB => Inserta un bloque de centrado de texto.
+
+     - <e TAB => Inserta un bloque de ejemplo.
+
+     - <l TAB => Inserta un bloque de Latex.
+
+     - <s TAB => Inserta un bloque de código.
+
+     - <q TAB => Inserta un bloque de cita.
+
+     - <v TAB => Inserta un bloque de verso.
+
+     - C-c C-c => Ejecuta código dentro de un bloque de código.
+
+   * ÓRDENES
+
+     - Vaya a la línea JULIET y presione C-n.
+
+     - Digite <s y presione TAB, un nuevo bloque de código se inserta.
+
+     - Justo después del texto '#+BEGIN_SRC', insert un espacio en blanco y
+       luego digite el texto 'emacs-lisp' (como en el ejemplo previo).
+
+     - Dentro del nuevo bloque de código digite el siguiente texto:
+
+       (princ (format "Hola, %s!\n" "Mundo"))
+
+     - Presione C-c C-c dentro del bloque, Emacs te preguntará (por razones
+       de seguridad) si quieres evaluar (ejecutar) el código en el bloque,
+       digite 'sí' y presione RET. Org añadirá una sección '#+RESULTS:' para
+       que puedas ver los resultados de la ejecución.
+
+   * JULIET
+
+     
+   * NOTAS
+
+     - Puedes esconder todos los bloques al abrir un archivo Org añadiéndole
+       el siguiente texto:
+
+       #+STARTUP: hideblocks
+
+     - Puedes mostrar todos los bloques al abrir un archivo Org añadiéndole
+       el siguiente texto:
+
+       #+STARTUP: nohideblocks
+
+Buen trabajo soldado, ahora puedes tomarte 10 minutos libres ...       

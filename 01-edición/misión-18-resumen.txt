@@ -1,0 +1,239 @@
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #18: Resumen Edición
+----------------------------------------------------------------------------
+
+Teclazos
+............................................................................
+
+La lista de todos los teclazos usados en las misiones de edición se
+muestra a continuación.
+
+Teclazos de Emacs
+............................................................................
+
+C-h C-h => Muestra el menú de ayuda.
+
+C-h => Muestra el menú de ayuda.
+
+C-d => Borra el caracter bajo el punto.
+
+<BACKSPACE> => Borra el caracter previo.
+
+C-j => Agrega una nueva línea y mueve le punto a la nueva línea.
+
+C-o => Agrega una nueva línea y mantiene el punto en la línea original.
+
+C-x C-o => Borra las próximas líneas en blanco.
+
+M-d => Mata la próxima palabra.
+
+C-<BACKSPACE> => Mata la palabra previa.
+
+C-k => Mata el texto desde la posición adonde está el punto hasta el final
+       de la misma línea.
+
+M-k => Mata el texto desde la posición adonde está el punto hasta el final
+       de la oración.
+
+C-M-k => Mata la próxima expresión sintáctica balanceada.
+
+C-S-<BACKSPACE> => Mata la línea actual.
+
+C-y => Pega texto.
+
+M-y => Cicla en el anillo kill.
+
+C-M-w => Agrega a la entrada actual del anillo kill.
+
+M-w => Copia la región activa.
+
+C-w => Corta la región activa.
+
+C-t => Transpone el caracter bajo el punto con el anterior.
+
+M-t => Transpone la palabra bajo el punto con la anterior.
+
+C-x C-t => Transpone la línea actual con la previa.
+
+M-q => Llena el párrafo.
+
+C-S-e => Selecciona la región desde el punto hasta el final de la línea.
+
+C-S-a => Selecciona la región desde el punto hata el inicio de la línea.
+
+M-; => Comenta o descomenta.
+
+C-x C-; => Comenta o descomenta la línea actual.
+
+M-u => Cambia la próxima palabra a mayúscula.
+
+M-l => Cambia la próxima palabra a minúscula.
+
+M-c => Capitaliza la próxima palabra.
+
+M-x cou-w => Cuenta el número de palabras en el buffer.
+
+Ó
+
+M-x count-words
+
+M-x cou-w-r => Cuenta el número de palabras en al región seleccionada.
+
+Ó
+
+M-x count-words-region
+
+C-x l => Cuenta el número de líneas en el buffer.
+
+M-a => Vaya al principio de la línea actual o al principio de la línea
+       previa si ya estás al principio de la actual.
+
+M-e => Vaya al final de la línea actual o al final de la próxima línea
+       si ya estás al final de la línea actual.
+
+TAB => Indenta la línea actual
+
+M-C-\ => Indenta una región.
+
+C-x TAB => Indentar manualmente como un bloque de texto.
+
+M-z => Zap, mata el texto desde la posición del punto hasta un caracter
+       arbitrario.
+
+M-x so-l => Ordena líneas alfabéticamente.
+
+Ó
+
+M-x sort-lines
+
+M-x so-f => Ordena líneas lexicográficamente.
+
+Ó
+
+M-x sort-fields
+
+M-x so-n => Ordena líneas numéricamente.
+
+Ó
+
+M-x sort-numeric
+
+M-x rev-r => Reversa el ordenamiento.
+
+Ó
+
+M-x reverse-region
+
+M-x so-c => Ordena por columna.
+
+Ó
+
+M-x sort-columns
+
+M-/ => Expande la palabra antes del punto como un abbrev dinámico (DAbbrev).
+
+C-M-/ => Completa la palabra antes del punto como un abbrev dinámico.
+
+M-% => Búsqueda y reemplazo interactivo en al region activa, o desde la
+       posición del punto hasta el final del buffer si no existe región
+       activa.
+
+C-M-% => Búsqueda y reemplazo interactivo usando una expresión regular
+         en la región activa o desde la posición del punto hasta el final
+         del buffer si no existe una región activa.
+
+M-x d-du => Borra todas las líneas duplicadas.
+
+Ó
+
+M-x delete-duplicate-lines
+
+M-x flu => Borra todas las líneas que coinciden con una expresión regular.
+
+Ó
+
+M-x flush-lines
+
+M-x kee => Mantiene solamente las líneas que coinciden con una expresión
+           regular.
+
+Ó
+
+M-x keep-lines
+
+M-x hip => Expande palabras usando hippie-expand.
+
+Ó
+
+M-x hippie-expand
+
+M-$ => Verifica la ortografía de la palabra antes del punto.
+
+M-x isp-r => Verifica los errores ortográficos en las región activa.
+
+Ó
+
+M-x ispell-region
+
+M-x flys-m => Modo menor flyspell que resalta los errores ortográficos.
+
+Ó
+
+M-x flyspell-mode
+
+M-x l-pac => Lista todos los paquetes MELPA disponibles.
+
+Ó
+
+M-x list-packages
+
+M-x p-ins RET <package-name> RET => Instala un paquete.
+
+Ó
+
+M-x package-install
+
+
+En un buffer de Menú de Ayuda
+............................................................................
+
+<SPC> => Hacer scroll hacia abajo en el menú de ayuda.
+
+DEL => Hacer scroll hacia arriba en el menú de ayuda.
+
+c <Type keybinding> => Muestra el comando que un teclazo ejecuta (digitando
+                       el nombre de un comando).
+
+a <TOPIC> => Función apropos, muestra información sobre un tópico (ej: al
+             digitar el nombre de un comando).
+
+k <COMMAND> => Muestra documentación que describe un comando (al digitar
+               un teclazo).
+
+q => Quita el menú de ayuda.
+
+
+En un buffer de Búsqueda y Reemplazo
+............................................................................
+
+y => Cambie la coincidencia de búsqueda actual (decir sí) y moverse a la
+     próxima.
+
+n => No cambie la coincidencia actual (diga no) y muévase a la siguiente.
+
+! => Cambie todas las coincidencias que encuentre (decir sí a todo).
+
+q => Quitar la búsqueda y reemplazo.
+
+
+Cuando el Modo Flyspell está habilitado
+............................................................................
+
+C-M-i => Auto-corregir la palabra antes del punto.
+
+Buen trabajo soldado, has ascendido un rango y estás calificado para
+avanzar a las misiones de entrenamiento de las fuerzas especiales.

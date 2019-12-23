@@ -1,0 +1,145 @@
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #09: Movement Summary
+----------------------------------------------------------------------------
+
+Keybindings
+............................................................................
+
+The list of all the keybindings used on the movement missions is shown below:
+
+Emacs Keybindings
+............................................................................
+
+C-n => Move the point down one line.
+
+C-p => Move the point up one line.
+
+C-e => Go the end of the line.
+
+C-a => Go to the beggining of the line.
+
+C-f => Move the point one character right.
+
+C-b => Move the point one character left.
+
+M-m => Move the point to the first non-space character on line.
+
+C-l => Center the view.
+
+C-x C-c => Exit Emacs.
+
+C-d => Delete the character under the point.
+
+C-x u => Undo the last action.
+
+C-x C-s => Save the current buffer to disk.
+
+C-x C-f => Opens a file by using a file path.
+
+C-x C-k => Kills (closes) a buffer.
+
+C-x b <type buffer name> RET => Create a new buffer.
+
+C-x b => Move between buffers.
+
+C-x C-b => List all open buffers.
+
+C-x o => Jump to the other window.
+
+C-x 1 => Displays only the current window.
+
+C-x 0 => Displays the other window only.
+
+C-x 2 => Splits the current window horizontally.
+
+C-x 3 => Divide the current window vertically.
+
+M-f => Move one word forward.
+
+M-b => Move one word backward.
+
+C-M-f => Move forward on a balanced expression.
+
+C-M-b => Move backward on a balanced expression.
+
+M-} => Jump to the next paragraph.
+
+M-{ => Jump to the previous paragraph.
+
+C-v => Move one screen down.
+
+M-v => Move one screen up.
+
+M-> => Move to the end of the buffer.
+
+M-< => Move to the beggining of the buffer.
+
+M-g g => Go to line number.
+
+C-M-v => Scroll the other window down.
+
+C-M-S-v => Scroll the other window up.
+
+C-<SPC> => Set the mark at the point.
+
+C-x C-x => Exchange the point and the mark.
+
+M-@ => Select next word.
+
+C-u # => Pass the universal argument.
+
+M-h => Select next paragraph.
+
+C-x h => Mark all the buffer.
+
+C-x r m => Set a bookmark.
+
+C-x r l => Show the list of bookmarks.
+
+C-x r b => Jump to a bookmark.
+
+M-x bookmark-delete => Delets a bookmark.
+
+C-x r <SPC> => Store the point position on a register.
+
+C-x r j <Cont to three> => List all register.
+
+C-x r j => Jump to a register.
+
+C-s => Start the incremental search.
+
+C-r => Start the incremental reverse search.
+
+C-M-s => Start the incremental search by regular expression.
+
+C-M-r => Start the incremental search by regular expression backward.
+
+M-x occur RET => Start the occur mode.
+
+M-x multi-occur-in-matching-buffers => Start the multi-occur search.
+
+Occur Mode Commands
+............................................................................
+
+The following list of commands must be executed inside an Occur Mode buffer:
+
+M-n => Move to the next occur match.
+
+M-p => Move to the previous occur match.
+
+> => Jump to the end of the occur buffer.
+
+< => Jump to the beggining of the occur buffer.
+
+g => Refresh the occur mode search.
+
+e => Enable the occur editor mode.
+
+q => Quit the occur mode.
+
+
+Great Job soldier, you achieve one rank up.

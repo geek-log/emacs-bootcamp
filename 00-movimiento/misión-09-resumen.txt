@@ -1,0 +1,147 @@
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #09: Resumen Movimiento
+----------------------------------------------------------------------------
+
+Teclazos
+............................................................................
+
+La lista de todos los teclazos usados en las misiones de movimiento se
+muestra a continuación.
+
+Teclazos de Emacs
+............................................................................
+
+C-n => Mueve el punto una línea abajo.
+
+C-p => Mueve el punto una línea arriba.
+
+C-e => Ir al final de la línea.
+
+C-a => Ir al inicio de la línea.
+
+C-f => Mover el punto un caracter a la derecha.
+
+C-b => Mover el punto un caracter a la izquierda.
+
+M-m => Mover el punto al primer caracter no-espacio de la línea.
+
+C-l => Centrar la vista.
+
+C-x C-c => Salir de Emacs.
+
+C-d => Borrar el caracter bajo el punto.
+
+C-x u => Deshacer la última acción.
+
+C-x C-s => Salvar el buffer actual al disco.
+
+C-x C-f => Abre un archivo usando una ruta de archivo.
+
+C-x C-k => Mata (cierra) el buffer.
+
+C-x b <escriba el nombre del buffer> RET => Crea un nuevo buffer.
+
+C-x b => Moverse entre buffers.
+
+C-x C-b => Listar todos los buffers abiertos.
+
+C-x o => Saltar a la otra ventana.
+
+C-x 1 => Despliega únicamente la ventana actual.
+
+C-x 0 => Despliega únicamente la otra ventana.
+
+C-x 2 => Divide la ventana actual horizontalmente.
+
+C-x 3 => Divide la ventana actual verticalmente.
+
+M-f => Moverse una palabra hacia adelante.
+
+M-b => Moverse una palabra hacia atrás.
+
+C-M-f => Moverse hacia adelante en una expresión balanceada.
+
+C-M-b => Moverse hacia atrás en una expresión balanceada.
+
+M-} => Saltar al próximo párrafo.
+
+M-{ => Saltar al párrafo previo.
+
+C-v => Moverse una pantalla abajo.
+
+M-v => Moverse una pantalla arriba.
+
+M-> => Moverse al final del buffer.
+
+M-< => Moverse al principio del buffer.
+
+M-g g => Ir a la línea número.
+
+C-M-v => Hacer scroll hacia abajo en la otra ventana.
+
+C-M-S-v => Hacer scroll hacia arriba en la otra ventana.
+
+C-<SPC> => Poner la marca en el punto.
+
+C-x C-x => Intercambiar el punto y la marca.
+
+M-@ => Seleccionar la próxima palabra.
+
+C-u # => Pasar el argumento universal.
+
+M-h => Seleccionar el próximo párrafo.
+
+C-x h => Marcar todo el buffer.
+
+C-x r m => Poner un bookmark.
+
+C-x r l => Mostrar la lista de bookmarks.
+
+C-x r b => Saltar a un bookmark.
+
+M-x bookmark-delete => Borrar un bookmark.
+
+C-x r <SPC> => Guardar la posición del punto en un registro.
+
+C-x r j <Contar hasta tres> => Listar todos los registros.
+
+C-x r j => Saltar a un registro.
+
+C-s => Iniciar la búsqueda incremental.
+
+C-r => Iniciar la búsqueda incremental reversa.
+
+C-M-s => Iniciar la búsqueda incremental por expresión regular.
+
+C-M-r => Iniciar la búsqueda incremental por expresión regular reversa.
+
+M-x occur RET => Iniciar el modo occur.
+
+M-x multi-occur-in-matching-buffers => Iniciar la búqueda multi-occur.
+
+Comandos del Modo Occur
+............................................................................
+
+La siguiente lista de comandos debe ejecutar dentro de un buffer en modo
+Occur:
+
+M-n => Moverse a la próxima coincidencia de occur.
+
+M-p => Moverse a la coincidencia previa de occur.
+
+> => Saltar al final del buffer occur.
+
+< => Saltar al inicio del buffer occur.
+
+g => Refrescar la búsqueda occur.
+
+e => Habilitar el modo editor de occur.
+
+q => Salir del modo occur.
+
+
+Buen trabajo soldado, has ascendido un rango.

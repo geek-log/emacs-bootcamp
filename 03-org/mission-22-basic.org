@@ -1,0 +1,371 @@
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+Mission #22: First Steps with Org-Mode
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+Note that this file has an ".org" extension and not a ".txt" extension like
+all the previous mission files, this is because this is an "Org file".
+
+Org files are edited using the Emacs Major Mode named "Org Mode" or
+"organizational mode". If you check the Modeline (the text area above
+the minibuffer), it says "(Org)".
+
+This mode allow us to use Emacs to write and manage information in an agile
+way, so it conforms to the changing flow of our thoughts (mind like water
+and all that).
+
+Org Mode has many features, some of them are:
+
+- Handle lists of items.
+
+- Handle todo lists.
+
+- Handle trees and subtrees of information in a dynamic way.
+  
+- Handle a diary.
+
+- Handle an agenda.
+
+- Handle a calendar and calendar events.
+  
+- Use events reminders.
+
+- Export to many formats.
+
+- Include working blocks of code in multiple languages.
+
+- Allows to insert multimedia.
+
+- Handle tabular information.
+
+Mission
+............................................................................
+
+1) Cycling heading states:
+
+   * Description
+      
+     Org-mode it's all about trees (or subtrees) of information,
+     each node on an information subtree corresponds to a heading on an
+     "Org document".
+
+     There are multiple ways to define a heading, the most common way is to
+     use the '*' symbol, another option could be use numbers to define
+     a numeric list.
+     
+   * Keybindings
+
+     - TAB => Cycle through heading states: folded > child > subtree.
+
+     - C-u C-u RET => Restarts to initial visibility.
+
+     - C-u C-u C-u RET => Show all including drawers.
+
+   * ORDERS
+    
+     - Read all instructions first.
+        
+     - Put the point over the line that contains the '1' number.
+        
+     - Press TAB, the text on this ORDERS will be hidden and only the
+       heading line is visible, this is the 'folded' state.
+        
+     - If you press TAB again more text is visible but on some lines the
+       text is not fully displayed and three periods (...) are displayed
+       to indicate that there are more text.
+        
+     - If you press TAB a third time then all the text is showed, this is
+       the 'subtree' state.
+
+     - Now that you know how to fold things fold the set of instructions
+       1 and go to set 2.
+
+2) Inserting items:
+
+   * Keybindings
+
+     - M-RET => Insert a new heading, item or row.
+
+     - C-RET => Insert a new heading at the end.
+
+     - M-UP / M-DOWN => Switch the current item with the previous/next one.
+
+     - M-LEFT => Promotes the current heading one level up.
+
+     - M-RIGHT => Demotes the current heading one level down.
+
+   * ORDERS
+
+     - Read all instructions first.
+
+     - Press C-RET to insert a new heading at the end.
+
+     - Press C-x u to undo.
+       
+     - Go to the ALPHA line and press C-a, then press M-RET.
+
+     - Press C-x u to undo.
+
+     - Go to the ALPHA line and press C-e, then press M-RET.
+
+     - Press C-x u to undo.
+
+     - Go to the BRAVO line and press C-e, then press M-RET.
+
+     - Press C-x u to undo.
+
+     - On the BRAVO line press M-UP and then press M-DOWN.
+
+     - On the ALPHA line press M-RIGHT and then press M-LEFT.
+
+     - On the ALPHA line press M-S-RIGHT and then press M-S-LEFT two times,
+       then press one more time M-S-RIGHT.
+
+   * ALPHA
+
+     - BRAVO
+
+     - CHARLIE
+
+3) Entries manipulation:
+
+   * Keybinding
+
+     C-c ^ => Order same level entries.
+
+     C-c * => Turn normal line into a heading.
+
+     Add TODO to a heading => Turn heading into a TODO item.
+
+     M-S RET => Add a new TODO entry below the current one.
+
+   * ORDERS
+
+     - Go to the FOXTROT line.
+
+     - Press C-c ^, Emacs will ask you what type ordering you want, type the
+       'a' character to apply an alphabetic order and press RET, the
+       entries are ordered.
+
+     - Go to the ECHO line and press C-c *.
+
+     - Press C-x u to undo.
+
+     - On the ECHO line press C-n and then press C-a.
+
+     - Then type the text '* TODO explain todo' (without the single quotes)
+       on the newly created entry, this will tell Org Mode that this is a
+       'TODO entry' and Org Mode will handle it appropriately.
+
+     - Press C-e to go to end of that line and press M-S RET to add a new
+       TODO entry.
+
+   * DELTA
+
+     - FOXTROT
+
+     - ECHO
+       
+4) Sparse trees:
+
+   * Description
+
+     Org Mode allows to build sparse trees of information from multiple
+     information sources.
+
+   * Keybindings
+
+     C-c / => Build sparse tree.
+
+     M-g n => Jump to next sparse tree.
+
+     M-g p => Jump to previous sparse tree.
+
+     C-c C-c => Remove highlights.
+
+   * ORDERS
+
+     - Press C-c /, a menu will show with all the options to build
+       a sparse tree.
+
+     - Press the 'r' key to tell Emacs that we want to build a sparse tree
+       using a regular expression.
+
+     - When Emacs ask you for a regular expression, type the text '[0-9]+)'
+       and press RET, this will highlight the number on each set of
+       instructions on the current buffer (i.e.: 1), 2), 3), and so on).
+
+     - To go to the next three subtrees (or regexp matches), press M-g n
+       three times.
+
+     - Press M-g p twice to go back on the subtrees.
+
+     - Finally press C-c C-c and see how the highlighting is gone.
+
+5) Plain lists:
+
+   * Description
+
+     There are multiple types of lists that you can create using org-mode:
+
+     - Unnordered: Starts with '-', '+' or '*'.
+
+     - Ordered: Starts with a number followed by a period ('.') or by
+       a parenthesis (')').
+
+   * Keybindings
+
+     - M-RET => Insert a new heading, item or row.
+
+     - C-S-RET => Insert a new checklist item.
+
+     - S-UP/S-DOWN => Jump to previous/next item on the list.
+
+     - S-LEFT, S-RIGHT => Change the type of list.
+
+     - M-LEFT, M-RIGHT => Increment or decrement the level of identation.
+
+     - C-c ^ => Order same level entries.
+
+     - M-UP / M-DOWN => Switch the current item with the previous/next one.
+     
+   * ORDERS
+
+     - Go to the HOTEL line.
+
+     - Press M-RET.
+
+     - Press C-x u to undo.
+
+     - Press S-DOWN two times.
+
+     - Press S-UP two times.
+     
+     - On the HOTEL line press M-S-RET.
+
+     - Press C-x u to undo.
+
+     - On the HOTEL line press S-LEFT five times.
+
+     - Press M-LEFT to promote the line.
+
+     - Press M-RIGHT to demote the line.
+
+     - Press M-DOWN to switch the lines, then press M-UP to switch back.
+
+   * GOLF
+
+     * HOTEL From now on you will speak only when spoken to, and the first
+       and last words out of your filthy sewers will be 'Sir.'
+       Do you maggots understand that?
+
+     * ONE Son, all I've ever asked of my Marines is that they obey my
+       orders as they would the word of God.
+
+     * TWO Sir, yes, sir.
+
+6) Drawers:
+
+   * Description
+
+     A drawer is an space where you keep information that you wish
+     to keep but that you don't want to be visible.
+
+     A drawer can be created by using the following syntax (without the
+     simple quotes):
+
+     ':DRAWERNAME:
+       This information is on the Drawer
+     :END:'
+     
+   * Keybindings
+
+     C-c C-x d => Inserts a new drawer.
+
+   * ORDERS
+
+     - Go to the INDIA line and press C-e.
+
+     - Press C-c C-x d, Emacs will ask you for a Drawer's name.
+
+     - Type the word 'doom' and press RET. A new drawer will be
+       inserted.
+
+   * INDIA
+
+7) Blocks:
+
+   * Description
+
+     A block is used to include source code and to capture logging
+     information.
+
+     A block is created using the following syntax:
+
+     #+BEGIN
+       Your text here.
+     #+END
+
+     For source code you can use the following format:
+
+     #+BEGIN_SRC emacs-lisp
+       (princ (format "Hello, %s!\n" "World"))
+     #+END_SRC
+
+   * Keybindings:
+
+     - <c TAB => Insert a center text block.
+
+     - <e TAB => Insert an example block.
+
+     - <l TAB => Insert a latex block.
+
+     - <s TAB => Insert a code block.
+
+     - <q TAB => Insert a quote block.
+
+     - <v TAB => Insert a verse block.
+
+     - C-c C-c => Execute code on source code block.
+
+   * ORDERS
+
+     - Go to the JULIET line and press C-n.
+
+     - Type <s and press TAB, a new code block gets inserted.
+
+     - Just after the '#+BEGIN_SRC' text, insert a blank space and then
+       type the text 'emacs-lisp' (as the example above).
+
+     - Inside the new code block paste the following text:
+
+       (princ (format "Hello, %s!\n" "World"))
+
+     - Press C-c C-c inside the block, Emacs will ask you (for security
+       reasons) if you want to evaluate (execute) the code on the block,
+       type 'yes' and press RET. Org will add a '#+RESULTS:' section for
+       you so you can see the results of the execution.
+
+   * JULIET
+
+     
+   * NOTES
+
+     - You can hide all blocks when opening an Org file by adding the
+       following text to it:
+
+       #+STARTUP: hideblocks
+
+     - You can show all blocks when opening an Org file by adding the
+       following text to it:
+
+       #+STARTUP: nohideblocks
+     
+Good job soldier, now you can take 10 minutes off ...

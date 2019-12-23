@@ -1,0 +1,47 @@
+NO TOQUES nada aún!!!
+NO seas tan mono, sigue leyendo hasta que recibas tus ÓRDENES.
+HAZ SOLO lo que te digan que hagas.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #01: Hacer, deshacer, rehacer.
+----------------------------------------------------------------------------
+
+1) Borrando un caracter:
+
+   Teclazo: C-d => Borra el caracter bajo el punto.
+
+   Tus ÓRDENES: Vaya al inicio de la línea ALPHA y  borre la A al presionar
+   C-d y NO TOQUE nada más.
+
+ALPHA
+
+2) Deshacer una acción:
+
+   Teclazo: C-x u => Deshacer la última acción.
+
+   Tus ÓRDENES: Ahora presione C-x u para deshacer la última acción realizada.
+   Luego vaya hasta la línea BRAVO.
+
+3) Deshacer el deshacer:
+
+   Categoría: Trucazo.
+
+   Descripción: Emacs no incluye un comando para rehacer acciones (redo),
+   para realizar una acción de 'rehacer' debes quebrar el anillo 'undo'.
+
+   Tus ÓRDENES:
+     - Al final de la línea BRAVO agregue un O extra, debe ser BRAVOO ahora.
+     - Deshaga el agregado de la O extra oprimiendo C-x u.
+     - Ahora, ¿Cómo rehago la acción?: Haz otra cosa que no sea deshacer,
+       OPRIME AHORA C-n.
+     - Oprime de nuevo C-x u para hacer que el deshacer trabaje como un
+       rehacer.
+
+BRAVO
+
+Buen trabajo soldado, ahora puedes descansar 4 minutos ...

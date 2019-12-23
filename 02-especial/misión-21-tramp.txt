@@ -1,0 +1,330 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de la fuerzas
+especiales.
+
+Aquí aprenderás a usar comandos más avanzados.
+
+Misión #21: Usando TRAMP
+...........................................................................
+
+Resumen
+...........................................................................
+
+"Esta tiene que ser la misión más grandiosa de todos los tiempos." - Un
+soldado regular.
+
+En esta misión haremos los siguiente:
+
+- Configurar tus llaves ssh.
+
+- Instalar y configurar KVM.
+
+- Crear una máquina virtual de Debian.
+
+- Acceder a la máquina virtual via buffer terminal.
+
+- Acceder a la máquina virtual via TRAMP.
+
+Requerimientos
+............................................................................
+
+Para completar esta misión necesitarás:
+
+- El programa 'sudo' instalado.
+
+- Acceso como usuario sudo (o como usuario root).
+
+Definiciones
+...........................................................................
+
+TRAMP: El editor de archivos remotos de Emamcs, es usado para administrar
+       archivos y directorio remotamente. Te permite de manera transparente
+       acceder a los archivos en el húesped remoto. "Transparente" significa
+       que usualmente el usuario no necesita tener preocuparse sobre nada.
+
+       Las conexiones TRAMP usan la siguiente sintaxis:
+
+           /protocol:[user@hostname[#port]]:
+
+       Donde el protocolo puede ser algo como ssh, scp o sftp. Cuando se
+       usa con ssh TRAMP revisará el archivo de configuración ~/.ssh/config.
+
+Misión
+...........................................................................
+
+01) Configurando SSH:
+
+    Descripción: Aquí necesitamos configurar nuestras llaves ssh para que
+                 todo funcione bien.
+
+    ÓRDENES:
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana de abajo.
+
+      - Presione M-x, digite 'term' y luego presione RET dos veces para
+        llamar a la terminal.
+
+      - Vamos a instalar el programa 'openssh-client' que usaremos
+        luego para acceder al servidor ssh. En un buffer terminal digite
+        el siguiente comando, presione RET y ESPERE A QUE 'openssh-client'
+        se instale:
+
+            sudo apt install -y openssh-client
+
+      - El siguiente paso es generar un par de llaves ssh (si no tienes ya
+        unas), en el buffer terminal digite el siguiente comando y
+        presione RET:
+
+            ssh-keygen -t rsa -b 4096 -C "tu_usuario@tu_correo.com"
+
+        El programa "ssh-keygen" TE PREGUNTARÁ las siguientes tres preguntas:
+
+Enter file in which to save the key (/home/doom/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again:
+
+        Puedes presionar RET para todas las preguntas, cuando el siguiente
+        texto se muestre, tus llaves habrán sido creadas:
+
+Your identification has been saved in /home/doom/.ssh/id_rsa.
+Your public key has been saved in /home/doom/.ssh/id_rsa.pub.
+
+      - Usemos Dired para verificar que todo va bien. En el buffer terminal,
+        presione C-c C-j para habilitar el estado 'line run', luego
+        presione C-x d, Emacs the PREGUNTARÁ por una ruta, borre la ruta
+        predeterminada que aparece en el minibuffer, digite la siguiente
+        ruta y presione RET:
+
+            ~/.ssh
+
+        En Dired, debes ver un listado similar al siguiente:
+
+  -rw-------   1 doom doom 3401 oct 25 11:48 id_rsa
+  -rw-r--r--   1 doom doom  754 oct 25 11:48 id_rsa.pub
+
+      - Presione 'q' para salir de Dired.
+
+      - Digite 'exit' en el buffer terminal y presione RET, luego presione
+        C-x 0 para desplegar solamente este buffer.
+
+02) Configurando KVM, Usando TRAMP:
+
+    Descripción: KVM o el Kernel Virtual Machine es una tecnología
+                 para crear máquinas virtuales para Linux.
+
+    ÓRDENES:
+      - Lea todas las instrucciones primero.
+
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana inferior
+
+      - Presione M-x, digite 'term' y presione RET dos veces para mostrar
+        un buffer de terminal.
+
+      - En el buffer terminal digite el siguiente comando y presione RET:
+
+sudo apt install -y libvirt-daemon qemu-kvm ssh-askpass virt-manager virtinst
+
+        Digite el password para 'sudo', presione RET y ESPERE a que KVM se
+        instale.
+
+      - Una vez que todo está instalado digite el próximo comando y
+        presione RET:
+
+            sudo usermod -a -G kvm, libvir,libvirt-qemu,libvirtd $(whoami)
+
+      - Para confirmar que has sido añadido a los grupos, en un buffer de
+        terminal digite el comando (y presione RET):
+
+          groups
+
+        Esto desplegará un listado de los grupos en los que estás, por
+        ejemplo:
+
+          doom sudo kvm libvirt libvirt-qemu libvirtd
+
+      - Vamos a necesitar un ISO de Debian así que vamos a descargar uno,
+        en el buffer terminal digite (y presione RET):
+
+            wget https://is.gd/lFsc1R -O debian.iso
+
+        Esto se conectará al URL
+        http://espejos.ucr.ac.cr/debian-cd/current/amd64/iso-cd/ y
+        traerá un Debian netinstall, puedes cambiar ese URL por otro si
+        quieres.
+
+        ESPERA a que Debian se descargue.
+
+      - Para asegurar que todo salga bien, ejecute el siguiente comnado
+        en un buffer terminal:
+
+            su $(whoami)
+
+        Esto te preguntará por tu contraseña, digítela y presione RET.
+
+      - Crearemos el directorio /var/lib/libvirt/isos para copiar ahí
+        el archivo ISO de Debian para evitar errores de permisos en
+        cualquiera de los siguientes pasos, digite el siguiente comando y
+        presione RET:
+
+            sudo mkdir /var/lib/libvirt/isos
+
+      - Y copie ahí el ISO de Debian descargado:
+
+sudo cp /home/doom/emacs-bootcamp/02-special/debian.iso /var/lib/libvirt/isos
+
+      - Ahora estamos listos para construir la máquina virtual con Debian,
+        ejecute el siguiente comando en un buffer terminal:
+
+virt-install --connect qemu:///system -n buster -r 2048 --vcpus=2 --disk path=/var/lib/libvirt/images/buster.img,size=14 -c /var/lib/libvirt/isos/debian.iso --vnc --os-type linux --os-variant debian10 --accelerate --network=bridge:virbr0 --hvm
+
+        Esto abrirá una ventan 'popup' con la instalación para Debian. VAYA
+        e instale el Debian virtual y regrese aquí una vez que hayas
+        finalizado con eso. ASEGÚRATE de DESMARCAR la opción
+        'Ambiente de Escritorio' y de MARCAR la opción 'Servidor SSH'
+        cuando SE TE PREGUNTA durante la selección de paquetes de la
+        instalación. NECESITAMOS ssh en los próximos pasos para conectarnos
+        via TRAMP. También puedes DESMARCAR la opción
+        'Servidor de Impresión'.
+
+        NOTA: Dr Doom usó como todos los nombres de usuario y todas
+              las contraseñas la palabra 'debian'.
+
+      - Cuando Debian arranca, ingrese en él y ejecute el siguiente
+        comando:
+
+            ip a s
+
+        Esto mostrará una salida similar a la siguiente:
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 18:03:73:9b:c6:03 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.193/24 brd 192.168.122.255 scope global dynamic enp2s0
+      valid_lft 3532sec preferred_lft 3532sec
+
+      La línea que necesitamos buscar es la que dice
+      'inet 192.168.122.193' ya que esta es la DIRECCIÓN IP de nuestro
+      Debian virtual y la que vamos a usar para conectarnos a él.
+
+    - Sálgase del Debian virtual y vuelva a Emacs, AHORA el buffer de
+      terminal no está disponible ya que está corriendo KVM. Así que
+      PONGA EL PUNTO EN ESTE BUFFER y presione C-x 1.
+
+    - Presione C-x 2 para dividir el marco en dos ventanas.
+
+    - Presione C-x o para saltar a la ventana de abajo.
+
+    - Presione M-x, PERO ESTA VEZ en vez de digitar 'term', digite la
+      palabra 'eshell' y presione RET.
+
+    - 'eshell' es otra terminal incluída en Emacs, en este buffer de
+      terminal nuevo digite el siguiente comando (reemplazando virtualuser
+      con el usuario que creaste durante la instalación) y presione RET,
+      NOTE que en este comando USAMOS la DIRECCIÓN IP que habíamos
+      obtenido antes:
+
+          ssh virtualuser@192.168.122.193
+
+      Cuando ssh te pregunte:
+
+           'Are you sure you want to continue connecting (yes/no)? '
+
+      Dígite 'sí' y presione RET, luego digite la contraseña que
+      usaste durante la instalación de Debian y presione RET. Ingresarás
+      al Debian virtual via ssh.
+
+    - Ahora que estamos dentro del Debian virtual, vamos a crear un archivo
+      aquí, primero vamos a verificar en que ruta estamos, digite el
+      próximo comando y presione RET:
+
+          pwd
+
+      Este comando debe imprimir una ruta similar a la siguiente:
+
+          /home/debian
+
+      Digite el siguiente comando y presione RET para crear un archivo
+      llamado 'doom.txt' dentro del Debian virtual:
+
+          echo 'Dr Doom' > doom.txt
+
+      Puedes verificar si el archivo fué creado al correr el comando 'ls':
+
+          debian@debian:~$ ls
+          doom.txt
+
+    - Digite 'exit' y presione RET para salir de la terminal 'eshell'. Luego
+      presione C-x 0 para mostrar solamente esta ventana.
+
+    - Presione C-x 2 para dividir el marco en dos ventanas.
+
+    - Presione C-x o para saltar a la ventana inferior.
+
+    - Ahora tenemos un archivo remoto para editar via TRAMP, presione
+      C-x C-f, borre toda la ruta de archivo que está desplegada en el
+      minibuffer y digite esta otra en su lugar:
+
+          /ssh:debian@192.168.122.193:/home/debian/doom.txt
+
+      Presione RET y Emacs te preguntará por una contraseña de ssh, digite
+      la contraseña que usaste durante la instalación de Debian y presione
+      RET, un buffer NUEVO se abre para el archivo 'doom.txt' y las
+      palabras 'Dr Doom' se muestran.
+
+    - Como este buffer CORRESPONDE con un archivo remoto (doom.txt), si
+      usamos cualquier comando de terminal, cualquier comando Dired o
+      cualquier comando de creación de buffer dentro de este buffer remoto,
+      se ejecutará remotamente, vamos a llamar a Dired al oprimir
+      C-x d RET, un listado de archivos similar al siguiente se despliega:
+
+       /ssh:debian@192.168.122.193:/home/debian:
+       total 28
+       drwxr-xr-x 2 debian debian 4096 Dec 17 19:45 .
+       drwxr-xr-x 3 root   root   4096 Dec 17 19:20 ..
+       -rw------- 1 debian debian  224 Dec 17 19:49 .bash_history
+       -rw-r--r-- 1 debian debian  220 Dec 17 19:20 .bash_logout
+       -rw-r--r-- 1 debian debian 3526 Dec 17 19:20 .bashrc
+       -rw-r--r-- 1 debian debian  807 Dec 17 19:20 .profile
+       -rw-r--r-- 1 debian debian    8 Dec 17 19:42 doom.txt
+
+       ESTO quiere decir que estamos usando un Emacs local para acceder
+       a archivos remotos, ¿GENIAL no es así?
+
+     - En el buffer Dired remoto presione M-x, digite 'shell' y presione
+       RET dos veces, el comando 'shell' ejecuta aún otra shell de Emacs,
+       esta vez como estamos llamando este comando desde un buffer remoto,
+       el buffer terminal 'shell' se abre directamente en el Debian virtual.
+       
+
+       NOTA: POR CIERTO este nuevo buffer 'shell' se abrirá encima de
+             este buffer (del que estás leyendo) así que cuando hayas
+             terminado de jugar con esta 'shell' remota, digite el comando
+             'exit', presione RET y luego presione C-x k RET para volver
+             a este buffer.
+
+     - Cuando el punto esté en este buffer presione C-x 1 para mostrar
+       solamente esta ventana.
+
+     - Puedes apagar la máquina virtual de Debian usando el siguiente
+       comando:
+
+           sudo systemctl poweroff
+
+     - Finalmente cierre Emacs con C-x C-c.
+
+Buen trabajo soldado, ahora puedes descansar 4 minutos ...

@@ -1,0 +1,280 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #17: Autocomplete, Autocorrect and MELPA
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn:
+   - How to use text completion.
+   - How to modify Emacs 'init.el' file.
+   - How to fix ortographical errors.
+   - How to install a package from the MELPA repository.
+
+Definitions
+............................................................................
+
+MELPA: M.E.L.P.A. or Milkypostman’s Emacs Lisp Package Archive, is a
+       repository of packages for Emacs. You can search and install new
+       packages from here.
+
+Mission
+............................................................................
+
+01) Using DAbbrev:
+
+    Keybinding: M-/ => Autocomplete word before the point.
+
+    Keybinding: C-M-/ => Tries to autocomplete as much as it cans.
+
+    ORDERS:
+      - On the ALPHA line press C-n, then press C-e.
+
+      - Press M-/ three times.
+
+ALPHA
+You maggo
+You maggot understand?
+You maggots understand?
+
+02) Using Hippie Expand:
+
+    Description: Hippie expand works better than DAbbrev so we will replace
+                 the keybinding M-/ assigned to DAbbrev to call Hippie expand
+                 instead.
+
+    Keybinding: M-x hip => Expands words using hippie-expand.
+
+                OR
+
+                M-x hippie-expand
+
+    Keybinding: M-/ => Expands words using hippie-expand.
+
+    ORDERS:
+      - Press C-x 2 to create two windows.
+
+      - Press C-x o to jump to the lower window.
+
+      - Press C-x C-f to find a file.
+
+      - On the minibuffer, delete all the file path that is shown.
+
+      - Now type the text '~/.emacs.d/init.el' and press RET.
+
+      - Add the following line (can be at the end) of that file:
+
+(global-set-key "\M-/" 'hippie-expand)
+
+      - Press C-x C-s to save the 'init.el' file.
+
+      - Press C-k RET to kill that buffer and return to this one.
+
+      - Press C-x 1 to show only one window.
+
+      - Close Emacs and reopen it, find and open the file
+        'mission-17-autocomplete.txt' and GO to the BRAVO line.
+
+      - On the BRAVO line and press C-n.
+
+      - Press C-e to go to the end of the line.
+
+      - Press M-/ to expand the text. Now we are using hippie expand instead
+        of DAbbrev. OF COURSE you can keep cycle the options by pressing
+        M-/ IF YOU LIKE.
+
+    NOTES: Congratulations you just edited your INIT FILE for the first time.
+           This is an open door for all kind of customizations, for example,
+           a dark theme: https://emacsthemes.com/themes/wintermute.html.
+
+BRAVO
+I'm asking the f-cking q
+I'm asking the f-cking questions here, Pvt.! Do you understand?
+
+03) Checking the spelling with ispell:
+
+    Keybinding: M-$ => Verifies spell of the word before the point.
+
+    Keybinding: M-x isp-reg => Verify the ortographical errors on the
+                               active region.
+
+                OR
+
+                M-x ispell-region
+
+    Keybinding: M-x flys-m => Minor mode that highlights the ortographical
+                              errors.
+
+                OR
+
+                M-x flyspell-mode
+
+    When running the Flyspell Mode:
+
+        Keybinding: C-M-i => Autocorrect the word before the point.
+
+    ORDERS:
+      - Go to the CHARLIE line and press C-n.
+
+      - Press C-e.
+
+      - Press M-$, A WINDOW will open at the top of Emacs, this windows
+        contains a list of words that can be used as the replacement
+        for the misspelled word 'rifel'.
+
+      - Press the number zero (0) to choose the first option, the word
+        'rifel' gets corrected to 'rifle'.
+
+      - Go to the DELTA line and press C-n.
+
+      - Press M-x, type 'flys-m' and press RET, the text
+        'Flyspell mode enabled in the current buffer' appears on the
+        minibuffer. Wait a couple of seconds and you will see the misspelled
+        word 'rifel' being highlighted.
+
+      - Put the point over the word 'rifel' and press C-M-i, the word
+        gets corrected and become 'rifle'.
+
+      - Press M-x, type 'flys-m' and press RET to disable the flyspell mode.
+
+      - Go to the ECHO line, press C-a and then press C-n.
+
+      - Press C-S-<DOWN> to select all the paragraph.
+
+      - Once the text is selected press M-x, type the text 'ispell-region'
+        and press RET.
+
+      - You can go correcting one by one the typos on the selected region
+        just like we did before, press C-g to cancel.
+
+    NOTES: You can check Hunspell (http://hunspell.github.io/) for a
+           high quality spell checker.
+
+CHARLIE
+rifel
+
+DELTA
+This is my rifel.
+
+ECHO
+This is my rifel. There are many like it but this one is mine.
+My rifel is my best friend.
+It is my life. I must master it as I must master my life.
+Without me, my rifel is useless. Without my rifel I am useless
+
+04) Installing a package from MELPA:
+
+    Description: To install a package from MELPA you first need to
+                 enable MELPA on your 'init.el' file.
+
+    Keybinding: M-x l-pac => List all available packages.
+
+                OR
+
+                M-x list-packages
+
+    Keybinding: M-x p-ins RET <package-name> RET => Install a package.
+
+                OR
+
+                M-x package-install
+
+    ORDERS:
+      - Read all orders first.
+
+      - Press C-x 2 to open a new window at the bottom of Emacs.
+
+      - Press C-x o to jump to the lower window.
+
+      - On the lower buffer press C-x C-f and open the location
+        ~/.emacs.d/init.el.
+
+      - Add the following lines to the '~/emacs.d/init.el' file:
+
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.org/packages/") t
+
+      - Close Emacs, reopen it and get to the FOXTROT line.
+
+FOXTROT
+
+      - Now you can install packages from MELPA, let's install
+        YASnippet, a package that expands words to full program
+        structures like functions, classes or other elements.
+
+      - Press C-x 2 to show two windows, press C-x o to jump to the
+        lower window.
+
+      - On the lower buffer press M-x, type the text 'l-pac' and
+        press RET, a list of all available packages is shown. Press
+        C-v a few times to advance the screen.
+
+      - Let's use I-search to search for the yasnippet package, go
+        to the end of the packages buffer pressing M->.
+
+      - Press C-r to call the reverse I-search.
+
+      - Type the text 'yasnippet', you should see something like:
+
+          yasnippet          0.13.0  available   Yet another snippets ...
+          yasnippet-snippets 0.9     available   Collection of yasnippets ...
+
+      - Press RET when the reverse I-search reachs the line of yasnippet.
+
+      - Navigate to the yasnippet first line and press C-a once there.
+
+      - Press RET, on the upper buffer a description of the yasnippet
+        package is shown (an this buffer gets behind).
+
+      - Press C-x o to jump to the description buffer.
+
+      - Read the description, if an 'Install' button appears on this
+        description, you can move the point to it and install the package
+        from there, for now press C-k to kill the description buffer.
+
+      - Press C-x 1 to show only one window.
+
+      - Press M-x, type 'p-ins' and press RET, the text 'Install package:'
+        is displayed on the minibuffer.
+
+      - Type the text 'yasnippet' and press RET, Emacs will contact MELPA
+        and get YASnippet for you.
+
+      - Let's do the same with the 'yasnippet-snippets' package, press M-x,
+        type 'yasnippet-snippets' and press RET.
+
+      - Let's check the list of packages again, press C-x 2 to divide the
+        frame in two windows.
+
+      - Pres C-x o to jump to the lower buffer.
+
+      - Press M-x, type 'pac-l' and press RET, the list of packages is
+        shown.
+
+      - Press M-> to go to the end of the buffer.
+
+      - Press C-r to call reverse I-search and type again 'yasnippet', you
+        should see something like this:
+
+          yasnippet          0.13.0  external   Yet another snippets ... 
+          yasnippet-snippets 0.9     external   Collection of yasnippets ...
+
+        See?, the state from yasnippet has changed from 'available' to 
+        'external', we installed YASnippet, COOL.
+
+      NOTES: For more information on YASnippet see:
+             https://www.emacswiki.org/emacs/Yasnippet
+        
+Good job soldier, now you can take 10 seconds to stretch ...

@@ -1,0 +1,98 @@
+DON'T touch anything yet!!!
+DON'T be so ape, keep reading until you receive your orders.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #03: The Frame and Window.
+----------------------------------------------------------------------------
+
+Definitions
+............................................................................
+
+- Frame: What is known in other software as a 'window', in Emacs is know as
+         a 'frame'.
+
+- Windows: A frame can contain multiple windows, a window is a subarea of
+           the frame, each window correspond to an open file.
+
+Mission
+...........................................................................
+
+1) Move!!!:
+
+   Your ORDERS: Go to the ALPHA line.
+
+
+
+
+ALPHA
+2) List all buffers:
+
+   Your ORDERS:
+     - Press C-x C-b to show the list of all buffers, when you press this
+       keybinding the Emacs 'Frame' is divided in two 'Windows'. The upper
+       window contains this text you're reading and the window on the bottom
+       contains the list of opened buffers. NOW go and follow the next
+       ORDERS.
+
+3) Jump between windows:
+
+  Keybinding: C-x o => Jump to the other window.
+
+  Your ORDERS:
+    - Press C-x o to jump to the 'other' window.
+
+    - Press C-x o again to jump back to this buffer.
+
+    - Go and follow the next ORDERS.
+
+4) Displaying this window only:
+
+  Keybinding: C-x 1 => Displays only the current window.
+
+  Your ORDERS:
+    - Press C-x 1 to close the window containing the buffers list.
+
+    - Go and follow the next ORDERS.
+
+5) Displaying the other window only:
+
+   Keybinding: C-x 0 => Displays the other window only.
+
+   Your ORDERS:
+     - Press C-x C-b to show the list of buffers.
+
+     - Press C-x o to jump to the other window containing the buffer list.
+
+     - Press C-x 0 to display only the 'mission-03-frame.txt' buffer only.
+
+6) Splitting the window horizontally:
+
+   Keybinding: C-x 2 => Splits the current window in two horizontal windows.
+
+   Your ORDERS:
+     - Press C-x 2 to divide the current window in two horizontal
+       windows.
+
+     - Press C-x 1 to show only one window.
+
+     - Follow the next ORDERS.
+
+7) Splitting the window vertically:
+
+   Keybinding: C-x 3 => Divide the current window in two vertical windows.
+
+   Your ORDERS:
+     - Press C-x 3 to divide the current window in two vertical windows.
+
+     - Press C-x 1 to show one window only.
+
+Note that on any of the new created windows you can press C-x C-f to open
+any file there.
+
+Good Job soldier, you can now have 2 minutes off ...

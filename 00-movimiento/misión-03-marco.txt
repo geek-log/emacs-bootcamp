@@ -1,0 +1,101 @@
+NO TOQUES nada aún!!!
+NO seas tan mono, sigue leyendo hasta que recibas tus ÓRDENES.
+HAZ SOLO lo que te digan que hagas.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #03: La ventana y el marco.
+----------------------------------------------------------------------------
+
+Definiciones
+............................................................................
+
+- Marco: Lo que es conocido en otros programas como una 'ventana', en
+         Emacs es conocido como 'el marco'.
+
+- Ventana: Un marco puede contener múltiples ventanas, una ventana es una
+          subárea de un marco, cada ventana corresponde a un archivo abierto.
+
+Misión
+............................................................................
+
+1) ¡¡¡Múevete!!!:
+
+   Tus ÓRDENES: Múevete a la línea ALPHA.
+
+
+
+ALPHA
+2) Listar todos los buffers:
+
+   Tus ÓRDENES:
+     - Oprima C-x C-b para mostrar la lista de buffers, cuando presiones
+       este keybinding el 'marco' de Emacs se divide en dos 'ventanas'. La
+       ventana superior contiene este mismo texto que estas leyendo y la
+       ventana inferior contiene la lista de buffers abiertos. AHORA vaya
+       y ejecute las ÓRDENES siguientes.
+
+3) Saltar entre ventanas:
+
+   Teclazo: C-x o => Salte a la otra ventana.
+
+   Tus ÓRDENES:
+     - Presione C-x o para saltar a la 'otra' ventana.
+
+     - Presiones C-x o de nuevo para saltar de vuelta a este buffer.
+
+     - Vaya y ejecute las próximas ÓRDENES.
+
+4) Desplegando esta ventana solamente:
+
+   Teclazo: C-x 1 => Despliega solamente la ventana actual.
+
+   Tus ÓRDENES:
+     - Presione C-x 1 para cerrar la ventana con la lista de buffers.
+
+     - Vaya y ejecute las próximas ÓRDENES.
+
+5) Desplegando la otra ventana solamente:
+
+   Teclazo: C-x 0 => Despliega la otra ventana solamente.
+
+   Tus ÓRDENES:
+     - Presione C-x C-b para mostrar la lista de buffers.
+
+     - Presione C-x o para saltar a la lista de buffers.
+
+     - Presione C-x 0 para desplegar solamente el buffer de
+       'misión-03-marco.txt'.
+
+6) Dividiendo la ventana horizontalmente:
+
+   Teclazo. C-x 2 => Divide la ventana actual en dos ventanas horizontales.
+
+   Tus ÓRDENES:
+     - Presiona C-x 2 para dividir la ventana actual en dos ventanas
+       horizontales.
+
+     - Presiona C-x 1 para mostrar solamente una ventana.
+
+     - Sigue las próximas ÓRDENES.
+
+7) Dividiendo la ventana verticalmente:
+
+   Teclazo: C-x 3 => Divide la ventana actual en dos ventanas verticales.
+
+   Tus ÓRDENES:
+     - Presiona C-x 3 para dividir la ventana actual en dos ventanas
+       verticales.
+
+     - Presiona C-x 1 para mostrar solamente una ventana.
+
+Note que en cualquiera de las ventanas nuevas que se abren, puedes usar
+C-x C-f para abrir cualquier archivo.
+
+Buen trabajo soldado, ahora puedes descansar 2 minutos ...

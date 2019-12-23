@@ -1,0 +1,199 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #16: Text manipulation
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to find and replace text.
+
+Mission
+............................................................................
+
+01) Find and replace:
+
+    Keybinding: M-% => Interactive find/replace on active region, or
+                       from the position of point to the end of buffer if
+                       there is no active region.
+
+    When the search is opened:
+
+        'y' => Change the current search match (say yes) and move to the 
+               next one.
+        'n' => Don't change the current search match (say no) and move to
+               the next.
+        '!' => Change all the matches found (say yes to all).
+
+        'q' => Quit the find-and-replace.
+
+    ORDERS:
+      - Go to the ALPHA line.
+
+      - Press M-% and watch the minibuffer, the text 'Query replace:' is
+        displayed on it.
+
+      - Type the text 'kill', press RET and observe the minibuffer, the
+        text 'Query replace kill with:' is displayed on it, type the
+        text 'go kill' and press RET, the word 'kill' under the ALPHA line
+        is selected.
+
+      - Press the 'y' key, the word 'kill' is replaced with 'go kill' and
+        the point is moved to the next search match.
+
+      - Press 'y' again to change the word 'killing' with 'go killing' and
+        move to the next coincidence.
+
+      - THIS TIME press 'n' to maintain the word 'kills' just as it is.
+
+      - NOW press '!' to change the words 'killer' to 'go killer' and
+        'kill them' to 'go kill them'. See? The '!' key is a 'Yes to all'
+        option.
+
+ALPHA
+kill
+killing
+kills
+killer
+kill them
+
+02) Find and replace using a regular expression:
+
+    Keybinding: C-M-% => Interactive find/replace WITH REGEXP, on active
+                         region, or cursor point to end if there is no
+                         active region.
+
+    When the search is opened:
+
+        'y' => Change the current search match (say yes) and move to the 
+               next one.
+        'n' => Don't change the current search match (say no) and move to
+               the next.
+        '!' => Change all the matches found.
+        'q' => Quit the find-and-replace.
+
+    ORDERS:
+      - Go to the BRAVO line. Note the typos on the words on the following
+        lines.
+
+      - Press C-M-%, the text 'Query replace regexp:' is displayed on the
+        minibuffer.
+
+      - Type 'sho.*' and press RET, now the text
+        'Query replace regexp sho.* with:' is displayed on the minibuffer.
+
+      - Type the text 'shoo' and press RET.
+
+      - Press the '!' character to say YES TO ALL, all the lines are
+        changed to the text 'shoo', it really sucks, let's fix it.
+
+      - Pres C-x u to undo the replacing.
+
+      - On the BRAVO line press C-M-% again.
+
+      - Type the text 'sho\(.*\)$' on the first minibuffer question and
+        press RET, with the parenthesis here we are using a CAPTURE GROUP
+        that is a space to save the rest of the text on the line (and
+        prevent puting only 'shoo' on each line).
+
+      - Type the text 'go shoo\1' on the minibuffer and press RET.
+
+      - When Emacs ask you for a change press the '!' key to SAY YES TO ALL.
+        Now the words are replaced correctly.
+
+BRAVO
+shot
+shoting
+shot 'em
+shoter
+shot them
+
+03) Manipulating text:
+
+    Keybinding: M-x d-du => Deletes all duplicate lines on the active region
+                            or from to point position to the end of the
+                            buffer if there is no active region.
+
+               OR
+
+                M-x delete-duplicate-lines
+
+    Keybinding: M-x flu => Deletes all the lines that matches with a regular
+                           expression region or from the point position to
+                           the end of the buffer if there is no active
+                           region.
+
+                OR
+
+                M-x flush-lines       
+
+    Keybinding: M-x kee => Keep only the lines that matches a regular
+                           expression.
+
+                OR
+
+                M-x keep-lines
+
+    ORDERS:
+      - Go to the CHARLIE line, below this line there is a sample event
+        report on JSON, note that the key "userName" appears three times,
+        this is WRONG because it should be only on "userName".
+
+      - Press M-x, type the text 'd-du' and press RET, now there is only
+        one "userName".
+
+      - Go to the DELTA line and press C-a.
+
+      - Press C-M-S-b to select all the syntactical unit that conforms
+        the report.
+
+      - Now we will delete all text that contains the text 'user', press
+        M-x, type 'flu' and press RET, the text
+        'Flush lines containing match for regexp:' is displayed on the
+        minibuffer.
+
+      - Type the text 'user' and press RET. Now the user information is gone.
+
+      - Go to the CHARLIE, press C-a and then press C-n.
+
+      - Press C-M-S-n, press M-x, type 'kee' in the minibuffer and press RET,
+        the text 'Keep lines containing match for regexp:' are shown.
+
+      - Write the text 'event' and press RET. Now only the event information
+        is displayed, NEAT.
+
+CHARLIE
+{"Records": [{
+    "eventVersion": "1.0",
+    "userIdentity": {
+        "accessKeyId": "EXAMPLE_KEY_ID",
+        "accountId": "123456789012",
+        "userName": "Alice"
+        "userName": "Alice"
+        "userName": "Alice"
+    },
+    "eventTime": "2014-03-06T21:22:54Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "StartInstances",
+    "userAgent": "ec2-api-tools 1.6.12.2",
+    "responseElements": {"instancesSet": {"items": [{
+        "instanceId": "i-ebeaf9e2",
+        "currentState": {
+            "code": 0,
+            "name": "pending"
+        },
+    }]}}
+}]}
+DELTA
+
+Good Job soldier, you can now take 20 seconds to stretch ...

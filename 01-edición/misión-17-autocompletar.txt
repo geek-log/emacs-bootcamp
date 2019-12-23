@@ -1,0 +1,280 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #17: Auto-completar, auto-corregir y MELPA
+...........................................................................
+
+Resumen
+...........................................................................
+
+En esta misión aprenderás:
+   - Como usar el auto-completado de texto.
+   - Como modificar el archivo 'init.el' de Emacs.
+   - Como corregir errores ortográficos.
+   - Como instalar un paquete del repositorio MELPA.
+
+Definiciones
+...........................................................................
+
+MELPA: M.E.L.P.A. o Milkypostman’s Emacs Lisp Package Archive, es un
+       repositorio de paquetes para Emacs. Puedes buscar e instalar 
+       nuevos paquetes de ahí.
+
+Misión
+...........................................................................
+
+
+01) Usando DAbbrev:
+
+    Teclazo: M-/ => Auto-completa la palabra antes del punto.
+
+    Teclazo: C-M-/ => Trata de auto-completar tanto como puede.
+
+    ÓRDENES:
+      - En la línea ALPHA presione C-n, luego presione C-e.
+
+      - Presione M-/ tres veces.
+
+ALPHA
+¿Uds gusan
+¿Ud gusano entiende?
+¿Uds gusanos entienden?
+
+02) Usando Hippie Expand:
+
+    Descripción: Hippie expand trabaja mejor que DAbbrev por lo que
+                 reemplazaremos el keybinding M-/ asignado a DAbbrev
+                 para llamar a Hippie expand en su lugar.
+
+    Teclazo: M-x hip => Expande palabras usando hippie-expand.
+
+             Ó
+
+             M-x hippie-expand
+
+    Teclazo: M-/ => Expande palabras usando hippie-expand.
+
+    ÓRDENES:
+      - Presione C-x 2 para crear dos ventanas.
+
+      - Presione C-x o para saltar a la ventana inferior.
+
+      - Presione C-x C-f para encontrar un archivo.
+
+      - En el minibuffer, borre todo en la ruta de archivo que se muestra.
+
+      - Ahora digite el texto '~/.emacs.d/init.el' y oprima RET.
+
+      - Agregue la siguiente línea (puede ser al final) al ese archivo:
+
+(global-set-key "\M-/" 'hippie-expand)
+
+      - Oprima C-x C-s para guardar el archivo 'init.el'.
+
+      - Presione C-k RET para matar ese buffer y regresar a este.
+
+      - Presione C-x 1 para mostrar solamente una ventana.
+
+      - Cierre Emacs, abrálo de nuevo, encuentre y abra el archivo
+        'misión-17-autocompletar.txt' y vaya a la línea BRAVO.
+
+      - En la línea BRAVO presione C-n.
+
+      - Presione C-e para ir al final de la línea.
+
+      - Presione M-/ para expandir el texto. Ahora estamos usando hippie
+        expand en lugar de DAbbrev. POR SUPUESTO que puedes seguir
+        ciclando en las opciones al presionar M-/ SI TU QUIERES.
+
+      NOTAS: Felicitaciones, acabase de editar por primera vez tu ARCHIVO
+             INIT. Esta es una puerta abierta para todo tipo de 
+             personalizaciones, por ejemplo, un tema oscuro:
+             https://emacsthemes.com/themes/wintermute.html.
+
+BRAVO
+¡Yo soy quién hace las p-tas p
+¡Yo soy quién hace las p-tas preguntas aquí, recluta! ¿Entiende?
+
+03) Verificando la ortografía con ispell:
+
+    Teclazo: M-$ => Verifica la ortografía de la palabra antes del punto.
+
+    Teclazo: M-x ispell-region => Verifica los errores ortográficos en la
+                                  región activa.
+
+    Teclazo: M-x flys-m => Modo menor que resalta los errores ortográficos.
+
+             Ó
+
+             M-x flyspell-mode
+
+    Cuando está ejecutándose el modo flyspell:
+
+        Teclazo: C-M-i => Auto-corrige la palabra antes del punto.
+
+    ÓRDENES:
+      - Vaya a la línea CHARLIE y presione C-n.
+
+      - Presione C-e.
+
+      - Presione M-$, UNA VENTANA se abrirá en la parte de arriba de Emacs,
+        esta ventana contiene una lista de palabras que pueden usarse como
+        un reemplazo para la palabra mal escrita 'rifel'.
+
+      - Presione el número zero (0) para escoger la primera opción, la
+        palabra 'rifel' es corregida a 'rifle'.
+
+      - Vaya a la línea DELTA y presione C-n.
+
+      - Presione M-x, digite 'flys-m' y oprima RET, el texto
+        'Modo flyspell habilitado en el buffer actual' aparece en el
+        minibuffer. Espere unos cuantos segundos y verás que la palabra
+        mal escrita 'rifel' es resaltada.
+
+      - Ponga el punto sobre la palabra 'rifel' y presione C-M-i, la palabra
+        es corregida y se convierte en 'rifle'.
+
+      - Presione M-x, digite 'flys-m' y presione RET para deshabilitar el
+        mode flyspell.
+
+      - Vaya a la líne ECHO, presione C-a y luego presione C-n.
+
+      - Presione C-S-<DOWN> para seleccionar todo el párrafo.
+
+      - Una vez que el texto está seleccionado presione M-x, digite el texto
+        'ispell-region' y presione RET.
+
+      - Puedes ir corrigiendo uno por uno los errores ortográficos en la
+        región seleccionada justo como lo hicimos antes, presione C-g para
+        cancelar.
+
+      NOTES: Puedes revisar Hunspell (http://hunspell.github.io/) para un
+             corrector ortográfico de alta calidad.
+
+CHARLIE
+rifel
+
+DELTA
+Este es mi rifel.
+
+ECHO
+Este es mi rifel. Hay muchos como él pero este es mío.
+Mi rifel es mi mejor amigo.
+Es mi vida. Debo masterizarlo como debo masterizar mi vida.
+Sin me, mi rifel es inútil. Sin mi rifel yo soy inútil.
+
+04) Instalando un paquete desde MELPA:
+
+    Description: Para instalar un paquete desde MELPA primero necesitas
+                 habilitar MELPA en tu archivo 'init.el'.
+
+    Teclazo: M-x l-pac => Lista todos los paquetes disponibles.
+
+    Teclazo: M-x p-ins <nombre-paquete> => Instala un paquete.
+
+             Ó
+
+             M-x package-install
+
+    ÓRDENES:
+      - Lea primero todas las instrucciones.
+
+      - Presione C-x 2 para abrir una nueva ventana en la parte inferior de
+        Emacs.
+
+      - Presione C-x 2 o para saltar a la ventan inferior.
+
+      - En el buffer inferior presione C-x C-f para abrir la ubicación
+        ~/.emacs.d/init.el.
+
+      - Agrege las siguientes líneas al archivo '~/emacs.d/init.el':
+
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.org/packages/") t
+
+      - Cierre Emacs, abrálo de nuevo y vaya llegue a la línea FOXTROT.
+
+FOXTROT
+
+      - Ahora ya puedes instalar paquetes desde MELPA, instalemos
+        YASnippet, un paquete que expande palabras a estructuras de 
+        programa completas como funciones, clases u otros elementos.
+
+      - Presione C-x 2 para mostrar dos ventans, presione C-x o para saltar
+        a la ventana inferior.
+
+      - En el buffer inferior presione M-x, digite el texto 'l-pac' y
+        presione RET, una lista de todos los paquetes disponibles se muestra.
+        Presione C-v unas cuantas veces para avanzar la pantalla.
+
+      - Usemos I-search para buscar el paquete yasnippet, vaya al final
+        del buffer de paquetes presionando M->.
+
+      - Presione C-r para llamar a la búsqueda I-search reversa.
+
+      - Digite el texto 'yasnippet', debe ver algo como lo siguiente:
+
+          yasnippet          0.13.0  available   Yet another snippets ... 
+          yasnippet-snippets 0.9     available   Collection of yasnippets ...
+
+      - Presione RET cuando la búsqueda I-search reversa alcance la línea
+        de yasnippet.
+
+      - Navege hasta la primera línea de yasnippet y presione C-a una vez
+        que estés ahí.
+
+      - Presione RET, en el buffer superior se muestra una descripción
+        del paquete yasnippet (y este buffer queda atrás).
+
+      - Presione C-x o para saltar al buffer con la descripción.
+
+      - Lea la descripción, si un botón 'Instalar' aparece en esta
+        descripción, puedes mover el punto hasta él e instalar el paquete
+        desde aquí, por ahora presione C-k para matar el buffer con la
+        descripción.
+
+      - Presione C-x 1 para mostar solamente una ventana.
+
+      - Presione M-x, digite 'p-ins' y presione RET, el texto 
+        'Instalar paquete:' se despliega en el minibuffer.
+
+      - Digite el texto 'yasnippet' y presione RET, Emacs contactará a
+        MELPA y traerá YASnippet por tí.
+
+      - Hagamos lo mismo con el paquete 'yasnippet-snippets', presione M-x
+        digite 'yasnippet-snippets' y presione RET.
+
+      - Verifiquemos la lista de paquetes de nuevo, presione C-x 2 para
+        dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar al buffer inferior.
+
+      - Presione M-x, digite 'pac-l' y presione RET, la lista de paquetes
+        se muestra.
+
+      - Presione M-> para llegar al final del buffer.
+
+      - Presione C-r para llamar a la búsqueda reversa I-search y digite
+        de nuevo 'yasnippet', debes ver algo como lo siguiente:
+
+          yasnippet          0.13.0  external   Yet another snippets ...
+          yasnippet-snippets 0.9     external   Collection of yasnippets ...
+
+        ¿Ves?, el estado de yasnippet ha cambiado de 'disponible' a
+        'externo', hemos instalado YASnippet, GENIAL.
+
+      NOTAS: Para más información sobre YASnippet vea:
+             https://www.emacswiki.org/emacs/Yasnippet
+
+Buen trabajo soldado, ahora puedes tomar 10 segundos para estirar ...

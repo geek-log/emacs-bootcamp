@@ -1,0 +1,161 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #05: Mark the region soldier!!!
+----------------------------------------------------------------------------
+
+Definitions
+............................................................................
+
+Point: On Emacs 'the point' is the cursor, it is the current position of the
+cursor on the buffer.
+
+Mark: 'The mark' is a position in the buffer that is remebered.
+
+Region: It's the region of text between 'the mark' and 'the point', it is
+a selection of text, just like you do with a mouse on other editors.
+
+01) Setting the mark:
+
+   Keybinding: C-<SPC> => Set the mark at the point (at the cursor).
+
+   ORDERS: 
+     - Go to the BRAVO line.
+
+     - Press C-<SPC> and NOTHING MORE, watch the minibuffer, it should
+       show the text 'Mark set', that means you correctly setted the mark.
+       It also means that 'the mark' is activated and you can select text.
+
+     - Now press C-p two times, see what happens? the ALPHA line is selected.
+
+     - Press C-g, this reliable command always cancels anything.
+
+ALPHA
+BRAVO
+
+02) Exchange the point and mark (Jumping to the mark):
+
+   Description: This may sound like a weird way to move but this is the
+                army, so shut up and DO YOUR DUTY.
+
+   Keybinding: C-x C-x => Exchange the point and the mark.
+
+   ORDERS:
+     - Go to the CHARLIE line.
+
+     - Press C-<SPC> to SET and ACTIVATE the mark.
+
+     - Press C-g to deactivate the region.
+
+     - Go to the BRAVO line.
+
+     - Press C-x C-x to jump to the CHARLIE line (where the mark is set).
+
+     - NOW you are in the CHARLIE line but the text between it and the BRAVO
+       line is selected (the mark is active). Press C-g to deactivate the
+       region.
+
+03) Commands that sets the mark:
+
+   Description: Multiple Emacs command sets the mark automatically for you,
+   and you can jump to it the same way we just did.
+
+   ORDERS:
+     - Read all steps.
+     - Go to the CHARLIE line.
+     - Press M-< to go to the beggining of the buffer.
+     - Press C-x C-x to return to the CHARLIE line.
+     - Press C-g to deactivate the mark.
+
+CHARLIE
+
+04) Select by words:
+
+   Keybindings:
+     - M-@ => Select next word.
+     OR
+     - C-M-<SPC> => Select next word.
+
+   ORDERS:
+     - Go to the DELTA line.
+     - Press C-a to go to the beggining of the line.
+     - Press M-@ to select the word DELTA.
+     - Press M-@ again to select the word ECHO.
+     - Press C-g to deactivate the mark.
+
+DELTA ECHO FOXTROT
+
+05) The UNIVERSAL argument:
+
+    Description: The UNIVERSAL argument allows to repeat actions.
+
+    Keybinding: C-u # => Executes the next command # times.
+
+    ORDERS:
+      - Go to the DELTA line.
+      - Press C-a.
+      - Press C-u 3.
+      - Press M-@. What happens? Using C-u 3 is the equivalent
+        of all the steps we did on the ORDERS #04.
+      - Now press C-g to deactivate the region.
+
+06) Select the next paragraph:
+
+    Keybinding: M-h => Selects the next paragraph.
+
+    ORDERS:
+      - Go to the GOLF line.
+      - Press C-a.
+      - Press M-h, the next paragraph (lorem ipsum) should be selected.
+      - Press M-h two more times to mark all paragraphs.
+      - Press C-g.
+      - Go to the HOTEL line.
+
+GOLF Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+vestibulum eget dui id ullamcorper. Donec vehicula at elit quis mollis. Sed
+sed ultrices felis, ac consectetur sapien. Etiam maximus mattis nulla in
+tristique. Phasellus id libero sapien. Nulla posuere, odio suscipit euismod
+fringilla, elit magna luctus turpis, a ornare lectus nisl non lacus. Nunc
+sit amet odio hendrerit, bibendum nulla id, dictum dui. Phasellus non sem
+euismod justo tempor sodales ut id justo. Pellentesque gravida odio elit,
+vel placerat arcu pharetra vestibulum. Integer non vehicula libero. Etiam
+feugiat dui ut faucibus rutrum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus
+ligula, maximus sed egestas at, ornare nec dui. Nulla porta cursus eros.
+Nulla dignissim vel nisi eget porta. Donec auctor justo at ante pharetra,
+sit amet sagittis velit semper. Sed et odio ac erat consequat bibendum eget
+in orci. Phasellus vel mi eget nisl congue venenatis. Mauris turpis orci,
+tincidunt vel molestie a, egestas ac magna. Morbi mattis ac ipsum ac
+venenatis. Sed a tempor est. Aliquam interdum neque id mi facilisis
+fermentum.
+
+Cras iaculis massa sit amet congue pretium. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. In
+accumsan auctor eros eget viverra. Sed hendrerit aliquam fringilla.
+Praesent pharetra, turpis nec viverra egestas, justo libero convallis massa,
+sit amet commodo enim sem nec ante. Maecenas in maximus sapien, quis
+condimentum arcu. Integer vehicula aliquet quam vel luctus. Nulla varius,
+nibh ac blandit ullamcorper, dui erat consectetur nulla, ac faucibus nisl
+eros sed felis. Maecenas sed nibh est. Maecenas laoreet fermentum nunc vel
+dignissim. Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Nulla ante odio, suscipit in diam vitae,
+interdum aliquam orci. Ut rutrum, mauris non fringilla vestibulum, risus
+dolor elementum nisi, in porttitor neque ipsum a arcu. Vivamus nec turpis
+commodo, lacinia urna a, suscipit elit. 
+
+HOTEL
+
+07) Mark all the buffer:
+
+    Keybinding: C-x h => Marks all the buffer.
+
+    ORDERS: Press C-x h to select all the text on this buffer.
+
+Good Job soldier, you can now have 30 seconds off ...

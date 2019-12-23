@@ -1,0 +1,299 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de la fuerzas
+especiales.
+
+Aquí aprenderás a usar comandos más avanzados.
+
+Misión #19: Trabajando con bitácoras.
+...........................................................................
+
+Resumen
+...........................................................................
+
+En esta misión aprenderás:
+   - Como trabajar con bitácoras.
+   - Como usar el emulador de terminal.
+   - Como usar el navegador web EWW.
+
+Misión
+...........................................................................
+
+01) Usando archivos como sólo-lectura:
+
+    Teclazo: C-x C-f => Abrir un archivo.
+
+    Teclazo: C-x C-r => Abrir un archivo como sólo-lectura.
+
+    Teclazo: C-x C-q => Habilitar o deshabilitar el estado sólo-lectura.
+
+    ÓRDENES:
+      - Presione C-x C-r para encontrar un archivo, visite este mismo
+        archivo ('misión-19-bitácoras.txt') y presione RET.
+
+      - Ahora trate de escribir algo en este buffer. Emacs no te dejará
+        y en en el minibuffer el mensaje de error 'El buffer es de
+        sólo-lectura' aparecerá.
+
+      - Puedes apagar o encender el estado sólo-lectura al presionar
+        C-x C-q, presiona C-x C-q ahora, el texto
+        'Modo Read-only deshabilitado en el buffer actual' se
+        despliega en el minibuffer.
+
+02) Listar solamente líneas coincidentes:
+
+    Teclazo: M-x kee => Mantiene solamente las líneas que coinciden con
+                        una expresón regular. Este comando altera el buffer
+                        original.
+
+             OR
+
+             M-x keep-lines
+
+    Teclazo: M-s o => Listar solamente las líneas que coinciden con una
+                      expresión regular. Este comando no altera el buffer
+                      original.
+
+    ÓRDENES:
+      - Lea todas las instrucciones primero.
+
+      - Vaya a la línea ALPHA y presione M-x, digite 'kee' y presione RET.
+
+      - Digite el expresión regular 'hower$' y presione RET. Esta expresión
+        coincide las líneas que TERMINAN con el texto 'hower'.
+
+      - Digite la expresión regular 'hower$' y presione RET.
+
+      - Presione C-x u para deshacer el comando 'keep-lines'.
+
+      - En la línea ALPHA presione M-s o, el texto 'Listar líneas que
+        coinciden con el regexp:' se muestra en el minibuffer.
+
+      - Digite 'hower$' y presione RET. Una segunda ventana se abre en la
+        parte inferior de Emacs, esta ventana contiene la lista de
+        resultados pero NO BORRÓ NADA del buffer original.
+
+      - Presione C-x 1 para mostrar solamente una ventana.
+
+ALPHA
+"Preparándome para la batalla he encontrado que los planes son inútiles,
+pero planear es indispensable." - Dwight D. Eisenhower
+
+"Ningún hombre sabio o valiente se acuesta en las vías de la historia
+a esperar que el tren del futuro lo arrolle." - Dwight D. Eisenhower
+
+"Liderazgo es el arte de hacer que alguien más haga algo que tu quieres hacer
+porque él quiere hacerlo." - Dwight D. Eisenhower
+
+03) Resaltando.
+
+    Teclazo: M-s h p => Resaltar una frase.
+
+    Teclazo: M-s h r => Resaltar usando una expresión regular.
+
+    Teclazo: M-s h . => Resaltar el símbolo bajo el punto.
+
+    Teclazo: M-s h u => Deshacer el resaltado bajo el punto.
+
+    ÓRDENES:
+      - Vaya a la línea BRAVO y presione M-s h p, el texto 'Frase a
+        resaltar:' se despliega en el minibuffer.
+
+      - Digite el texto 'Dwight D.Eisenhower' y presione RET, el texto
+        'Highlight using face:' se despliega en el minibuffer, presione
+        RET de nuevo, el texto es resaltado.
+
+      - En la línea BRAVO presione M-s h r, el texto 'Regexp a resaltar:'
+        aparece en el minibuffer.
+
+      - Digite el texto ^".* y presione RET, esta es una expresión
+        regular que coincide todas las líneas que empiezan con un
+        caracter de doble comilla.
+
+      - En la línea BRAVO presione C-a.
+
+      - Presione M-s h . , todas las palabras BRAVO son resaltadas.
+
+      - Presione M-s h u, Emacs te preguntará cuál de todos los
+        resaltados quieres remover, y the mostrará de manera predeterminada
+        el último resaltado usado (BRAVO en este caso), presion RET, el
+        resaltado para todas las palabras BRAVO es removido. Puedes
+        seguir eliminando resaltados al usar M-s h u SI TÚ QUIERES.
+
+BRAVO
+"Preparándome para la batalla he encontrado que los planes son inútiles,
+pero planear es indispensable." - Dwight D. Eisenhower
+
+"Ningún hombre sabio o valiente se acuesta en las vías de la historia
+a esperar que el tren del futuro lo arrolle." - Dwight D. Eisenhower
+
+"Liderazgo es el arte de hacer que alguien más haga algo que tu quieres hacer
+porque él quiere hacerlo." - Dwight D. Eisenhower
+
+04) Usando la terminal desde Emacs:
+
+    Teclazo: M-x term => Abre un buffer de terminal.
+
+    Teclazo: C-c C-j => Habilita el modo term-line-mode (copiar y pegar en
+                        terminal).
+
+    Teclazo: C-c C-k => Habilita el modo char-line-mode (modo estándard que
+                        no "ensucia" el output).
+
+    ÓRDENES:
+      - Lea todas las instrucciones primero.
+
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana de abajo.
+
+      - Presione M-x, digite la palabra 'term' y presione RET, el texto
+        'Ejecutar programa: /bin/bash' aparece en el minibuffer, presione
+        RET de nuevo, esto abrirá un NUEVO BUFFER DE TERMINAL.
+
+      - Cuando estas en el buffer de terminal y tratas de regresar al
+        buffer superior con C-x o (presiónelo AHORA), Emacs no te deja,
+        entonces ¿Cómo hago PARA SALIRME del buffer de terminal?
+      
+      - Si lees el área de mensajes del buffer de terminal (el área de texto
+        encima del minibuffer) dice '(Term: char run)', este es el
+        estado estándard para un buffer de terminal, vamos a cambiarlo para
+        que podamos SALIRNOS DE AQUÍ, presione C-c C-j y observe el área
+        de mensajes, el texto se cambió a '(Term: line run)'.
+
+      - Cuando el estado '(Term: line run)' está habilitado, es posible
+        usar C-x o para saltar a otra ventana. El estado 'line run' también
+        nos permite copiar y pegar texto desde y hacia la terminal, ya que
+        este estado trata más la terminal como un buffer y menos como una
+        terminal (contrario al estado 'char run'). Presione C-x o ahora
+        para volver a este buffer.
+
+      - Presione C-x de nuevo para saltar al buffer de terminal.
+
+      - En el buffer de terminal digite 'ls' y presione RET, la lista
+        de todos los archivos en el directorio actual se imprime.
+
+      - Digite 'exit' en la terminal, luego presione C-x 0 para mostar
+        solamente este buffer.
+
+05) Usando el navegador web EWW:
+
+    Teclazo: M-x eww => Ejecuta el navegador web EWW.
+
+    Cuando el punto está en un buffer EWW
+
+           M-<RET> => Abrir la URL bajo el punto en un nuevo buffer.
+
+           b => Guardar bookmark.
+
+           B => Listar los bookmarks guardados.
+
+           d => Descargar URL bajo el punto.
+
+           g => Recargar página.
+
+           S => Listar los buffers EWW abiertos.
+
+           w => Copiar el URL actual al anillo kill.
+
+           M-C (C mayúscula y no control) => Habilitar/Deshabilitar colores.
+
+    ÓRDENES:
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana de abajo.
+
+      - Presione M-x, digite eww y oprima RET, el texto
+        'Digite URL o palabra clave' se muestra en el minibuffer.
+
+      - Digite el URL google.com y presione RET, se mostrará la página
+        del buscador Google.
+
+      - LLegue hasta la caja de texto de búsqueda, escriba 'dr doom' y
+        presione RET, el listado de resultados de Google se muestran.
+
+      - Presione M-x de nuevo, digite eww y oprima RET.
+
+      - Esta vez en lugar de ir al buscador de Google, digite el texto
+        'dr doom' y presione RET, se muestran los resultados de búsqueda.
+        
+      - Ponga el punto encima del enlace de Wikipedia y presione RET para
+        visitarlo y espera a que cargue la página. Note que aquí puedes usar
+        M-<RET> para abrir esa URL en un nuevo buffer y no en el mismo.
+
+      - Presione el caracter 'b', el texto '¿Marcar esta página? (sí, no)'
+        se muestra en el minibuffer, dígite 'sí' y presione RET, el texto
+        'Página agregada a los marcadores' se despliega en el minibuffer.
+
+      - Presione el caracter 'B' para ver la lista de marcadores guardados,
+        EN LA VENTANA SUPERIOR SE DESPLIEGA UN NUEVO buffer con un texto
+        similar al siguiente:
+
+Doctor Doom - Wikipedia          https://en.wikipedia.org/wiki/Doctor_Doom
+
+      - Ponga el punto en la línea Doctor Doom y oprima RET para visitar
+        la página marcada.
+
+      - Presione de nuevo 'B' para mostrar la lista de marcadores de EWW y
+        navegue hasta la línea 'Doctor Doom'.
+
+      - Oprima C-k para matar esa línea y ASÍ BORRAR ESE MARCADOR.
+
+      - Presione C-x C-k y luego presione C-x 1 para matar el buffer EWW
+        y volver a este buffer.
+
+06) De vuelta a las bitácoras:
+
+    Teclazo: M-x a-re-m => Refrescar el buffer cuando el archivo cambie.
+
+             Ó
+
+             M-x auto-revert-mode
+
+    Teclazo: M-x a-ta => Agrega cambios cuando el archivo cambia. Esto
+                         funciona como el comando de terminal 'tail -f'.
+
+             Ó
+
+             M-x auto-revert-tail-mode
+
+    ÓRDENES:
+      - Lea todas las instrucciones primero.
+
+      - Presione M-x, digite 'a-re-m' y presione RET, el texto
+        'Modo Auto-Revert habilitado para este buffer' se despliega en
+        el minibuffer.
+
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana de abajo.
+
+      - Presione M-x, digite 'term' y presione RET dos veces, un buffer
+        de terminal se abre.
+
+      - Desde la terminal haremos cambios al archivo
+        'misión-19-bitácoras.txt', digite el siguiente comando y presione
+        RET:
+
+           echo 'understand maggot?' >> misión-19-bitácoras.txt
+
+        Ese comando agrega texto al archivo 'misión-19-bitácoras.txt'.
+
+      - Digite el comando 'exit' en la terminal, presione RET y luego
+        presione C-x 0 para mostrar solamente esta ventana.
+
+      - Vaya al final del buffer oprimiendo C-> y verifique que el texto
+        se añadió ahí, luego presione C-x C-x para regresar aquí (C-g para
+        cancelar la región seleccionada).
+
+      - Presione M-x, digite 'a-re-m' y presione RET, el texto
+        'Modo Auto-Revert deshabilitado para este buffer' se despliega
+        en el minibuffer.
+
+Buen trabajo soldado, ahora puedes descansar 10 minutos ...

@@ -1,0 +1,113 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #07: Search for it soldier!!!
+----------------------------------------------------------------------------
+
+ALPHA
+
+01) Searching incrementally:
+
+    Description: Incremental search means that you can make a full-text
+                 search.
+
+    Keybinding: C-s => Start the incremental search.
+
+    ORDERS:
+      - Go to the ALPHA line.
+
+      - Press C-s.
+
+      - Type the word 'bravo' and watch what happens.
+
+      - Press C-s two more times and watch what happens.
+
+      - Press C-g to cancel and get bac to the original position.
+
+bravo
+BRAVO
+
+02) Searching incrementally but backwards:
+
+    Keybinding: C-r => Start incremental search backward.
+
+    ORDERS:
+      - Go to the CHARLIE line.
+
+      - Press C-r.
+
+      - Type the word 'bravo' and watch what happens.
+
+      - Press C-r again and watch what happens.
+
+      - Press C-g to cancel and get back to the original position.
+
+      - Press C-r and type the word 'BRAVO' (all caps), watch what happens.
+
+      - Press C-r three more times and watch what happens (don't worry if
+        a screen flick occurs, is the normal behaviour).
+
+      - Press RET to go to the position of the selected search match.
+
+CHARLIE
+
+charles
+Charcoal
+CHARM
+CharIzard
+
+03) Searching incrementally using a regular expression:
+
+    Keybinding: C-M-s => Start incremental search by regular expression.
+
+    ORDERS:
+      - Go to the DELTA line.
+
+      - Press C-M-s to start the incremental search, you are asked to
+        type a regular expression to use ('Regexp I-search').
+
+      - Type the following expression and nothing more: charl.*
+
+      - Press C-M-s six more times (don't worry if the screen flicks).
+
+      - Press C-g to cancel and get back to the original position.
+
+DELTA
+Charles
+
+04) Searching incrementally using a regular expression but backwards:
+
+    Keybinding: C-M-r => Start incremental search by regexp backward.
+
+    ORDERS:
+      - Read all instructions.
+
+      - Go to the DELTA line.
+
+      - Press C-M-r.
+
+      - On the minibuffer write the following regular expression: charl.*
+
+      - Press C-M-r five more times, watch what happens (don't worry about
+        the screen flick).
+
+      - Press RET to jump to the position of the selected match.
+
+
+FINAL NOTES:
+
+  - TO end a search you have two options:
+
+    - Press C-g to cancel and get back to your previous position.
+
+    OR
+
+    - Press RET to jump to the select match position.
+
+Good Job soldier ...

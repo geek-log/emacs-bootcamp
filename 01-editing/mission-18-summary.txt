@@ -1,0 +1,219 @@
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #18: Editing Summary
+----------------------------------------------------------------------------
+
+Keybindings
+............................................................................
+
+The list of all the keybindings used on the editing missions is shown below:
+
+Emacs Keybindings
+............................................................................
+
+C-h C-h => Display the help menu.
+
+C-h => Display the help menu.
+
+C-d => Deletes the character under the point.
+
+<BACKSPACE> => Deletes the previous character.
+
+C-j => Adds a newline and moves the point to the new created line.
+
+C-o => Adds a newline and maintains the point on the original line.
+
+C-x C-o => Deletes the next blank lines.
+
+M-d => Kills the next word.
+
+C-<BACKSPACE> => Kills the previous word.
+
+C-k => Kills the text from the position where the point is to the end of the
+same line.
+
+M-k => Kills the text from the position where the point is to the end of the
+sentence.
+
+C-M-k => Kills the next balanced syntactic expression.
+
+C-S-<BACKSPACE> => Mata la línea actual.
+
+C-y => Yanks text.
+
+M-y => Cycle the kill ring entries.
+
+C-M-w => Append to the kill ring current entry.
+
+M-w => Copy the active region.
+
+C-w => Cut the active region.
+
+C-t => Transpose the character under the pont with the previous one.
+
+M-t => Tranpose the word under the point with the previous one.
+
+C-x C-t => Transpose the current line with the previous one.
+
+M-q => Fill the paragraph.
+
+C-S-e => Select the region from the point ot the end of the line.
+
+C-S-a => Select the region from the point to the beggining of the line.
+
+M-; => Comment or uncomment.
+
+C-x C-; => Comment or uncomment the current line.
+
+M-u => Change next word to uppercase.
+
+M-l => Chage next word to lowercase.
+
+M-c => Capitalize next word.
+
+M-x cou-w => Count the number of words in the buffer.
+
+OR
+
+M-x count-words
+
+M-x cou-w-r => Count the number of word in the selected region.
+
+OR
+
+M-x count-words-region
+
+C-x l => Count the number of lines in the buffer.
+
+M-a => Go to the beggining of the current line or to the beggining of the
+previous line if your are at the beginning of the current.
+
+M-e => Go to the end of the current line or to the end of the next line
+if you are at the end of the current line.
+
+TAB => Indent the current line.
+
+M-C-\ => Indent a region.
+
+C-x TAB => Manually indent as a block of text.
+
+M-z => Zap, kills the text from the point to an arbitrary character.
+
+M-x so-l => Order lines alphabetically.
+
+OR
+
+M-x sort-lines
+
+M-x so-f => Order lines lexicographically.
+
+OR
+
+M-x sort-fields
+
+M-x so-n => Order lines numerically.
+
+OR
+
+M-x sort-numeric
+
+M-x rev-r => Reverse the ordering.
+
+OR
+
+M-x reverse-region
+
+M-x so-c => Order by column.
+
+OR
+
+M-x sort-columns
+
+M-/ => Expand the word in the buffer before the point as a dynamic abbrev.
+
+C-M-/ => Complete the word before the point as a dynamic abbrev.
+
+M-% => Interactive find/replace on active region, or from the position of
+       the point to the end of the buffer if there is no active region.
+
+C-M-% => Interactive find/replace with regexp, on the active region or from
+         the position of the point to the end of the buffer if there is
+         no active region.
+
+M-x d-du => Delete all duplicate lines.
+
+M-x flu => Flush all lines that matchs with a regular expression.
+
+M-x kee => Keep only the lines that matches a regular expression.
+
+M-x hip => Expand words using hippie-expand.
+
+M-$ => Verify spell of the word before the point.
+
+M-x isp-r => Verify the ortographical errors on the active region.
+
+OR
+
+M-x ispell-region
+
+M-x flys-m => Flyspell minor mode that highlights ortographical errors.
+
+OR
+
+M-x flyspell-mode
+
+M-x l-pac => List all available MELPA packages.
+
+OR
+
+M-x list-packages
+
+M-x p-ins RET <package-name> RET => Installs a package.
+
+OR
+
+M-x package-install
+
+
+On a Help Menu Buffer
+............................................................................
+
+<SPC> => Scroll down the help menu.
+
+DEL => Scroll up the help menu.
+
+c <Type keybinding> => Show the command that a keybinding executes
+                       (by typing a command name).
+
+a <TOPIC> => Apropos function, show information about a topic (i.e.: by
+             typing a command name).
+
+k <COMMAND> => Show documentation that describes a command (by typing
+               a command keybinding).
+
+q => Quits the help menu.
+
+
+On a Find and Replace Buffer
+............................................................................
+
+y => Change the current search match (say yes) and move to the next.
+
+n => Don't change the current match (say no) and move to the next.
+
+! => Change all matches found (say yes to all).
+
+q => Quit the find-and-replace.
+
+
+When Flyspell Mode is enabled
+............................................................................
+
+C-M-i => Autocorrect the word before the point.
+
+
+Great job soldier, you achieve one rank up and are qualified to advance
+to the special forces training missions.

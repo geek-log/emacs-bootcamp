@@ -1,0 +1,268 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #14: Correct them
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to transpose text and some other tricks.
+
+Definitions
+............................................................................
+
+Traspose: Transposing text is the art of interchange two syntactic units.
+
+Mission
+............................................................................
+
+01) Transposing two characters:
+
+    Keybinding: C-t => Transpose the character under the point with the
+                       previous one.
+
+    ORDERS:
+      - Go to the ALPHA line, press C-a, then press M-f, the cursor must
+        be in a blank space between the 't' and the 'h' characters.
+
+      - Press C-t, the blank space - that is under the cursor - is
+        switched with the 't' character that is the previous character,
+        and now the phrase makes sense.
+
+ALPHAt his is trash
+
+02) Transposing two words:
+
+    Keybinding: M-t => Transpose the word under the point with the previous
+                       one.
+
+    ORDERS:
+      - Go to the BRAVO line and press C-a.
+
+      - Press M-f to get between words.
+
+      - Press M-t.
+
+      - Go to the DELTA line.
+
+      - Press M-f two times, the point must be on the ':' symbol.
+
+BRAVO CHARLIE
+
+DELTA 'Doom': 'Doctor'
+
+03) Transposing syntactic expressions:
+
+    Keybinding: C-M-t => Transpose s-expressions.
+
+    ORDERS:
+      - Go to the ECHO line and press C-a.
+
+      - Press M-f THREE times and then press C-f ONE time, this is to get
+        to the blank space between '2 n)' and '(* 4'.
+
+      - Press C-M-t, the expression must had changed to (/ (* 4 n) (+ 2 n))
+
+ECHO (/ (+ 2 n) (* 4 n))
+
+04) Transposing lines:
+
+    Keybinding: C-x C-t => Transpose the current line with the previous one.
+
+    ORDERS:
+      - Go to the GOLF line.
+      - Press C-x C-t.
+
+FOXTROT This is secondary trash.
+GOLF This is primary trash.
+
+05) Transposing with numeric arguments:
+
+    Description: Passing a numeric argument to a transposing commands works
+                 differently than the standard way, the argument is
+                 interpreted as the N-th syntactical unit to transpose.
+
+    ORDERS:
+      - Go to the HOTEL line and press C-a.
+
+      - Press M-f twice.
+
+      - Press M-t, the words 'Jane' and 'and' are switched.
+
+      - Press C-x u to undo the changes.
+
+      - Press M-2 M-t, the words 'Jane' and 'and Mary' are switched.
+
+      - Press M-x u to undo the changes.
+
+      - Press M-4 M-t, the words 'Jane' and 'and Mary here, Molly' are
+        switched.
+
+      - Go to the INDIA line and put the point over the 'D' character.
+
+      - Press C-t, the 'D' character is switched with the 'C' character.
+
+      - Press C-x u.
+
+      - Press C-2 C-t, the 'DE' characters are switched with the 'C'
+        character.
+
+      - Press C-x u.
+
+      - Press C-3 C-t, the 'DEF' characters are switched with the 'C'
+        character.
+
+HOTEL Jane and Mary here, Molly is comming.
+
+INDIA ABCDEFGH
+
+06) Filling a paragraph:
+
+    Description: The following command is used to maintain the 0 to 79
+                 columns rule, which is VERY VERY IMPORTANT for reading.
+
+    Keybinding: M-q => Fill the paragraph.
+
+    ORDERS:
+      - Go to the JULIET line.
+
+      - Press M-q and watch what happens, the paragraph magically
+        orders itself.
+
+    NOTES: Other related keybindings are:
+           C-x f => Sets the fill width.
+           C-x . => Sets the fill prefix.
+
+JULIET If you ladies leave my island, if you survive recruit training, you will be a weapon. You will be a minister of death praying for war. But until that day, you are pukes. You are the lowest form of life on Earth. You are not even human fucking beings. You are nothing but unorganized grab-asstic pieces of amphibian shit!
+
+07) Commenting text:
+
+    Keybinding: C-S-e => Select the region from the point to the end of
+                         the line.
+
+    Keybinding: M-; => Comment or uncomment.
+
+    ORDERS:
+      - Read all orders first.
+
+      - Go to the KILO line and press C-a.
+
+      - Press M-f to skip the word KILO.
+
+      - Press C-S-e to select the rest of the text.
+
+      - Press M-; and watch the minibuffer, the text
+        'No comment syntax is defined. Use:' is displayed on it. This means
+        that Emacs don't knows which code comments style to apply, that's
+        because the file 'mission-14-transpose.txt' is a plain text file and
+        does not have any code header written on it (i.e.: #!/bin/bash), if
+        the filename were 'mission-14-transpose.py' (that's a python file) Emacs would
+        not bother you asking for a comment style.
+
+      - Let's use the bash comments style (#), on the minibuffer, type the
+        symbol '#' and press RET, the text GETS COMMENTED.
+
+      - Go to the LIMA line and press M-;. What happens? This time
+        a '#' symbol is added to the end of the line and NO text gets
+        commented, this means that if there is selected text, that text
+        gets commented, and if there is no selected text, then the
+        comment goes to the end of the line, GREAT.
+
+      - On the LIMA line press C-a and then press C-S-e to select all
+        text on that line.
+
+      - Press M-;.
+
+KILO this is trash
+
+LIMA another trash
+
+08) Commenting the current line:
+
+    Keybinding: C-S-a => Select the region from the point to the beginning
+                         of the line.
+
+    Keybinding: C-x C-; => Comments the current line.
+
+    ORDERS:
+      - Go to the MIKE line and press C-e.
+
+      - Press C-S-a to select all text on that line.
+
+      - Press M-; to comment all that text.
+
+      - Press C-x u to cancel the commenting.
+
+      - Press C-e.
+
+      - Press C-S-a again.
+
+      - WAIT!!! ... There is a better way to do this, PRESS C-g to cancel
+        the selected region.
+
+      - Press C-x C-;, the MIKE line gets commented without having to
+        select anything.
+
+      - And this applies on any part of the line, press C-x u to undo
+        the commenting.
+
+      - On the MIKE line press C-a and then press M-f three times.
+
+      - Now press C-x C-;, the line gets commented equally.
+
+MIKE This is just a decoy text for you to practice.
+
+09) Selecting and commenting:
+
+    ORDERS:
+      - Go to the NOVEMBER line and press C-a.
+
+      - Press C-S and HOLD IT, DON'T let it go soldier.
+
+      - Now with C-S still pressed, press the 'n' key, the whole
+        NOVEMBER line gets selected and the point is now on the OSCAR
+        line, keep holding C-S.
+
+      - Now press the 'e' key to select the rest of the current line
+        (that's all the line).
+
+      - Press M-; to comment all the region.
+
+NOVEMBER Another decoy to shoot in the head.
+OSCAR And here just another line with an empty meaning. What is life?
+
+10) Selecting and commenting backwards:
+
+    ORDERS:
+      - Go to the UNIFORM line and press C-e.
+
+      - Press C-S and hold it (just like you did on the lasts ORDERS).
+
+      - Press the 'p' key, the whole UNIFORM line is selected and the
+        point is now on the TANGO line.
+
+      - Press the 'p' key FOUR more times, all text is selected except for
+        the text on the PAPA line.
+
+      - Press C-a (with C-S still pressed) to select the rest of the text.
+
+      - Press C-x C-; to comment all the region.
+
+PAPA Over hill, over dale
+QUEBEC as we hit the dusty trail
+ROME and the army goes rolling along
+SIERRA in and out, hear them shout
+TANGO "counter march, and right about!"
+UNIFORM and the army goes rolling along
+
+Good Job soldier, you can now take 1 minute off ...

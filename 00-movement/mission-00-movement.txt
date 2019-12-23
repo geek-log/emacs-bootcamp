@@ -1,0 +1,93 @@
+DON'T touch anything yet!!!
+DON'T be so ape, keep reading until you receive your orders.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+
+ALPHA
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #00: You need to move that ass soldier!!!
+----------------------------------------------------------------------------
+
+1) Moving one line down:
+
+   Keybinding: C-n => Move the point down one line.
+
+   Your ORDERS: Keep pressing C-n until you reach the line with BRAVO on it,
+   NOW GO, GO, GO!!!
+
+BRAVO
+
+2) Moving one line up:
+
+   Keybinding: C-p => Move the point up one line.
+
+   Your ORDERS: Now press C-p until you return to the line with ALPHA and
+   then, press C-n again util you get to the line with CHARLIE.
+
+
+
+
+CHARLIE
+
+3) Moving to the end of a line:
+
+   Keybinding: C-e => Go to the end of the line.
+
+   Your ORDERS: On the CHARLIE line press C-e to go to the end of that line.
+
+4) Moving to the beggining of a line:
+
+   Keybinding: C-a => Go to the beggining of the line.
+
+   Your ORDERS: Press C-a on the CHARLIE line to go to the beggining of the
+   line, then use C-n to go to the DELTA line.
+
+
+
+DELTA
+
+5) Moving one character right:
+
+   Keybinding: C-f => Move the point one character right.
+
+   Your ORDERS: On the DELTA line, press C-a to go to the beggining of the
+   line and then press C-f until you reach the last character of that line
+   (and DON'T PASS).
+
+6) Moving one character left:
+
+   Keybinding: C-b => Move the point one character left.
+
+   Your ORDERS: On the DELTA line, press C-b until you reach the beggining of
+   that line (AND DON'T PASS), then press C-n util you reach ECHO.
+
+
+
+
+   ECHO FOXTROT
+
+7) Move to the first non-space character:
+
+   Category: Emacs Occult Gem.
+
+   Keybinding: M-m => Move the point to the first non-space character on line.
+
+   Your ORDERS: On the ECHO line, use C-e to go to the end of the line and
+   then press M-m to put the point on the E letter, GO, GO, GO!!!
+
+8) Center the view on the cursor:
+
+   Keybinding: C-l => Center the view on the point (cursor).
+
+   Your ORDERS: Press C-l to center the view.
+
+9) Exit Emacs:
+
+   Keybinding: C-x C-c => Exit Emacs.
+
+   Your ORDERS: Good Job soldier, you can now have 5 minutes off, go on and exit
+   Emacs ...

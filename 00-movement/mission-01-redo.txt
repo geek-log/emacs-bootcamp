@@ -1,0 +1,44 @@
+DON'T touch anything yet!!!
+DON'T be so ape, keep reading until you receive your orders.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #01: Doing, undoing, redoing.
+----------------------------------------------------------------------------
+
+1) Deleting a character:
+
+   Keybinding: C-d => Delete the character under the point.
+
+   Your ORDERS: Go to the start of the ALPHA line and delete the A by
+   pressing C-d and DON'T touch anything more.
+
+ALPHA
+
+2) Undoing an action:
+
+   Keybinding: C-x u => Undo the last action.
+
+   Your ORDERS: Now press C-x u to undo the character deleting. Then go to
+   the BRAVO line.
+
+3) Undoing the undoing:
+
+   Category: Trick.
+
+   Description: Emacs does not include a 'redo' command, you must break the
+   'undo-ring' to perform a redo action.
+
+   Your ORDERS:
+     - At the end of the BRAVO line append one extra Os, it must be BRAVOO.
+     - Undo the extra O appending by pressing C-x u.
+     - Now, how do you redo?: Do something else first, NOW PRESS C-n.
+     - Now press C-x u again to make the undo action works as a redo.
+
+BRAVO
+
+Good Job soldier, you can now have 4 minutes off ...

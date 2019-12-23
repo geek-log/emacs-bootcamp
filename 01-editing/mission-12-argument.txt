@@ -1,0 +1,109 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #12: Kill a lot of them!!!
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to kill using numeric arguments, both
+positive and negative.
+
+When using editing commands, is possible to pass numeric arguments to them,
+this will execute the command multiple times (similarly to the movement
+commands).
+
+If you pass a negative argument to the command, then it will be executed in
+the opposed direction. You can use the '-' symbol to indicate a '-1' value or
+use a explicit value like '-2'.
+
+Definitions
+............................................................................
+
+Tempo: The 'Emacs Tempo' is the ability of use the minimal hands movement
+       when using Emacs commands, think of a piano player using the hands
+       close to the keys for optimal performance.
+
+Mission
+............................................................................
+
+01) Passing positive numerical arguments to a command:
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Go to the ALPHA line and press C-a.
+
+      - Let's inspect the command 'M-@' that is used to select words. The
+        first part of that command is 'M-' (without the '@'), press 'M-2'
+        NOW and WATCH the minibuffer, the text 'C-u 2-' appears on it, if
+        you remember from previous missions, the keybinding 'C-u' is the
+        "Universal Argument", this is the argument used to tell Emacs the
+        number of times to execute a command.
+
+      - Press M-@, the words ALPHA and BRAVO must be selected now.
+
+      - Press C-g to cancel.
+
+      - Go to the DELTA line and press C-a.
+
+      - Press M-f to skip the DELTA word.
+
+      - Now let's inspect the command 'C-M-k' that kills a balanced
+        expression (s-expression), the first part of the command is
+        'C-M-' (without the 'k'), press 'C-M-2' NOW and WATCH the minibuffer,
+        the text 'C-u 2-' is displayed again, see? there are many ways to
+        pass an argument and we must use the one that allow us to maintain
+        our Emacs Tempo.
+
+      - Press C-M-k now to kill the decoys A and B.
+
+      - Press C-x u to undo the killing.
+
+    NOTES: To maintain your 'Emacs Tempo' when using arguments BE SURE to use
+           the same base keybinding for passing the numeric argument as the
+           actual command.
+
+ALPHA BRAVO CHARLIE
+
+DELTA (Decoy A) (Decoy B) (Decoy C) (Decoy D)
+
+02) Passing negative arguments to a command:
+
+    Description: To pass a negative argument to an Emacs command you must
+                 use the first part of the command (as we did on the 
+                 ORDERS #01) but instead of typing a number, we type the
+                 '-' symbol first, and then we type a number (first the
+                 sign, second the number).
+
+    ORDERS:
+      - Read all instructions first.
+
+      - On the DELTA line press C-e.
+
+      - Press 'C-M--' (that's Control-Alt-minus) and watch the minibuffer,
+        the text 'C-u --' appears in the minibuffer.
+
+      - Press the number '2', the text 'C-u -2-' is displayed on the
+        minibuffer.
+
+      - Press C-M-k to kill the decoys C and D.
+
+      - Press C-x u to undo the killing.
+
+      - On the DELTA line press C-e and the press 'C-M--' again.
+
+      - This time do not type any number but press C-M-k. The D decoy is
+        killed, when you only type the '-' symbol it is equivalent to '-1'.
+
+Good Job soldier, you can now take 3 minutes off ...

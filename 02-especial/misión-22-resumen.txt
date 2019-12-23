@@ -1,0 +1,127 @@
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #22: Resumen de Especial
+----------------------------------------------------------------------------
+
+Teclazos
+............................................................................
+
+La lista de todos los teclazos usados en las misiones especiales se
+muestra a continuación.
+
+Teclazos de Emacs
+............................................................................
+
+C-x C-f => Encontrar un archivo.
+
+C-x C-r => Encontrar un archivo como solo lectura.
+
+C-x C-q => Habilitar/Deshabilitar read-only.
+
+M-x kee => Mantener solamente las líneas que coinciden con una expresión
+           regular
+
+M-s o => Listar solamente las líneas que coinciden con una expresión
+         regular.
+
+M-s h p => Resaltar una frase.
+
+M-s h r => Resaltar usando una expresión regular.
+
+M-s h . => Resaltar el símbolo bajo el punto.
+
+M-s h u => Deshacer el resaltado bajo el punto.
+
+M-x term => Abre un buffer 'term' de terminal.
+
+M-x shell => Abre un buffer 'shell' de terminal.
+
+M-x eshell => Abre un buffer 'eshell' de terminal.
+
+M-x eww => Abre el navegador web EWW.
+
+M-x a-re-m => Refresca el buffer cuando el archivo cambió.
+
+OR
+
+M-x auto-revert-mode
+
+C-x d => Inicia Dired.
+
+C-x C-f /ssh:user@remotehost:/file.txt => Inicia una conexión TRAMP.
+
+
+En un buffer de terminal 'termp
+
+C-c C-j => Habilita el modo term-line-mode.
+
+C-c C-k => Habilitar el modo term-char-mode.
+
+
+En un EWW buffer
+
+M-<RET> => Abre el URL bajo el punto en un nuevo buffer.
+
+b => Guarde el marcador (bookmark).
+
+B => Listar todos los marcadores.
+
+d => Descargar el URL bajo el punto.
+
+g => Recargar la página.
+
+S => Listar todos los buffers EWW abiertos.
+
+w => Copiar el URL actual al anillo kill.
+
+M-C (Capital C and not Control) => Habilitar/Deshabilitar los colores.
+
+
+Cuando el punto está en un buffer Dired
+
++ => Crear un nuevo directorio.
+
+m => Marcar un archivo o directorio.
+
+u => Desmarcar un archivo o directorio.
+
+U => Desmarcar todo.
+
+C => Copiar los ítems marcados.
+
+d => Poner una bandera de borrado.
+
+D => Borra los ítems marcados.
+
+x => Borra los ítems con bandera.
+
+*m => Marca una región.
+
+*u => Desmarca una región.
+
+*% => Marca los archivos cuyo nombre coincide con una expresión regular.
+
+*t => Intercambia la marca.
+
+*c => Cambia el símbolo de la marca del viejo a uno nuevo.
+
+g => Refresca el buffer Dired.
+
+R => Renombra los ítems marcados.
+
+O => Ejecuta chown en los ítems marcados.
+
+G => Ejecuta chrgrp en los ítems marcados.
+
+M => Ejecuta chmod en los ítems marcados.
+
+D => Borra los ítems marcados.
+
+F => Visita los ítems marcados. Este comando REQUIERE 'dired-x'.
+
+
+Buen trabajo soldado, has ascendido un rango y estás calificado para
+avanzar a las misiones de entrenamiento de las fuerzas especiales.

@@ -1,0 +1,154 @@
+NO TOQUES nada aún!!!
+NO seas tan mono, sigue leyendo hasta que recibas tus ÓRDENES.
+HAZ SOLO lo que te digan que hagas.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Misión #02: Guárdelo soldado!!!
+----------------------------------------------------------------------------
+
+Definiciones
+............................................................................
+- Buffer: Documento abierto en Emacs, puede ser un archivo que ya existe o
+          texto que aún no se ha guardado.
+
+- Minibuffer: Línea de texto desplegada en la parte de abajo del editor, se
+              activa al enviar comandos Emacs.
+
+- Encontrar un archivo: Abrir un archivo.
+
+- Matar un buffer: Cerrar un buffer.
+
+Misión
+............................................................................
+1) ¡¡¡Múevete!!!:
+
+   Tus ÓRDENES: Múevete a la línea ALPHA.
+
+2) Guardando un buffer a un archivo:
+
+   Descripción: Puedes pensar en un buffer como en un documento.
+
+   Teclazo: C-x C-s => Guarda el buffer actual al disco.
+
+   Tus ÓRDENES:
+     - Oprima C-x C-s ahora, observe el minibuffer (la línea de texto
+       desplegada abajo), el texto '(Sin cambios por guardar)' debe aparecer,
+       esto significa que no has hecho ningún cambio al documento aún.
+
+     - Ahora escriba la palabra 'Doom' en la línea ALPHA y presione C-x C-s
+       de nuevo, el texto 'Escrito /home/doom/misión-02-guardar.txt' debe
+       aparecer en el minibuffer, esto quiere decir que has guardado los
+       cambios que recién hiciste.
+
+     - Ahora ve a la línea BRAVO.
+
+ALPHA
+
+3) Encontrando un archivo, abrirlo como un buffer:
+
+   Teclazo: C-x C-f => Abre un archivo usando una ruta de archivo.
+
+   Tus ÓRDENES:
+     - Oprima C-x C-f, un texto similar a
+       'Encontrar archivo: ~/emacs-bootcamp/' debe haberse desplegado en
+       el minibuffer. Lo que ocurre es que tú activas el minibuffer al
+       oprimir la combinación de teclas.
+
+     - Escribe el texto 'misión-02-guardar.txt' y oprima RET, en el
+       minibuffer, se limpia el texto existente, lo que acabas de hacer es
+       intentar reabrir este mismo archivo y Emacs simplemente no hizo nada
+       ya que era innecesario. Pero acuérdate de este teclazo porque lo
+       necesitaras en las ÓRDENES siguientes.
+
+BRAVO
+4) Matar un buffer.
+
+   Teclazo: C-x C-k => Matar (cierra) un buffer.
+
+   Tus ÓRDENES:
+     - Con el fin de prevenir cualquier falla, primero lea todos los pasos
+       en estas ÓRDENES. Lo que sucede es que al oprimir C-x C-k el
+       buffer para el archivo misión-02-guardar.txt se cerrará y tendrás que
+       reabrirlo usando C-x C-f para encontrar el archivo.
+
+     - Presione C-x C-k para matar este buffer, en el minibuffer, el texto
+       'Matar buffer (por defecto misión-02-guardar.txt):' se desplegará,
+       presione RET para responder 'sí'.
+
+     - Ahora presione C-x C-f para encontrar el archivo
+       'misión-02-guardar.txt', cuando presionas esta secuencia de teclas,
+       el minibuffer se activa y puedes escribir una ruta al archivo
+       'misión-02-guardar.txt', el caso más común es que cuando oprimes
+       C-x C-f se te presenta tu directorio casa (HOME) y tienes que usar la
+       tecla TAB para visualizar los directorios y archivos en él, Soldado!!!
+       VE a buscar el archivo 'misión-02-guardar.txt' AHORA y una vez que lo
+       encuentres presiona RET para abrirlo.
+
+     - Finalmente ve a la línea DELTA.
+
+CHARLIE
+5) Crear un nuevo buffer:
+
+   Teclazo: C-x b <escribir nombre del buffer> RET => Crear nuevo buffer.
+
+   Tus ÓRDENES:
+     - Oprima C-x b y observe el minibuffer, el texto 'Cambiar al buffer ...'
+       debe aparecer ahí.
+
+     - Ahora escriba el texto 'doom.txt', este será el nombre del archivo
+       que se guardará luego.
+
+     - En este paso debes oprimir RET, PERO NO lo hagas aún,  cuando
+       finalmente oprimas RET un nuevo buffer llamado 'doom.txt' se
+       desplegará, tendrás que editar ese buffer y guardarlo en el disco,
+       para hacerlo, cuando el nuevo buffer 'doom.txt' se despliegue,
+       sigue los pasos:
+         - Escribe el texto: 'Doom es Rey' en él.
+         - Presiona C-x C-s RET para guardar el buffer al archivo 'doom.txt'.
+         - Mata el buffer 'doom.txt' al presionar C-x C-k.
+
+      - Ve a la línea ECHO.
+
+DELTA
+6) Moverse entre buffers:
+
+   Teclazo. C-x b => Moverse (pasarse) entre buffers.
+
+   Tus ÓRDENES:
+     - Primero lea todos los pasos en estas ÓRDENES para prevenir cualquier
+       falla.
+
+     - Abre el archivo 'doom.txt' guardado en el paso anterior siguiendo los
+       pasos:
+         - Presione C-x C-f para activar el minibuffer para encontrar
+           el archivo.
+         - Use TAB y escriba texto para encontrar el archivo 'doom.txt' en
+           tu disco.
+         - Una vez que lo encuentres abrélo oprimiendo RET, el archivo
+           'doom.txt' se desplegará en EMACS.
+
+     - En el buffer 'doom.txt' presione C-x b RET para devolverte al buffer
+       'misión-02.txt'.
+
+     - Ve a la línea FOXTROT.
+ECHO
+
+7) Listar los buffers:
+
+   Teclazo: C-x C-b => Listar todos los buffers abiertos.
+
+   Tus ÓRDENES: Presione C-x C-b para desplegar la lista de buffers, esta
+   lista será desplegada en una nueva ventana debajo de este buffer,
+   verifique que los archivos 'misión-02-guardar.txt' y 'doom.txt' estén en
+   esa lista.
+
+FOXTROT
+
+Buen trabajo soldado, ahora puedes descansar 3 minutos ...

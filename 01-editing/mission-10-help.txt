@@ -1,0 +1,107 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #10: Search for help SOLDIER!!!
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission we will learn how to ask Emacs for help or information.
+
+"The long-term goal of any Emacs user is to reach the point where they
+can seek answers to questions they have by asking Emacs. Eventually,
+you'll commit to muscle memory the commands and keys you use most
+frequently, and the rest, well you can always look them" - Mastering Emacs.
+
+Mission
+............................................................................
+
+01) Using the help menu:
+
+    Keybinding: C-h C-h => Display the help menu.
+
+    Keybinding: C-h => Display the help menu.
+
+    When the 'point' is on a 'Help Menu' buffer:
+
+    Keybinding: <SPC> => Scroll down the help menu.
+
+    Keybinding: DEL => Scroll up the help menu.
+
+    Keybinding: c <Type keybinding> => Show the command that a keybinding
+                                       executes (by typing a keybinding).
+
+    Keybinding: a <COMMAND> => Show information about a command (by typing
+                               a command name).
+
+    Keybinding: k <COMMAND> => Show documentation that describes a command
+                               (by typing a command keybinding).
+
+    Keybinding: q => Quits the help menu.
+
+    ORDERS:
+      - Read all instructions.
+
+      - Press C-h C-h to display the help menu at the bottom of Emacs, 
+        the point will placed on the help menu buffer.
+
+      - Press <SPC> once to scroll down the help menu.
+
+      - Press DEL to scroll up on the help menu.
+
+      - Press 'q' to close the help menu buffer.
+
+      - Press C-h C-h to display the help menu.
+
+      - Press 'c', when you press 'c' the help menu buffer will be closed
+        and the text 'Describe the following key ...' will appear in the
+        minibuffer.
+
+      - Press the keybinding 'C-a', the text
+        'runs the command move-beginning-of-line' will display on the
+        minibuffer.
+
+      - Press C-h C-h again.
+
+      - Press 'a', the help menu buffer will be closed and the text
+        'Search for command ...' will display on the minibuffer.
+
+      - Type the text 'move-beginning-of-line' and press RET, information
+        about that command is displayed.
+
+      - Press C-x 1 to close that window and get back to this one.
+
+      - Press C-h C-h once more.
+
+      - Press 'b' to display the list of all active keybindings. You can use
+        C-M-v to scroll down that ('the other') window.
+
+      - Press C-x 1 to display only this window.
+
+      - Press C-h C-h yet another time.
+
+      - Press 'k' and then press the keybinding 'C-a'.
+
+      - Press C-x 1 to display only this window.
+
+      - You can use shortcuts keybindings for the previous commands by
+        using the command prefix 'C-h', NOW PRESS 'C-h k'
+        and then PRESS 'C-a' to display information about the
+        'move-to-beginning-of-line' command.
+
+      - Press C-x 1 to keep only one window.
+
+    NOTE: The 'C-h a' command is known as 'apropos' and it's very
+          popular on the Emacs world.
+
+Good Job soldier, you can now take 10 minutes off ...

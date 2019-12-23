@@ -1,0 +1,162 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #06: Bookmarks and Registers.
+----------------------------------------------------------------------------
+
+Definitions
+...........................................................................
+
+Bookmark: Think as the bookmarks of your web browser but can include: web
+          pages, directories, files, man pages and others. The bookmarks
+          are permanent and are stored on the file ~/.emacs.d/bookmarks.
+
+Register: The registers allows to store text and positions inside the buffer
+          but in contrast with the bookmarks, they are trasient, this means
+          that they dissapear when Emacs is closed. The registers are
+          'one-character-store'. They can store positions on the buffer,
+          regions of text (selected text) and numbers.
+
+Mission
+...........................................................................
+
+01) Setting a bookmark:
+
+   Keybinding: C-x r m => Set a bookmark.
+
+   ORDERS:
+     - Go to the ALPHA line.
+
+     - Press C-x r m, the text 'Set bookmark unconditionally' must appear
+       on the minibuffer.
+
+     - Type the name 'alpha' and press RET to create a bookmark.
+
+     - Go to the BRAVO line.
+
+     - Press C-x r m, type the text 'bravo' as name for the bookmark and
+       press RET to save another bookmark.
+
+02) Listing the bookmarks:
+
+    Keybinding: C-x r l => Show the list of bookmarks.
+
+    ORDERS:
+      - Read all steps.
+
+      - Press C-x r l to show the list of bookmarks. This will open a new
+        buffer with the list of bookmarks on it.
+
+      - On the bookmark list press C-x k RET to kill that buffer and return
+        to this one.
+
+ALPHA
+
+BRAVO
+
+03) Jumping to a bookmark:
+
+    Keybinding: C-x r b => Jump to a bookmark.
+
+    ORDERS:
+      - Go to the CHARLIE line.
+
+      - Press C-x r b.
+
+      - Write the name 'alpha' on the minibuffer.
+
+      - Press RET to jump to the 'alpha' bookmark.
+
+CHARLIE
+
+04) Deleting a bookmark (Running a command by name):
+
+    Description: When a command has no keybinding associated, it must be
+                 called by name.
+
+    Keybinding: M-x (type the command name) RET => Execute command by name.
+
+    ORDERS:
+      - Read all instructions.
+
+      - Press M-x, the minibuffer must show the text 'M-x'.
+
+      - Press C-g to cancel.
+
+      - Press M-x again.
+
+      - Write in the minibuffer the text 'bookmark-delete'.
+
+      - Press RET.
+
+      - The text 'Delete bookmark' must be shown on the minibuffer, type
+        the text 'bravo' and press RET.
+
+      - Press C-x r l to show the list of bookmarks, the bookmark 'bravo'
+        must not appear on this list now.
+
+      - Press C-x k RET to return to this buffer.
+
+05) Setting a register:
+
+    Description: Register are 'one character only'.
+
+    Keybiding: C-x r <SPC> => Store point position on a register.
+
+    ORDERS:
+      - Go to the DELTA line.
+
+      - Press C-x r <SPC>. The text 'Point to register' must be shown on
+        the minibuffer.
+
+      - Type the 'a' character as the name of the register.
+
+06) Listing saved registers:
+
+    Description: For this next command you must wait about two to three
+                 seconds for the information to display (tiny delay).
+
+    Keybinding: C-x r j (wait three seconds) => List saved registers.
+
+    ORDERS:
+      - Press C-x r j.
+
+      - Count to three.
+
+      - Watch the minibuffer, the list of registers is displayed.
+
+      - Press C-g to cancel.
+
+DELTA
+
+07) Jumping to a register:
+
+    Keybinding: C-x r j <type register character> RET => Jump to register.
+
+    ORDERS:
+      - Go to the ECHO line.
+
+      - Press C-x r j.
+
+      - Press the character 'a' (the name of the register).
+
+      - Press RET to jump to the register 'a'.
+
+ECHO
+
+08) Deleting a register:
+
+    Description: There is no such thing as register deletion, you can
+                 overwrite them by using C-x r <SPC> and using the
+                 character you want to rewrite as name on the minibuffer.
+
+                 Also when you close Emacs and reopen it again, the
+                 register will be all gone (they are temporary).
+
+Good Job soldier, you can now have 20 seconds to stretch ...

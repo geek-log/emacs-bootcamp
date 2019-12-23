@@ -1,0 +1,116 @@
+git Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs
+
+Misión #07: ¡¡¡Búsquelo soldado!!!
+----------------------------------------------------------------------------
+
+ALPHA
+
+01) Buscando incrementalmente:
+
+    Descripción: Búsqueda incremental quiere decir que puedes realizar una
+                 búsqueda de texto completo.
+
+    Teclazo: C-s => Inicia la búsqueda incremental.
+
+    ÓRDENES:
+      - Vaya a la línea ALPHA.
+
+      - Presione C-s.
+
+      - Digite la palabra 'bravo' y observe que pasa.
+
+      - Presione C-s dos veces más y observe que pasa.
+
+      - Presione C-g para cancelar y volver a la posición original.
+
+bravo
+BRAVO
+
+02) Buscando incrementalmente hacia atrás:
+
+    Teclazo: C-r => Inicie la búsqueda incremental hacia atrás.
+
+    ÓRDENES:
+      - Vaya a la línea CHARLIE.
+
+      - Presione C-r.
+
+      - Digite la palabra 'bravo' y observe que pasa.
+
+      - Presione C-r de nuevo y observe que pasa.
+
+      - Presione C-g para cancelar y volver a la posición original.
+
+      - Oprima C-r y digite la palabra 'BRAVO' (en mayúscula), observe
+        que pasa.
+
+      - Oprima C-r tres veces más y observe lo que pasa (no te preocupes
+        si la pantalla hace un flash, es el comportamiento normal).
+
+      - Presione RET para ir a la posición de la coincidiencia seleccionada.
+
+CHARLIE
+
+charles
+Charca
+CHAVO
+CharIzard
+
+03) Buscando incrementalmente usando una expresión regular:
+
+    Teclazo: C-M-s => Inicia la búsqueda incremental con expresión regular.
+
+    ÓRDENES:
+      - Vaya a la línea DELTA.
+
+      - Presione C-M-s para empezar la búsqueda incremental, se te pide que
+        digites una expresión regular para usar ('Regexp I-search').
+
+      - Digite la siguiente expresión y nada más: charl.*
+
+      - Presione C-M-s seis veces más (no te preocupes por el flash de la
+        pantalla).
+
+      - Oprima C-g para cancelar y volver a la posición original.
+
+DELTA
+Charles
+
+04) Buscar incrementalmente hacia atrás usando una expresión regular:
+
+    Teclazo: C-M-r => Inicia la búsqueda incremental hacia atrás con regexp.
+
+    ÓRDENES:
+      - Lea todas las instrucciones.
+
+      - Vaya a la línea DELTA.
+
+      - Presione C-M-r.
+
+      - En el minibuffer escriba la siguiente expresión regular: charl.*
+
+      - Presione C-M-r cinco veces más, observe lo que pasa (no te preocupes
+        por el flash de la pantalla).
+
+      - Presione RET para saltar a la posición de la coincidencia
+        seleccionada.
+
+NOTAS FINALES:
+
+  - PARA finalizar una búsqueda tienes dos opciones:
+
+    - Oprimes C-g para cancelar y volver a la posición original.
+
+    Ó
+
+    - Presionas RET para saltar a la coincidencia seleccionada.
+
+Buen trabajo soldado ...

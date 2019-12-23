@@ -1,0 +1,168 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs
+
+Misión #05: Marca la región soldado!!!
+----------------------------------------------------------------------------
+
+Definiciones
+............................................................................
+
+Punto: En Emacs 'el punto' es el cursor, es la posición actual del cursor
+dentro del buffer.
+
+Marca: 'La marca' es una posición en el buffer que es recordada.
+
+Región: Es la región de texto entre 'la marca' y 'el punto', es una
+selección de texto, justo como lo harías con un mouse en otros editores.
+
+01) Poniendo la marca:
+
+   Teclazo: C-<SPC> => Pone la marca en el punto (adonde está el cursor).
+
+   ÓRDENES:
+     - Vaya a la línea BRAVO.
+
+     - Presione C-<SPC> y NADA MÁS, observe el minibuffer, debe mostrar
+       el texto 'Marca puesta', esto quiere decir que correctamente
+       pusiste la marca. También significa que 'la marca' se ha activado
+       y que puedes seleccionar texto.
+
+     - Ahora presiona C-p dos veces, ¿ves lo que pasa?, la línea ALPHA está
+       seleccionada.
+
+     - Presiona C-g, este confiable comando siempre cancela lo que sea.
+
+ALPHA
+BRAVO
+
+02) Intercambiar el punto y la marca (Saltando a la marca):
+
+   Descripción: Esto tal vez suena como una manera extraña para moverse,
+                pero este es el ejército así que CÁLLATE Y HAZ LO QUE SE
+                TE DICE.
+
+   Teclazo: C-x C-x => Intecambia el punto y la marca.
+
+   ÓRDENES:
+     - Vaya a la línea CHARLIE.
+
+     - Presione C-<SPC> para PONER y ACTIVAR la marca.
+
+     - Presione C-g para desactivar la marca.
+
+     - Vaya a la línea BRAVO.
+
+     - Presione C-x C-x para saltar a la línea CHARLIE (adonde está la
+       marca).
+
+     - AHORA estás en la línea CHARLIE pero el texto entre ella y la línea
+       BRAVO está seleccionado (la marca está activa). Presione C-g para
+       desactivar la marca.
+
+03) Comandos que ponen la marca:
+
+   Descripción: Múltiple comandos Emacs ponen la marca automaticámente por
+   tí, y puedes saltar a ella de la manera como recién lo hicimos.
+
+
+   ÓRDENES:
+     - Lea todos los pasos.
+     - Vaya a la línea CHARLIE.
+     - Presione M-< para ir al principio del buffer.
+     - Presione C-x C-x para regresar a la línea CHARLIE.
+     - Presione C-g para desactivar la región.
+
+CHARLIE
+
+04) Seleccionar por palabras:
+
+   Teclazos:
+     - M-@ => Seleccionar la próxima palabra.
+     O
+     - C-M-<SPC> => Seleccionar la próxima palabra.
+
+   ÓRDENES:
+     - Vaya a la línea DELTA.
+     - Presione C-a para ir al principio de la línea.
+     - Presione M-@ para seleccionar la palabra DELTA.
+     - Presione M-@ para seleccionar la palabra ECHO.
+     - Presione C-g para desactivar la región.
+
+DELTA ECHO FOXTROT
+
+05) El argumento UNIVERSAL:
+
+    Descripción: El argumento UNIVERSAL permite repetir acciones.
+
+    Teclazo: C-u # => Ejecuta el siguiente comando # veces.
+
+    ÓRDENES:
+      - Vaya a la línea DELTA.
+      - Presione C-a.
+      - Presione C-u 3.
+      - Presione M-@. ¿Qué ocurre? Usar C-u 3 es el equivalente de todos
+        los pasos que hicimos en las ÓRDENES #04.
+      - Ahora presione C-g para desactivar la región.
+
+06) Seleccione el próximo párrafo:
+
+    Teclazo: M-h => Selecciona el próximo párrafo.
+
+    ÓRDENES:
+      - Vaya a la línea GOLF.
+      - Presione C-a.
+      - Presione M-h, el próximo párrafo (lorem ipsum) debe estar
+        seleccionado.
+      - Presione M-h dos veces más para marcar todos los párrafos.
+      - Presione C-g.
+      - Vaya a la línea HOTEL.
+
+GOLF Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+vestibulum eget dui id ullamcorper. Donec vehicula at elit quis mollis. Sed
+sed ultrices felis, ac consectetur sapien. Etiam maximus mattis nulla in
+tristique. Phasellus id libero sapien. Nulla posuere, odio suscipit euismod
+fringilla, elit magna luctus turpis, a ornare lectus nisl non lacus. Nunc
+sit amet odio hendrerit, bibendum nulla id, dictum dui. Phasellus non sem
+euismod justo tempor sodales ut id justo. Pellentesque gravida odio elit,
+vel placerat arcu pharetra vestibulum. Integer non vehicula libero. Etiam
+feugiat dui ut faucibus rutrum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus
+ligula, maximus sed egestas at, ornare nec dui. Nulla porta cursus eros.
+Nulla dignissim vel nisi eget porta. Donec auctor justo at ante pharetra,
+sit amet sagittis velit semper. Sed et odio ac erat consequat bibendum eget
+in orci. Phasellus vel mi eget nisl congue venenatis. Mauris turpis orci,
+tincidunt vel molestie a, egestas ac magna. Morbi mattis ac ipsum ac
+venenatis. Sed a tempor est. Aliquam interdum neque id mi facilisis
+fermentum.
+
+Cras iaculis massa sit amet congue pretium. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. In
+accumsan auctor eros eget viverra. Sed hendrerit aliquam fringilla.
+Praesent pharetra, turpis nec viverra egestas, justo libero convallis massa,
+sit amet commodo enim sem nec ante. Maecenas in maximus sapien, quis
+condimentum arcu. Integer vehicula aliquet quam vel luctus. Nulla varius,
+nibh ac blandit ullamcorper, dui erat consectetur nulla, ac faucibus nisl
+eros sed felis. Maecenas sed nibh est. Maecenas laoreet fermentum nunc vel
+dignissim. Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Nulla ante odio, suscipit in diam vitae,
+interdum aliquam orci. Ut rutrum, mauris non fringilla vestibulum, risus
+dolor elementum nisi, in porttitor neque ipsum a arcu. Vivamus nec turpis
+commodo, lacinia urna a, suscipit elit. 
+
+HOTEL
+
+07) Marcar todo el buffer:
+
+    Teclazo: C-x h => Marca todo el buffer.
+
+    ÓRDENES: Presione C-x h para seleccionar todo el texto en este buffer.
+
+Buen trabajo soldado, ahora puedes descansar 30 segundos ...

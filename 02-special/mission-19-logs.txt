@@ -1,0 +1,296 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Special Forces training.
+
+Here you will learn to use more advanced commands.
+
+Mission #18: Working with Logs
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn:
+     - How to work with logs.
+     - How to use the terminal emulator.
+     - How to use the web browser EWW.
+
+Mission
+............................................................................
+
+01) Using files in read-only:
+
+    Keybinding: C-x C-f => Find a file.
+
+    Keybinding: C-x C-r => Find a file as read-only.
+
+    Keybinding: C-x C-q => Toggle read-only.
+
+    ORDERS:
+      - Press C-x C-r to find a file, visit this same file
+        ('mission-19-logs.txt') and press RET.
+
+      - Now try to write something on this buffer. Emacs won't let you
+        and on the minibuffer the error message 'Buffer is read-only'
+        is displayed.
+
+      - You can turn on and off the read-only state by pressing C-x C-q,
+        press C-x C-q now, the text
+        'Read-only mode disable in the current buffer' is displayed on
+        the minibuffer.
+
+02) Listing matching lines only:
+
+    Keybinding: M-x kee => Keep only the lines that matches a regular
+                           expression. This command alters the original
+                           buffer.
+
+                OR
+
+                M-x keep-lines
+
+    Keybinding: M-s o => List only the lines that matches a regular
+                         expression. This command does not alters the
+                         original buffer and creates a second
+                         buffer (window).
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Go to the ALPHA line and press M-x, type 'kee' and press RET. 
+
+      - Type the regexp 'hower$' and press RET. This regular expression
+        matches all lines that END WITH the text 'hower'.
+
+      - Press C-x u to undo the keep-lines command.
+
+      - On the ALPHA line press M-s o, the text 'List lines matching
+        regexp:' is displayed on the minibuffer.
+
+      - Type 'hower$' and press RET. A second window is opened at the
+        bottom of Emacs, this window contains the list of results BUT
+        DID NOT delete anything from the original 'mission-19-logs.txt'
+        buffer. NOTE that the results are the same that we get with the
+        keep-lines command.
+
+      - Press C-x 1 to show only one window.
+
+ALPHA
+"In preparing for battle I have always found that plans are useless, but
+planning is indispensable." - Dwight D. Eisenhower
+
+"Neither a wise nor a brave man lies down on the tracks of history to wait
+for the train of the future to run over him." - Dwight D. Eisenhower
+
+"Leadership is the art of getting someone else to do something you want
+done because he wants to do it." - Dwight D. Eisenhower
+
+03) Highlighting:
+
+    Keybinding: M-s h p => Highlight a phrase.
+
+    Keybinding: M-s h r => Highlight by regular expression.
+
+    Keybinding: M-s h . => Highlight the symbol under the point.
+
+    Keybinding: M-s h u => Undo the highlighting under the point.
+
+    ORDERS:
+      - Go to the BRAVO line and press M-s h p, the text 'Phrase to
+        highlight:' is displayed on the minibuffer.
+
+      - Type the text 'Dwight D. Eisenhower' and press RET, the text
+        'Highlight using face:' is displayed on the minibuffer, press
+        RET again, the text gets highlighted.
+
+      - On the BRAVO line press M-s h r, the text 'Regexp to highlight:'
+        is displayed on the minibuffer.
+
+      - Type the text ^".* and press RET, this is a regexp that matches
+        all the lines that begins with a double quote character.
+
+      - On the BRAVO line press C-a.
+
+      - Press M-s h . , all the BRAVO words gets highlighted.
+
+      - Press M-s h u, Emacs will ask you wich one of all the highlights
+        you want to remove, and shows you by default the last used
+        highlight (BRAVO in this case), press RET, the highlight for all
+        the BRAVO word gets removed. You can continue removing
+        highlights by using M-s h u IF YOU LIKE.
+
+BRAVO
+"In preparing for battle I have always found that plans are useless, but
+planning is indispensable." - Dwight D. Eisenhower
+
+"Neither a wise nor a brave man lies down on the tracks of history to wait
+for the train of the future to run over him." - Dwight D. Eisenhower
+
+"Leadership is the art of getting someone else to do something you want
+done because he wants to do it." - Dwight D. Eisenhower
+
+04) Using the terminal from Emacs:
+
+    Keybinding: M-x term => Opens a terminal buffer.
+
+    Keybinding: C-c C-j => Toggles term-line mode (copy paste on terminal).
+
+    Keybinding: C-c C-k => Toggles term-char-mode (standard mode on
+                           terminal buffer).
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Press C-x 2 to divide the frame in two windows.
+
+      - Press C-x o to jump to the lower window.
+
+      - Press M-x, type the word 'term' and press RET, the text
+        'Run program: /bin/bash' appears on the minibuffer, press RET again,
+        this will open a NEW TERMINAL BUFFER.
+
+      - When you are on the terminal buffer and you try to get back to the
+        upper buffer with C-x o (press it NOW), Emacs won't let yo do that,
+        so how you GET OUT of a terminal buffer then?
+
+      - If you read the message area of the terminal buffer (the area
+        of text above the minibuffer) it says '(Term: char run)', this is
+        the standard state for a terminal buffer, let's change it so we can
+        GET OUT of there, press C-c C-j and observe the message area,
+        the text is changed to '(Term: line run)'.
+
+      - When the '(Term: line run)' state is on, is possible to use C-x o
+        to jump to another window. The 'line run' state also allow us
+        to copy and paste taste from and to the terminal buffer, as this
+        state threats the terminal more as a buffer and less as a terminal
+        (contrary to the 'char run' state). Press C-x o now to get back to
+        this buffer.
+
+      - Press C-x o again to jump to the terminal buffer.
+
+      - On the terminal buffer type 'ls' and press RET, the list of files
+        in the current directory is printed.
+
+      - Type 'exit' on the terminal, then press C-x 0 to show only this
+        buffer.
+
+05) Using EWW, the Emacs Web Browser.
+
+    Keybinding: M-x eww => Opens EWW web browser.
+
+    When the point is on an EWW buffer
+
+         M-<RET> => Opens the URL under the point on a new buffer.
+
+         b => Save bookmark.
+
+         B => List all bookmarks.
+
+         d => Download the URL under the point.
+
+         g => Reload the page.
+
+         S => List all open EWW buffers.
+
+         w => Copy the current URL to the kill ring.
+
+         M-C (Capital C and not Control) => Toggle colors.
+
+    ORDERS:
+      - Press C-x 2 to divide the frame in two windows.
+
+      - Press C-x 0 to jump to the lower windows.
+
+      - Press M-x, type eww and press RET, the text
+        'Type URL or keywords' is displayed on the minibuffer.
+
+      - Type the URL google.com and press RET, the google search page
+        will be displayed.
+
+      - Reach to the search text box, type 'dr doom' and press RET, the
+        Google results listings are displayed.
+
+      - Presione M-x again, type eww and press RET.
+
+      - This time instead of going to the Google search page, type the text
+        'dr doom' and press RET, the search results are displayed.
+
+      - Put the point over the Wikipedia link and press RET to visit it
+        and wait for the page to load. Note that here you could press
+        M-<RET> to open that URL on a new buffer and not on the same one.
+
+      - Press the 'b' character, the text 'Bookmark this page? (yes, no)'
+        is displayed on the minibuffer, type 'yes' and press RET, the text
+        'Page added to bookmarks' is showed on the minibuffer.
+
+      - Press the character 'B' to see the list of saved bookmarks, ON THE
+        UPPER WINDOW A NEW BUFFER is displayed with some text like the
+        following:
+
+Doctor Doom - Wikipedia          https://en.wikipedia.org/wiki/Doctor_Doom
+
+     - Put the point on the Doctor Doom line and press RET to visit the
+       bookmarked page.
+
+     - Press 'B' again to show the list of EWW bookmarks and navigate to
+       the 'Doctor Doom' line.
+
+     - Press C-k to kill that line and DELETE THE BOOKMARK THAT WAY.
+
+     - Press C-x C-k and then press C-x 1 to kill the buffer EWW and
+       get back to this buffer.
+
+06) Back to the logs:
+
+    Keybinding: M-x a-re-m => Refresh the buffer when the file is changed.
+
+                OR
+
+                M-x auto-revert-mode 
+                
+
+    Keybinding: M-x a-ta => Add changes when the file change. This works
+                            as the 'tail -f' terminal command.
+
+                OR
+
+                M-x auto-revert-tail-mode
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Press M-x, type 'a-re-m' and press RET, the text
+        'Auto-Revert mode enabled for this buffer' is displayed on the
+        minibuffer.
+
+      - Press C-x 2 to divide the frame in two windows.
+
+      - Press C-x o to jump to the lower window.
+
+      - Press M-x, type 'term' and press RET twice, a terminal buffer is
+        opened.
+
+      - From the terminal we will change the 'mission-19-logs.txt' file, type
+        the following command and press RET:
+
+            echo 'understand maggot?' >> mission-19-logs.txt
+
+        That command appends text to the 'mission-19-logs.txt' file.
+
+      - Type the command 'exit' on the terminal, press RET and then
+        press C-x 0 to show only this window.
+
+      - Go to the end of the buffer pressing C-> and verify that the
+        text we added is there, then press C-x C-x to return here (C-g to
+        cancel the selected region).
+
+      - Press M-x, type 'a-re-m' and press RET, the text
+        'Auto-Revert mode disabled for this buffer' is displayed on the
+        minibuffer.
+
+Good job soldier, now you can take 10 minutes off ...

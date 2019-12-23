@@ -1,0 +1,307 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de la fuerzas
+especiales.
+
+Aquí aprenderás a usar comandos más avanzados.
+
+Misión #20: Usando Dired
+...........................................................................
+
+Resumen
+...........................................................................
+
+En esta misión aprenderás como usar Dired, el editor de directorios y
+archivos de Emacs.
+
+Para esta misión necesitarás los archivos 'misión-19-bitácoras.txt' y
+'misión-20-dired.txt'.
+
+Definiciones
+...........................................................................
+
+Dired: Editor de directorios de Emacs, es usado para manejar archivos y
+       directorios justo como si usáramos los comandos cd, mv, mdkir, rm,
+       chown, chgrp y chmod de Linux.
+
+Misión
+...........................................................................
+
+01) Usando el Modo Dired:
+
+    Teclazo: C-x d => Inicia Dired.
+
+    Cuando el punto está en un buffer Dired
+
+           + => Crea un nuevo directorio.
+
+           m => Marca un archivo o directorio.
+
+           u => Desmarca un archivo o directorio.
+
+           U => Desmarca todo.
+
+           C => Copia los ítems marcados.
+
+           d => Pone la bandera de borrado.
+
+           D => Borra los ítems marcados
+
+           x => Borra los ítems que tienen la bandera de borrado.
+
+    ÓRDENES:
+      - Lea primero todas las instrucciones.
+
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana inferior.
+
+      - Presione C-x d, en el minibuffer un texto similar al siguiente se
+        despliega:
+
+            Dired (directorio): ~/emacs-bootcamp/02-especial/
+
+      - Presione RET, un NUEVO buffer es desplegado en la ventana inferior
+        con el listado de archivos para el directorio actual, en este
+        caso la ruta ~/emacs-bootcamp/02-especial, este listado debe verse
+        parecido a:
+
+        /home/doom/emacs-bootcamp/02-especial:
+        total used in directory 32 available 80722400
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:07 .
+        drwxr-xr-x 9 doom doom 4096 dic 14 23:46 ..
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19-bitácoras.txt
+        -rw-r--r-- 1 doom doom 7583 dic 15 14:07 misión-20-dired.txt
+
+      - Navegue hasta la línea que contiene misión-19-bitácoras.txt y
+        presione RET, el archivo 'misión-19-bitácoras.txt' se abre.
+
+      - Press C-x K para mater el buffer para 'misión-19-bitácoras.txt' y
+        regresar al listado de archivos de Dired.
+
+      - Ahora usemos Dired para agregar un NUEVO directorio, en el buffer
+        Dired presione el símbolo '+' y observe el minibuffer, el texto
+        'Crear directory: ~/emacs-bootcamp/02-especial/' se despliega
+        en el minibuffer.
+
+      - Digite el nombre 'temporal' para el nuevo directorio a ser creado y
+        presione RET. ASEGÚRESE de digitar la ruta completa al nuevo
+        directorio, como '~/emacs-bootcamp/02-especial/temporal'.
+
+      - Ahora el listado se ve parecido al siguiente:
+
+        /home/doom/emacs-bootcamp/02-especial:
+        total used in directory 24 available 80725316
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:07 .
+        drwxr-xr-x 9 doom doom 4096 dic 14 23:46 ..
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporal
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19-bitácoras.txt
+        -rw-r--r-- 1 doom doom 7583 dic 15 14:07 misión-20-dired.txt
+
+        Si vas y verificas esa ruta con un navegador de archivos (como
+        nautilus), el folder 'temporal' debe estar ahí.
+
+      - Vamos a explorar como borrar un directorio, mueva el punto a la
+        línea del directorio 'temporal' y presione la tecla 'd'. Una 'D'
+        se despliega en frente de esa línea ahora:
+
+        D drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporal
+
+        Esto quiere decir que este directorio tiene la bandera para ser
+        borrado.
+
+      - Ahora presione la tecla 'x', el texto 'Borrar temporal (sí o no)'
+        se despliega en el minibuffer.
+
+      - Digite o 'no' y presione RET para cancelar.
+
+      - Presione el caracter 'U' para quitar la bandera al directorio
+        'temporal', el caracter 'D' ya no aparece en frente de esa línea.
+
+      - Ahora movámonos a copiar un archivo, mueva el punto a la línea con
+        el texto 'misión-20-dired.txt' y presion el caracter 'm' para marcar
+        ese ítem, un caracter '*' aparece en frente de esa línea.
+
+        * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 misión-20-dired.txt
+
+      - Presione el caracter 'C' para copiar ese archivo, el texto
+        'Copiar misión-20-dired.txt a: ~/emacs-bootcamp/02-especial/' se
+        despliega en el minibuffer.
+
+     - Digite la siguiente ruta (o similar) y presione RET:
+
+       ~/emacs-bootcamp/02-special/temporal
+
+       Recuerde que puedes usar TAB para autocompletar.
+
+       El texto 'Copiado: 1 archivo' se despliega en el minibuffer.
+
+     - Visitemos el archivo copiado, en el buffer Dired, navegue hasta la           línea del directorio 'temporal' y presione RET, AÚN OTRO BUFFER DIRED
+       MÁS SE ABRE (se abren recursivamente cuando visitas un directorio
+       o subdirectorio) con un listado de archivos como el siguiente:
+
+        /home/doom/emacs-bootcamp/02-especial/temporal:
+        total used in directory 16 available 80722512
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 .
+        drwxr-xr-x 3 doom doom 4096 dic 15 15:42 ..
+        -rw-r--r-- 1 doom doom 4824 dic 15 15:40 misión-20-dired.txt
+
+        GENIAL, ¿No es así?
+
+     - Ahora presione C-k RET para matar el buffer Dired del directorio
+       'temporal', el buffer que estaba atrás se muestra de nuevo.
+
+     - Presione 'q' o C-k RET de nuevo para matar el buffer Dired para el
+       directorio '02-especial'.
+
+     - Presione C-x 1 para dejar solamente una ventana.
+
+02) Seleccionando regiones con Dired:
+
+    Descripción: Los comandos listados aquí se apilan con los usados
+                 en las ÓRDENES previas.
+
+    Teclazo: C-x d => Inicia Dired.
+
+    Cuando el punto está en un buffer Dired
+
+           *m => Marca una región.
+
+           *u => Desmarca una región.
+
+           *% => Marca archivos cuyo nombre coincide con una expresión
+                 regular.
+
+           *t => Habilita o deshabilita la marca.
+
+           *c => Cambia el símbolo de la marca del viejo a uno nuevo.
+
+    ÓRDENES:
+      - Presione C-x 2 para dividir el marco en dos ventanas.
+
+      - Presione C-x o para saltar a la ventana inferior.
+
+      - Ponga el punto en la línea 'temporal' y presione C-a.
+
+      - Presione C-M-<DOWN> para seleccionar todos los archivos y
+        directorios.
+
+      - Oprima *m para marcar todos los elementos, la lista debe verse
+        parecida a la siguiente:
+
+       * drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporal
+       * -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19.txt
+       * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 misión-20.txt
+
+     - Presione *m para marcar todos los elementos en esa región.
+
+     - Seleccione esa región de nuevo y presion *u para desmarcar todos
+       los elementos, la lista debe verse como:
+
+       drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporaral
+       -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19-bitácoras.txt
+       -rw-r--r-- 1 doom doom 2643 dic 15 14:57 misión-20-dired.txt
+
+     - Vamos a marcar ítems usando un nombre de archivo, presione *%, el
+       texto 'Marcar archivos (regexp):' se despliega en el minibuffer.
+
+     - Digite la palabra 'misión' y presione RET, todos los archivos cuyo
+       nombre contiene la palabra 'misión' son marcados con el símbolo '*':
+
+       drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporal
+       * -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19-bitácoras.txt
+       * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 misión-20-dired.txt
+
+     - Ahora presione C-x h para seleccionar todo el texto en el buffer
+       Dired y después presione *u para desmarcar todos los elementos.
+
+     - Navegue a la línea 'temporal' y presione RET para entrar en ese
+       directorio.
+
+     - Cuando el directorio 'temporal' se abra (en un nuevo buffer Dired),
+       presione el caracter '^' para volver al directorio padre.
+
+     - Presione 'q' dos veces para cerrar los dos buffers Dired y luego
+       oprima C-x 0 para dejar solamente este buffer.
+
+03) Operations sobre archivos con Dired:
+
+    Descripción: Los siguientes comandos son versiones de Emacs de comandos
+                 de terminal de Linux.
+
+    Teclazo: C-x d => Inicia Dired.
+
+    Cuando el punto está en un buffer Dired
+
+           g => Refresca el buffer dired.
+
+           + => Crea un subdirectorio.
+
+           C => Copia los ítems marcados.
+
+           R => Renombra los ítems marcados.
+
+           O => Ejecuta chown en los ítems marcados.
+
+           G => Ejecuta chgrp en los ítems marcados.
+
+           M => Ejecuta chmod en los ítems marcados.
+
+           D => Borra los ítems marcados
+
+           x => Borra los ítems con bandera.
+
+           F => Visita los ítems marcados. Est comando REQUIERE 'dired-x'.
+
+    ÓRDENES:
+      - Presione C-x 2 para abrir una segunda ventana.
+
+      - Presione C-x o para saltar a la ventana de abajo.
+
+      - Presione C-x d RET para abrir un buffer Dired, el listado debe
+        ser algo parecido a:
+
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 misión-19-bitácoras.txt
+        -rw-r--r-- 1 doom doom 8947 dic 15 17:58 misión-20-dired.txt
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 temporal
+
+      - Vaya a la línea 'temporal' y presione el caracter 'O', el texto
+        'Cambiar el dueño de temporal a:' se despliega en el minibuffer.
+
+      - Digite su propio nombre de usuario y presion RET. El texto
+        'Redesplegando ... hecho' se muestra en el minibuffer. Visualmente
+        nada ha cambiado pero el comando chown fue ejecutado.
+
+      - En la línea 'temporal' presione el caracter 'M', el texto
+        'Cambiar el modo de temporal a:' se despliega en el minibuffer.
+
+      - Digite 777 y presione RET, el texto 'Redesplegando ... hecho' se
+        despliega en el minibuffer y los permisos para el directorio
+        'temporal' son cambiados DE:
+
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 temporal
+
+        A
+
+        drwxrwxrwx 2 doom doom 4096 dic 15 18:06 temporal
+
+
+        El permiso w (escritura) fue agregado para todo usuario.
+
+      - Vamos a renombrar el directorio 'temporal', en la línea 'temporal'
+        presione el caracter 'R', el texto
+        'Renombrar temporal a: ~/emacs-bootcamp/02-especial/' es
+        desplegado en el minibuffer.
+
+      - Digite el nombre 'señuelo' (~/emacs-bootcamp/02-especial/) y
+        presione RET, el archivo es cambiado:
+
+        drwxrwxrwx 2 doom doom 4096 dic 15 18:06 decoy
+
+Buen trabajo soldado, ahora puedes descansar 5 minutos ...

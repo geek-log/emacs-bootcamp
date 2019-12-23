@@ -1,0 +1,302 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Special Forces training.
+
+Here you will learn to use more advanced commands.
+
+Mission #20: Using Dired
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn to use Dired, the Emacs directory and files
+editor.
+
+For this mission you will need the files 'mission-19-logs.txt' and
+'mission-20-dired.txt'.
+
+Definitions
+............................................................................
+
+Dired: Emacs directory editor, it is used to manage files and directories,
+       just like using the commands cd, mv, mkdir, rm, chown, chgrp and
+       chmod from Linux.
+
+Mission
+............................................................................
+
+01) Using Dired Mode:
+
+    Keybinding: C-x d => Starts Dired.
+
+    When the point is on a Dired buffer
+
+         + => Create a new directory.
+
+         m => Marks a file or directory.
+
+         u => Unmarks a file or directory.
+
+         U => Unmarks everything.
+
+         C => Copy the marked items.
+
+         d => Set delete flag.
+
+         D => Deletes marked items.
+
+         x => Deletes flagged items.
+
+    ORDERS:
+      - Read all instructions first.
+
+      - Press C-x 2 to divide the frame in two windows.
+
+      - Press C-x o to jump to the lower window.
+
+      - Press C-x d, on the minibuffer a text similar to the following is
+        displayed:
+
+            Dired (directory): ~/emacs-bootcamp/02-special/
+
+      - Press RET, a NEW buffer will be displayed on the lower window with
+        the file listings for the current directory, in this case the path
+        ~/emacs-bootcamp/02-special, this listing should look something like:
+
+        /home/doom/emacs-bootcamp/02-special:
+        total used in directory 32 available 80722400
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:07 .
+        drwxr-xr-x 9 doom doom 4096 dic 14 23:46 ..
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+        -rw-r--r-- 1 doom doom 7583 dic 15 14:07 mission-20-dired.txt
+
+      - Navigate to the line that contains mission-19-logs.txt and press RET,
+        the file 'mission-19-logs.txt' is opened.
+
+      - Press C-x K to kill the buffer for 'mission-19-logs.txt' and return
+        to the Dired file listing.
+
+      - Now let's use Dired to add a NEW directory, on the Dired buffer
+        press the '+' symbol and watch the minibuffer, the text
+        'Create directory: ~/emacs-bootcamp/02-special/' is displayed
+        on the minibuffer.
+
+      - Type the name 'temporary' for the new folder to be created and
+        press RET. BE SURE to type the full path to the new folder, like
+        '~/emacs-bootcamp/02-special/temporary'.
+
+      - Now the listing looks something like the following:
+
+        /home/doom/emacs-bootcamp/02-special:
+        total used in directory 24 available 80725316
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:07 .
+        drwxr-xr-x 9 doom doom 4096 dic 14 23:46 ..
+        drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporary
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+        -rw-r--r-- 1 doom doom 7583 dic 15 14:07 mission-20-dired.txt
+
+        If you go and check that path with a file browser (like nautilus),
+        the folder 'temporary' must be there.
+
+      - Let's explore hot wo delete a folder, move the point to the
+        line of the 'temporary' folder and press the 'd' key. A 'D'
+        is displayed on front of that line now:
+
+        D drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporary
+
+        That means that this folder is flagged to be deleted.
+
+      - Now press the 'x' key, the text 'Delete temporary (yes or no)' is
+        displayed on the minibuffer.
+
+      - Type 'no' and press RET to cancel.
+
+      - Press the 'U' character to unflagged the 'temporary' folder, the
+        'D' character does not longer appears in front of that line.
+
+      - Now let's move on to copy a file, move to the point to the line with
+        the text 'mission-20-dired.txt' and press the 'm' character to mark
+        that item, a '*' character now appears in front of that line.
+
+        * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 mission-20-dired.txt
+
+      - Press the 'C' character to copy that file, the text
+        'Copy mission-20-dired.txt to: ~/emacs-bootcamp/02-special/' is
+        displayed on the minibuffer.
+
+      - Type the following path (or similar) and press RET:
+
+        ~/emacs-bootcamp/02-special/temporary
+
+        Remember that you can use TAB to autocomplete.
+
+        The text 'Copy: 1 file' is displayed on the minibuffer.
+
+      - Let's visit the copied file, on the Dired buffer, navigate to the
+        line of the 'temporary' folder and press RET, YET ANOTHER DIRED
+        BUFFER IS OPENED (they are opened recursively when you visit
+        a directory or subdirectory) with a file listing like the following:
+
+        /home/doom/emacs-bootcamp/02-special/temporary:
+        total used in directory 16 available 80722512
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 .
+        drwxr-xr-x 3 doom doom 4096 dic 15 15:42 ..
+        -rw-r--r-- 1 doom doom 4824 dic 15 15:40 mission-20-dired.txt
+
+        COOL, isn't it?
+
+      - Now press C-k RET to kill the Dired Buffer for the directory
+        'temporary', the buffer that was behind is showed again.
+
+      - Press 'q' or C-k RET again to kill the Dired Buffer for the
+        '02-special' directory.
+
+      - Press C-x 1 to leave only one window.
+
+02) Selecting regions with Dired:
+
+    Description: The commands listed here stacks with the used on the
+                 previous ORDERS.
+
+    Keybinding: C-x d => Starts Dired.
+
+    When the point is on a Dired buffer
+
+         *m => Marks a region.
+
+         *u => Unmarks the region.
+
+         *% => Marks files whose name matches with a regular expression.
+
+         *t => Toggle mark.
+
+         *c => Changes the mark symbol from the old to a new one.
+
+   ORDERS:
+     - Press C-x 2 to open a second window.
+
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x d RET to open a Dired buffer on the current directory.
+
+     - Put the point on the 'temporary' line and press C-a.
+
+     - Press C-M-<DOWN> to select all files and directories.
+
+     - Press *m to mark all elements, the listing should look like the
+       following:
+
+       * drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporary
+       * -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+       * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 mission-20-dired.txt
+
+     - Press *m to mark all elements on that region.
+
+     - Select that region again and press *u to unmark all elements, the
+       list should look like:
+
+       drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporary
+       -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+       -rw-r--r-- 1 doom doom 2643 dic 15 14:57 mission-20-dired.txt
+
+     - Let's mark items by using a file name, press *%, the text
+       'Mark files (regexp):' is displayed on the minibuffer.
+
+     - Type the word 'mission' and press RET, all the files whose
+       name contains the word 'mission' are marked with the '*' symbol:
+
+       drwxr-xr-x 2 doom doom 4096 dic 15 14:59 temporary
+       * -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+       * -rw-r--r-- 1 doom doom 2643 dic 15 14:57 mission-20-dired.txt
+
+     - Now press C-x h to select all text on the Dired buffer and then
+       press *u to unmark all elements.
+
+     - Navigate to the 'temporary' line and press RET to enter that folder.
+
+     - When the 'temporary' folder opens (in a new Dired buffer), press the
+       '^' character to get back to parent directory.
+
+     - Press 'q' twice to close the two Dired buffer and then press C-x 0
+       to keep only this buffer.
+
+03) File operations with Dired:
+
+    Description: The following commands are Emacs versions linux terminal
+                 commands.
+
+    Keybinding: C-x d => Starts Dired.
+
+    When the point is on a Dired buffer
+
+         g => Refresh the Dired buffer.
+
+         + => Creates a subdirectory.
+
+         C => Copies the marked items.
+
+         R => Renames the marked items.
+
+         O => Executes chown on the marked items.
+
+         G => Executes chgrp on the marked items.
+
+         M => Executes chmod on the marked items.
+
+         D => Deletes the marked items.
+
+         x => Deletes the flagged items.
+
+         F => Visit the marked items. This command REQUIRES 'dired-x'.
+    
+    ORDERS:
+      - Press C-x 2 to open a second window.
+
+      - Press C-x o to jump to the lower window.
+
+      - Press C-x d RET to open a Dired buffer, the listing should be
+        something like:
+
+        -rw-r--r-- 1 doom doom 6923 dic 15 12:30 mission-19-logs.txt
+        -rw-r--r-- 1 doom doom 8947 dic 15 17:58 mission-20-dired.txt
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 temporary
+
+      - Go to the 'temporary' line and press the 'O' character, the text
+        'Change Owner of temporary to:' is displayed on the minibuffer.
+
+      - Type your own username and press RET. The text
+        'Redisplaying ... done' is shown on the minibuffer.
+        Visually nothing has changed but the command chown was runned.
+
+      - On the 'temporary' line press the 'M' character, the text
+        'Change mode of temporary to:' is displayed on the minibuffer.
+
+      - Type 777 and press RET, the text 'Redisplaying ... done' displays
+        again on the minibuffer and the permissions for the directory
+        'temporary' are changed FROM:
+
+        drwxr-xr-x 2 doom doom 4096 dic 15 15:40 temporary
+
+        TO
+
+        drwxrwxrwx 2 doom doom 4096 dic 15 18:06 temporary
+
+        The w (write) permission was added for every user.
+
+      - Let's rename the 'temporary' folder, on the 'temporary' line
+        press the 'R' character, the text
+        'Rename temporary to: ~/emacs-bootcamp/02-special/' is
+        displayed on the minibuffer.
+
+      - Type the name 'decoy' (~/emacs-bootcamp/02-special/decoy) and
+        press RET, the filename is changed:
+
+        drwxrwxrwx 2 doom doom 4096 dic 15 18:06 decoy
+
+Good job soldier, now you can take 5 minutes off ...

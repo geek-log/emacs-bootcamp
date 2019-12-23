@@ -1,0 +1,267 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #14: Corríjalos
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderemos como transponer texto y algunos otros trucos.
+
+Definiciones
+...........................................................................
+
+Transponer: Transponer texto es el arte de intercambiar dos unidades
+            sintácticas.
+
+Misión
+...........................................................................
+
+01) Transponiendo dos caracteres:
+
+    Teclazo: C-t => Transpone el caracter bajo el punto con el anterior.
+
+    ÓRDENES:
+      - Vaya a la línea ALPHA y oprima C-a, luego presione M-f, el cursor
+        debe estar en un espacio en blanco entre los caracteres 'b' y 'a'.
+
+      - Presione C-t, el espacio en blanco - que está bajo el cursor - es
+        intercambiado con el caracter 'b' que es el caracter previo, y ahora
+        la frase tiene sentido.
+
+ALPHAb asura esto
+
+02) Transponiendo dos palabras:
+
+    Teclazo: M-t => Transpone la palabra bajo el punto con la palabra previa.
+
+    ÓRDENES:
+      - Vaya a la línea BRAVO y oprima C-a.
+
+      - Presione M-f para posicionarse entre las palabras.
+
+      - Presione M-t.
+
+      - Vaya a la línea DELTA.
+
+      - Presione M-f dos veces, el punto debe estar en el símbolo ':'.
+
+BRAVO CHARLIE
+
+DELTA 'Doom': 'Doctor'
+
+03) Transponiendo expresiones sintácticas:
+
+    Teclazo: C-M-t => Transponer expresión sintáctica.
+
+    ÓRDENES:
+      - Vaya a la línea ECHO y oprima C-a.
+
+      - Presione M-f TRES veces y luego presione C-f UNA vez, esto es para
+        llegar al espacio en blanco entre '2 n)' y '(* 4'.
+
+      - Presione C-M-t, la expresión debe haber cambiado a
+        (/ (* 4 n) (+ 2 n))
+
+ECHO (/ (+ 2 n) (* 4 n))
+
+04) Transponiendo líneas:
+
+    Teclazo: C-x C-t => Transpone la línea actual con la previa.
+
+    ÓRDENES:
+      - Vaya a la línea GOLF.
+      - Presione C-x C-t.
+
+05) Transponiendo con argumentos númericos:
+
+    Descripción: Pasar argumentos númericos a los comandos para transponer
+                 no funciona igual a la manera estándard, el argumento
+                 es interpretado como la N-ava unidad sintáctia por
+                 transponer.
+
+    ÓRDENES:
+      - Vaya a la línea HOTEL y oprima C-a.
+
+      - Presione M-f dos veces.
+
+      - Presione M-t, las palabras 'Jane' y 'y' son intercambiadas.
+
+      - Presione C-x u para deshacer los cambios.
+
+      - Presione M-2 M-t, las palabras 'Jane' y 'y Mary' son intercambiadas.
+
+      - Presione M-x u para deshacer los cambios.
+
+      - Presione M-4 M-t, las palabras 'Jane' y 'y Mary aquí, Moly' son
+        intercambiadas.
+
+      - Vaya a la línea INDIA y ponga el punto sobre el caracter 'D'.
+
+      - Presione C-t, el caracter 'D' es intercambiado con el caracter 'C'.
+
+      - Presione C-x u.
+
+      - Presione C-2 C-t los caracteres 'DE' son intercambiados con el
+        caracter 'C'.
+
+      - Presione C-x u.
+
+      - Presione C-3 C-t, los caracteres 'DEF' son intercambiados con el
+        characer 'C'.
+
+HOTEL Jane y Mary aquí, Molly ya viene.
+
+INDIA ABCDEFGH
+
+06) Llenando un párrafo:
+
+    Descripción: El comando siguiente es usado para mantener la regla
+                 de las 0 a 79 columnas, la cual es MUY MUY importante
+                 para leer.
+
+    Teclazo: M-q => Llena el párrafo.
+
+    ÓRDENES:
+      - Vaya a la línea JULIET.
+
+      - Presione M-q y observe lo que pasa, el párrafo se auto-ordena
+        mágicamente.
+
+JULIET Si uds señoritas dejan mi isla, si sobreviven el entrenamiento de recluta, uds serán un arma. Uds serán ministros de la muerte y rezaran por que venga la guerra. Pero hasta ese día, son vomitadas. Son la forma más baja de vida en la Tierra. No son ni siquiera putos seres humanos. No son nada más que unas desordenadas piezas de mierda de anfibio!
+
+07) Comentando texto:
+
+    Teclazo: C-S-e => Selecciona la region desde el punto hasta el final de
+                      la línea.
+
+    Teclazo: M-; => Comenta o descomenta.
+
+    ÓRDENES:
+      - Lea todas las instrucciones primero.
+
+      - Vaya a la línea KILO y presione C-a.
+
+      - Presione M-f para saltarse la palabra KILO.
+
+      - Presione C-S-e para selecionar el resto del texto.
+
+      - Presione M-; y observe el minibuffer, el texto
+        'No hay sintaxis definida para los comentarios. Usar:' se despliega
+        ahí. Esto quiere decir que Emacs no sabe que tipo de comentarios de
+        código aplicar, esto ocurre porque el archivo
+        'misión-14-transponer.txt' es un archivo de texto plano y no tiene
+        ningún encabezado escrito en él (por ejemplo: #!/bin/bash), si el
+        nombre del archivo hubiera sido 'misión-14-transponer.py' (eso es un
+        archivo de python) Emacs no se hubiera molestado en preguntarte.
+
+      - Usemos los comentarios de tipo bash (#), en el minibuffer, digite
+        el símbolo '#' y presione RET, el texto ES COMENTADO.
+
+      - Vaya a la línea LIMA y presione M-;, ¿Qué ocurre? Esta vez un
+        símbolo '#' es agregado al final de la línea y NINGÚN texto es
+        comentado, esto quiere decir que si existe texto seleccionado,
+        ese texto es comentado, y si no existe texto seleccionado, entonces
+        el comentario va al final de la línea, GRANDIOSO. 
+
+      - En la línea LIMA presione C-a y luego presione C-S-e para
+        seleccionar todo el texto en esa línea.
+
+      - Presione M-;.
+
+KILO esto es basura
+
+LIMA más basura
+
+08) Comentando la línea actual:
+
+    Teclazo: C-S-a => Selecciona la región desde el punto hasta el
+                      principio de la línea.
+
+    Teclazo: C-x C-; => Comenta la línea actual.
+
+    ORDERS:
+      - Vaya a la línea MIKE y presione C-e.
+
+      - Presione C-S-a para seleccionar todo el texto en esa línea.
+
+      - Presione M-; para comentar todo ese texto.
+
+      - Presione C-x u para cancelar el comentado.
+
+      - Presione C-e.
+
+      - Presione C-S-a de nuevo.
+
+      - ¡¡¡ESPERA!!! ... Hay una mejor manera de hacer esto, PRESIONE C-g
+        para cancelar la región seleccionada.
+
+      - Presione C-x C-;, la línea MIKE es comentada sin tener que
+        seleccionar nada.
+
+      - Y esto aplica para cualquier parte de la línea, presione C-x u
+        para deshacer el comentado.
+
+      - En la línea MIKE presione C-a y luego presione M-f tres veces.
+
+      - Ahora presione C-x C-;, la línea es comentada igualmente.
+
+MIKE Este es solamente un texto señuelo para que practiques.
+
+09) Seleccionando y comentando:
+
+    ÓRDENES:
+      - Vaya a la línea NOVEMBER y presione C-a.
+
+      - Presione C-S y MANTÉNGALO PRESONADO, NO lo dejes ir soldado.
+
+      - Ahora con C-S aún presionado, presione la tecla 'n', la línea
+        NOVEMBER completa es seleccionada y el punto está ahora en la
+        línea OSCAR, sigue presionando C-S.
+
+      - Ahora oprime la tecla 'e' para seleccionar el resto del texto
+        de la línea actual (esto es toda la línea).
+
+      - Presione M-; para comentar toda la region.
+
+NOVEMBER Otro señuelo para dispararle en la cabeza.
+OSCAE Y aquí está otra línea más con un sentido vacío. ¿Qué es la vida?
+
+10) Seleccionando y comentando hacia atrás:
+
+    ÓRDENES:
+      - Vaya a la línea UNIFORM y presione C-e.
+
+      - Presione C-S y mántengalo presionado (justo como en las últimas
+        ÓRDENES)
+
+      - Presione la tecla 'p', la línea UNIFORM completa es seleccionada y
+        el punto está ahora en la línea TANGO.
+
+      - Presione la tecla 'p' CUATRO veces más, todo el texto es seleccionado
+        excepto por el texto en la línea PAPA.
+
+      - Oprima C-a (con C-S aún oprimido) para seleccionar el resto del
+        texto.
+
+      - Presione C-x C-; para comentar toda la región.
+
+PAPA Sobre las praderas, sobre las montañas
+QUEBEC sobre los caminos de tierra
+ROME la armada va andando y andando
+SIERRA adentro y afuera, escuchélos gritar
+TANGO "izquier, dos, tres, cuatro"
+UNIFORM y la armada va andando y andando
+
+Buen trabajo soldado, ahora puedes descansar 1 minuto ...

@@ -1,0 +1,171 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Now that you can run all the laps without losing your breath we'll advance
+to specialize your abilities.
+
+Mission #11: Kill them soldier!!!
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to kill and yank.
+
+On Emacs (for historical reasons), the cut command is know as 'kill'.
+
+On Emacs, the paste command is know as 'yank'.
+
+The difference between cut and kill is that a 'cut' cuts the selected
+text and a 'kill' cuts the text and also adds the 'killed' text to a space
+know as the 'kill ring'.
+
+The 'kill ring' is a special buffer where each killed text is added, so we
+can reuse it later, this is similar to the 'undo ring' used on mission #01.
+
+From all the commands included on this mission, the first two DON'T kills
+the text but delete it, this means the first two commands used here will not
+add anything to the 'kill ring'.
+
+Go ahead killing and yanking soldier.
+
+Mission
+............................................................................
+
+01) Deleting a character:
+
+    Note: this command does not add anything to the 'kill ring'.
+
+    Keybinding: C-d => Deletes the character under the point.
+
+    ORDERS: Go to the ALPHA line and press C-a to go to the beginning of the
+            line, then press C-d to delete the first 'A' character.
+
+02) Deleting the previous character:
+
+    Note: this command does not add anything to the 'kill ring'.
+
+    Keybinding: <BACKSPACE> => Deletes the previous character.
+
+    ORDERS: On the ALPHA line press C-e to go to the end of the line, then
+            press <BACKSPACE> to delete the last 'A' character.
+
+ALPHA
+
+03) Adding a new line:
+
+    Note: This command does not delete, kills or cuts but just adds a new
+          line.
+
+    Keybinding: C-j => Add a newline.
+
+    ORDERS: On the ALPHA line press C-e and then press C-j.
+
+04) You first kill, killing a word:
+
+    Keybinding: M-d => Kills the next word.
+
+    ORDERS: On the BRAVO line press C-a, then press M-d to kill the BRAVO
+            word and DON'T press anything else.
+
+BRAVO
+
+05) Yanking, your first restore:
+
+    Keybinding: C-y => Yanks text.
+
+    ORDERS: Press C-y two times. See what happens? The text you just killed
+            is pasted.
+
+06) Killing the previous word:
+
+    Keybinding: C-<BACKSPACE> => Kills the previous word.
+
+    ORDERS:
+      - On the CHARLIE line press C-e.
+
+      - Press M-<BACKSPACE> to kill the CHARLIE word.
+
+      - Press C-y to yank (paste) it again.
+
+CHARLIE DELTA
+
+07) Killing the rest of the line:
+
+    Keybinding: C-k => Kills the text from the position where the point
+                       is to the end of that same line.
+
+    ORDERS:
+      - Go to the ECHO line and press C-a.
+
+      - Press M-f two times to skip the ECHO and FOXTROT words.
+
+      - Press C-k to kill the rest of the line.
+
+      - Press C-n to get one line down.
+
+      - Press C-y to yank the portion of line you just killed.
+
+ECHO FOXTROT This is just a decoy dummy text for you to kill it.
+
+08) Killing the rest of the sentence:
+
+    Keybinding: M-k => Kills the text from the position where the point
+                       is to the end of the sentence.
+
+    ORDERS:
+      - Go to the GOLF line and press C-a.
+
+      - Press M-f to skip the GOLF word.
+
+      - Press C-k to kill the rest of the line.
+
+      - Press C-x u to undo the killing.
+
+      - Press M-k to kill the rest of the sentence.
+
+      - Press C-x u.
+
+GOLF "Son, all I've ever asked of my Marines is that they obey my orders
+as they would the word of God."
+
+09) Killing a balanced syntactic expression:
+
+    Keybinding: C-M-k => Kills the next balanced syntactic expression.
+
+    ORDERS:
+      - Go to the HOTEL line.
+
+      - Press C-a and then press M-f to skip the HOTEL word.
+
+      - Now press C-M-k to kill the next balanced syntatic expression
+        wich is all text included inside the parenthesis and the
+        parenthesis themselves.
+
+      - Press C-x u to cancel the deletion.
+
+HOTEL (This is just a decoy for you to shoot, shoot to kill) this is trash.
+
+10) Killing the current line:
+
+    Keybinding: C-S-<BACKSPACE> => Kills the current line.
+
+    ORDERS:
+      - Go to the INDIA line and press C-a.
+
+      - Press M-f three times.
+
+      - Press C-S-<BACKSPACE> to kill the current line.
+
+      - Press C-x u to cancel.
+
+INDIA Yet another decoy text for you to kill, you can kill this in order to
+advance your abilities.
+
+Good Job soldier, you can now take 5 minutes off ...

@@ -1,0 +1,195 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #13: Escuadrón de fusilamiento
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderemos como copiar regiones y como usar el anillo
+kill.
+
+Definiciones
+...........................................................................
+
+Region: Texto contenido entre el punto y la marca (texto seleccionado).
+
+Anillo Kill: Área especial adonde todo texto matado va a parar.
+
+Misión
+...........................................................................
+
+01) Ciclando a través del anillo kill:
+
+    Teclazo: M-y => Ciclar en las entradas del anillo kill.
+
+    ÓRDENES:
+      - Primero lea todas las instrucciones.
+
+      - Vaya a la línea ALPHA y oprima C-a.
+
+      - Presione M-d para matar la palabra ALPHA.
+
+      - Vaya a la línea BRAVO y presione C-a.
+
+      - Presione M-d para matar la palabra BRAVO.
+
+      - Vaya a la línea CHARLIE y presione C-a.
+
+      - Presione M-d para matar la palabra CHARLIE.
+
+      - Vaya a la línea DELTA y presione C-e.
+
+      - Presione C-y para pegar el último texto matado, en este caso el
+        texto 'CHARLIE'.
+
+      - Presione M-y una vez y observe lo que sucede. ¿Qué sucede? La
+        palabra BRAVO es desplegada en lugar de 'CHARLIE', esto pasa
+        porque estamos ciclando en el anillo kill (pila circular).
+
+      - Oprima M-y de nuevo para desplegar la palabra 'ALPHA'.
+
+      - Oprima M-y una vez más para desplegar 'CHARLIE' nuevamente, aquí
+        hemos alcanzado el final del anillo kill y estamos en el principio.
+
+ALPHA esto es basura
+
+BRAVO
+
+CHARLIE
+
+DELTA
+
+02) La entrada actual del anillo kill:
+
+    Descripción: Considera tu última secuencia de movimientos: Mataste la
+                 palabra ALPHA con M-d y luego bajaste una línea con C-n,
+                 luego mataste la palabra BRAVO con M-d de nuevo y bajaste
+                 otra línea con C-n, y así.
+
+                 La combinación de eso dos comandos (M-d y C-n) añaden una
+                 nueva entrada al anillo kill, cada una de estas entradas
+                 eran las que ciclamos con M-y en las ÓRDENES previas.
+
+                 Pero, ¿Podemos agregar todas las palabras a una única
+                 entrada en el anillo kill? ¿Podemos añadir cantidades
+                 monstruosas de texto a una única entrada en el anillo?
+                 SÍ QUE PODEMOS.
+
+    Teclazo: C-M-w => Agrega a la entrada actual en el anillo kill.
+
+    ÓRDENES:
+      - Lee todas las instrucciones primero.
+
+      - Vaya a la línea ECHO.
+
+      - Presione C-S-<BACKSPACE> para matar la línea actual, ahora en el
+        anillo kill hay una NUEVA entrada con el texto 'ECHO'.
+
+      - Presione C-S-<BACKSPACE> de nuevo para matar la palabra 'FOXTROT',
+        en el anillo kill el texto ahora es 'ECHO FOXTROT'.
+
+      - Presione C-S-<BACKSPACE> para matar la palabra 'GOLF', en el anillo
+        kill el texto ahora es 'ECHO FOXTROT GOLF'.
+
+      - Presione C-y y observe lo que pasa, ¿Qué pasa? Las tres palabras
+        se pegaron juntas y no separadas como pasó en las ÓRDENES previas.
+        ¿Por qué pasa eso? Emacs agrega cualquier texto matado por llamados
+        sucesivos a comandos para matar texto en una ÚNICA ENTRADA, pero
+        SI EJECUTAS CUALQUIER comando que NO SEA UN COMANDO KILL (como
+        moverse una línea abajo), entonces Emacs creará una nueva entrada
+        en el anillo kill.
+
+      - Para matar la próxima línea (HOTEL) vas a tener que presionar C-n
+        para moverte a la siguiente línea, PERO AL HACER ESO CREARÁS UNA
+        NUEVA entrada en el anillo kill (como antes) y LO QUE QUEREMOS
+        aquí es usar una SOLA ENTRADA en el anillo kill. Queremos usar la
+        misma entrada que actualmente tiene el texto 'ECHO FOXTROT GOLF'
+        y agregarle el texto 'HOTEL'. Para hacer eso, presione C-n para
+        moverte a la línea HOTEL.
+
+      - Ahora le diremos a Emacs que queremos agregar texto a la entrada
+        actual en el anillo kill y sabiendo esto, Emacs NO CREARÁ una
+        nueva entrada sino que agregará a la que ya existe. Presione
+        C-M-w ahora y mire el minibuffer, el texto 'Si el próximo comando
+        es un kill, se agregará' aparece en él. Esta es la manera de
+        decirle a Emacs que agregue y que no cree una nueva entrada.
+
+      - Presione C-S-<BACKSPACE> para matar la línea HOTEL.
+
+      - Ahora presione C-y para pegar todas las líneas juntas, note que la
+        línea HOTEL fue agregada a las otras tres líneas y no a una nueva
+        entrada en el anillo kill.
+
+ECHO
+FOXTROT
+GOLF
+
+HOTEL
+
+03) Copiando la región activa:
+
+    Teclazo: M-w => Copia la region activa (seleccionada).
+
+    ÓRDENES:
+      - Vaya a la línea INDIA y presione C-a.
+
+      - Presione C-<SPC> para poner y activar la marca. El texto
+        'Marca activada' debe aparecer en el minibuffer.
+
+      - Presione C-n tres veces, el párrafo completo debe estar seleccionado.
+
+      - Presione A-w para copia la región activa (seleccionada).
+
+      - Vaya a la línea JULIET y presione M-f para saltar la palabra 
+        'JULIET'.
+
+      - Presione C-y para pegar el texto copiado.
+
+INDIA Este es mi rifle. Hay muchos otros como este, pero este es mío. Mi
+rifle es mi mejor amigo. Es mi vida. Debe masterizarlo como debo masterizar
+mi vida. Sin mí, mi rifle es inútil. Sin mi rifle, yo soy inútil.
+
+
+JULIET
+
+04) Cortando la región activa.
+
+    Teclazo: C-w => Corta la región activa.
+
+    ÓRDENES:
+      - Vaya a la línea KILO y presione C-a.
+
+      - Presione C-<SPC> para poner y activar la marca.
+
+      - Presione C-5 C-n para marcar cinco líneas.
+
+      - Presione C-w para matar la región.
+
+      - Vaya a la línea LIMA y presione C-e.
+
+      - Presione C-y para pegar el texto cortado.
+
+
+KILO Debo disparar mi rifle en verdad. Debo disparar más derecho que mi
+enemigo quien está tratando de matarme. Debo dispararle antes de que me
+dispare. Lo haré. Ante Dios digo este juramento: mi rifle y yo somos
+defensores de mi país, somos los maestros de nuestro enemigo, somos los
+salvadores de la vida. Que así sea, hasta que no haya enemigo sino que
+haya paz. Amen.
+
+
+LIMA
+
+Buen trabajo soldado, ahora puedes descansar 2 minutos ...

@@ -1,0 +1,175 @@
+Go and follow each set of ORDERS on this document.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #08: Search for it on the trench soldier!!!
+----------------------------------------------------------------------------
+
+Definitions
+............................................................................
+
+Emacs Mode: A mode is a set of rules that makes Emacs behave in a particular
+            way.
+
+Occur Mode: The occur mode is a grep for Emacs.
+
+Mission
+............................................................................
+
+ALPHA
+
+01) Searching with occur mode:
+
+    Description: In contrast with the I-search from the previous mission, the
+    occur mode shows the results on a different buffer.
+
+    Keybinding: M-x occur RET => Start the occur mode.
+
+    ORDERS:
+      - Read all instructions.
+
+      - Go to the ALPHA line.
+
+      - Press M-x occur RET to activate the occur mode, a regexp will be
+        requested.
+
+      - On the minibuffer type the following regexp: brav.*
+
+      - Press RET, what happens? The Frame is divided in two windows and
+        the lower windows contains the search results. You can verify that
+        the lower buffer is in Occur mode as in its minibuffer it must say
+        *Occur*.
+
+      - DON'T close the 'occur' buffer and go follow the next set of ORDERS.
+
+BRAVO
+
+bravo
+
+Bravo
+
+02) Jumping to the next 'occur' match:
+
+    Keybinding: M-n => Move to the next occur match.
+
+    ORDERS:
+      - Read all instructions.
+      - Press C-x o to jump to the occur buffer.
+      - Press M-n two times and watch what happens.
+      - Press C-x o to jump to this buffer and go follow next ORDERS.
+
+03) Jumping to the previous 'occur' match:
+
+    Keybinding: M-p => Move to the previous occur match.
+
+    ORDERS:
+      - Read all instructions.
+      - Press C-x o to jump to the occur buffer.
+      - Press M-p two times and watch what happens.
+      - Press C-x o to jump to this buffer and go follow next ORDERS.
+
+04) Jumping to the end of an 'occur' buffer:
+
+    Keybinding: > => Jump to the end of an occur buffer.
+
+    ORDERS:
+      - Press C-x o to jump to the lower occur buffer.
+      - Press > to go to the end of the occur buffer.
+      - Press C-x o to jump to this buffer and go follow next ORDERS.
+
+05) Jumping to the beggining of an 'occur' buffer:
+
+    Keybinding: < => Jump to the begginig of an occur buffer.
+
+    ORDERS:
+      - Press C-x o to jump to the lower occur buffer.
+      - Press > to go to the end of the occur buffer.
+      - Press < to go to the start of the occur buffer.
+      - Press C-x o to return to this buffer.
+
+06) Refreshing the results:
+
+    Keybinding: g => Refresh an 'occur' mode buffer.
+
+    ORDERS:
+      - Press C-x o to jump to the occur buffer.
+      - Press g on the occur buffer to refresh the results.
+      - Press C-x o to return here.
+
+07) Using the occur editor mode:
+
+    Category: Emacs Gem.
+
+    Description: With this command you edit the results of the occur search.
+
+    Keybinding: e => Enable the occur EDITOR mode.
+
+    ORDERS:
+      - Read all steps.
+      - Press C-x o to jump to the occur buffer.
+      - Press < to go to the beggining of the occur buffer.
+      - Press M-n three times.
+      - Press e to switch to the 'occur EDITOR mode'. The text 'Editing ...'
+        must be shown.
+      - Delete the word 'bravo' and write the word 'OVARB', watch what
+        happens.
+      - Press C-c C-c to switch from the 'occur EDITOR mode' to the
+        'occur mode', the text 'Switching to Occur mode' must be shown.
+      - Press C-x o to jump to this buffer again.
+      - Press C-x u twice to undo the changes made from the occur mode.
+
+08) Closing the occur mode:
+
+    Keybinding: q => Quits the occur mode.
+
+    ORDERS:
+      - Press C-x o to jump to the occur buffer.
+      - Press g to update the results and watch what happens.
+      - Press q to close the occur mode (and the occur buffer).
+
+09) Using the multi-occur mode:
+
+    Description: The multi-occur mode allows to search in multiple buffers.
+
+    Notes:
+      - For this set of ORDERS you will need the file
+        'mission-07-search.txt'.
+
+      - You can use TAB on the minibuffer to autocomplete names.
+
+    Keybinding: M-x multi-occur-in-matching-buffers => Starts multi-occur.
+
+    ORDERS:
+      - Read all steps.
+
+      - Press C-x C-f and find the file 'mission-07-search.txt'.
+
+      - On the 'mission-07-search.txt' buffer press C-x b RET to return here.
+
+      - Press M-x and type 'multi-occur-in-matching-buffers', two regular
+        expressions will be asked to you, the first one will match the names
+        of the buffers where to search, and the second one will match the
+        text to find.
+
+      - Type as the first regexp (List lines in buffers ...) the following
+        text: mission.*
+
+      - Press RET.
+
+      - For the second regexp (List lines matching ...) type the following
+        text: BRAVO.
+
+      - Press RET and watch what happens. A second window is opened at the
+        bottom, you can see that both mission-07-search and mission-08-occur
+        files were included on the result lists.
+
+      - Press C-x o to jump to the occur buffer.
+
+      - Press q to close the occur buffer.
+
+Good Job soldier, you can now take 10 minutes off ...

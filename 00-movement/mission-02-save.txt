@@ -1,0 +1,148 @@
+DON'T touch anything yet!!!
+DON'T be so ape, keep reading until you receive your orders.
+If you get stuck and wanna get out, press C-g or ESC ESC ESC to run away.
+If the text 'Command attempted to use minibuffer' haunts you, just press C-g.
+
+EMACS BOOTCAMP
+============================================================================
+
+Hello recruit and welcome to the Emacs bootcamp program.
+
+Mission #02: Save it soldier!!!
+----------------------------------------------------------------------------
+
+Definitions
+............................................................................
+
+- Buffer: Document open in Emacs, can be an existent file or unsaved text.
+
+- Minibuffer: Line of text displayed at the bottom of Emacs, get activates by
+              issuing Emacs commands.
+
+- Finding a file: Opening a file.
+
+- Killing a buffer: Closing a buffer.
+
+Mission
+...........................................................................
+
+1) Move!!!:
+
+   Your ORDERS: Go to the ALPHA line.
+
+2) Saving a buffer to a file:
+
+   Description: You can think of a buffer as a document.
+
+   Keybinding: C-x C-s => Save the current buffer to disk.
+
+   Your ORDERS:
+     - Press the keybinding C-x C-s now, watch the minibuffer (the line of
+       text at the bottom of Emacs), the text '(No changes need to be saved)'
+       must appear, that means you don't have made any change to this file
+       yet.
+
+     - Now write the word 'Doom' on the ALPHA line and press C-x C-s again,
+       the text 'Wrote /home/doom/mission-02-save.txt' must appear on the
+       minibuffer, this means you saved the changes you just made.
+
+     - Now go to the BRAVO line.
+
+ALPHA
+
+3) Finding a file, opening it as a buffer:
+
+  Keybinding: C-x C-f => Opens a file by using a file path.
+
+  Your ORDERS:
+    - Press C-x C-f, a text similar to
+      'Find file: ~/emacs-bootcamp/' must be displayed on the
+      minibuffer. What happens is that you activate the minibuffer by
+      pressing this keybinding.
+
+    - Write the text 'mission-02-save.txt' and press RET, on the minibuffer,
+      the existent text is cleared, what you just do was try to reopen
+      this same file and Emacs simply didn't do nothing as it was
+      unnecesary. But keep in mind this keybinding as you will need it on
+      the following ORDERS.
+
+    - Go to the CHARLIE line.
+
+BRAVO
+4) Killing a buffer:
+
+  Keybinding: C-x C-k => Kills (closes) a buffer.
+
+  Your ORDERS:
+    - First read all the steps on this ORDERS to prevent any failure because
+      when you press C-x C-k the buffer for the file mission-02-save.txt
+      will be closed and you will have to reopen it using C-x C-f to find
+      the file.
+
+    - Press C-x C-k to kill this buffer, on the minibuffer, the text 'Kill
+      buffer (default mission-02-save.txt):' will be displayed, press RET to
+      say 'yes' as response.
+
+    - Now press C-x C-f to find the 'mission-02-save.txt' file, when you
+      press this keybinding, the minibuffer is activated and you can type in
+      a path to the 'mission-02-save.txt' file, the most common case is that
+      when press C-x C-f you will be presented with your HOME directory and
+      you can use the TAB key to visualize the folders and files on it, GO
+      search the 'mission-02.txt' file soldier and once you find it press
+      RET to open it.
+
+    - Finally go to the DELTA line.
+
+CHARLIE
+5) Creating a new buffer:
+
+   Keybinding: C-x b <type name for buffer> RET => Create new buffer.
+
+   Your ORDERS:
+     - Press C-x b and watch the minibuffer, the text 'Switch to buffer ...'
+       must appear on it.
+
+     - Now write the text 'doom.txt', this will be the name of the file to be
+       saved later.
+
+     - On this step you must press the RET key BUT DON't do it yet, when you
+       finally press RET a new buffer named 'doom.txt' will be displayed, you
+       will have to edit that buffer and write it to disk, to do that, when
+       the new 'doom.txt' buffer is displayed follow the steps:
+         - Write the text: 'Doom is King' on it.
+         - Press C-x C-s RET to save the buffer to the file 'doom.txt'.
+         - Kill the 'doom.txt' buffer by pressing C-x C-k.
+
+     - Go to the ECHO line.
+
+DELTA
+6) Moving between buffers:
+
+   Keybinding: C-x b => Move between buffers.
+
+   Your ORDERS:
+     - First read all steps on this ORDERS to prevent any failure.
+
+     - Open the file 'doom.txt' saved on the previous step by:
+       - Press C-x C-f to activate the minibuffer for finding the file.
+       - Use the TAB and type text to find the file 'doom.txt' on your disk.
+       - Once you find it open it by pressing RET, the file 'doom.txt' will
+         be displayed on Emacs.
+
+     - On the 'doom.txt' buffer press C-x b RET to get back to the
+       'mission-02-save.txt' buffer.
+
+     - Go to the FOXTROT line.
+ECHO
+
+7) Listing buffers:
+
+   Keybinding: C-x C-b => List all open buffers.
+
+   Your ORDERS: Press C-x C-b to display the list of buffers, this list will
+   be displayed on a new window below this buffer, verify that the files
+   'mission-02-save.txt' and 'doom.txt' are on that list.
+
+FOXTROT
+
+Good Job soldier, you can now have 3 minutes off ...

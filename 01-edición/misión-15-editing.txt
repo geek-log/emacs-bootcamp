@@ -1,0 +1,347 @@
+Ve y sigue cada grupo de ÓRDENES que aparecen en este documento.
+Si te quedas pegado y quieres escapar oprime C-g o ESC ESC ESC para huir.
+Si el texto 'Trato de ejecutar el comando en el minibuffer' te acecha, oprime
+C-g.
+
+CAMPO DE ENTRENAMIENTO DE EMACS
+============================================================================
+
+Hola recluta y bienvenido al programa de entrenamiento de Emacs.
+
+Ahora que puedes correr todas las vueltas sin perder el aliento,
+avanzaremos a especializar tus habilidades.
+
+Misión #15: Cambiélos
+----------------------------------------------------------------------------
+
+En esta misión aprenderemos como usar más comandos de edición.
+texto.
+
+Misión
+...........................................................................
+
+01) Cambiando la mayúscula:
+
+    Teclazo: M-u => Cambia la próxima palabra a mayúscula.
+
+    Teclazo: M-l => Cambia la próxima palabra a minúscula.
+
+    ÓRDENES:
+      - En la línea ALPHA, presione C-a y luego presione M-f una vez.
+
+      - Presione M-u tres veces.
+
+      - Vaya a la línea BETA, presione C-a y luego presione M-f una vez.
+
+      - Presione M-l tres veces.
+
+      - Vaya a la línea CHARLIE, presione C-a y luego presione M-f una vez.
+
+      - Presione M-c tres veces.
+
+ALPHA Mayúscula esta mierda
+BETA  MINÚSCULA ESTA MIERDA
+CHARLIE cApitalice ESta mIErda
+
+02) Contando palabras y líneas:
+
+    Teclazo: M-x cou-w RET => Cuenta el número de palabras en el
+             buffer.
+
+             Ó
+
+             M-x count-words
+
+    Teclazo: M-x cou-w-r RET => Cuenta el número de palabras en la
+                                región seleccionada.
+
+Ó
+
+M-x count-words-region
+
+Teclazo: C-x l => Cuenta las líneas en el buffer.
+
+ÓRDENES:
+- Presione M-x, digite 'cou-w', presione RET y observe el minibuffer.
+
+- Vaya a la línea ALPHA y presione C-a, luego presion C-s-n tres veces.
+
+- Presione M-x cou-w-r RET y mire el minibuffer.
+
+- Presione C-x l, observe el minibuffer.
+
+03) Agregando nuevas líneas:
+
+Teclazo: C-j => Agrega una nueva línea y mueve el punto a la nueva
+línea agregada.
+
+Teclazo: C-o => Agrega una nueva línea y mantien el punto en la
+línea original
+
+ÓRDENES:
+- Vaya a la línea DELTA, presione C-a y luego presione M-f.
+
+- Presione C-j para agregar una nueva línea y moverse a la próxima
+línea.
+
+- Vaya a la línea FOXTROT y presione C-e.
+
+- Presione C-o tres veces.
+
+DELTA ECHO
+FOXTROT
+
+04) Borrando líneas vacías:
+
+Teclazo: C-x C-o => Borra todas las líneas en blanco después de la
+línea actual hasta que una línea que no esté en
+blanco sea encontrada o hasta alcanzar el fin del
+buffer.
+
+ÓRDENES:
+- Vaya a la línea GOLF.
+- Presione C-x C-o para borrar todas las líneas en blanco siguientes.
+
+GOLF
+
+
+
+
+
+
+
+HOTEL
+
+05) Moverse al principio y al final de la línea actual:
+
+Teclazo: M-a => Ir al principio de la línea actual o al principio de
+la línea previa si ya estás al principio de la línea
+actual.
+
+Teclazo: M-e => Ir al final de la línea actual o al final de la
+próxima línea si estás al final de la línea actual.
+
+ÓRDENES:
+- Presione C-e en la línea JULIET.
+
+- Presione M-a para saltar al principio de la línea JULIET.
+
+- Presione M-a una vez más para ir al principio de la línea INDIA.
+
+- Presione M-e dos veces para regresar al final de la línea JULIET.
+
+INDIA El arma más mortal en el mundo es un soldado con su rifle. Es tu
+instinto asesion el que debe ser endurecido si quieres sobrevivir en
+combate.
+
+JULIET
+
+06) Indentando:
+
+Teclazo: TAB => Indenta la línea actual.
+
+Teclazo: M-C-\ => Indenta una región.
+
+         Ó
+
+         M-x indent-region
+
+Teclazo: C-x TAB => Manualmente indenta como un bloque de texto.
+
+ÓRDENES:
+      - En la línea KILO presione C-a.
+
+      - Presione TAB para identar esa línea.
+
+      - Presione C-x u para deshacer el indentado.
+
+      - Presione y MANTENGA C-s.
+
+      - Presione tres veces la tecla 'n', suelte C-s·
+
+      - Presione C-x TAB, ahora puedes usar las flechas izquierda y
+        derecha para identar el bloque de texto, presione la flecha
+        derecha cuatro veces.
+
+      - Presione C-g.
+
+KILO Tu rifle es solo una herramienta. Es un corazón frío lo que mata.
+Si tus instintos asesinos no están limpios y fuertes dudarás en el momento
+de la verdad.
+
+07) Zapping:
+
+    Teclazo: M-z => Zap, mata el texto desde la posición del punto hasta un
+                    caracter arbitrario.
+
+    ÓRDENES:
+      - Vaya a la línea LIMA y oprima C-a.
+
+      - Presione M-z y observe el minibuffer, el texto
+        'Zap hasta el caracter:' es desplegado en él, Emacs está
+        pidiéndote que ingreses el caracter a usar como el último caracter
+        del ZAP.
+
+      - Digite el caracter '@' y observe lo que pasa.
+
+      - Presione C-y para pegar el texto matado.
+
+LIMA Uds no mataran. @||||| Serán soldados muertos y entonces estarán
+metidos en una gran pila de mierda porque a los soldados no se les permite
+morir sin permiso. ¿Entienden gusanos?
+
+08) Seleccionando bloques de texto:
+
+    Teclazo: C-S-<DOWN> => Selecciona el próximo bloque de texto.
+
+    Teclazo: C-S-<UP> => Selecciona el bloque de texto previo.
+
+    ÓRDENES:
+      - Vaya a la línea MIKE y presione C-a.
+
+      - Presione C-S-<DOWN>.
+
+      - Presione C-g.
+
+      - Ahora presione C-S-<UP>.
+
+MIKE Desde ahora solo hablaran cuando les hablen,
+y las primeras y últimas palabras que sus sucias cloacas dirán será 'Señor'.
+¿Entienden eso gusanos?
+
+09) Ordenando líneas:
+
+    Teclazo: M-x so-l => Ordena líneas alfabéticamente.
+
+             Ó
+
+             M-x sort-lines
+
+    Teclazo: M-x so-f => Ordena líneas lexicográficamente.
+
+             Ó
+
+             M-x sort-fields
+
+    Teclazo: M-x so-n => Ordena líneas numéricamente.
+
+             Ó
+
+             M-x sort-numeric
+
+    Teclazo: M-x rev-r => Reversar el ordenamiento.
+
+             Ó
+
+             M-x reverse-region
+
+    Teclazo: M-x so-c => Ordenar líneas por columna.
+
+             Ó
+
+             M-x sort-columns
+
+    ÓRDENES:
+      - Lea todas instrucciones.
+
+      - Vaya a la línea QUEBEC y presione C-a.
+
+      - Presione C-S-<DOWN> para seleccionar el bloque de texto.
+
+      - Presione M-x so-l RET para ordenar las líneas alfabéticamente.
+
+      - Vaya a la línea ROME, presione C-a y luego presione C-n.
+
+      - Presione C-S-<DOWN>.
+
+      - Presione M-x so-f RET para ordenar las líneas lexicográficamente.
+
+      - Vaya a la línea SIERRA, presione C-a, luego presione C-n.
+
+      - Presione C-S-<DOWN>.
+
+      - Presione M-x rev-r RET para reversar el orden de los números.
+
+      - Vaya a la línea TANGO, presione C-a y luego presione C-n.
+
+      - Presione C-S-<DOWN>.
+
+      - Para ordenar por el tercer campo (tipo de sangre), use el argumento
+        númerico 'M-3' y luego presione 'M-x so-f RET'.
+
+QUEBEC
+PAPA
+OSCAR
+NOVEMBER
+
+ROME
+Peter 01
+Peter 03
+Peter 02
+Jhon  03
+Jhon  16
+
+SIERRA
+03
+02
+01
+00
+
+TANGO
+Peter 01 A
+Peter 03 A
+Peter 02 AB
+Jhon  03 O
+Jhon  16 A
+
+10) Expandiendo abreviaturas:
+
+    Descripción: Emacs Abbrev permite expandir palabras pero no es muy
+    inteligente, busca las palabras en el mismo buffer.
+
+    Teclazo: M-/ => Expande la palabra en el buffer antes del punto como
+                    una abreviatura dinámica.
+
+    Teclazo: C-M-/ => Completa la palabra antes del punto como una
+                      abreviatura dinámica.
+
+    ÓRDENES:
+      - Vaya a la línea UNIFORM y presione C-e, luego presione C-n.
+
+      - Presione M-/, la palabra 'Mis' es expandida a 'Mismo.
+
+      - Presione C-n, luego presione M-/ de nuevo.
+
+      - Presione C-n.
+
+      - Presione M-/, la palabra 'mat' es expandida en 'mataran'.
+
+      - Oprima M-/ de nuevo, la palabra 'mataran' se convierte en 'matado'.
+
+      - Presione M-/ una vez más, la palabra 'matado' se convierte en
+        'mata', aquí estamos ciclando a través de las coincidencias
+        de la expansión.
+
+      - Presione M-/ para regresar a la palabra original 'mat'.
+
+      - Vaya a la línea VICTOR y presione C-e, luego presione C-n.
+
+      - Presione C-M-/ y observe el minibuffer, una lista de opciones
+        que coinciden con la palabra 'mat' se muestra.
+
+      - Presione C-x o para saltar al buffer de resultados.
+
+      - Use C-n para mover el punto hasta la palabra 'mataran' y presione
+        RET para seleccionar esa opción.
+
+    NOTA: Para cerrar el buffer de resultados puedes oprimir ESC ESC ESC.
+
+UNIFORM
+Mis
+Tec
+mat
+
+VICTOR Von Doom
+mata
+
+Buen trabajo soldado, ahora puedes descansar 30 segundos ...
