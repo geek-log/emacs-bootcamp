@@ -45,7 +45,7 @@ M-x eww => Abre el navegador web EWW.
 
 M-x a-re-m => Refresca el buffer cuando el archivo cambió.
 
-OR
+O
 
 M-x auto-revert-mode
 
