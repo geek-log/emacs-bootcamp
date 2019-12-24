@@ -48,32 +48,22 @@ Org Mode tiene muchas funcionalidades, algunas de ellas son:
 En Org-Mode se pueden crear árboles de información usando el símbolo '*' como
 el primer caracter en una línea:
 
-* Encabezado 1
+ * Encabezado 1
 
 Si pones dos asteriscos (**) juntos como los dos primeros caracteres en una
 línea, esa línea se convertirá en un encabezado de segundo nivel:
 
-* Encabezado 1
-** Encabezado 2
+ 
+ ** Encabezado 2
 
 Si pones tres asteriscos (***) como los tres primeros caracteres de una
 línea, esa línea se convertirá en un encabezado de tercer nivel (y así
 sigue):
 
-* Encabezado 1
-** Encabezado 2
-*** Encabezado 3
+ *** Encabezado 3
 
-Esa estructura de encabezados y subencabezados es lo que conforma un árbol
-(o subárbol) de información:
-
-
-* Encabezado 1
-  Mi información para el Encabezado 1.
-** Encabezado 2
-   Mi información para el Encabezado 2.
-*** Encabezado 3
-    Mi información para el Encabezado 3.
+Esta estructura de encabezados y subencabezados es lo que conforma un árbol
+(o subárbol) de información.
 
 Mission
 ............................................................................

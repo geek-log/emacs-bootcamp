@@ -46,32 +46,23 @@ Org Mode has many features, some of them are:
 - Handle tabular information.
 
 On Org-mode you can create information trees by using the '*' as first
-character on a line:
+character on a line to promote that line as a heading:
 
-* Heading 1
+ * Heading 1
 
 If you put two asterisks (**) together as the first two characters on a line,
 that line will become a second level heading:
 
-* Heading 1
-** Heading 2
+ ** Heading 2
 
 If you put trhee asterisk (***) as the first three charaters on a line,
 that line becomes a third level heading (and so on):
 
-* Heading 1
-** Heading 2
-*** Heading 3
+
+ *** Heading 3
 
 That headings and subheading structure is what conforms an information
-tree (or subtree):
-
-* Heading 1
-  My information for Heading 1.
-** Heading2
-   My information for Heading 2.
-*** Heading 3
-    My information for Heading 3.
+tree (or subtree).
 
 Mission
 ............................................................................
