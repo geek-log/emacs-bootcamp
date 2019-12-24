@@ -30,6 +30,9 @@ C-x u => Undo the last action.
 
 C-x C-s => Save the current buffer to disk.
 
+C-x C-w => Saves the buffer as a new file. Prompts for the
+                          new file name.
+
 C-x C-f => Opens a file by using a file path.
 
 C-x C-k => Kills (closes) a buffer.
@@ -490,6 +493,9 @@ C-d => Borrar el caracter bajo el punto.
 C-x u => Deshacer la última acción.
 
 C-x C-s => Salvar el buffer actual al disco.
+
+C-x C-w => Guarda el buffer como un nuevo archivo. Pregunta por
+           el nombre para el nuevo archivo.
 
 C-x C-f => Abre un archivo usando una ruta de archivo.
 

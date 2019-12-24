@@ -4,7 +4,7 @@ EMACS ORG-MODE
 Hello recruit and welcome to the Air Force where you will learn
 to FLY using org-mode.
 
-Mission #24: Using Links
+Mission #25: Using Links
 ----------------------------------------------------------------------------
 
 Briefing
@@ -17,7 +17,7 @@ Requirements
 
 This mission requires the following items available:
 
-- The file 'mission-23-tables.org'.
+- The file 'mission-24-tables.org'.
 
 Mission
 ............................................................................
@@ -107,22 +107,22 @@ Mission
 
      - Press C-u C-c C-l, the text 'File: ~/emacs-bootcamp/03-org/' is
        displayed on the minibuffer, type a path similar to the next:
-       '~/emacs-bootcamp/03-org/mission-23-tables.org' and press RET.
+       '~/emacs-bootcamp/03-org/mission-24-tables.org' and press RET.
 
      - As before Emacs will ask you for a description for the link, type
-       the text 'mission-23' and press RET, the link is inserted.
+       the text 'mission-24' and press RET, the link is inserted.
 
      - On the new created line press C-e to go to the end of that line.
 
      - Press <BACKSPACE> just ONE time to delete the last ']' character of
-       the link, the text '[[file:mission-23-tables.org][mission-23]' is
+       the link, the text '[[file:mission-24-tables.org][mission-24]' is
        showed instead of the compact link, press C-x u to undo and leave the
        link unchanged (or you can type the deleted ']' too).
 
      - Press C-a to go to the beggining of that line and press C-x C-o to
        follow the link that we just inserted, a new buffer will opens
        on the bottom part of Emacs with the contents of the file
-       'mission-23-tables.org' file.  This command will save the current
+       'mission-24-tables.org' file.  This command will save the current
        position into the mark ring and leave the point on the new opened
        buffer.
 
@@ -204,10 +204,10 @@ ECHO
 
      - Press C-x o to jump to the lower window.
 
-     - Press C-x C-f and visit the 'mission-23-tables.org' file.
+     - Press C-x C-f and visit the 'mission-24-tables.org' file.
 
      - When the buffer is opened, press C-c l, the text
-       'Stored: file: ~/emacs-bootcamp/03-org/mission-23-tables.org' is
+       'Stored: file: ~/emacs-bootcamp/03-org/mission-24-tables.org' is
        displayed.
 
      - Press C-x 0 to leave only THIS window.
@@ -220,7 +220,7 @@ ECHO
        then press RET.
 
      - As always Emacs ask you for a link description, write the text
-       'mission-23' and press RET, the link gets inserted.
+       'mission-24' and press RET, the link gets inserted.
 
 FOXTROT
 

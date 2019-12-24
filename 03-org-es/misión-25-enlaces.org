@@ -4,7 +4,7 @@ EMACS ORG-MODE
 Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
 org-mode.
 
-Misión #24: Usando Enlaces
+Misión #25: Usando Enlaces
 ----------------------------------------------------------------------------
 
 Resumen
@@ -17,7 +17,7 @@ Requerimientos
 
 Esta misión requiere los siguientes ítems disponibles:
 
-- El archivo 'misión-23-tablas.org'.
+- El archivo 'misión-24-tablas.org'.
 
 Misión
 ............................................................................
@@ -111,23 +111,23 @@ Misión
 
      - Presione C-u C- C-l, el texto 'Archivo: ~/emacs-bootcamp/03-org-es/'
        se despliega en el minibuffer, digite una ruta similar a la siguiente:
-       '~/emacs-bootcamp/03-org-es/misión-23-tablas.org' y presione RET.
+       '~/emacs-bootcamp/03-org-es/misión-24-tablas.org' y presione RET.
 
      - Igual que antes Emacs te preguntará por una descripción para el
-       enlace, digite el texto 'misión-23' y presione RET, el enlace es
+       enlace, digite el texto 'misión-24' y presione RET, el enlace es
        insertado.
 
      - En la recién creada línea presione C-e para ir al final de esa línea.
 
      - Presione <BACKSPACE> solo UNA vez para borrar el último caracter ']'
-       del enlace, el texto '[[file:misión-23-tablas.org][misión-23]' se
+       del enlace, el texto '[[file:misión-24-tablas.org][misión-24]' se
        muestra en lugar del enlace compacto, presione C-x u para deshacer y
        dejar el link sin cambios (o puedes reescribir el ']' borrado).
 
      - Presione C-a para ir al principio de esa línea y presion C-x C-o para
        seguir el enlace que acabamos de insertar, un nuevo buffer se abre
        en la parte inferior de Emacs con los contenidos del archivo
-       'misión-23-tablas.org'. Este comando guardará la posición actual
+       'misión-24-tablas.org'. Este comando guardará la posición actual
        en el anillo de marcas y dejará el punto en el nuevo buffer que se
        abrió.
 
@@ -211,10 +211,10 @@ ECHO
 
      - Presione C-x o para saltar a la ventana inferior.
 
-     - Presione C-x C-f y visite el archivo 'misión-23-tablas.org'.
+     - Presione C-x C-f y visite el archivo 'misión-24-tablas.org'.
 
      - Cuando el buffer se abre, presione C-c l, se despliega el texto
-       'Almacenado: archivo: ~/emacs-bootcamp/03-org-es/misión-23-tables.org'
+       'Almacenado: archivo: ~/emacs-bootcamp/03-org-es/misión-24-tables.org'
 
      - Presione C-x 0 para mostrar solamente ESTA ventana.
 
@@ -226,7 +226,7 @@ ECHO
        presione UNA vez la tecla UP y luego presione RET.
 
      - Como siempre Emacs te pregunta por una descripción para el enlace,
-       digite el texto 'misión-23' y presione RET, el enlace es insertado.
+       digite el texto 'misión-24' y presione RET, el enlace es insertado.
 
 FOXTROT
 

@@ -38,6 +38,9 @@ C-x u => Undo the last action.
 
 C-x C-s => Save the current buffer to disk.
 
+C-x C-w => Saves the buffer as a new file. Prompts for the
+                          new file name.
+
 C-x C-f => Opens a file by using a file path.
 
 C-x C-k => Kills (closes) a buffer.

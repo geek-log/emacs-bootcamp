@@ -4,7 +4,7 @@ EMACS ORG-MODE
 Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR
 usando org-mode.
 
-Misión #23: Usando Tablas
+Misión #24: Usando Tablas
 ----------------------------------------------------------------------------
 
 Resumen

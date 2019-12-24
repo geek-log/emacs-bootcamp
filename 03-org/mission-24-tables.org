@@ -4,7 +4,7 @@ EMACS ORG-MODE
 Hello recruit and welcome to the Air Force where you will learn
 to FLY using org-mode.
 
-Mission #23: Using Tables
+Mission #24: Using Tables
 ----------------------------------------------------------------------------
 
 Briefing

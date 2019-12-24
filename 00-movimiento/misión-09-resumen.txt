@@ -39,6 +39,9 @@ C-x u => Deshacer la última acción.
 
 C-x C-s => Salvar el buffer actual al disco.
 
+C-x C-w => Guarda el buffer como un nuevo archivo. Pregunta por
+           el nombre para el nuevo archivo.
+
 C-x C-f => Abre un archivo usando una ruta de archivo.
 
 C-x C-k => Mata (cierra) el buffer.
