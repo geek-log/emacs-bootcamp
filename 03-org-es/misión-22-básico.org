@@ -80,7 +80,7 @@ Mission
 
      - Si presionas TAB de nuevo, más texto es visible pero en algunas
        líneas el texto no se despliega por completo y tres punto (...) se
-       despliegan para indicar que existe más texto.
+       despliegan para indicar que existe más texto. Es es el estado 'hijo'.
 
      - Si presionas TAB una tercera vez, entonces todo el texto se muestra,
        este es el estado 'subárbol'.
@@ -361,4 +361,4 @@ Mission
 
        #+STARTUP: nohideblocks
 
-Buen trabajo soldado, ahora puedes tomarte 10 minutos libres ...       
+Buen trabajo soldado, ahora puedes tomarte 10 minutos libres ...

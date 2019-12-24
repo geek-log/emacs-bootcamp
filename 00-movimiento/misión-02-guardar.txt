@@ -151,4 +151,15 @@ ECHO
 
 FOXTROT
 
+8) Guardando un buffer con otro nombre:
+
+   Teclazo: C-x C-w => Guarda el buffer como un nuevo archivo. Pregunta por
+                       el nombre para el nuevo archivo.
+
+   Tus ÓRDENES: Presione C-x C-w, el texto
+   'Escribir el archivo: ~/emacs-bootcamp/00-movimiento/' se despliega en el
+   minibuffer, digite una ruta similar a la siguiente
+   '~/emacs-bootcamp/00-movimiento/nuevo-buffer' y presione RET, el archivo
+   es guardado.
+
 Buen trabajo soldado, ahora puedes descansar 3 minutos ...

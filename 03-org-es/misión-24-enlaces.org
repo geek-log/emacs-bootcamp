@@ -1,0 +1,234 @@
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+org-mode.
+
+Misión #24: Usando Enlaces
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderás como manipular enlances usando Org-Mode.
+
+Requerimientos
+............................................................................
+
+Esta misión requiere los siguientes ítems disponibles:
+
+- El archivo 'misión-23-tablas.org'.
+
+Misión
+............................................................................
+
+1) Usando enlaces:
+
+   * Descripción
+
+     Para agregra un enlace a un documento org, la siguiente sintaxis es
+     usada:
+     
+         [[ENLACE][DESCRIPCIÓN
+
+         O solamente
+
+         [[ENLACE]
+
+     Note que falta un ']' en las expresiones previas, esto es para evitar
+     que org cambie el despliegue de texto plano a enlace.
+
+     Si el enlace es un enlace interno (un ancla), entonces la siguiente
+     sintaxis es usada:
+
+         <<mi-ancla>
+
+     Note que falta un '>' en la expresión previa.
+
+   * Teclazos
+
+     - C-c C-o => Si el punto está en un enlace, guarde la posición actual
+                  en el anillo de marcas y SALTE al enlace.
+
+     - C-c & => Saltar de vuelta a la marca guardada.
+
+     - C-c % => Agregar la posición actual al anillo de marcas.
+
+     - C-c C-l => Si el punto está en una línea vacía, inserta un enlace. Si
+                  el punto está sobre un enlace, edita el enlace.
+
+     - C-u C-c C-l => Inserta un enlace a un archivo.
+
+     - C-c C-x C-n => Salta al próximo enlace en el buffer.
+
+     - C-c C-x C-p => Salta al previo enlace en el buffer.
+
+   * ÓRDENES
+
+     - Vaya a la línea BRAVO y presione C-a, luego presione C-n para poner
+       el punto sobre el enlace interno 'mi-ancla'.
+
+     - Presione C-c C-o para seguir el enlace, el punto saltará al enlace
+       bajo la línea ALPHA y el texto "Posición guardada en el anillo de
+       marcas, regrese con 'C-c &o'" se despliega en el minibuffer.
+
+     - Presione C-c & para saltar de vuelta a la marca guardada.
+
+     - Presione a la línea CHARLIE y presione C-c % para guardar esa
+       posición.
+
+     - Vaya a la línea ALPHA.
+
+     - Presione C-c & para saltar a la línea CHARLIE.
+
+     - Presione C-a y luego C-n para mover el punto sobre el enlace de
+       duckduckgo.
+
+     - Presione C-c C-o, esto abrirá este enlace en tu navegador
+       predeterminado.
+
+     - Vaya a la línea DELTA y presione C-n para mover el punto a una línea
+       vacía.
+
+     - Presione C-c C-l, en el minibuffer el texto 'Enlace:' se despliega,
+       digite el URL https://google.com y presione RET.
+
+     - Emacs te preguntará por una descripción (o nombre) para el enlace,
+       digite la palabra 'google' y presione RET, el link es creado.
+
+     - Ahora presione C-c C-l para editar el recién agregado enlace, en el
+       minibuffer se muestra el texto 'Enlace: https://google.com', presione
+       RET para aceptar ese enlace.
+
+     - El texto 'Descripción: google' se muestra en el minibuffer, borre
+       la palabra 'google' dejando un valor vacío y presione RET.
+
+     - Vaya a la línea ALPHA y presione C-c C-x C-n dos veces.
+
+     - Presione C-c C-x C-p dos veces.
+
+     - Vaya a la línea ECHO y presione C-n.
+
+     - Presione C-u C- C-l, el texto 'Archivo: ~/emacs-bootcamp/03-org-es/'
+       se despliega en el minibuffer, digite una ruta similar a la siguiente:
+       '~/emacs-bootcamp/03-org-es/misión-23-tablas.org' y presione RET.
+
+     - Igual que antes Emacs te preguntará por una descripción para el
+       enlace, digite el texto 'misión-23' y presione RET, el enlace es
+       insertado.
+
+     - En la recién creada línea presione C-e para ir al final de esa línea.
+
+     - Presione <BACKSPACE> solo UNA vez para borrar el último caracter ']'
+       del enlace, el texto '[[file:misión-23-tablas.org][misión-23]' se
+       muestra en lugar del enlace compacto, presione C-x u para deshacer y
+       dejar el link sin cambios (o puedes reescribir el ']' borrado).
+
+     - Presione C-a para ir al principio de esa línea y presion C-x C-o para
+       seguir el enlace que acabamos de insertar, un nuevo buffer se abre
+       en la parte inferior de Emacs con los contenidos del archivo
+       'misión-23-tablas.org'. Este comando guardará la posición actual
+       en el anillo de marcas y dejará el punto en el nuevo buffer que se
+       abrió.
+
+     - Presione C-c & para saltar de vuelta a la posición guardada.
+
+     - Presione C-x 1 para mostrar solo una ventana.
+
+ALPHA
+<<mi-ancla>>
+
+#+BEGIN_VERSE
+Este es mi rifle. Hay muchos otros como este, pero este es mío. Mi rifle
+es mi mejor amigo. Es mi vida. Debo masterizarlo como debo masterizar
+mi vida. Sin mí, mi rifle es inútil. Sin mi rifle, Yo soy inútil.
+Debo disparar mi rifle de verdad. Debe disparar más recto que mi enemigo,
+quien está tratando de matarme. Debo dispararle antes de que me dispare. Lo
+haré. Ante Dios digo este juramento: mi rifle y yo somos los defensores de
+mi país, somos los maestros de nuestro enemigo, somos los salvadores de la
+vida. Que así sea, hasta que no haya enemigo sino paz. Amen.
+#+END_VERSE
+
+BRAVO
+[[mi-ancla]]
+
+#+BEGIN_VERSE
+Estos son días grandiosos los que vivimos, hermanos. Somos los gigantes
+verdes que caminamos en la Tierra con armas. Esta gente con la que acabamos
+aquí hoy son los mejores seres humanos que nunca conoceremos. Luego de que
+volvamos a nuestro mundo, extrañaremos no tener a nadie que valga la pena
+matar.
+#+END_VERSE
+
+CHARLIE
+https://duckduckgo.com
+
+DELTA
+
+
+ECHO
+
+
+1) Almacenando enlaces:
+
+   * Descripción
+
+     Org Mode puede almacenar enlaces en una variable especial llamada
+     'org-stored-links' para que pueda pegarse luego usando C-c C-l, pero
+     la función para almacenar enlaces 'org-store-link' no tiene ningún
+     teclazo asociado, vamos a agregar un teclazo personalizado en el
+     archivo 'init.el' de Emacs.
+ 
+   * Teclazos
+
+     - C-c l => Almacena un enalce que puede pegarse luego usando C-c C-l.
+
+     - C-c C-l => Pega un enlace almacenado.
+
+     En el menú de enlaces almacenados:
+      
+     - UP/DOWN => Va al enlace almancenado previo/siguiente.
+
+   * ÓRDENES
+
+     - Presione C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana de abajo.
+
+     - Presione C-x C-f para visitar un archivo, en el minibuffer digite
+       la ruta '~/.emacs.d/init.el' y presione RET, el archivo de
+       configuración de Emacs se abre.
+
+     - Agregue el siguiente texto al archivo 'init.el':
+
+           (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Guarde el buffer presionando C-x C-s.
+
+     - Cierre Emacs, vuélvalo a abrir y regrese a ESTA LÍNEA.
+
+     - Presione C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana inferior.
+
+     - Presione C-x C-f y visite el archivo 'misión-23-tablas.org'.
+
+     - Cuando el buffer se abre, presione C-c l, se despliega el texto
+       'Almacenado: archivo: ~/emacs-bootcamp/03-org-es/misión-23-tables.org'
+
+     - Presione C-x 0 para mostrar solamente ESTA ventana.
+
+     - Vaya a la línea FOXTROT y presione C-n.
+
+     - Presione C-c C-l para pegar el enlace, un buffer se abre en la parte
+       de abajo de Emacs con la lista de enlaces almacenados, puedes navegar
+       entre los enlaces almacenados presionando las teclas UP y DOWN,
+       presione UNA vez la tecla UP y luego presione RET.
+
+     - Como siempre Emacs te pregunta por una descripción para el enlace,
+       digite el texto 'misión-23' y presione RET, el enlace es insertado.
+
+FOXTROT
+
+
+Buen trabajo soldado, ahora puedes descansar 4 minutos ...

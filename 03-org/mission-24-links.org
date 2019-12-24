@@ -1,0 +1,228 @@
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+Mission #24: Using Links
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to manipulate links using Org-Mode.
+
+Requirements
+............................................................................
+
+This mission requires the following items available:
+
+- The file 'mission-23-tables.org'.
+
+Mission
+............................................................................
+
+1) Using links:
+
+   * Description
+
+     To add a link into an org document, the following syntax is used:
+     
+         [[LINK][DESCRIPTION
+
+         Or just
+
+         [[LINK]
+
+     Note that there is a missing ']' on the previous expressions, this
+     is to prevent org from changing the display from plain text to a link.
+
+     If the link is an internal link (an anchor), then the following
+     syntax is used:
+
+         <<my-anchor>
+
+     Note that there is a missing '>' on the previous expression.
+
+   * Keybindings
+
+     - C-c C-o => If the point is on a link, save the current position
+                  on the mark ring and JUMP to the link.
+
+     - C-c & => Jump back to the saved mark.
+
+     - C-c % => Add current position to the mark ring.
+
+     - C-c C-l => If the point is on an empty line, inserts a link. If the
+                  point is over a link, edits the link.
+
+     - C-u C-c C-l => Insert a link to a file.
+
+     - C-c C-x C-n => Jump to next link on the buffer.
+
+     - C-c C-x C-p => Jump to previous link on the buffer.
+
+   * ORDERS
+
+     - Go to the BRAVO line and press C-a, then press C-n to put the point
+       over the internal link 'my-anchor'.
+
+     - Press C-c C-o to follow the link, the point will jump to the link
+       under the ALPHA line and the text "Position saved to mark ring, go
+       back with 'C-c &'" is displayed on the minibuffer.
+
+     - Press C-c & to jump back to the saved mark.
+
+     - Go to the CHARLIE line and press C-c % to save that position.
+
+     - Go to the ALPHA line.
+
+     - Press C-c & to jump to the CHARLIE line.
+
+     - Press C-a and then C-n to move the point over the duckduckgo link.
+
+     - Press C-c C-o, this will open this link in your default browser.
+
+     - Go to the DELTA line and press C-n to move the point to an empty
+       line.
+
+     - Press C-c C-l, on the minibuffer the text 'Link:' is displayed,
+       type the URL https://google.com and press RET.
+
+     - Emacs will ask you for a description (or name) for the link, type the
+       word 'google' and press RET, the link is created.
+
+     - Now press C-c C-l to edit the new added link, on the minibuffer the
+       text 'Link: https://google.com' is displayed, press RET to accept
+       that link.
+
+     - The text 'Description: google' is showed on the minibuffer,
+       delete the word 'google' to leave an empty value and press RET.
+
+     - Go to the ALPHA line and press C-c C-x C-n two times.
+
+     - Press C-c C-x C-p two times.
+
+     - Go to the ECHO line and press C-n.
+
+     - Press C-u C-c C-l, the text 'File: ~/emacs-bootcamp/03-org/' is
+       displayed on the minibuffer, type a path similar to the next:
+       '~/emacs-bootcamp/03-org/mission-23-tables.org' and press RET.
+
+     - As before Emacs will ask you for a description for the link, type
+       the text 'mission-23' and press RET, the link is inserted.
+
+     - On the new created line press C-e to go to the end of that line.
+
+     - Press <BACKSPACE> just ONE time to delete the last ']' character of
+       the link, the text '[[file:mission-23-tables.org][mission-23]' is
+       showed instead of the compact link, press C-x u to undo and leave the
+       link unchanged (or you can type the deleted ']' too).
+
+     - Press C-a to go to the beggining of that line and press C-x C-o to
+       follow the link that we just inserted, a new buffer will opens
+       on the bottom part of Emacs with the contents of the file
+       'mission-23-tables.org' file.  This command will save the current
+       position into the mark ring and leave the point on the new opened
+       buffer.
+
+     - Press C-c & to jump back to the saved position.
+
+     - Press C-x 1 to show only one window.
+
+ALPHA
+<<my-anchor>>
+
+#+BEGIN_VERSE
+This is my rifle. There are many others like it, but this one is mine. My
+rifle is my best friend. It is my life. I must master it as I must master
+my life. Without me, my rifle is useless. Without my rifle, I am useless.
+I must fire my rifle true. I must shoot straighter than my enemy, who is
+trying to kill me. I must shoot him before he shoots me. I will. Before God
+I swear this creed: my rifle and myself are defenders of my country, we are
+the masters of our enemy, we are the saviors of my life. So be it, until
+there is no enemy, but peace. Amen.
+#+END_VERSE
+
+BRAVO
+[[my-anchor]]
+
+#+BEGIN_VERSE
+These are great days we're living, bros. We are jolly green giants, walking
+the Earth with guns. These people we wasted here today are the finest human
+beings we will ever know. After we rotate back to the world, we're gonna
+miss not having anyone around that's worth shooting. 
+#+END_VERSE
+
+CHARLIE
+https://duckduckgo.com
+
+DELTA
+
+
+ECHO
+
+
+1) Storing links:
+
+   * Description
+
+     Org Mode can store links on a special variable called
+     'org-stored-links' to be pasted later using C-c C-l, but the function
+     to store links 'org-store-link' does not have any keybinding associated
+     to it, so we must add a custom keybinding on the Emacs 'init.el' file.
+
+   * Keybindings
+
+     - C-c l => Store link that can later be pasted using C-c C-l.
+
+     - C-c C-l => Paste a stored link.
+
+     On the stored links menu:
+
+     - UP/DOWN => Go to previous/next stored link.
+
+   * ORDERS
+
+     - Press C-x 2 to divide the frame in two windows.
+
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x C-f to visit a file, on the minibuffer type the path:
+       '~/.emacs.d/init.el' and press RET, the Emacs configuration file
+       opens up.
+
+     - Add the following text to the 'init.el' file:
+
+           (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Save the buffer by pressing C-x C-s.
+
+     - Close Emacs, open it up again and come back TO THIS LINE.
+     
+     - Press C-x 2 to divide the frame in two windows.
+
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x C-f and visit the 'mission-23-tables.org' file.
+
+     - When the buffer is opened, press C-c l, the text
+       'Stored: file: ~/emacs-bootcamp/03-org/mission-23-tables.org' is
+       displayed.
+
+     - Press C-x 0 to leave only THIS window.
+
+     - Go to the FOXTROT line and press C-n.
+
+     - Press C-c C-l to paste the link, a buffer opens at the bottom of Emacs
+       with the list of stored links, you can navigate through the stored
+       links by pressing the UP and DOWN keys, press ONE TIME the UP key and
+       then press RET.
+
+     - As always Emacs ask you for a link description, write the text
+       'mission-23' and press RET, the link gets inserted.
+
+FOXTROT
+
+
+Good job soldier, now you can take 4 minutes off ...

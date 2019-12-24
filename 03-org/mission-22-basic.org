@@ -79,7 +79,7 @@ Mission
         
      - If you press TAB again more text is visible but on some lines the
        text is not fully displayed and three periods (...) are displayed
-       to indicate that there are more text.
+       to indicate that there are more text. This is the 'child' state.
         
      - If you press TAB a third time then all the text is showed, this is
        the 'subtree' state.

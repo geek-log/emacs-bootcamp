@@ -141,8 +141,19 @@ ECHO
 
    Your ORDERS: Press C-x C-b to display the list of buffers, this list will
    be displayed on a new window below this buffer, verify that the files
-   'mission-02-save.txt' and 'doom.txt' are on that list.
+   'mission-02-save.txt' and 'doom.txt' are on that list, press C-x 1 to
+   leave only one window.
 
 FOXTROT
+
+8) Saving a buffer with another name:
+
+   Keybinding: C-x C-w => Saves the buffer as a new file. Prompts for the
+                          new file name.
+
+   Your ORDERS: Press C-x C-w, the text
+   'Write file ~/emacs-bootcamp/00-movement/' is displayed on the minibuffer,
+   type a path similar to the next '~/emacs-bootcamp/00-movement/new-buffer'
+   and press RET, the file is saved.
 
 Good Job soldier, you can now have 3 minutes off ...
