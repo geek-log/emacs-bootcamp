@@ -54,7 +54,7 @@ C-x d => Inicia Dired.
 C-x C-f /ssh:user@remotehost:/file.txt => Inicia una conexión TRAMP.
 
 
-En un buffer de terminal 'termp
+En un buffer de terminal 'term'
 
 C-c C-j => Habilita el modo term-line-mode.
 
