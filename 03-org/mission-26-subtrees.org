@@ -1,0 +1,113 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+* Mission #26: Using Subtrees
+
+** Briefing
+
+On this mission you will learn how to manage subtrees of information.
+
+For this mission and the next ones, the mission file is written using
+a new format to comply with the org-mode style.
+
+** Mission
+
+*** Creating a subtree:
+  
+**** Description
+     
+     As stated on mission #23, you can use the '*' character to create
+     headings and subheadings, and the resulting structure of headings and
+     subheadings is an information subtree.
+
+     You can create, modify, copy, paste, delete, export and import subtrees.
+
+**** Keybindings
+
+     - TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the current heading (current subtree).
+
+     - S-TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the whole tree (all the org document).
+
+     - C-u C-u TAB => Restarts to the startup visibility.
+
+     - C-u C-u C-u TAB => Show all including drawers.
+
+     - C-c C-r => Reveal command, reveals the context around the point.
+
+     - C-c C-k => Exposes all tree headings.
+
+     - C-c TAB => Expose all subtree direct children.
+
+     - C-c C-x b => Show the subtree in an indirect buffer.
+
+     - C-c C-v => Copy the visible subtree text.
+
+     - C-c C-n => Next visible heading.
+
+     - C-c C-p => Previous visible heading.
+
+     - C-c C-f => Next heading on the same level.
+
+     - C-c C-u => One heading level up.
+
+**** Orders
+
+     - Go to the ALPHA heading.
+
+     - Press TAB three times to cycle all the states: folded, child, subtree.
+
+     - Press C-c % to set the mark, then press M-< to go to the beginning of
+       the buffer.
+
+     - Press S-TAB three times to cycle all the states: folded, child,
+       subtree.
+
+     - Press S-TAB one more time to leave the document on the 'folded' state.
+
+     - Press C-u C-u TAB to return to the initial visibility that is 'show
+       all' the information except for hidden drawers. If you notice the
+       '#+STARTUP: showall' text as first line on this buffer, this is a
+       configuration setting that tells Emacs that all trees must be expanded
+       (except if hidden) when first opening this file, other possible values
+       are 'overview', 'content' and 'showeverything'.
+
+     - Press C-c & to jump back to the ALPHA heading.
+
+     - Press C-c C-x b, this will open a new buffer on the bottom of Emacs
+       with the ALPHA subtree.
+
+     - Press C-x o to jump to that new buffer.
+
+     - Modify the word bravo to be uppercase BRAVO.
+
+     - Press C-x k RET to kill the buffer and C-x 1 to show only this one, if
+       you check the ALPHA tree, the changes made on the new buffer are
+       applied to the tree on this one.
+
+     - On the ALPHA heading press TAB to set it to the 'folded' state.
+
+     - Press C-c C-k to expose all subheadings of the ALPHA heading.
+
+     - Put the ALPHA heading on the 'folded' state again.
+
+     - Press C-c TAB, the direct child 'This is an alpha item ...' is
+       displayed.
+
+**** ALPHA
+
+    This is alpha information.
+    
+***** This is an alpha item.
+
+****** BRAVO
+
+      This is bravo information.
+      
+******* This is a bravo item.
