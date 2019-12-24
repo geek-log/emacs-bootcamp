@@ -1,0 +1,311 @@
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR
+usando org-mode.
+
+Misión #23: Usando Tablas
+----------------------------------------------------------------------------
+
+Resumen
+............................................................................
+
+En esta misión aprenderás como manipular tablas usando Org-Mode.
+
+Misión
+............................................................................
+
+1) Alineando tablas:
+
+   * Teclazos
+
+     C-c C-c => Alínea una tabla.
+          
+     TAB, RET => Alínea una tabla y mueve el punto al próximo campo.
+
+     S-TAB => Alínea una tabla y se mueve al campo previo.
+
+   * ÓRDENES
+     - Vaya a la línea ALPHA y presione C-p una vez para llegar a la última
+       fila de la tabla superior.
+
+     - Presione C-e y luego presione M-b, esto pondrá el punto sobre el 
+       número 25.
+
+     - Presione TAB para agregar una nueva fila, la tabla se alínea también.
+
+     - Presione C-x u para deshacer.
+
+     - Presione S-TAB dos veces para ir al nombre 'Anna'.
+
+     - Presione TAB una vez más.
+
+     - Presione RET para agregar una nueva fila.
+
+     - Presione C-x u para deshacer.
+     
+| Name  | Phone | Age |
+|-------+-------+-----|
+| Peter |  1234 |  19 |
+| Michael |  2345 |  29 |
+| Anna  |  4321 |  25 |
+ALPHA
+
+2) Creando tablas:
+
+   * Teclazos
+
+     C-c | => Transforma la región seleccionada en una tabla.
+
+     C-c - => Inserta una regla horizontal bajo la línea actual.
+
+     C-c <SPC> => Limpia el campo bajo el punto.
+
+     M-a => Mueve el punto al principio del campo actual.
+
+     M-e => Mueve el punto al final del campo actual.
+
+     M-LEFT, M-RIGHT => Mueve la columna actual a la izquierda/derecha.
+
+     M-UP, M-DOWN => Mueve la fila actual hacia arriba/abajo.
+
+     M-S-LEFT => Mata la columna actual.
+
+     M-S-RIGHT => Inserta una columna a la derecha.
+
+     M-S-UP => Mata la fila actual.
+
+     M-S-DOWN => Inserta una nueva fila encima de la fila actual.
+
+     C-c ^ => Ordena las filas de la tabla.
+
+   * ÓRDENES
+
+     - Vaya a la línea BRAVO y presione C-a, luego presione C-n.
+
+     - Presione y mantenga C-S y luego presione la tecla 'n' cinco veces
+       para seleccionar la región deseada.
+
+     - Presione C-c | para transformar la región en una tabla.
+
+     - Presione C-c - para agregar una regla horizontal.
+
+     - Presione TAB tres veces para poner el punto sobre la 'b' de 'batman'.
+
+     - Presione M-e para ir al final de ese campo.
+
+     - Presione M-a para if al principio de ese campo.
+
+     - Presione C-c <SPACE> para limpiar ese campo.
+
+     - Presione C-x u para deshacer.
+
+     - Con el punto sobre 'batman' presione M-RIGHT, luego presione M-LEFT.
+
+     - Presione M-DOWN luego presione M-UP.
+
+     - Presione M-S-LEFT para matar la columna actual.
+
+     - Presione C-x u para deshacer.
+
+     - Presione M-S-RIGHT para insertar una nueva columna vacía.
+
+     - Presione C-x u para deshacer.
+
+     - Presione M-S-UP para matar la fila actual.
+
+     - Presione C-x u para deshacer.
+
+     - Presione M-S-DOWN para insertar una nueva fila.
+
+     - Presione C-x u para deshacer.
+
+     - Presione C-c ^ para ordenar la tabla, Emacs te preguntará el tipo de
+       ordenamiento a aplicar, digite 'a' para escoger alfabético, las
+       líneas son ordenadas.
+
+   * NOTAS
+     - Si te diste cuenta, el teclazo C-c ^ es el mismo teclazo que habíamos
+       usado en la misión previa para ordenar una lista plana, Org Mode
+       llama a diferentes funciones usando el mismo teclazo dependiendo
+       DEL CONTEXTO en el que nos encontramos actualmente, en la misión
+       previa EL CONTEXTO era una lista plana, en esta misión EL CONTEXTO
+       es una tabla.
+       
+BRAVO
+eruid,descripción
+batman,usa tecnología
+superman,vuela por el aire
+spiderman,usa una telaraña
+ghostrider,maneja una motocicleta
+
+3) Editando tablas:
+
+   * Teclazos
+
+     C-c + => Suma todos los ítems en la columna actual o en el rectángulo
+              definido por la región actual.
+
+     S-RET => Si el campo actual está vacío, cópielo del primer campo no
+              vacío.
+
+     C-c ` => Edita el campo actual en otro buffer. Útil para campos muy
+              largos que no son completamente visibles.
+
+   * ÓRDENES
+
+     - Vaya a la línea BRAVO y presione C-a, luego presione C-p.
+
+     - Presione TAB para poner el punto sobre la columna de números.
+
+     - Presione C-c + para sumar todos los número, el texto
+       'Suma de 5 ítems: 15 <S-instertar> insertará el resultado en el
+       buffer' se despliega en el minibuffer.
+
+     - Presione RET para insertar una nueva fila, luego presione C-y para
+       pegar el resultado ahí.
+
+     - Vaya a la línea CHARLIE y presione C-a, luego presione C-n.
+
+     - Presione TAB dos veces para poner el punto en el campo vacío.
+
+     - Presione S-RET para copiar el valor del campo de la fila previa.
+
+     - Vaya a la línea DELTA y presione C-a, luego presione C-n.
+
+     - Presione TAB dos veces para alcanzar el segundo campo de la tabla.
+
+     - Presione C-c ` para abrir un nuevo buffer con los contenidos del
+       campo.
+
+     - En el nuevo buffer presione M-u para convertir el Si en un SI en
+       mayúscula.
+
+     - En el nuevo buffer presione C-c C-c para guardar los cambios y
+       cerrar el buffer.
+
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
+BRAVO
+
+CHARLIE
+| muscaria   |
+|            |
+| phalloides |
+
+DELTA
+| Una celda | Si conoces al enemigo y a tí mismo, no debes temer el resultado de cien batallas. Si te conoces a tí mismo pero no al enemigo, por cada victoria ganada también sufrirás una derrota. Si no te conoces a tí mismo ni al enemigo, sucumbirás en cada batalla. |
+
+1) Importando/Exportando tablas:
+
+   * Teclazos
+
+     M-x org-table-export => Exporta una tabla a un archivo.
+
+     M-x org-table-import => Importa un archivo como una tabla.
+
+   * ÓRDENES
+
+     - Vaya a la línea ECHO, presione C-a y luego presione C-n.
+
+     - Presione M-x y digite 'org-table-export' y presione RET, el texto
+       'Exportar tabla a: ~/emacs-bootcamp/03-org/' se despliega en el
+       minibuffer, digite una ruta similar a
+       '~/emacs-bootcamp/03-org/mi-tabla' y presione RET.
+
+     - Ahora en el minibuffer el texto 'Formato: orgtbl-to-tsv' se muestra,
+       existen múltiples formatos que puedes usar cuando exportas una tabla,
+       presione RET ahora para aceptar, el texto 'Exportación hecha' se
+       muestra, si vas y revisas esa ruta, el archivo debe existir y
+       contiene los contenidos de la tabla.
+
+     - Vaya a la línea FOXTROT, presione C-a, luego presione C-n.
+
+     - Presione M-x, digite 'org-table-import' y presione RET.
+
+     - En el minibuffer digite la ruta al archivo 'mi-tabla' que justo
+       exportamos y presione RET, la tabla es importada.
+
+ECHO
+| amanita | muscaria   |
+| amanita | phalloides |
+| amanita | phanterina |
+
+FOXTROT
+
+
+1) Referenciando campos:
+
+   * Descripción:
+
+     Para referirse a un campo de una tabla desde otro campo de la misma
+     tabla, se usa la próxima sintaxis:
+
+       @fila_número$columna_número
+
+   * Teclazos
+
+     - C-c = => Instala una fórmula en la celda actual.
+
+     - C-c * => Recomputa la fila actual.
+
+     - C-u C-c * => Recomputa toda la tabla.
+
+     - M-x orgtbl-ascii-plot => Grafica una tabla usando histogramas.
+
+     - M-x org-plot/gnuplot => Grafica una tabla usando Gnuplot, necesita que
+                               Gnuplot esté instalado.
+       
+   * ÓRDENES
+
+     - Vaya a la línea GOLF y presione C-a, luego presione C-p.
+
+     - Presione TAB una vez para poner el punto en el primer campo vacío.
+
+     - Presione C-c =, el texto 'Fórmula de columna $1=' se despliega en el
+       minibuffer.
+
+     - Aquí introducimos la referencia al número '3': fila 2, columna 1,
+       digite el texto '@2$1' y presione RET, el número '3' se despliega en
+       la primera columna de la última fila y el texto '#+TBLFM: $1=@2$1' es
+       agregado al buffer Org.
+
+     - Presione TAB para poner el punto en el último campo vacío de la tabla.
+
+     - Presione C-c =, digite el texto '@1$1 + @1$2' y presione RET, de nuevo
+       se agrega otro texto '#+TBLFM:' (table formula).
+
+     - Ponga el punto sobre el primer '1' de la tabla.
+
+     - Presione C-d para borrar el '1' y digitar el número '2'.
+
+     - Vaya a la última fila de la tabla y presione C-c *, el segundo '3' en
+       esa fila debe cambiar a '4'.
+
+     - Vaya a la línea HOTEL, presione C-a y luego presione C-p.
+
+     - Presione TAB dos veces para poner el punto en la segunda columna.
+
+     - Presione M-x, luego digite 'orgtbl-ascii-plot' y presione RET, una
+       tercera columna con el gráfico en modo texto es creada.
+
+| 1 | 2 |
+| 3 | 4 |
+| 5 | 6 |
+|   |   |
+GOLF
+
+| Sede          | Max cites |
+|---------------+-----------|
+| Chile         |    257.72 |
+| Leeds         |    165.77 |
+| Sao Paolo     |     71.00 |
+| Stockholm     |    134.19 |
+| Morelia       |    257.56 |
+| Rochefourchat |      0.00 |
+HOTEL
+
+Buen trabajo soldado, ahora puedes tomarte 5 minutos libres ...

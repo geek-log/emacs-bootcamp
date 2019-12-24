@@ -1,0 +1,307 @@
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+Mission #23: Using Tables
+----------------------------------------------------------------------------
+
+Briefing
+............................................................................
+
+On this mission you will learn how to manipulate tables using Org-Mode.
+
+Mission
+............................................................................
+
+1) Aligning tables:
+
+   * Keybindings
+
+     C-c C-c => Aligns a table.
+          
+     TAB, RET => Aligns a table and moves to the next field.
+
+     S-TAB => Aligns a table and moves to the previous field.
+
+   * ORDERS
+     - Go to the ALPHA line and press C-p one time to get to the last row
+       of the upper table.
+
+     - Press C-e and then press M-b, this will put the point over the
+       number 25.
+
+     - Press TAB to add a new row, the table gets aligned too.
+
+     - Press C-x u to undo.
+
+     - Press S-TAB two times to go to the name 'Anna'.
+
+     - Press TAB one more time.
+
+     - Press RET to add a new row.
+
+     - Press C-x u to cancel.
+     
+| Name  | Phone | Age |
+|-------+-------+-----|
+| Peter |  1234 |  19 |
+| Michael |  2345 |  29 |
+| Anna  |  4321 |  25 |
+ALPHA
+
+2) Creating tables:
+
+   * Keybindings
+
+     C-c | => Transforms a selected region into a table.
+
+     C-c - => Inserts a new horizontal rule under the current line.
+
+     C-c <SPC> => Clear the field under the point.
+
+     M-a => Move the point to the beggining of the current field.
+
+     M-e => Move the point to the end of the current field.
+
+     M-LEFT, M-RIGHT => Move the current column to the left/right.
+
+     M-UP, M-DOWN => Move the current row up/down.
+
+     M-S-LEFT => Kill the current column.
+
+     M-S-RIGHT => Insert new column to the right.
+
+     M-S-UP => Kill the current row.
+
+     M-S-DOWN => Insert a new row above the current row.
+
+     C-c ^ => Order the table rows.
+
+   * ORDERS
+
+     - Go to the BRAVO line and press C-a, then press C-n.
+
+     - Press and hold C-S and then press the 'n' key five times to
+       select all the desired region.
+
+     - Press C-c | to transform that region into a table.
+
+     - Press C-c - to add an horizontal rule.
+
+     - Press TAB three times to put the point over the 'b' of 'batman'.
+
+     - Press M-e to go to the end of that field.
+
+     - Press M-a to go to the start of that field.
+
+     - Press C-c <SPACE> to clear that field.
+
+     - Press C-x u to undo.
+
+     - With the point over 'batman' press M-RIGHT, then press M-LEFT.
+
+     - Press M-DOWN then press M-UP.
+
+     - Press M-S-LEFT to kill the current column.
+
+     - Press C-x u to undo.
+
+     - Press M-S-RIGHT to insert a new empty column.
+
+     - Press C-x u to undo.
+
+     - Press M-S-UP to kill the current row.
+
+     - Press C-x u to undo.
+
+     - Press M-S-DOWN to insert a new row.
+
+     - Press C-x u to undo.
+
+     - Press C-c ^ to order the table, Emacs will ask you for the type of
+       ordering to apply, type 'a' to choose alphabetic, the lines
+       gets ordered.
+
+   * NOTES
+     - If you notice, the C-c ^ is the same keybinding that we used on
+       the previous mission to order a plain list, Org mode call different
+       functions using the same keybinding depending on THE CONTEXT in we
+       currently are, on the previous mission THE CONTEXT was a plain
+       list, on this mission THE CONTEXT is a table.
+
+BRAVO
+eruid,description
+batman,uses technology
+superman,flies through the air
+spiderman,uses a web
+ghostrider, rides a motorcycle
+
+3) Editing tables:
+
+   * Keybindings
+
+     C-c + => Sums all the items on the current column or in the
+              rectangle defined by the current region.
+
+     S-RET => If the current field is empty copy it from the first non empty
+              field.
+
+     C-c ` => Edits the current field on another buffer. Useful for long
+              fields that are not fully visible.
+
+   * ORDERS
+
+     - Go to the BRAVO line and press C-a, then press C-p.
+
+     - Press TAB to put the point over the numbers column.
+
+     - Press C-c + to sum all numbers, the text
+       'Sum of 5 items: 15   <S-insertchar> will insert result into buffer'
+       is displayed on the minibuffer.
+
+     - Press RET to insert a new row, then press C-y to paste the result.
+
+     - Go to the CHARLIE line and press C-a, then press C-n.
+
+     - Press TAB twice to put the point on the empty field.
+
+     - Press S-RET to copy the value from the previous row field.
+
+     - Go to the DELTA line press C-a then press C-n.
+
+     - Press TAB two times to reach the table second field.
+
+     - Press C-c ` to open a new buffer with the field contents.
+
+     - On the new field buffer press M-u to convert the If into an upper IF.
+
+     - On the new buffer press C-c C-c to save the changes and close the
+       buffer.
+
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
+BRAVO
+
+CHARLIE
+| muscaria   |
+|            |
+| phalloides |
+
+DELTA
+| A cell | If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle. |
+
+4) Importing/Exporting tables:
+
+   * Keybindings
+
+     M-x org-table-export => Exports a table to a file.
+
+     M-x org-table-import => Imports a file as a table.
+
+   * ORDERS
+
+     - Go to the ECHO line, press C-a then press C-n.
+
+     - Press M-x and type 'org-table-export' and press RET, the text
+       'Export table to: ~/emacs-bootcamp/03-org/' is displayed on the
+       minibuffer, type a path similar to '~/emacs-bootacmp/03-org/my-table'
+       and press RET.
+
+     - Now on the minibuffer the text 'Format: orgtbl-to-tsv' is displayed,
+       there are multiple formats that you can use when exporting a table,
+       press RET now to accept, the text 'Export done' is showed, if you
+       go an check that path, the file must exists and it contains the table
+       contents.
+
+     - Go to the FOXTROT line, press C-a, then press C-n.
+
+     - Press M-x, type 'org-table-import' and press RET.
+
+     - On the minibuffer type the path to the file 'my-table' that we just
+       exported and press RET, the table data is imported.
+
+ECHO
+| amanita | muscaria   |
+| amanita | phalloides |
+| amanita | phanterina |
+
+FOXTROT
+
+
+5) Referencing fields:
+
+   * Description
+
+     To refer to a table field from another field on the same table, the
+     following syntax is used:
+
+       @row_number$column_number
+
+   * Keybindings
+
+     - C-c = => Installs a formula on the current table cell.
+
+     - C-c * => Recomputes the current row.
+
+     - C-u C-c * => Recomputes the whole table.
+
+     - M-x orgtbl-ascii-plot => Plots a table using text histograms.
+
+     - M-x org-plot/gnuplot => Plots a table using Gnuplot, needs Gnuplot
+                               to be installed.
+       
+   * ORDERS
+
+     - Go to the GOLF line and press C-a, then press C-p.
+
+     - Press TAB one time to put the point on the first empty field.
+
+     - Press C-c =, the text 'Column formula $1=' is displayed on the
+       minibuffer.
+
+     - Here we enter the reference for the number '3': row 2, column 1, type
+       the text '@2$1' and press RET, the number '3' is displayed on the
+       first column of the last row and the text '#+TBLFM: $1=@2$1' is added
+       to the Org buffer.
+
+     - Press TAB to put the point on the last empty field of the table.
+
+     - Press C-c =, type the text '@1$1 + @1$2' and press RET,
+       again another '#+TBLFM:' (table formula) text is added.
+
+     - Put the point over the first '1' on the table.
+
+     - Press C-d to delete the '1' and type the number '2'.
+
+     - Go to the last table row and press C-c *, the second '3' on that row
+       should change to a '4'.
+
+     - Go to the HOTEL line, press C-a then press C-p.
+
+     - Press TAB two times to put the point on the second column.
+
+     - Press M-x, then type 'orgtbl-ascii-plot' and press RET, a third
+       column with the text-mode graphics is created.
+
+| 1 | 2 |
+| 3 | 4 |
+| 5 | 6 |
+|   |   |
+GOLF
+
+| Sede          | Max cites |
+|---------------+-----------|
+| Chile         |    257.72 |
+| Leeds         |    165.77 |
+| Sao Paolo     |     71.00 |
+| Stockholm     |    134.19 |
+| Morelia       |    257.56 |
+| Rochefourchat |      0.00 |
+HOTEL
+
+Good job soldier, now you can take 5 minutes off ...
