@@ -1,0 +1,256 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerz Áerea adónde aprenderás a VOLAR usando
+org-mode.
+
+* Misión #26: Usando subárboles
+
+** Resumen
+
+   En esta misión aprenderás como manipular subárboles de información.
+
+   Para esta misión y las siguientes, el archivo de misión está escrito
+   usando un formato más org-mode
+
+   El texto en la parte superior de este documento('#+STARTUP: showall') es
+   usado para establecer la visibilidad inicial de los ítems, en este caso
+   'mostrar todo' (muestra todo excepto los ítems escondidos como los
+   cajones).
+
+** Misión
+
+*** Creando un subárbol:
+  
+**** Descripción
+
+     Como se dijo en la misión #23, puedes usar el caracter '*' para crear
+     encabezados y subencabezados, y la estructura resultante de encabezados
+     y subencabezados es un subárbol de información.
+
+     Puedes crear, modificar, copiar, pegar, borrar, exportar e importar
+     subárboles.
+
+**** Teclazos
+
+     - TAB => Ciclar entre los estados 'doblado' > 'hijo' > 'subárbol' en
+       el encabezado actual (subárbol actual).
+
+     - S-TAB => Ciclar entre los estados 'doblado' > 'hijo' > 'subárbol' en
+       el árbol completo (todo el documento org).
+
+     - C-u C-u TAB => Reinicia a la visibilidad inicial.
+
+     - C-u C-u C-u TAB => Mostrar todo incluídos los cajones.
+
+     - C-c C-r => Comando para revelar, revela el contexto alrededor del
+       punto.
+
+     - C-c C-k => Expone todos los encabezados del árbol.
+
+     - C-c TAB => Expone todos los hijos directos del subárbol.
+
+     - C-c C-x b => Muestra el subárbol en un buffer indirecto.
+
+     - C-c C-x v => Copia el texto en el subárbol visible.
+
+     - C-c C-n => Próximo encabezado visible.
+
+     - C-c C-p => Encabezado visible previo.
+
+     - C-c C-f => Próximo encabezado en el mismo nivel.
+
+     - C-c C-u => Un encabezado arriba.
+
+**** Órdenes
+
+     - Vaya al encabezado ALPHA.
+
+     - Presione TAB tres veces para ciclar todos los estados: doblado, hijo,
+       subárbol.
+
+     - Presione C-c % para poner la marca, luego presione M-< para ir al
+       principio del buffer.
+
+     - Presione S-TAB tres veces para ciclar todos los estados: doblado,
+       hijo, subárbol.
+
+     - Presione S-TAB una vez más para dejar el documento en el estado
+       'doblado'.
+
+     - Presione C-u C-u TAB para regresar a la visibilidad inicial la cual
+       es 'mostrar todo' excepto por los cajones escondidos.
+       La línea '#+STARTUP: showall' en este buffer le dice a Emacs
+       que al abrir el archivo debe mostrar toda la información, otros
+       valores posibles son: 'overview', 'content' y 'showeverything'.
+
+     - Presione C-c & para saltar de vuelta al encabezado ALPHA.
+
+     - Presione C-c C-x b, esto abrirá un nuevo buffer en la parte inferior
+       de Emacs con el subárbol ALPHA.
+
+     - Presione C-x o para saltar a ese nuevo buffer.
+
+     - Modifque la palabra bravo para que sea toda en mayúscula: BRAVO.
+
+     - Presione C-x k RET para matar el buffer y C-x 1 para mostrar solamente
+       este buffer, si verificas el árbol ALPHA, los cambios hecho en el
+       nuevo buffer son aplicados en el árbol de este buffer.
+
+     - En el encabezado ALPHA presione TAB para ponerlo en el estado
+       'doblado'.
+
+     - Presione C-c C-k para exporner todos los subencabezados del
+       encabezado ALPHA.
+
+     - En el encabezado ALPHA presione C-a, luego presione TAB para poner
+       el encabezado en el estado 'doblado' de nuevo.
+
+     - Presione C-c TAB, el hijo directo 'Este es un ítem alpha ...' es
+       desplegado.
+
+     - Presione C-c C-n cuatro veces.
+
+     - Presione C-c C-p cuatro veces.
+
+     - Vaya a la línea ALPHA y use TAB dos veces para ponerlo en el estado
+       'subárbol'.
+
+     - Presione C-c C-f dos veces.
+
+     - VAYA A LA LÍNEA con el texto '* Este es un ítem bravo' y presione
+       C-c C-u tres veces.
+
+**** ALPHA
+
+    Esto es información alpha.
+    
+***** Este es un ítem alpha.
+
+****** BRAVO
+
+      Esto es información bravo.
+      
+******* Este es un ítem bravo.
+
+        
+**** CHARLIE
+***** Este es un ítem charlie.
+
+**** DELTA
+
+*** Matando y pegando un subárbol:
+
+**** Teclazos
+
+      - C-c @ => Seleccione el subárbol bajo el punto.
+
+      - C-c C-x C-w => Matar el subárbol actual.
+
+      - C-c C-x M-w => Copiar el subárbol actual.
+
+      - C-c C-x C-y => Pegar el subárbol.
+
+      - C-y => Pegar el subárbol.
+
+      - C-c C-x c => Clonar un subárbol.
+
+      - C-c C-w => Mover la entrada o región actual a otra ubicación.
+
+**** Órdenes
+
+     - Vaya a la línea FOXTROT.
+
+     - Presione C-c C-x c para clonar el subárbol, Emacs te preguntará
+       por el número de clone a crear, digite el número '2' y presione RET,
+       el árbol FOXTROT es clonado dos veces.
+
+     - Presione C-x u para deshacer el clonado.
+
+     - Presione C-c @ on el árbol FOXTROT para seleccionarlo.
+
+     - Presione C-g para cancelar la selección, luego presione C-a.
+
+     - C-c C-x C-w para matar el subárbol FOXTROT.
+
+     - Vaya al encabezado GOLF y presione C-e, luego presione C-n y luego
+       presione C-a.
+
+     - Presione C-y para pegar el subárbol.
+
+     - Vaya al encabezado HOTEL.
+
+     - Presione C-c C-x M-w para copiar el subárbol HOTEL.
+
+     - Vaya al encabezado JULIET y presione C-n.
+
+     - Presione C-c C-x C-y para pegar el subárbol, note que cuando se usa
+       C-c C-x C-y en lugar de sólo C-y, no hay necesidad de presionar C-a
+       para ir al principio de la línea.
+
+**** ECHO
+
+     El contenido echo.
+
+***** FOXTROT
+
+      El contenido foxtrot.
+
+****** Un ítem foxtrot.
+
+     
+
+***** GOLF
+
+***** HOTEL
+
+      El contenido hotel.
+
+****** INDIA
+
+       El contenido india.
+
+
+*** Estrechando y ensanchando un buffer:
+
+**** Teclazos
+
+     - C-x ns => Estrecha el buffer actual al subárbol actual.
+       
+     - C-x nb => Estrecha el buffer actual al bloque actual.
+       
+     - C-x nw => Ensancha el buffer
+
+**** Órdenes
+
+     - Lea todas las instrucciones.
+
+     - Vaya a la línea KILO.
+
+     - Presione C-x ns, el buffer completo se estrecha al subárbol KILO.
+
+     - Para mostrar el documento completo presione C-x nw.
+
+     - Vaya a la línea LIMA y presione C-n.
+
+     - Presione C-x nb para mostrar solomente el bloque de verso.
+
+     - Presione C-x nw para mostrar el documento completo.
+
+**** JULIET
+     
+     Esto es información juliet.
+     
+***** KILO
+
+****** LIMA
+       #+BEGIN_VERSE
+           Primero a pelear por el bien,
+           Y a construir el carácter de la nación,
+           Y la armada va rodando.
+           Orgullosos de todo lo que hemos hecho,
+           Peleando hasta que la batalla se gane,
+           Y la armada va rodando.
+       #+END_VERSE

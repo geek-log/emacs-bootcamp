@@ -10,10 +10,14 @@ to FLY using org-mode.
 
 ** Briefing
 
-On this mission you will learn how to manage subtrees of information.
+   On this mission you will learn how to manipulate information subtrees.
 
-For this mission and the next ones, the mission file is written using
-a new format to comply with the org-mode style.
+   For this mission and the next ones, the mission file is written using
+   a more org-mode format.
+
+   The text on top of this document ('#+STARTUP: showall') is used to
+   set the initial items visibility to full expanded (except for hidden
+   items like drawers).
 
 ** Mission
 
@@ -47,7 +51,7 @@ a new format to comply with the org-mode style.
 
      - C-c C-x b => Show the subtree in an indirect buffer.
 
-     - C-c C-v => Copy the visible subtree text.
+     - C-c C-x v => Copy the visible subtree text.
 
      - C-c C-n => Next visible heading.
 
@@ -72,11 +76,11 @@ a new format to comply with the org-mode style.
      - Press S-TAB one more time to leave the document on the 'folded' state.
 
      - Press C-u C-u TAB to return to the initial visibility that is 'show
-       all' the information except for hidden drawers. If you notice the
-       '#+STARTUP: showall' text as first line on this buffer, this is a
-       configuration setting that tells Emacs that all trees must be expanded
-       (except if hidden) when first opening this file, other possible values
-       are 'overview', 'content' and 'showeverything'.
+       all' the information except for hidden drawers. The line
+       '#+STARTUP: showall' on this buffer, is a configuration setting that
+       tells Emacs that all trees must be expanded (except if hidden) when
+       opening this file, other possible values are 'overview', 'content'
+       and 'showeverything'.
 
      - Press C-c & to jump back to the ALPHA heading.
 
@@ -95,10 +99,23 @@ a new format to comply with the org-mode style.
 
      - Press C-c C-k to expose all subheadings of the ALPHA heading.
 
-     - Put the ALPHA heading on the 'folded' state again.
+     - On the ALPHA heading press C-a, then press TAB to put the heading
+       on the 'folded' state again.
 
      - Press C-c TAB, the direct child 'This is an alpha item ...' is
        displayed.
+
+     - Press C-c C-n four times.
+
+     - Press C-c C-p four times.
+
+     - Go to the ALPHA line and use TAB two times to set it to the 'subtree'
+       state.
+
+     - Press C-c C-f two times.
+
+     - GO TO THE LINE with the text '* This is a bravo item' and press
+       C-c C-u three times.
 
 **** ALPHA
 
@@ -111,3 +128,124 @@ a new format to comply with the org-mode style.
       This is bravo information.
       
 ******* This is a bravo item.
+
+        
+**** CHARLIE
+***** This is a charlie item.  
+
+**** DELTA
+
+*** Killing and yanking a subtree:
+
+**** Keybindings
+
+      - C-c @ => Select the subtree at the point.
+
+      - C-c C-x C-w => Kill the current subtree.
+
+      - C-c C-x M-w => Copy the current subtree.
+
+      - C-c C-x C-y => Yanks the subtree.
+
+      - C-y => Paste the subtree.
+
+      - C-c C-x c => Clone a subtree.
+
+      - C-c C-w => Refile the current entry or region to a different
+        location.
+
+**** Orders
+
+     - Go to the FOXTROT line.
+
+     - Press C-c C-x c to clone the FOXTROT subtree, Emacs will ask you
+       for the number of clones to make, type the number '2' and press RET,
+       the FOXTROT tree is clone two times.
+
+     - Press C-x u to undo the cloning.
+
+     - Press C-c @ on the FOXTROT tree to select it.
+
+     - Press C-g to cancel the selection, then press C-a.
+
+     - C-c C-x C-w to kill the FOXTROT subtree.
+
+     - Go to the GOLF heading and press C-e, then press C-n and then press
+       C-a.
+
+     - Press C-y to paste the tree.
+
+     - Go to the HOTEL heading.
+
+     - Press C-c C-x M-w to copy the HOTEL subtree.
+
+     - Go to the JULIET heading and press C-n.
+
+     - Press C-c C-x C-y to paste the tree, note that when using C-c C-x C-y
+       instead of just C-y, there is no need to press C-a to go to the
+       beginning of the line.
+
+**** ECHO
+
+     The echo content.
+
+***** FOXTROT
+
+      The foxtrot content.
+
+****** A foxtrot item.
+
+     
+
+***** GOLF
+
+***** HOTEL
+
+      The hotel content.
+
+****** INDIA
+
+       The india content.
+
+
+*** Narrow and widen a buffer:
+
+**** Keybindings
+
+     - C-x ns => Narrow current buffer to current subtree.
+       
+     - C-x nb => Narrow buffer to current block.
+
+     - C-x nw => Widen a buffer.
+
+**** Orders
+
+     - Read all instructions.
+
+     - Go to the KILO line.
+
+     - Press C-x ns, the whole buffer is narrowed down to the KILO subtree.
+
+     - To show the whole document press C-x nw.
+
+     - Go to the LIMA line and press C-n.
+
+     - Press C-x nb to show only the verse block.
+
+     - Press C-x nw to show all the document.
+
+**** JULIET
+     
+     The juliet information.
+     
+***** KILO
+
+****** LIMA
+       #+BEGIN_VERSE
+           First to fight for the right,
+           And to build the Nation’s might,
+           And The Army Goes Rolling Along.
+           Proud of all we have done,
+           Fighting till the battle’s won,
+           And the Army Goes Rolling Along.
+       #+END_VERSE
