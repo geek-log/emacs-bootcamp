@@ -1,0 +1,227 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuera Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #29: Marcas de Tiempo (Timestamps)
+
+** Resumen
+
+   En esta misión aprenderás como usar Marcas de Tiempo.
+
+** Misión
+
+*** Usando Timestamps:
+
+**** Teclazos
+
+     - C-c . => Pregunta por una fecha e inserta una marca de tiempo.
+       
+     - C-c ! => Inserta una marca de tiempo inactiva.
+
+     - C-c < => Inserta la fecha de hoy.
+
+     - C-c C-o => Accesa a la vista de agenda para el timestamp actual.
+
+***** En la Vista de Agenda para la marca de tiempo actual
+
+      - q => Quita la vista de agenda para la marca de tiempo actual.
+        
+      - S-UP, S-DOWN, S-RIGHT, S-LEFT => Moverse en el calendario.
+
+      - M-S-RIGHT, M-S-LEFT => Moverse al mes próximo/previo.
+
+      - M-S-UP, M-S-DOWN => Moverese al año próximo/previo.
+
+      - <, > => Hacer scroll un mes en el calendario.
+            
+***** Cuando el punto está en una marca de tiempo
+
+      - S-UP, S-DOWN => Incrementa o decrementa the año, mes, día, hora o
+        minuto dependiendo de la porción de la marca de tiempo sobre la
+        que esté ubicado el punto.
+     
+**** Órdenes
+
+     - Vaya al encabezado ALPHA y presione C-e.
+
+     - Press C-c ., un buffer de calendario se abrirá en la parte inferior
+       de Emacs.
+
+     - Presione S-RIGHT dos veces para cambiar la fecha dos días en el
+       futuro.
+
+     - Presione RET para insertar la fecha al final del encabezado ALPHA.
+
+     - Vaya a la línea BRAVO y presione C-e.
+
+     - Presione C-c !.
+
+     - Presione S-UP dos veces para establecer la fecha dos meses en el
+       pasado.
+
+     - Presione RET para insertar la marca de tiempo, pero esta vez, como
+       una inactiva, puedes ver la diferencia entre una activa por el uso
+       de '[]' en lugar de '<>'.
+
+     - Vaya al encabezado CHARLIE y presione C-e.
+
+     - Presione C-c < para insertar la fecha de hoy.
+
+     - Presione M-b para poner el punto dentro de la última marca de tiempo
+       agregada.
+
+     - Presione C-c C-o, esto abrirá un nuevo buffer en la parte inferior
+       de Emacs, este es un buffermuy especial llamado AGENDA, la agenda
+       ofrece diferentes tipos de vitas (i.e.: por días, mes, todo, ...)
+       y actúa mucho como una agenda de papel (o aún mejor). El punto se
+       moverá a esta nueva vista de agenda.
+
+     - Presione la tecla 'q' para quitar la vista de agenda para la marca
+       de tiempo.
+
+     - Ponga el punto en la porción del día en la marca de tiempo y presione
+       S-UP.
+
+     - Mueva el punto a la porción del día en la marca de tiempo y presione
+       S-DOWN.
+
+**** ALPHA 
+
+**** BRAVO 
+
+**** CHARLIE 
+
+*** Fechas de Entrega
+
+**** Descripción
+
+     Una marca de tiempo puede estar precedido por palabras clave especiales
+     para facilitar la planificación de proyectos. Las palabras clave
+     'DEADLINE' y 'SCHEDULED' son ejemplos de estas.
+
+     'DEADLINE' es la fecha final para terminar una tarea en tanto que
+     'SCHEDULED' es una fecha en la que cierta tarea va a empezar.
+
+**** Teclazos
+
+     - C-c C-d => Inserta la palabra clave 'DEADLINE'. Esto se listará en
+       la agenda.
+       
+     - C-c C-s => Inserta la palabra clave 'SCHEDULED'.
+
+     - C-c / d => Construye un árbol esparcido con todos los deadlines.
+
+     - C-c / b => Construye un árbol esparcido con todos los deadlines
+       antes de una fecha dada.
+
+**** Órdenes
+
+     - Vaya al encabezado DELTA.
+
+     - Presione C-c C-d para insertar un 'DEADLINE', el calendario se abrirá.
+
+     - Presione S-RIGHT tres veces y luego presione RET, un 'DEADLINE' se
+       agregará.
+
+     - Vaya al encabezado ECHO.
+
+     - Presione C-c C-s para insertar un 'SCHEDULED', el calendario se
+       abrirá.
+
+     - Presione S-RIGHT tres veces y luego presione RET, un 'SCHEDULES' se
+       agregará.
+
+     - Presione C-c / d, esto doblará todo el buffer y mostraŕa el
+       deadline que agregaste antes.
+
+     - Presione C-u C-u TAB para mostrar todos los ítems de nuevo.
+
+     - Presione C-c / b, la vista de calendario se despliega, presione
+       S-RIGHT CUATRO veces y luego presione RET para indicarle a Emacs que
+       muestre todos los ítems DEADLINE que existen antes de esa fecha, esto
+       doblará el buffer y mostrará los deadlines.
+
+**** DELTA
+
+**** ECHO
+
+*** Midiendo tiempos de trabajo
+
+**** Descripción
+
+     Org Mode te permite tomar el tiempo que gastaste haciendo una tarea,
+     puede iniciar y detener el reloj cuando quieras o alternativamente,
+     cuando una tarea es marcada como 'DONE', el reloj se detendrá
+     automáticamente y el tiempo final se guardará.
+
+     También es posible computar el total del tiempo gastado al calcular
+     los tiempos de las entradas de un subárbol (ej: por proyecto).
+
+**** Teclazos
+
+     - C-c C-x C-i => Inicia el reloj para el ítem actual.
+       
+     - C-c C-x C-o => Inserta otra marca de tiempo en la misma ubicación
+       en la que el reloj se inició anteriormente (detiene el reloj).
+
+     - C-c C-x C-x => Volver a medir el último tiempo tomado.
+
+     - C-c C-x C-e => Actualizar el estimado de esfuerzo.
+
+     - C-c C-y => Recomputar el tiempo.
+
+     - C-c C-t => Cambia una tarea TODO a DONE y detiene el reloj.
+       
+     - C-c C-x C-q => Cancela el reloj actual.
+
+     - C-c C-x C-j => Salta al encabezado al cual se le está tomando el
+       tiempo actualmente.
+
+     - C-c C-x C-d => Despliega el tiempo en cada subárbol.
+
+**** Órdenes
+
+     - Ir al encabezado FOXTROT.
+
+     - Presione C-c C-x C-i, el texot 'El reloj empieza en: ..' se despliega
+       en el minibuffer.
+
+     - Presione C-n para poner el punto sobre el cajón 'LOGBOOK' y presione
+       TAB, dentro de él hay una entrada 'CLOCK'.
+
+     - Vaya a la línea GOLF, presione C-c C-x C-o y observe el cajón
+       'LOGBOOK', una nueva marca de tiempo se agrega a la previa, también
+       en la línea de modo (Modeline), el texto 'El reloj se ha detenido'
+       es mostrado.
+
+     - Presione C-c C-x C-o de nuevo, el texto 'No hay reloj activo' se
+       despliega en la línea de Modo.
+
+     - Vaya al encabezado FOXTROT y presione C-c C-x C-e, luego presione RET,
+       el esfuerzo total se agrega (que en este caso es 0:00).
+
+     - Vaya a la línea GOLF.
+
+     - Presione C-c C-x C-i.
+
+     - Presione C-n, luego presione TAB.
+
+     - Vaya al encabezado HOTEL.
+
+     - Presione C-c C-x C-j para saltar a la línea GOLF que es la línea
+       a la que se le está midiendo el tiempo.
+
+     - ESPERE por un minuto completo y luego presione C-c C-x C-o para
+       detener el reloj.
+
+     - Presione C-c C-x C-d, el tiempo para cada subárbol es desplegado.
+       
+**** FOXTROT
+     
+**** GOLF
+     
+**** HOTEL

@@ -1,0 +1,215 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+* Mission #29: Timestamps
+
+** Briefing
+
+   On this mission you will learn how to use Timestamps.
+
+** Mission
+
+*** Using Timestamps
+
+**** Keybindings
+
+     - C-c . => Prompts for a date and inserts a timestamp.
+       
+     - C-c ! => Inserts a inactive timestamp.
+
+     - C-c < => Inserts today's date.
+
+     - C-c C-o => Access the agenda for the given timestamp.
+
+***** On the Agenda View for the given timestamp
+
+      - q => Quits the Agenda timestamp view.
+        
+      - S-UP, S-DOWN, S-RIGHT, S-LEFT => Move on the calendar.
+
+      - M-S-RIGHT, M-S-LEFT => Move to the next/previous month.
+
+      - M-S-UP, M-S-DOWN => Move to the next/previous year.
+
+      - <, > => Scroll a month on the calendar.
+            
+***** When the point is on a timestamp
+
+      - S-UP, S-DOWN => Increases or decreases the year, month, day, hour or
+        minute depending on the portion of the timestamp where the point is
+        located.
+     
+**** Orders
+
+     - Go to the ALPHA heading and press C-e.
+
+     - Press C-c ., a calendar buffer will be opened on the bottom of Emacs.
+
+     - Press S-RIGHT two times to change the date two days in the future.
+       
+     - Press RET to insert the date next to the ALPHA heading.
+
+     - Go to the BRAVO line and press C-e.
+
+     - Press C-c !.
+
+     - Press S-UP two times to set the date two months in the past.
+
+     - Press RET to insert the timestamp, but this time, as an inactive one,
+       you can tell the difference between an active one by the use of '[]'
+       instead of '<>'.
+
+     - Go to the CHARLIE heading and press C-e.
+
+     - Press C-c < to insert today's date.
+
+     - Press M-b to put the point inside the last inserted timestamp.
+
+     - Press C-c C-o, this opens a new buffer on the bottom of Emacs, this
+       a very special buffer called AGENDA, the agenda offers different
+       types of views (i.e.: by day, month, todo, ...) and acts very like
+       a real agenda notebook (or even better). The point will be moved
+       to this new agenda view.
+
+     - Press the 'q' key to quit the agenda view for the timestamp.
+
+     - Put the point on the day portion of the timestamp and press S-UP.
+
+     - Move the point to the day portion of the timestamp and press S-DOWN.
+
+**** ALPHA 
+
+**** BRAVO 
+
+**** CHARLIE 
+
+*** Delivery Dates
+
+**** Description
+
+     A timestamp can be preceded by special keywords to facilitate
+     the projects planification. The keywords 'DEADLINE' and 'SCHEDULED' are
+     examples of those.
+
+     'DEADLINE' is the final date to finish a task and 'SCHEDULED' is the
+     date that a certain task will be started.
+
+**** Keybindings
+
+     - C-c C-d => Insert 'DEADLINE'. This will be listed on the agenda.
+       
+     - C-c C-s => Insert 'SCHEDULED'.
+
+     - C-c / d => Build a sparsed tree with all deadlines.
+
+     - C-c / b => Build a sparsed tree with all deadlines previous to
+       a given date.
+
+**** Orders
+
+     - Go to the DELTA heading.
+       
+     - Press C-c C-d to insert a 'DEADLINE', the calendar view will open.
+
+     - Press S-RIGHT three times and then press RET, a 'DEADLINE' will be
+       added.
+
+     - Go to the ECHO heading.
+
+     - Press C-c C-s to insert a 'SCHEDULED', the calendar view will open.
+
+     - Press S-RIGHT three times and then press RET, a 'SCHEDULED' will be
+       added.
+
+     - Press C-c / d, this will fold the buffer and show the deadline you
+       added before.
+
+     - Press C-u C-u TAB to show all items again.
+
+     - Press C-c / b, the calendar view is displayed, press S-RIGHT
+       FOUR times and press RET to ask Emacs to show all DEADLINE items that
+       exists before that date, this will fold the buffer and show the
+       deadlines.
+
+**** DELTA
+
+**** ECHO
+
+*** Clocking Working Time
+
+**** Description
+
+     Org Mode allows you to clock the time you spend doing a task, you
+     can start and stop the clock anytime you want or alternatively, when
+     a task is marked as 'DONE', the clock will automatically stop and the
+     final time is recorded.
+
+     It is also possible to compute the total time spended by calculating
+     the times on a subtree entries (i.e. by project).
+
+**** Keybindings
+
+     - C-c C-x C-i => Starts the clock for the current item.
+       
+     - C-c C-x C-o => Inserts another timestamp on the same location where
+       the clock was started before (stops the clock).
+
+     - C-c C-x C-x => Reclock the last clocked time.
+
+     - C-c C-x C-e => Updates the effort estimate.
+
+     - C-c C-y => Recomputes the time.
+
+     - C-c C-t => Changes a TODO task to DONE and stops the clock.
+
+     - C-c C-x C-q => Cancels the current clock.
+
+     - C-c C-x C-j => Jump to the currently clocked heading.
+
+     - C-c C-x C-d => Displays the time of each subtree.
+
+**** Orders
+
+     - Go to the FOXTROT heading.
+       
+     - Press C-c C-x C-i, the text 'Clock starts at: ...' is displayed on the
+       minibuffer.
+
+     - Press C-n to step over the added 'LOGBOOK' drawer and press TAB,
+       inside it there is a 'CLOCK' entry.
+
+     - GO to the GOLF line, press C-c C-x C-o and observe the 'LOGBOOK'
+       drawer, a new timestamp is added to the previous one, also on the
+       Modeline the text 'The clock is stopped' is displayed.
+
+     - Press C-c C-x C-o again, the text 'No active clock' will be displayed
+       on the Modeline.
+
+     - Go to the FOXTROT heading and press C-c C-x C-e, then press RET,
+       the total effort will be added (which in this case is 0:00).
+
+     - Go to the GOLF line.
+
+     - Press C-c C-x C-i.
+
+     - Press C-n, then press TAB.
+
+     - Go to the HOTEL heading.
+
+     - Press C-c C-x C-j to jump to the GOLF line that is the line being
+       clocked.
+
+     - WAIT a whole minute and then press C-c C-x C-o to stop the clock.
+
+     - Press C-c C-x C-d, the time of each subtree is displayed.
+       
+**** FOXTROT
+     
+**** GOLF
+     
+**** HOTEL
