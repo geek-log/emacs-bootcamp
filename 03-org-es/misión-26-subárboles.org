@@ -3,7 +3,7 @@
 EMACS ORG-MODE
 ============================================================================
 
-Hola recluta y bienvenido a la Fuerz Áerea adónde aprenderás a VOLAR usando
+Hola recluta y bienvenido a la Fuerza Áerea adónde aprenderás a VOLAR usando
 org-mode.
 
 * Misión #26: Usando subárboles

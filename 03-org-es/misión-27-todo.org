@@ -1,0 +1,202 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #27: listas TODO
+
+** Resumen
+
+   En esta misión aprenderaś a usar listas TODO.
+
+   "Los ítems TODO son una parte integral del archivo de notas, porque los
+   ítems TODO usualmente aparecen cuando se está tomando notas!
+
+   Con Org Mode, simplemente marque una entrada en un árbol como un ítem
+   TODO. De esta manera, la información no está duplicada, y el contexto
+   completo del cuál el ítem TODO se originó siempre está presente.
+
+   Por supuesto, esta técnica para manejar ítems TODO los esparce a través
+   de tu archivo de notas, Org Mode compensa esto al proveer métodos para
+   darte un vistazo de todas las cosas que tienes que hacer." - Manual de
+   Org Mode
+
+** Misión
+
+*** Creando TODOs:
+  
+**** Descripción
+
+     Cualquier encabezado es convertido a un ítem TODO si empieza con la
+     palabra 'TODO':
+
+***** TODO Explicar ítems TODO
+
+**** Teclazos
+
+     - C-c C-t => Rotar los estados TODO: 'desmarcado', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Cambiar el estado TODO.
+
+     - C-c / t => Desplegar todos los ítems TODO en un árbol esparcido,
+       dobla todo el buffer y muestra todos los 'TODOs' no markados como
+       'DONE'.
+
+     - C-c / T => Busca un TODO específico.
+
+     - S-M-RET => Inserta un nuevo TODO bajo el actual.
+
+**** Órdenes
+
+     - Lea todas las órdenes.
+
+     - Vaya al encabezado ALPHA.
+       
+     - Presione C-c C-t tres veces para ciclar todos los estados TODO.
+       
+     - Presione S-RIGHT dos veces para marcar el encabezado ALPHA como DONE.
+       
+     - Presione S-LEFT una vez para ponerlo como un ítem TODO.
+       
+     - Presione C-c /, en el minibuffer una lista de opciones se presenta
+       para que escojas.
+
+     - Presione la tecla 't' para desplegar solamente los ítems TODO, esto
+       doblará el buffer completo y resaltará los ítems TODO existentes,
+       puedes presionar C-u C-u TAB para mostrar todo el contenido de nuevo.
+
+     - Vaya al encabezado ALPHA y presione S-M-RET para insertar un nuevo
+       ítem TODO bajo el ítem ALPHA.
+
+**** ALPHA
+
+     La información alpha.
+
+***** Un ítem alpha.
+
+*** Prioridad
+
+**** Descripción
+
+     Puedes usar las letras mayúsculas 'A', 'B' o 'C' para establecer la
+     prioridad de un ítem TODO.
+
+     Por ejemplo los encabezados siguientes:
+
+***** TODO [#A] Más prioridad.
+
+***** TODO [#C] Menos prioridad.
+
+**** Teclazos
+
+     - C-c , => Establece la prioridad.
+
+     - S-UP / S-DOWN => Incrementa/Decrementa la prioridad.i
+
+**** Órdenes
+
+     - Vaya al encabezado BRAVO.
+
+     - Presione C-c , para establecer la prioridad, Emacs te preguntará
+       por un caracter de la 'A' a  la 'C'.
+
+     - Digite 'A', el tecto '[#A]' es insertado.
+
+     - Presione S-DOWN dos veces para poner la prioridad en 'C'.
+
+     - Presione S-UP una vez para poner la prioridad en 'B'.
+
+**** BRAVO
+
+*** Subtareas:
+
+**** Descripción
+
+     Un encabezado TODO puede tener subtareas, por ejemplo:
+
+***** Llamar a los pilotos:
+
+****** Llamar a CHARLIE
+
+****** Llamar a Pérez
+
+    Puedes dividir tareas en subtareas al usar '[/]' o '[%]' al final
+    de un ítem TODO, por ejemplo:
+
+***** TODO LLamar a los pilotos [/]
+
+****** TODO Llamar a CHARLIE
+
+****** TODO Llamar a Pérez
+
+    Cuando un ítem está marcado como hecho, se desplegará la cantidad de
+    progreso, lo mismo aplica si usas '%'.
+
+***** TODO LLamar a los pilotos [1/2] 
+
+****** TODO Call CHARLIE
+
+****** DONE Call Pérez
+
+**** Órdenes
+
+     - Vaya al encabezado DELTA y presione C-e.
+
+     - Agrege el texto '[%]' (sin las comillas simples).
+
+     - Vaya al encabezado FOXTROT.
+
+     - Márquelo como hecho al presionar S-LEFT, el '[%]', se convierte en
+       '[50%]'.
+
+**** TODO DELTA - Llamar a los pilotos [%]
+
+***** TODO ECHO - Llamar a CHARLIE
+
+***** TODO FOXTROT - Llamar a  Pérez
+
+
+*** Checkboxes:
+
+**** Descripción
+
+     En las órdenes previas usamos un encabezado TODO padre (llamar pilotos)
+     y dos encabezados hijos(llamar charlie, llamar pérez), podemos alcanzar
+     un resultado similar si usamos un encabezado TODO padre e ítems
+     checkboxes como hijos.
+
+     Puedes crear un ítem checkbox si usar el texto '[ ]' al principio
+     de un ítem de lista plana:
+
+         '- [ ] Mi checkbox'
+
+     Usar checkboxes es más rápido que usar ítems TODO porque los checkboxes
+     no son incluidos en la lista global TODO.
+
+**** Teclazos
+
+     - C-c C-x C-b => Habilitar el estado del checkbox.
+       
+     - M-S-RET => Insertar un ítem checkbox nuevo.
+
+     - C-c C-x o => Habilitar la propiedad 'ORDERED', esto es usado si los
+       checkboxes necesitan encenderse en una secuencia particular.
+
+     - C-c # => Actualiza la 'galleta estadística'.
+
+**** Órdenes
+
+     - Vaya a la línea HOTEL y presione C-c C-x C-b.
+
+     - Vaya al encabezado INDIA y presione C-e.
+
+     - Presione M-S-RET para insertar un nuevo ítem checkbox.
+
+**** TODO GOLF [/]
+
+     - [ ] HOTEL
+       
+     - [ ] INDIA

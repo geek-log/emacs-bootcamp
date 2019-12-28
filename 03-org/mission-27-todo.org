@@ -1,0 +1,199 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+* Mission #27: TODO lists.
+
+** Briefing
+
+   On this mission you will learn how to use TODO lists.
+
+   "TODO items are an integral part of the notes file, because TODO items
+   usually come up while taking notes!
+
+   With Org mode, simply mark any entry in a tree as being a TODO item. In
+   this way, information is not duplicated, and the entire context from which
+   the TODO item emerged is always present.
+
+   Of course, this technique for managing TODO items scatters them throughout
+   your notes file. Org mode compensates this by providing methods to give
+   you an overview of all the things that you have to do." - Org Mode Manual
+
+** Mission
+
+*** Creating TODOs:
+  
+**** Description
+     
+     Any heading is converted into a TODO item if it starts with the word
+     'TODO':
+
+***** TODO Explain TODO items.
+
+**** Keybindings
+
+     - C-c C-t => Rotate the TODO state: 'unmarked', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Change the TODO item state.
+
+     - C-c / t => Display all TODO items in a sparsed tree, folds all the
+       buffer and show all 'TODOs' not marked as 'DONE'.
+
+     - C-c / T => Search for a specific TODO item.
+
+     - S-M-RET => Inserts a new TODO below the current one.
+
+**** Orders
+
+     - Read all orders.
+
+     - Go to the ALPHA heading.
+       
+     - Press C-c C-t three times to cycle all three TODO states.
+       
+     - Press S-RIGHT two times to mark the ALPHA heading as a DONE item.
+       
+     - Press S-LEFT one time to set it as a TODO item.
+       
+     - Press C-c /, on the minibuffer a list of options are presented for
+       you to choose.
+
+     - Press the 't' key to display only the TODO items, this will fold
+       the whole buffer and highlight the existent TODO items, you can press
+       C-u C-u TAB to show all the content again.
+
+     - Go to the ALPHA heading and press S-M-RET to insert a new TODO
+       item below the ALPHA one.
+
+**** ALPHA
+
+     The alpha information.
+
+***** An alpha item
+
+*** Priority:
+
+**** Description
+
+     You can use the capital letters 'A', 'B' or 'C' to set the priority
+     of a TODO item.
+
+     For example the following headings:
+     
+***** TODO [#A] More priority. 
+
+***** TODO [#C] Less priority.
+
+**** Keybindings
+
+     - C-c , => Set priority.
+
+     - S-UP / S-DOWN => Increase/Decrease priority.
+
+**** Orders
+
+     - Go to the BRAVO heading.
+
+     - Press C-c , to set the priority, Emacs will ask you for a character
+       from 'A' to 'C'.
+
+     - Type 'A', the text '[#A]' is inserted.
+
+     - Press S-DOWN two times to set the priority to 'C'.
+
+     - Press S-UP one time to set priority to 'B'.
+
+**** BRAVO
+
+*** Subtasks:
+
+**** Description
+
+     A TODO heading can have subtasks, for example:
+
+***** Call Pilots
+
+****** Call CHARLIE
+
+****** Call Pérez
+
+    You can break tasks in subtasks using '[/]' or '[%]' at the end of
+    the TODO item, for example:
+
+***** TODO Call Pilots [/]
+
+****** TODO Call CHARLIE
+
+****** TODO Call Pérez
+
+    When a item is marked as done, it will display the amount of progress,
+    the same applies if you use '%'.
+
+***** TODO Call Pilots [1/2]
+
+****** TODO Call CHARLIE
+
+****** DONE Call Pérez
+
+**** Orders
+
+     - Go to the DELTA heading and press C-e.
+
+     - Add the text '[%]' (whithout the single quotes).
+
+     - Go to the FOXTROT heading.
+
+     - Mark it as done by pressing S-LEFT, the '[%]', becomes '[50%]'.
+
+**** TODO DELTA - Call Pilots [%]
+
+***** TODO ECHO - Call CHARLIE
+
+***** TODO FOXTROT - Call Pérez
+
+
+*** Checkboxes:
+
+**** Description
+
+     On the previous orders we used a parent TODO heading (call pilots)
+     and two children TODO headings (call charlie, call pérez), we can
+     achieve a similar result by using a parent TODO heading and
+     checkboxes items as childrens.
+
+     You can create a checkbox item by using the text '[]' at the beginning
+     of a plain list item:
+
+         '- [ ] My checkbox'
+
+     Using checkboxes is faster than using TODO items because checkboxes are
+     not included on the global TODO list.
+
+**** Keybindings
+
+     - C-c C-x C-b => Toggle checkbox status.
+       
+     - M-S-RET => Insert a new checkbox item.
+
+     - C-c C-x o => Toggle 'ORDERED' property, this is used if the
+       checkboxes needs to be turned on using a particular sequence.
+
+     - C-c # => Updates the 'statistic cookie'.
+
+**** Orders
+
+     - Go to the HOTEL line and press C-c C-x C-b.
+
+     - Go to the INDIA heading and press C-e.
+       
+     - Press M-S-RET to insert a new checkbox item.
+ 
+**** TODO GOLF [/]
+
+     - [ ] HOTEL
+       
+     - [ ] INDIA
