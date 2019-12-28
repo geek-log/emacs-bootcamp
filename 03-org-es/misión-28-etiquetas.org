@@ -1,0 +1,115 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #28: Etiquetas y Propiedades
+
+** Resumen
+
+   En esta misión aprenderás como usar Etiquetas y Propiedades.
+
+** Misión
+
+*** Usando Etiquetas
+  
+**** Descripción
+
+     Puedes agregar etiquetas a un encabezado agregando el texto
+     ':NombreEtiqueta:' al final de la línea, por ejemplo agregar la
+     etiqueta 'ejemplo':
+
+***** Mi encabezado de ejemplo                                      :ejemplo:
+
+     
+**** Teclazos
+
+     - C-c C-c => Agregar etiquetas al encabezado.
+       
+     - C-c \ => Construye un árbol esparcido con todos los encabezados
+       que coinciden con una búsqueda de etiquetas.
+
+**** Órdenes
+
+     - Vaya al encabezado ALPHA.
+
+     - Presione C-c C-c, el texto 'Etiquetas:' se despliega en el minibuffer.
+
+     - Digite 'trabajo' y presione RET, la etiqueta 'trabajo' es agregada
+       al encabezado.
+
+     - Presione C-c \ para empezar una búsqueda de etiquetas, el texto
+       'Coincidencia:' se despliega en el minibuffer.
+
+     - Digite la palabra 'ejemplo' y presione RET, esto doblará todo el
+       buffer.
+
+**** ALPHA
+
+*** Usando Propiedades
+
+**** Descripción
+
+     Las propiedades son pares de ítems llave-valor, puedes agregar
+     propiedades al usando texto ':PROPERTIES:', por ejemplo
+
+***** Collección de Música
+
+****** Rap
+
+******* Operation Doomsday
+        :PROPERTIES:
+        :Title: Operation Doomsday
+        :Composer: MF Doom
+        :NDisks: 1
+        :END:
+
+**** Teclazos
+
+     - C-c C-x p => Inserta una propiedad.
+       
+     - C-u M-x => Inserta una propiedad en el cajón actual.
+
+     - C-c C-c d => Borra una propiedad.
+
+     - C-c C-c D => Borra una propiedad globalmente.
+
+     - S-RIGHT, S-LEFT => Cambiar la propiedad ciclando en los valores
+       permitidos.
+
+     - C-c C-c => Cuando el punto está en un propiedad, ejecuta los comandos
+       de la propiedad.
+
+     - C-c C-c c => Compute la propiedad en el punto.
+
+     - C-c \ => Construir un árbol esparcido que concuerda con una búsqueda
+       de etiquetas.
+       
+     - C-c / p  => Construir un árbol esparcido basado en el valor de una
+       propiedad.
+
+**** Órdenes
+
+     - Vaya al encabezado BRAVO.
+
+     - Presione C-c C-x p para insertar una propiedad.
+
+     - Emacs te preguntará por el valor de la llave, digite la palabra
+       'rango' y presione RET.
+
+     - Ahora Emacs the preguntará por el valor para la llave 'rango', digite
+       la palabra 'corporal' y presione RET.
+
+     - Presione C-c C-x p en el encabezado BRAVO.
+
+     - Digite 'pago' y presione RET.
+
+     - Digite '0.25 * 10000 y presione RET.
+
+     - Presione C-c C-d, Emacs te preguntará por una propiedad a borrar,
+       digite la palabra 'pago' y presione RET.
+
+**** BRAVO

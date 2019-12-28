@@ -1,0 +1,110 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using org-mode.
+
+* Mission #28: Tags and Properties
+
+** Briefing
+
+   On this mission you will learn how to use Tags and Properties.
+
+** Mission
+
+*** Using Tags
+  
+**** Description
+
+     You can add tags to a heading by adding the text ':TagName:' at the end
+     of the line, for example adding the 'example' tag:
+
+***** My example heading                                            :example:
+
+     
+**** Keybindings
+
+     - C-c C-c => Add tags to a heading.
+       
+     - C-c \ => Builds a sparse tree with all headings that matches with
+       a tags search.
+
+**** Orders
+
+     - Go to the ALPHA heading.
+
+     - Press C-c C-c, the text 'Tags:' is displayed on the minibuffer.
+
+     - Type 'work' and press RET, the tag 'work' is added to the heading.
+
+     - Press C-c \ to start a tags search, the text 'Match:' is displayed
+       on the minibuffer.
+
+     - Type the word 'example' and press RET, this will fold all the buffer.
+
+**** ALPHA
+
+*** Using Properties
+
+**** Description
+
+     Properties are pairs of key-value items, you can add properties
+     by using the text ':PROPERTIES:', for example:
+
+***** Music collection
+
+****** Rap
+
+******* Operation Doomsday
+        :PROPERTIES:
+        :Title: Operation Doomsday
+        :Composer: MF Doom
+        :NDisks: 1
+        :END:
+
+**** Keybindings
+
+     - C-c C-x p => Insert a property.
+       
+     - C-u M-x => Insert property on the current drawer.
+
+     - C-c C-c d => Deletes a property.
+
+     - C-c C-c D => Deletes a property globally.
+
+     - S-RIGHT, S-LEFT => Change the property by cycling on the allowed
+       values.
+
+     - C-c C-c => When the point is over a property, execute the property
+       commands.
+
+     - C-c C-c c => Compute a property at the point.
+
+     - C-c \ => Build a sparsed tree with all matching entries.
+       
+     - C-c / p  => Build a sparsed tree based on a property value.       
+
+**** Orders
+
+     - Go to the BRAVO heading.
+
+     - Press C-c C-x p to insert a property.
+
+     - Emacs will ask you for the value of the key, type the word 'rank'
+       and press RET.
+
+     - Next, Emacs asks for a value for the 'rank' key, type the word
+       'corporal' and press RET.
+
+     - Press C-c C-x p on the BRAVO heading.
+
+     - Type 'pay' and press RET.
+
+     - Type '0.25 * 10000 and press RET.
+
+     - Press C-c C-d, Emacs will ask you for a property to delete, type
+       the word 'pay' and press RET.
+
+**** BRAVO
