@@ -1,0 +1,64 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #30: Archivando
+
+** Resumen
+
+   En esta misión aprenderás como agregar información a un archivo.
+
+** Misión
+
+*** Archivando:
+
+**** Teclazos
+
+     - C-c C-x C-a => Archivar la entrada actual.
+       
+     - C-c $ => Archivar el subárbol actual.
+
+**** Órdenes
+
+     - Vaya al encabezado ALPHA y presione C-c C-x C-a, el texto 'subárbol
+       archivado en
+       ~/emacs-bootcamp/03-org-es/misión-30-archivando.org_archive' se
+       despliega en la línea de Modo.
+
+     - Presione C-x C-c para tratar de salir de Emacs, Emacs no te dejará
+       y te dirá que existe un buffer llamado
+       'misión-30-archivando.org_archive' con modificaciones y si quieres
+       guardarlo.
+
+     - Digite la tecla 'y' dos veces, Emacs guardará el subárbol archivado
+       y saldrá, abre este archivo de nuevo y regresa a esta línea.
+
+     - La acción previa guardó el árbol ALPHA en un archivador, presione
+       C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana de abajo.
+
+     - Presione C-x C-f para visitar el archivo
+       '~/emacs-bootcamp/03-org-es/misión-30-archivando.org_archive'.
+
+     - El archivo se abre y puedes ver que el árbol ALPHA se encuentra ahí,
+       ponga el punto sobre el encabezado ALPHA y presione TAB, esto
+       desplegará la palabra clave ':PROPERTIES:'.
+
+     - Ponga el punto en la línea ':PROPERTIES:' y presione TAB para
+       desplegar sus contenidos.
+
+     - Presione C-x o para saltar de vuelta a esta buffer.
+
+     - Vaya a la línea BRAVO y presione C-c $.
+
+     - Presione C-x o para saltar al buffer archivador.
+
+     - Presione M-> para ir al final del buffer archivador, puedes ver que
+       el árbol BRAVO está ahí.
+
+     - Presione C-x 0 para mostrar este buffer solamente.
