@@ -1,0 +1,198 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #31: Captura
+
+** Resumen
+
+   En esta misión aprenderás como usar el comando captura.
+
+   Captura te permite almacenar rápidamente notas con poca interrupción de
+   tu flujo de trabajo.
+
+** Misión
+
+*** Usando Captura:
+
+**** Descripción
+
+     El comando Captura junto con el comando Almacenar Enlace y el comando
+     Vista de Agenda son los 'Tres Grandes' comandos de Org que DEBES
+     configurar en el archivo 'init.el' de Emacs.
+
+     Ya configuramos el comando Almacenar Enlace en la misión #25, ahora
+     vamos a configurar el comando Captura.
+
+**** Teclazos
+
+     - C-c c => Comando Captura.
+       
+**** Órdenes
+
+     - Presione C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana inferior.
+
+     - Presione C-x C-f y visite el archivo '~/.emacs.d/init.el'.
+
+     - Una vez que le archivo 'init.el' se abre, busque por la línea que
+       agregamos en la misión #25:
+       
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+       Y cambiélo a lo siguiente:
+
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Guarde el archivo, salga de Emacs, abra este archivo de nuevo y
+       regrese a esta línea.
+
+     - Vaya al encabezado ALPHA y presione C-c c, esto abrirá un buffer
+       en la parte inferior de Emacs, este buffer solicitará escoger una
+       plantilla para aplicar a la captura, también, este buffer bloqueará
+       Emacs hasta que hagas una acción o te salgas, presione 'q' para salir.
+
+     - Presione C-c c de nuevo, esta vez vamos a usar una plantilla, en el
+       buffer de Captura la única plantilla disponible es 'Tarea'.
+
+     - Presione el caracter 't' para seleccionar la plantilla de 'Tarea'.
+
+     - El buffer de Captura creará un nuevo item TODO con una marca de tiempo
+       deshabilitada (recuerde el '[]' o '<>'), digite el texto:
+       'Siga Ódenes', luego presione C-c C-c, este teclazo es usado para
+       decirle a Captura que guarde el ítem. El texto 'Guardado ~/.notes' se
+       despliega en la línea de modo, esto quiere decir que la tarea TODO
+       fue creada y que fue creada en el archivo '.notes' en nuestro
+       directorio de usuario.
+
+     - Si se despliega una advertencia, ignórela y presione la tecla 'q'
+       para salir del buffer de Captura.
+
+     - Ahora vamos a agregar plantillas personalizadas, presione C-x 2 para
+       dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana inferior.
+
+     - Presione C-x C-f y visite el archivo '~/.emacs.d/init.el' y presione
+       RET.
+
+     - Agréguele el siguiente texto y guárdelo:
+
+       (setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
+
+       En esta configuración definimos dos plantillas: Un item TODO similar
+       al que ya usamos, y un entrada de Diario, NOTE que aquí definimos
+       que los archivos deben guardarse en los archivos:
+       "~/org/gtd.org" y "~/org/journal.org".
+
+     - Cierre Emacs, abra este archivo de nuevo y regrese a esta línea.
+
+     - Vaya al encabezado ALPHA y presione C-c c.
+
+     - Ahora dos plantillas se muestran en el buffer de Captura: Tareas y
+       Diario.
+
+     - Digite la tecla 'j' para agregar una entrada de diario.
+
+     - Cuando la nueva entrada se muestra (en el buffer de Captura), digite
+       el título para el encabezado: 'Aprendí captura hoy' y presione
+       C-c C-c, Emacs te preguntará si quieres crear el directorio '~/org/',
+       digite la tecla 's' y presione RET, la entrada de diario es guardada.
+
+**** ALPHA
+
+*** Adjuntos
+
+**** Descripción
+
+     Puedes adjuntar archivos a una tarea Org, los archivos están ubicados
+     en un directorio que pertenece al nodo outline.
+
+     Org puede accesar directorios por nombre, por identificado único o
+     usnado la propiedad 'DIR'.
+
+**** Teclazos
+
+     - C-c C-a => Llamar al despachador de adjuntos.
+     
+***** Cuando se está en el despachador de adjuntos
+
+      - a => Seleccionar un archivo y moverlo al directorio de adjuntos
+        para la tarea actual.
+        
+      - c/m/l => Adjunte un archivo usando copia/marvel/enlace.
+
+      - b => Seleccione un buffer y guárdelo en el directorio de adjuntos.
+
+      - n => Crear un nuevo adjunto como un buffer en Emacs.
+
+      - z = Sincronizar la tarea actual con su directorio de adjuntos.
+
+      - o => Abrir el adjunto para la tarea actual.
+
+      - O => Forzar a abrir el adjunto para la tarea actual.
+
+      - f => Abrir el directorio de adjuntos.
+
+      - f => Abrir el directorio de adjuntos, forzar Dired.
+        
+      - d => Seleccionar y borrar un adjunto.
+
+      - D => Borrar todos los adjuntos.
+
+      - s => Establecer un directorio como adjunto. Esto usa la propiedad
+        'DIR'.
+
+**** Órdenes
+
+     - Presione C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana inferior.
+
+     - Presione M-x, digite 'eshell' y presione RET para abrir un buffer de
+       terminal.
+
+     - En el buffer terminal digite el comando "echo hi > hi.txt" y
+       presione RET, el archivo 'hi.txt' es creado en el directorio actual.
+
+     - Digite el comando 'ls' y presione RET para listar los archivos en el
+       directorio actual.
+
+     - Presione C-x o para regresar a este buffer.
+
+     - Vaya a la línea CHARLIE y presione C-c C-a, este abrirá un nuevo
+       buffer en la parte inferior de Emacs, esta es la interfaz del
+       despachador de adjuntos.
+
+     - Presione la tecla 'a' para buscar por el archivo a adjuntar, en el
+       minibuffer el texto
+       'Archivo a agregar como un adjunto:~/emacs-bootcamp/03-org-es/' se
+       muestra.
+
+     - Digite la ruta al archivo 'hi.txt' y presione RET, el texto
+       'Archivo "hi.txt" es ahora un adjunto' es desplegado en el minibuffer
+       y en el encabezado CHARLIE un cajón ':ATTACH: :PROPERTIES:' es
+       añadido, dentro de ':PROPERTIES:' está el identificador único del
+       archivo adjunto.
+
+     - Presione C-x o para saltar al buffer terminal.
+
+     - Digite el comando 'ls' y presione RET, puedes ver que un nuevo
+       directorio 'data' fue creado, este es adonde los archivos adjuntos
+       son guardados.
+
+     - Press C-x 0 para mostrar solamente este buffer.
+
+**** BRAVO
+
+***** TODO CHARLIE - Adjuntar un archivo a esta tarea.

@@ -1,0 +1,191 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using Org Mode.
+
+* Mission #31: Capture
+
+** Briefing
+
+   On this mission you will learn how to use the capture command.
+
+   Capture lets you quickly store notes with little interruption of your
+   work flow.
+
+** Mission
+
+*** Using Capture:
+
+**** Description
+     
+     Capture command alongside the Store Link command and the Agenda View
+     command are the 'Big Three' org commands and YOU MUST configure them
+     on the init.el Emacs configuration file.
+
+     We already configure the Store Link command on mission #25, now we are
+     going to configure the Capture command.
+
+**** Keybindings
+
+     - C-c c => Capture command.
+       
+**** Orders
+
+     - Press C-x 2 to divide the frame on two windows.
+       
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x C-f and visit the file '~/.emacs.d/init.el'.
+
+     - Once the 'init.el' file is opened, search for the line that we
+       added on mission #25:
+
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+       And change to the following:
+
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Save the file, exit Emacs, open this file again and comeback to this
+       line.
+
+     - Go to the ALPHA heading and press C-c c, this will open a buffer on
+       the bottom of Emacs, this buffer asks for a template to apply to
+       the capture, also, this buffer will block Emacs until you do
+       an action or you quit, press 'q' to quit.
+
+     - Press C-c c again, this time we are going to use a template, on the
+       Capture buffer the only available template is 'Task'.
+
+     - Press the 't' character to select the Task template.
+
+     - The Capture buffer will create a new TODO item with a disabled
+       timestamp (remember the '[]' or '<>'), type the text: 'Follow Orders',
+       then press C-c C-c, this keybinding is used to tell Capture to
+       save the item. The text 'Saved ~/.notes' is displayed on the Modeline,
+       this means that the TODO task was created and it was created on the
+       file '.notes' on our user home directory.
+
+     - If a warning is displayed, ignore it and press the 'q' key to quit
+       the Capture buffer.
+
+     - Now we are going to add custom templates, press C-x 2 to divide the
+       frame on two windows.
+
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x C-f and visit the file '~/.emacs.d/init.el' and press RET.
+
+     - Add the following text to it and save it:
+
+       (setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
+
+       On this configuration we define two templates: A TODO item
+       similar to the one we used before, and a Journal item, NOTE that
+       here we define that the files must be saved on the files:
+       "~/org/gtd.org" and "~/org/journal.org".
+
+     - Close Emacs, open this file again and comeback to this line.
+
+     - Go to the ALPHA heading and press C-c c.
+
+     - Now two templates are shown on the Capture buffer: Tasks and Journal.
+
+     - Type the 'j' key to add a Journal entry.
+
+     - When the new entry shows (on the Capture buffer), type the heading
+       title: 'Learned capture today' and press C-c C-c, Emacs will ask you
+       if you want to create the directory '~/org/', type the 'y' key and
+       press RET, the journal entry is saved.
+
+**** ALPHA
+
+*** Attachments
+
+**** Description
+
+     You can attach files to an Org task, the files are located on
+     a directory that belongs to the outline node.
+
+     Org can address directories by name, by unique entry ID or by using
+     the 'DIR' property.
+
+**** Keybindings
+
+     - C-c C-a => Call the attachments dispatcher.
+     
+***** When on the Attachements Dispatcher
+
+      - a => Select a file and move it to the attachements directory for the
+        current task.
+        
+      - c/m/l => Attach a file using copy/marvel/link.
+
+      - b => Select a buffer and save it on the attachement directory.
+
+      - n => Create a new attachment as a buffer on Emacs.
+
+      - z = Synchronize the current task with its attachement directory.
+
+      - o => Opens the attachment for the current task.
+
+      - O => Force to open the attachement for the current task.
+
+      - f => Open the attachements directory.
+
+      - F => Open the attachements directory, forces Dired.
+
+      - d => Select and delete an attachement.
+
+      - D => Delete all attachements.
+
+      - s => Sets a directory as attachement. This uses the 'DIR' property
+
+**** Orders
+
+     - Press C-x 2 to divide the frame on two windows.
+
+     - Press C-x o to jump to the lower window.
+
+     - Press M-x, type 'eshell' and press RET open a terminal buffer.
+
+     - On the terminal buffer type the command "echo hi > hi.txt"
+       and press RET, the file 'hi.txt' is created on the current
+       folder.
+
+     - Type the 'ls' command and press RET to list all files in the current
+       directory.
+
+     - Press C-x o to return to this buffer.
+
+     - Go to the CHARLIE line and press C-c C-a, this will open a buffer
+       on the bottom of Emacs, this is the attachments dispatcher interface.
+       
+     - Press the 'a' key to search for a file to attach, on the minibuffer
+       the text 'File to keep as an attachment:~/emacs-bootcamp/03-org/'
+       is displayed.
+
+     - Type the path to the file 'hi.txt' and press RET, the text
+       'File "hi.txt" is now a task attachment' is displayed on the
+       minibuffer and on the CHARLIE heading a ':ATTACH: :PROPERTIES:'
+       drawer isadded, inside ':PROPERTIES:' there is the unique ID for the
+       attached document.
+
+     - Press C-x o to jump to the terminal buffer.
+
+     - Type the command 'ls' and press RET, you can see that a new 'data'
+       folder was created, this is where the attached files are kept.
+
+     - Press C-x 0 to show only this buffer.
+
+**** BRAVO
+
+***** TODO CHARLIE - Attach a file to this task.
