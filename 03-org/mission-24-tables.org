@@ -19,11 +19,11 @@ Mission
 
    * Keybindings
 
-     C-c C-c => Aligns a table.
+     - C-c C-c => Aligns a table.
           
-     TAB, RET => Aligns a table and moves to the next field.
+     - TAB, RET => Aligns a table and moves to the next field.
 
-     S-TAB => Aligns a table and moves to the previous field.
+     - S-TAB => Aligns a table and moves to the previous field.
 
    * ORDERS
      - Go to the ALPHA line and press C-p one time to get to the last row
@@ -55,29 +55,29 @@ ALPHA
 
    * Keybindings
 
-     C-c | => Transforms a selected region into a table.
+     - C-c | => Transforms a selected region into a table.
 
-     C-c - => Inserts a new horizontal rule under the current line.
+     - C-c - => Inserts a new horizontal rule under the current line.
 
-     C-c <SPC> => Clear the field under the point.
+     - C-c <SPC> => Clear the field under the point.
 
-     M-a => Move the point to the beggining of the current field.
+     - M-a => Move the point to the beggining of the current field.
 
-     M-e => Move the point to the end of the current field.
+     - M-e => Move the point to the end of the current field.
 
-     M-LEFT, M-RIGHT => Move the current column to the left/right.
+     - M-LEFT, M-RIGHT => Move the current column to the left/right.
 
-     M-UP, M-DOWN => Move the current row up/down.
+     - M-UP, M-DOWN => Move the current row up/down.
 
-     M-S-LEFT => Kill the current column.
+     - M-S-LEFT => Kill the current column.
 
-     M-S-RIGHT => Insert new column to the right.
+     - M-S-RIGHT => Insert new column to the right.
 
-     M-S-UP => Kill the current row.
+     - M-S-UP => Kill the current row.
 
-     M-S-DOWN => Insert a new row above the current row.
+     - M-S-DOWN => Insert a new row above the current row.
 
-     C-c ^ => Order the table rows.
+     - C-c ^ => Order the table rows.
 
    * ORDERS
 
@@ -142,13 +142,13 @@ ghostrider, rides a motorcycle
 
    * Keybindings
 
-     C-c + => Sums all the items on the current column or in the
+     - C-c + => Sums all the items on the current column or in the
               rectangle defined by the current region.
 
-     S-RET => If the current field is empty copy it from the first non empty
+     - S-RET => If the current field is empty copy it from the first non empty
               field.
 
-     C-c ` => Edits the current field on another buffer. Useful for long
+     - C-c ` => Edits the current field on another buffer. Useful for long
               fields that are not fully visible.
 
    * ORDERS
@@ -199,9 +199,9 @@ DELTA
 
    * Keybindings
 
-     M-x org-table-export => Exports a table to a file.
+     - M-x org-table-export => Exports a table to a file.
 
-     M-x org-table-import => Imports a file as a table.
+     - M-x org-table-import => Imports a file as a table.
 
    * ORDERS
 

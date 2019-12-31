@@ -4,7 +4,7 @@ EMACS ORG-MODE
 Hello recruit and welcome to the Air Force where you will learn
 to FLY using org-mode.
 
-Mission #22: First Steps with Org-Mode
+Mission #23: First Steps with Org-Mode
 ----------------------------------------------------------------------------
 
 Briefing
@@ -157,13 +157,13 @@ Mission
 
    * Keybinding
 
-     C-c ^ => Order same level entries.
+     - C-c ^ => Order same level entries.
 
-     C-c * => Turn normal line into a heading.
+     - C-c * => Turn normal line into a heading.
 
-     Add TODO to a heading => Turn heading into a TODO item.
+     - Add TODO to a heading => Turn heading into a TODO item.
 
-     M-S RET => Add a new TODO entry below the current one.
+     - M-S RET => Add a new TODO entry below the current one.
 
    * ORDERS
 
@@ -201,13 +201,13 @@ Mission
 
    * Keybindings
 
-     C-c / => Build sparse tree.
+     - C-c / => Build sparse tree.
 
-     M-g n => Jump to next sparse tree.
+     - M-g n => Jump to next sparse tree.
 
-     M-g p => Jump to previous sparse tree.
+     - M-g p => Jump to previous sparse tree.
 
-     C-c C-c => Remove highlights.
+     - C-c C-c => Remove highlights.
 
    * ORDERS
 
@@ -306,7 +306,7 @@ Mission
      
    * Keybindings
 
-     C-c C-x d => Inserts a new drawer.
+     - C-c C-x d => Inserts a new drawer.
 
    * ORDERS
 

@@ -1,0 +1,331 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using Org Mode.
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #34: Resumen de Org Mode
+
+** Teclazos
+
+   La lista de todos los teclazos usados en las misiones de Org Mode se
+   muestra a continuación:
+   
+** Teclazos de Org Mode
+
+*** Básico
+
+      - TAB => Ciclar a través de los estados de encabezado: 'doblado' >
+        'hijo' > 'subárbol'.
+
+      - C-u C-u RET => Reiniciar a la visibilidad inicial.
+
+      - C-u C-u C-u RET => Mostrar todo incluidos los cajones.
+
+      - M-RET => Insertar un nuevo encabezado, ítem o fila.
+
+      - C-RET => Insertar un nuevo encabezado al final.
+
+      - M-UP / M-DOWN => Intercambiar el ítem actual con el próximo/previo.
+
+      - M-LEFT => Promueve el encabezado actual un nivel.
+
+      - M-RIGHT => Degrada el encabezado un nivel.
+
+      - C-c ^ => Ordena entradas en el mismo nivel.
+
+      - C-c * => Convierte una línea normal en un encabezado.
+
+      - Add TODO to a heading => Convierte un encabezado en un ítem TODO.
+
+      - M-S RET => Agrega un nuevo ítem TODO bajo el actual.
+
+      - C-c / => Construir un árbol esparcido.
+
+      - M-g n => Saltar al próximo árbol esparcido.
+
+      - M-g p => Saltar al árbol esparcido previo.
+
+      - C-c C-c => Remover el resaltado.
+
+      - M-RET => Insertar un nuevo encabezado, ítem o fila.
+
+      - C-S-RET => Insertar un nuevo ítem de checklist.
+
+      - S-UP/S-DOWN => Saltar al previo/próximo ítem de la lista.
+
+      - S-LEFT, S-RIGHT => Cambiar el tipo de lista.
+
+      - M-LEFT, M-RIGHT => Incrementar o decrementar el nivel de indentación.
+
+      - C-c C-x d => Insertar un nuevo cajón.
+
+      - <c TAB => Insertar un bloque de centrado.
+
+      - <e TAB => Insertar un bloque de ejemplo.
+
+      - <l TAB => Insertar un bloque de latex.
+
+      - <s TAB => Insertar un bloque de código.
+
+      - <q TAB => Insertar un bloque de cita.
+
+      - <v TAB => Insertar un bloque de verso.
+
+      - C-c C-c => Ejecutar código en un bloque de código.
+
+      - C-c c => Comando de Captura.
+
+      - C-c C-e => Llamar al despachador de exportación.
+
+*** Tablas
+
+       - C-c C-c => Alinear una tabla.
+
+       - TAB, RET => Alinea una tabla y se mueve al próximo campo.
+
+       - S-TAB => Alinea una tabla y se mueve el campo previo.
+
+       - C-c | => Transforma la región seleccionada en una tabla.
+
+       - C-c - => Inserta una nueva regla horizontal bajo el punto.
+
+       - C-c <SPC> => Limpiar el campo bajo el punto.
+
+       - M-a => Mover el punto al principio del campo actual.
+
+       - M-e => Mover el punto al final del campo actual.
+
+       - M-LEFT, M-RIGHT => Mover la columna actual a la izquierda/derecha.
+
+       - M-UP, M-DOWN => Mover la fila actual hacia arriba/abajo.
+
+       - M-S-LEFT => Matar la columna actual.
+
+       - M-S-RIGHT => Insertar una nueva columna a la derecha.
+
+       - M-S-UP => Matar la fila actual.
+
+       - M-S-DOWN => Insertar una nueva fila sobre la actual.
+
+       - C-c ^ => Ordenar las filas de la tabla.
+
+       - C-c + => Sumar todos los ítems en la columna actual o en el
+         rectángulo definido por la región actual.
+
+       - S-RET => Si el campo actual está vacío, cópielo del primer campo
+         no vacío.
+
+       - C-c ` => Edita el campo actual en otro buffer. Útil para campos
+         muy largos que no son completamente visibles.
+
+       - M-x org-table-export => Exporta una tabla a un archivo.
+
+       - M-x org-table-import => Importa un archivo como una tabla.         
+
+       - C-c = => Instala una fórmula en la celda actual de la tabla.
+
+       - C-c * => Recomputar la fila actual.
+
+       - C-u C-c * => Recomputar la tabla completa.
+
+       - M-x orgtbl-ascii-plot => Graficar una tabla usando histogramas.
+
+       - M-x org-plot/gnuplot => Graficar una tabla usando Gnuplot, necesita
+         Gnuplot.
+
+*** Enlaces
+
+     - C-c l => Almacenar un enlace que luego puede pegarse usando C-c C-l.
+
+     - C-c C-l => Si el punto está en un línea vacía, pega un enlace
+       almacenado. Si el punto está sobre un enlace, edita el enlace.
+       
+     - C-c C-o => Si el punto está en un enlace, guarda la posición actual
+       en el anillo de marcas y SALTA al enlace.
+
+     - C-c & => Saltar a la marca guardada.
+
+     - C-c % => Agrega la posición actual al anillo de marcas.
+
+     - C-u C-c C-l => Inserta un enlace a un archivo.
+
+     - C-c C-x C-n => Salta al próximo enlace en el buffer.
+
+     - C-c C-x C-p => Salta al enlace previo en el buffer.
+
+*** Subárbol
+
+     - TAB => Ciclar entre los estados 'doblado' > 'hijos' > 'subárbol'
+       del encabezado actual.
+
+     - S-TAB => Ciclar entre los estados 'doblado' > 'hijos' > 'subárbol'
+       en todo el árbol (el documento completo).
+
+     - C-u C-u TAB => Reinicia a la visibilidad inicial.
+
+     - C-u C-u C-u TAB => Mostrar todo incluidos los cajones.
+
+     - C-c C-r => Comando de revelar, revela el contexto alrededor del punto.
+
+     - C-c C-k => Expone todos los encabezados de un subárbol.
+
+     - C-c TAB => Expone todos los hijos directos de un encabezado.
+
+     - C-c C-x b => Muestra el subárbol en un buffer indirecto.
+
+     - C-c C-x v => Copiar el texto visible del subárbol.
+
+     - C-c C-n => Próximo encabezado visible.
+
+     - C-c C-p => Encabezado visible previo.
+
+     - C-c C-f => Próximo encabezado en el mismo nivel.
+
+     - C-c C-u => Un encabezado arriba.
+
+*** 'TODO'
+
+     - C-c C-t => Rotar los estados TODO: 'desmarcado', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Cambiar el estado del ítem TODO.
+
+     - C-c / t => Desplegar todos los ítems TODO en un árbol esparcido y
+       despliega todos los 'TODOs' no marcados como 'DONE'.
+
+     - C-c / T => Busca por un ítem TODO específico.
+
+     - S-M-RET => Inserta un nuevo TODO bajo el actual.
+
+     - C-c , => Establece la prioridad·
+
+     - S-UP / S-DOWN => Incrementa/Decrementa la prioridad.
+
+     - C-c C-x C-b => Habilita o deshabilita un checkbox.
+       
+     - M-S-RET => Inserta un nuevo ítem de checkbox.
+       
+     - C-c C-x o => Habilita la propiedad 'ORDERED' que es usada cuando
+       los checkboxes necesitan encenderse en una secuencia particular.
+
+     - C-c # => Actualiza la 'galleta estadística'.
+
+*** Etiquetas
+
+     - C-c C-c => Agrega etiquetas a un encabezado.
+       
+     - C-c \ => Construye un árbol esparcido con todos los encabezados que
+       concuerdan con un búsqueda de etiquetas.
+
+     - C-c C-x p => Inserta una propiedad.
+       
+     - C-u M-x => Inserta una propiedad en el cajón actual.
+
+     - C-c C-c d => Borra una propiedad.
+
+     - C-c C-c D => Borra una propiedad globalmente.
+
+     - S-RIGHT, S-LEFT => Cambiar la propiedad ciclando en los valores
+       permitidos.
+
+     - C-c C-c => Cuando el punto está encima de una propiedad, ejecute
+       los comandos de la propiedad.
+
+     - C-c C-c c => Computa una propiedad en el punto.
+
+     - C-c \ => Construir un árbol esparcido con todas las entradas que
+       concuerden.
+       
+     - C-c / p  => Construir un árbol esparcido basado en el valor de una
+       propiedad.
+
+*** Marcas de Tiempo
+
+     - C-c . => Pregunta por una fecha e inserta una marca de tiempo.
+       
+     - C-c ! => Inserta una marca de tiempo inactiva.
+
+     - C-c < => Inserta la fecha de hoy.
+
+     - C-c C-o => Accesa la agenda para la marca de tiempo dada.
+
+     - C-c C-d => Inserta un 'DEADLINE'. Esto se listará en la agenda.
+       
+     - C-c C-s => Inserta un 'SCHEDULED'.
+
+     - C-c / d => Construye un árbol esparcido con todos los deadlines.
+
+     - C-c / b => Construye un árbol esparcido con todos los deadlines
+       previos a una fecha dada.
+
+     - C-c C-x C-i => Inicia el reloj para el ítem actual.
+       
+     - C-c C-x C-o => Inserta otra marca de tiempo en la misma ubicación
+       adonde el reloj fue iniciado antes).
+
+     - C-c C-x C-x => Volver a tomar el último tiempo tomado.
+
+     - C-c C-x C-e => Actualiza el estimado de esfuerzo.
+
+     - C-c C-y => Recomputa el tiempo.
+
+     - C-c C-t => Cambia una tarea TODO a DONE y detiene el reloj.
+
+     - C-c C-x C-q => Cancela el reloj actual.
+
+     - C-c C-x C-j => Salta al encabezado al que se le está tomando el
+       tiempo actualmente.
+
+     - C-c C-x C-d => Despliega el tiempo en cada subárbol.
+
+**** En la Vista de Agenda para la marca de tiempo actual
+
+     - q => Quita la vista de Agenda.
+        
+     - S-UP, S-DOWN, S-RIGHT, S-LEFT => Moverse en el calendario.
+
+     - M-S-RIGHT, M-S-LEFT => Moverse al próximo/previo mes.
+
+     - M-S-UP, M-S-DOWN => Moverse al próximo/previo año.
+
+     - <, > => Hacer scroll de un mes en el calendario.
+            
+**** Cuando el punto está en una marca de tiempo
+
+     - S-UP, S-DOWN => Incrementa o decremente el año, mes día, hora o
+       minuto dependiendo de la porción de la marca de tiempo en donde el
+       punto esté ubicado.
+
+*** Archivando
+
+     - C-c C-x C-a => Archiva la entrada actual.
+       
+     - C-c $ => Archiva el subárbol actual.
+
+*** Agenda
+
+     - C-c a => Comando de Vista de Agenda.
+       
+**** En el Despachador de Agenda
+
+     - a => Crea una agenda.
+
+     - t => Crea una lista TODO.
+
+     - T => Crear una lista de encabezados que concuerdan con una expresión
+       regular.
+
+     - s => Buscar.
+
+     - / => Multi-occur.
+
+     - q => Quitar el despachador de Agenda.
+
+     - n => Moverse a la próxima entrada de la agenda.
+
+     - p => Moverse a la entrada previa de la agenda.

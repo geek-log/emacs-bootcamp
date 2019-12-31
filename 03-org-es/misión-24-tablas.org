@@ -19,11 +19,11 @@ Misión
 
    * Teclazos
 
-     C-c C-c => Alínea una tabla.
+     - C-c C-c => Alínea una tabla.
           
-     TAB, RET => Alínea una tabla y mueve el punto al próximo campo.
+     - TAB, RET => Alínea una tabla y mueve el punto al próximo campo.
 
-     S-TAB => Alínea una tabla y se mueve al campo previo.
+     - S-TAB => Alínea una tabla y se mueve al campo previo.
 
    * ÓRDENES
      - Vaya a la línea ALPHA y presione C-p una vez para llegar a la última
@@ -55,29 +55,29 @@ ALPHA
 
    * Teclazos
 
-     C-c | => Transforma la región seleccionada en una tabla.
+     - C-c | => Transforma la región seleccionada en una tabla.
 
-     C-c - => Inserta una regla horizontal bajo la línea actual.
+     - C-c - => Inserta una regla horizontal bajo la línea actual.
 
-     C-c <SPC> => Limpia el campo bajo el punto.
+     - C-c <SPC> => Limpia el campo bajo el punto.
 
-     M-a => Mueve el punto al principio del campo actual.
+     - M-a => Mueve el punto al principio del campo actual.
 
-     M-e => Mueve el punto al final del campo actual.
+     - M-e => Mueve el punto al final del campo actual.
 
-     M-LEFT, M-RIGHT => Mueve la columna actual a la izquierda/derecha.
+     - M-LEFT, M-RIGHT => Mueve la columna actual a la izquierda/derecha.
 
-     M-UP, M-DOWN => Mueve la fila actual hacia arriba/abajo.
+     - M-UP, M-DOWN => Mueve la fila actual hacia arriba/abajo.
 
-     M-S-LEFT => Mata la columna actual.
+     - M-S-LEFT => Mata la columna actual.
 
-     M-S-RIGHT => Inserta una columna a la derecha.
+     - M-S-RIGHT => Inserta una columna a la derecha.
 
-     M-S-UP => Mata la fila actual.
+     - M-S-UP => Mata la fila actual.
 
-     M-S-DOWN => Inserta una nueva fila encima de la fila actual.
+     - M-S-DOWN => Inserta una nueva fila encima de la fila actual.
 
-     C-c ^ => Ordena las filas de la tabla.
+     - C-c ^ => Ordena las filas de la tabla.
 
    * ÓRDENES
 
@@ -143,13 +143,13 @@ ghostrider,maneja una motocicleta
 
    * Teclazos
 
-     C-c + => Suma todos los ítems en la columna actual o en el rectángulo
+     - C-c + => Suma todos los ítems en la columna actual o en el rectángulo
               definido por la región actual.
 
-     S-RET => Si el campo actual está vacío, cópielo del primer campo no
+     - S-RET => Si el campo actual está vacío, cópielo del primer campo no
               vacío.
 
-     C-c ` => Edita el campo actual en otro buffer. Útil para campos muy
+     - C-c ` => Edita el campo actual en otro buffer. Útil para campos muy
               largos que no son completamente visibles.
 
    * ÓRDENES
@@ -203,9 +203,9 @@ DELTA
 
    * Teclazos
 
-     M-x org-table-export => Exporta una tabla a un archivo.
+     - M-x org-table-export => Exporta una tabla a un archivo.
 
-     M-x org-table-import => Importa un archivo como una tabla.
+     - M-x org-table-import => Importa un archivo como una tabla.
 
    * ÓRDENES
 

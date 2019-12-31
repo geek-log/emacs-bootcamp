@@ -159,9 +159,9 @@ Mission
 
    * Teclazo
 
-     C-c ^ => Ordena entradas del mismo nivel.
+     - C-c ^ => Ordena entradas del mismo nivel.
 
-     C-c * => Convierte una línea normal en un encabezado.
+     - C-c * => Convierte una línea normal en un encabezado.
 
    * ÓRDENES
 
@@ -199,13 +199,13 @@ Mission
 
    * Teclazo
 
-     C-c / => Construir un árbol esparcido.
+     - C-c / => Construir un árbol esparcido.
 
-     M-g n => Saltar al próximo árbol esparcido.
+     - M-g n => Saltar al próximo árbol esparcido.
 
-     M-g p => Saltar al árbol esparcido previo.
+     - M-g p => Saltar al árbol esparcido previo.
 
-     C-c C-c => Remove highlights.
+     - C-c C-c => Remove highlights.
 
    * ÓRDENES
 

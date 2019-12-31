@@ -1,0 +1,324 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using Org Mode.
+
+* Mission #34: Org Mode Summary
+
+** Keybindings
+
+   The list of all the Keybindings used on the Org Mode missions is shown
+   below:
+   
+** Org Mode Keybindings
+
+*** Basic
+
+      - TAB => Cycle through heading states: folded > child > subtree.
+
+      - C-u C-u RET => Restarts to initial visibility.
+
+      - C-u C-u C-u RET => Show all including drawers.
+
+      - M-RET => Insert a new heading, item or row.
+
+      - C-RET => Insert a new heading at the end.
+
+      - M-UP / M-DOWN => Switch the current item with the previous/next one.
+
+      - M-LEFT => Promotes the current heading one level up.
+
+      - M-RIGHT => Demotes the current heading one level down.
+
+      - C-c ^ => Order same level entries.
+
+      - C-c * => Turn normal line into a heading.
+
+      - Add TODO to a heading => Turn heading into a TODO item.
+
+      - M-S RET => Add a new TODO entry below the current one.
+
+      - C-c / => Build sparse tree.
+
+      - M-g n => Jump to next sparse tree.
+
+      - M-g p => Jump to previous sparse tree.
+
+      - C-c C-c => Remove highlights.
+
+      - M-RET => Insert a new heading, item or row.
+
+      - C-S-RET => Insert a new checklist item.
+
+      - S-UP/S-DOWN => Jump to previous/next item on the list.
+
+      - S-LEFT, S-RIGHT => Change the type of list.
+
+      - M-LEFT, M-RIGHT => Increment or decrement the level of identation.
+
+      - C-c C-x d => Inserts a new drawer.
+
+      - <c TAB => Insert a center text block.
+
+      - <e TAB => Insert an example block.
+
+      - <l TAB => Insert a latex block.
+
+      - <s TAB => Insert a code block.
+
+      - <q TAB => Insert a quote block.
+
+      - <v TAB => Insert a verse block.
+
+      - C-c C-c => Execute code on source code block.
+
+      - C-c c => Capture command.
+
+      - C-c C-e => Call the Export Dispatcher.        
+
+*** Tables
+
+       - C-c C-c => Aligns a table.
+
+       - TAB, RET => Aligns a table and moves to the next field.
+
+       - S-TAB => Aligns a table and moves to the previous field.
+
+       - C-c | => Transforms a selected region into a table.
+
+       - C-c - => Inserts a new horizontal rule under the current line.
+
+       - C-c <SPC> => Clear the field under the point.
+
+       - M-a => Move the point to the beggining of the current field.
+
+       - M-e => Move the point to the end of the current field.
+
+       - M-LEFT, M-RIGHT => Move the current column to the left/right.
+
+       - M-UP, M-DOWN => Move the current row up/down.
+
+       - M-S-LEFT => Kill the current column.
+
+       - M-S-RIGHT => Insert new column to the right.
+
+       - M-S-UP => Kill the current row.
+
+       - M-S-DOWN => Insert a new row above the current row.
+
+       - C-c ^ => Order the table rows.
+
+       - C-c + => Sums all the items on the current column or in the
+         rectangle defined by the current region.
+
+       - S-RET => If the current field is empty copy it from the first non empty
+         field.
+
+       - C-c ` => Edits the current field on another buffer. Useful for long
+         fields that are not fully visible.
+
+       - M-x org-table-export => Exports a table to a file.
+
+       - M-x org-table-import => Imports a file as a table.              
+
+       - C-c = => Installs a formula on the current table cell.
+
+       - C-c * => Recomputes the current row.
+
+       - C-u C-c * => Recomputes the whole table.
+
+       - M-x orgtbl-ascii-plot => Plots a table using text histograms.
+
+       - M-x org-plot/gnuplot => Plots a table using Gnuplot, needs Gnuplot
+         to be installed.
+
+
+*** Links
+
+     - C-c l => Store link that can later be pasted using C-c C-l.
+
+     - C-c C-l => If the point is on an empty line, paste a stored link. If
+       the point is over a link, edits the link.
+       
+     - C-c C-o => If the point is on a link, save the current position
+       on the mark ring and JUMP to the link.
+
+     - C-c & => Jump back to the saved mark.
+
+     - C-c % => Add current position to the mark ring.
+
+     - C-u C-c C-l => Insert a link to a file.
+
+     - C-c C-x C-n => Jump to next link on the buffer.
+
+     - C-c C-x C-p => Jump to previous link on the buffer.
+
+*** Subtree
+
+     - TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the current heading (current subtree).
+
+     - S-TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the whole tree (all the org document).
+
+     - C-u C-u TAB => Restarts to the startup visibility.
+
+     - C-u C-u C-u TAB => Show all including drawers.
+
+     - C-c C-r => Reveal command, reveals the context around the point.
+
+     - C-c C-k => Exposes all tree headings.
+
+     - C-c TAB => Expose all subtree direct children.
+
+     - C-c C-x b => Show the subtree in an indirect buffer.
+
+     - C-c C-x v => Copy the visible subtree text.
+
+     - C-c C-n => Next visible heading.
+
+     - C-c C-p => Previous visible heading.
+
+     - C-c C-f => Next heading on the same level.
+
+     - C-c C-u => One heading level up.
+
+*** 'TODO'
+
+     - C-c C-t => Rotate the TODO state: 'unmarked', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Change the TODO item state.
+
+     - C-c / t => Display all TODO items in a sparsed tree, folds all the
+       buffer and show all 'TODOs' not marked as 'DONE'.
+
+     - C-c / T => Search for a specific TODO item.
+
+     - S-M-RET => Inserts a new TODO below the current one.
+
+     - C-c , => Set priority.
+
+     - S-UP / S-DOWN => Increase/Decrease priority.
+
+     - C-c C-x C-b => Toggle checkbox status.
+       
+     - M-S-RET => Insert a new checkbox item.
+
+     - C-c C-x o => Toggle 'ORDERED' property, this is used if the
+       checkboxes needs to be turned on using a particular sequence.
+
+     - C-c # => Updates the 'statistic cookie'. 
+
+*** Tags
+
+     - C-c C-c => Add tags to a heading.
+       
+     - C-c \ => Builds a sparse tree with all headings that matches with
+       a tags search.
+
+     - C-c C-x p => Insert a property.
+       
+     - C-u M-x => Insert property on the current drawer.
+
+     - C-c C-c d => Deletes a property.
+
+     - C-c C-c D => Deletes a property globally.
+
+     - S-RIGHT, S-LEFT => Change the property by cycling on the allowed
+       values.
+
+     - C-c C-c => When the point is over a property, execute the property
+       commands.
+
+     - C-c C-c c => Compute a property at the point.
+
+     - C-c \ => Build a sparsed tree with all matching entries.
+       
+     - C-c / p  => Build a sparsed tree based on a property value.
+
+*** Timestamps
+
+     - C-c . => Prompts for a date and inserts a timestamp.
+       
+     - C-c ! => Inserts a inactive timestamp.
+
+     - C-c < => Inserts today's date.
+
+     - C-c C-o => Access the agenda for the given timestamp.
+
+     - C-c C-d => Insert 'DEADLINE'. This will be listed on the agenda.
+       
+     - C-c C-s => Insert 'SCHEDULED'.
+
+     - C-c / d => Build a sparsed tree with all deadlines.
+
+     - C-c / b => Build a sparsed tree with all deadlines previous to
+       a given date.
+
+     - C-c C-x C-i => Starts the clock for the current item.
+       
+     - C-c C-x C-o => Inserts another timestamp on the same location where
+       the clock was started before (stops the clock).
+
+     - C-c C-x C-x => Reclock the last clocked time.
+
+     - C-c C-x C-e => Updates the effort estimate.
+
+     - C-c C-y => Recomputes the time.
+
+     - C-c C-t => Changes a TODO task to DONE and stops the clock.
+
+     - C-c C-x C-q => Cancels the current clock.
+
+     - C-c C-x C-j => Jump to the currently clocked heading.
+
+     - C-c C-x C-d => Displays the time of each subtree.       
+
+**** On the Agenda View for the given timestamp
+
+     - q => Quits the Agenda timestamp view.
+        
+     - S-UP, S-DOWN, S-RIGHT, S-LEFT => Move on the calendar.
+
+     - M-S-RIGHT, M-S-LEFT => Move to the next/previous month.
+
+     - M-S-UP, M-S-DOWN => Move to the next/previous year.
+
+     - <, > => Scroll a month on the calendar.
+            
+**** When the point is on a timestamp
+
+     - S-UP, S-DOWN => Increases or decreases the year, month, day, hour or
+       minute depending on the portion of the timestamp where the point is
+       located.
+
+*** Archiving
+
+     - C-c C-x C-a => Archive the current entry.
+       
+     - C-c $ => Archive the current subtree.
+
+*** Agenda
+
+     - C-c a => Agenda View Command.
+       
+**** On the Agenda Dispatcher
+
+     - a => Create an agenda.
+
+     - t => Create a TODO list.
+
+     - T => Create a list of headings matching a regular expression.
+
+     - s => Search.
+
+     - / => Multi-occur.
+
+     - q => Quit the Agenda Dispatcher.
+
+     - n => Move to next agenda entry.
+
+     - p => Move to previous agenda entry.
