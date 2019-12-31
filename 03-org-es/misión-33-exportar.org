@@ -1,0 +1,44 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #33: Exportar
+
+** Resumen
+
+   En esta misión aprenderás como exportar documentos ORG a otros formatos.
+
+** Misión
+
+*** Exportando
+
+**** Teclazos
+
+     - C-c C-e => Llamar al Despachador de Exportación.
+       
+***** En el Despachador de Exportación
+
+      - h h => Exporte como un archivo HTML.
+
+      - l p => Exporte como un archivo PDF (require latex).
+
+      - o o => Exporte como un archivo ODT (requiere zip).
+
+      - q => Quitar el Despachador de Exportación.
+
+**** Órdenes
+
+     - Presione C-c C-e para llamar al Despachador de Exportación, esto
+       abrirá un nuevo buffer que muestra la interfaz del Despachador de
+       Exportación.
+
+     - Presione la tecla 'h' y luego presiónela de nuevo para exportar
+       este buffer como un archivo HTML, el archivo 'misión-33-exportar.html'
+       se crea y el Despachador de Exportación se cierra.
+
+AQUÍ finaliza todo tu entrenamiento, ahora eres un "Piloto de Doom"
+certificado, vaya y tire bombas sobre las casas de nuestros enemigos AHORA.

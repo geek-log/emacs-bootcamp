@@ -1,0 +1,45 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using Org Mode.
+
+* Mission #33: Export
+
+** Briefing
+
+   On this mission you will learn how to export ORG documents to another
+   formats.
+
+** Mission
+
+*** Exporting
+
+**** Keybindings
+
+     - C-c C-e => Call the Export Dispatcher.
+       
+***** On the Export Dispatcher
+
+      - h h => Export as HTML file.
+
+      - l p => Export as PDF file (requires latex).
+
+      - o o => Export as ODT file (requires zip).
+
+      - q => Quit the Export Dispatcher.
+
+**** Orders
+
+     - Press C-c C-e to call the Export Dispatcher, this will open a new
+       buffer that shows the Export Dispatcher interface.
+       
+     - Press the 'h' key and then press it again to export this buffer
+       as an HTML file, the file 'mission-33-export.html' is created and
+       the Export Dispatcher buffer is closed.
+
+
+HERE ends all your training, now you are a certified "Pilot of Doom", go
+and throw bombs over our enemies houses NOW.
