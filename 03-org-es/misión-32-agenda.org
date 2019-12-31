@@ -6,7 +6,7 @@ EMACS ORG-MODE
 Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
 Org Mode.
 
-* Misión #31: Agenda
+* Misión #32: Agenda
 
 ** Resumen
 

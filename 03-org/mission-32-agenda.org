@@ -6,7 +6,7 @@ EMACS ORG-MODE
 Hello recruit and welcome to the Air Force where you will learn
 to FLY using Org Mode.
 
-* Mission #31: Agenda
+* Mission #32: Agenda
 
 ** Briefing
 
