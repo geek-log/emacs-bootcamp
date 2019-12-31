@@ -1,0 +1,207 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hola recluta y bienvenido a la Fuerza Áerea adonde aprenderás a VOLAR usando
+Org Mode.
+
+* Misión #31: Agenda
+
+** Resumen
+
+   En esta misión aprenderás como usar el comando Vista de Agenda.
+
+   La Vista de Agenda está compuesta por:
+
+   - Un calendario.
+
+   - Una agenda digital, similar a una de papel.
+     
+   - Una lista TODO global.
+
+   - Una lista de coincidencias construidas a partir de una búsqueda
+     (ej: por etiquetas, por estados TODO, ...).
+
+   - Una lista de proyectos atrasados.
+
+   - Las vistas personalizadas que agregues (opcional si tú quieres).
+
+** Misión
+
+*** Configurando la Agenda:
+
+**** Descripción
+
+     La Vista de Agenda debe ser configurada en el archivo 'init.el' de
+     Emacs.
+
+**** Teclazos
+
+     - C-c a => Llamar a la Agenda.
+       
+***** Cuando se está en el Despachador de Agenda
+
+      - a => Crear una agenda.
+
+      - t => Crear una lista TODO.
+
+      - T => Crear una lista de encabezados que concuerdan con expresión
+        regular.
+
+      - s => Buscar.
+
+      - / => Multi-occur.
+
+      - q => Quitar el despachador de agenda.
+
+
+**** Órdenes
+
+     - Presione C-x 2 para dividir el marco en dos ventanas.
+
+     - Presione C-x o para saltar a la ventana inferior.
+
+     - Presione C-x C-f y visite el archivo '~/.emacs.d/init.el'.
+
+     - Una vez que el archivo 'init.el' se abre, busque la línea que
+       agregamos en la misión #25:
+       
+     - Presione 'p' dos veces para regresar a hoy.
+
+     - Presione la tecla 'q' para salir de la Agenda.
+
+     - Presione C-c a para mostrar el Despachador de Agenda.
+
+     - Presione la tecla 't' para mostrar la lista TODO.
+
+     - Presione la tecla 'q' para salir de la Agenda.
+
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+       Y cambiélo a lo siguiente:
+       
+       (global-set-key (kbd "C-c a") 'org-agenda)
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Guarde el archivo, salga de Emacs, abra este archivo de nuevo y
+       regrese a esta línea de nuevo.
+
+     - Vaya al encabezado ALPHA y presione C-c a, esto abrirá un buffer en
+       la parte inferior de Emacs, este buffer muestra la interfaz para el
+       despachador de Agenda, presione la tecla 'q' para cancelar.
+
+       
+**** ALPHA
+
+*** Archivos de Agenda
+
+**** Descripción
+
+     Para que la Agenda haga algo útil, necesitas dos cosas:
+
+     - Una lista de archivos de los que quieres llevar cuenta.
+       
+     - Ítems TODO con marcas de tiempo activas incluídas en los archivos
+       de los que se lleva cuenta.
+
+     De esta manera la Agenda puede usar los archivos e ítems TODO incluídos
+     en ellos, como la fuente para construir Vistas de Agenda.
+
+**** Teclazos:
+
+     - C-c [ => Agregar el archivo actual a la lista de archivos de agenda.
+       
+     - C-c ] => Remover el archivo actual de la lista de archivos de agenda.
+
+     - C-' => Ciclar a través de archivos de agenda.
+
+     - C-, => Ciclar a través de archivos de agenda.
+
+     - C-c C-x < => Reestringir la agenda al subárbol actual.
+
+     - C-c C-x > => Remover las reestricciones.
+
+**** Órdenes
+
+     - Vaya al encabezado BRAVO y presione C-c [ para agregar este archivo
+       a la Agenda, el texto 'Archivo agregado al frente de la lista de
+       archivos de agenda', se despliega en la línea de modo.
+
+     - Presione C-c ], el texto 'Removido de la lista Org Agenda: ...' se
+       despliega en la línea de modo.
+       
+     - Presione C-c [ de nuevo para agregar este archivo ya que lo
+       necesitamos en las próximas órdenes.
+
+     - Ahora la Agenda tiene un archivo para revisar y este archivo tiene
+       ítems TODO en él (al final), pero estos ítems TODO no tienen ninguna
+       marca de tiempo asociada aún, vaya a siga las próximas órdenes para
+       cambiar esto.
+
+**** BRAVO
+
+*** Viendo la Agenda
+
+**** Teclazos
+     
+     - C-c a => Llamar a la Agenda.
+       
+***** Cuando se está en el Despachador de Agenda
+
+      - a => Crear una agenda.
+
+      - t => Crear una lista TODO.
+
+      - T => Crear una lista de encabezados que concuerdan con expresión
+        regular.
+
+      - s => Buscar.
+
+      - / => Multi-occur.
+
+      - q => Quitar el despachador de agenda.
+
+      - n => Moverse a la próxima entrada.
+
+      - p => Moverse a la entrada previa.
+
+
+**** Órdenes
+
+     - Lea todas las instrucciones primero.
+       
+     - Vaya al encabezado CHARLIE y presione C-c C-s para calendarizar esta
+       tarea, cuando se despliega el calendario, presione S-RIGHT dos veces
+       para marcar la tarea por empezar dos días en el futuro y presione
+       RET.
+
+     - Vaya al encabezado DELTA y presione C-c C-d para agregar un
+       deadline a esta tarea, cuando se despliega el calendario, presione
+       S-RIGHT dos veces para marcar la tarea por terminar dentro de dos
+       días.
+
+     - Presione C-c a para mostrar el Despachador de Agenda.
+
+     - Presione la tecla 'a' para mostrar la Agenda para esta semana, la
+       vista de agenda se muestra y los ítems TODO CHARLIE y DELTA están
+       incluídos en ella.
+
+     - Presione 'n' dos veces para moverse a la próxima entrada (día).
+
+     - Presione 'p' dos veces para regresar a hoy.
+
+     - Presione la tecla 'q' para quitar la agenda.
+
+     - Presione C-c a para mostrar el Despachador de Agenda.
+
+     - Presione la tecla 't' para mostrar la lista TODO.
+
+     - Presione la tecla 'q' para quitar la Agenda.
+
+**** TODO CHARLIE
+     
+     
+**** TODO DELTA

@@ -1,0 +1,186 @@
+#+STARTUP: showall
+
+EMACS ORG-MODE
+============================================================================
+
+Hello recruit and welcome to the Air Force where you will learn
+to FLY using Org Mode.
+
+* Mission #31: Agenda
+
+** Briefing
+
+   On this mission you will learn how to use the Agenda View command.
+
+   The Agenda View is compose of:
+
+   - A calendar.
+
+   - A digital agenda, similar to the paper one.
+     
+   - A global TODO list.
+
+   - A matches list build from a search (i.e.: by tags, by TODO states, ...).
+
+   - A 'Stuck projects' list.
+
+   - The custom views that you add (optionally if you like).
+
+** Mission
+
+*** Configuring the Agenda:
+
+**** Description
+
+     Agenda View must be configured on Emacs 'init.el' file.
+
+**** Keybindings
+
+     - C-c a => Agenda View Command.
+       
+***** On the Agenda Dispatcher
+
+      - a => Create an agenda.
+
+      - t => Create a TODO list.
+
+      - T => Create a list of headings matching a regular expression.
+
+      - s => Search.
+
+      - / => Multi-occur.
+
+      - q => Quit the Agenda Dispatcher.
+
+**** Orders
+
+     - Press C-x 2 to divide the frame on two windows.
+       
+     - Press C-x o to jump to the lower window.
+
+     - Press C-x C-f and visit the file '~/.emacs.d/init.el'.
+
+     - Once the 'init.el' file is opened, search for the line that we
+       added on mission #25:
+
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+       And change to the following:
+       
+       (global-set-key (kbd "C-c a") 'org-agenda)
+       (global-set-key (kbd "C-c c") 'org-capture)
+       (global-set-key (kbd "C-c l") 'org-store-link)
+
+     - Save the file, exit Emacs, open this file again and comeback to this
+       line.
+
+     - Go to the ALPHA heading and press C-c a, this will open a buffer on
+       the bottom of Emacs, this buffer shows the interface of the Agenda
+       Dispatcher, press the 'q' key to cancel.
+
+**** ALPHA
+
+*** Agenda Files
+
+**** Description
+
+     In order to make the Agenda do something useful, you need two things:
+
+     - A list of files that you want to track.
+       
+     - TODO items with active timestamps included on the tracked files.
+       
+     This way the Agenda can use the files and TODO items on them, as the
+     source to build Agenda Views.
+
+**** Keybindings
+
+     - C-c [ => Add current file to the list of agenda files.
+       
+     - C-c ] => Remove current file from the list of agenda files.
+
+     - C-' => Cycle through agenda files.
+
+     - C-, => Cycle through agenda files.
+
+     - C-c C-x < => Restrict the agenda to the current subtree.
+
+     - C-c C-x > => Remove reestrictions.
+
+**** Orders
+
+     - Go to the BRAVO heading and press C-c [ to add this file to the
+       Agenda, the text 'File added to front of agenda file list' is
+       displayed on the Modeline.
+
+     - Press C-c ], the text 'Removed from Org Agenda list: ...' is
+       displayed on the Modeline.
+
+     - Press C-c [ again to add this file as we needed for next orders.
+       
+     - Now the Agenda has a file to review, and this file has TODO items
+       on it (at the bottom), but these TODO items don't have any timestamps
+       associated yet, go and follow next orders to change that.
+
+**** BRAVO
+
+     
+*** Viewing the Agenda
+
+**** Keybindings
+
+     - C-c a => Call the agenda.
+
+***** On the Agenda Dispatcher
+
+      - a => Create an agenda.
+
+      - t => Create a TODO list.
+
+      - T => Create a list of headings matching a regular expression.
+
+      - s => Search.
+
+      - / => Multi-occur.
+
+      - q => Quit the Agenda Dispatcher.
+
+      - n => Move to next agenda entry.
+
+      - p => Move to previous agenda entry
+
+**** Orders
+
+     - Read all instructions first.
+
+     - Go to the CHARLIE headline and press C-c C-s to schedule this task,
+       when the calendar displays, press S-RIGHT two times to set the
+       task to start two days on the future and press RET.
+
+     - Go to the DELTA headline and press C-c C-d to add a deadline to
+       this task, when the calendar displays, press S-RIGHT two times to
+       set the task to end two days on the future and press RET.
+
+     - Press C-c a to show the Agenda Dispatcher.
+
+     - Press the 'a' key to show the Agenda for this week, the agenda view
+       is displayed and the CHARLIE and DELTA TODO items are included on it.
+
+     - Press 'n' two times to move to the next entry (day).
+
+     - Press 'p' two times to get back to today.
+
+     - Press the 'q' key to quit the Agenda.
+
+     - Press C-c a to show the Agenda Dispatcher.
+
+     - Press the 't' key to show the TODO list.
+
+     - Press the 'q' key to quit the Agenda.
+
+       
+**** TODO CHARLIE
+     
+     
+**** TODO DELTA
