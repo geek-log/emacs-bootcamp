@@ -1,4 +1,56 @@
-# Emacs Bootcamp
+- [Emacs-Bootcamp](#emacs-bootcamp)
+  * [Movement](#movement)
+    + [Occur-Mode](#occur-mode)
+- [Editing](#editing)
+- [Special](#special)
+  * [Term-Commands](#term-commands)
+  * [EWW-Commands](#eww-commands)
+  * [Dired-Commands](#dired-commands)
+  * [Help](#help)
+  * [Replace](#replace)
+  * [Flyspell-Mode](#flyspell-mode)
+- [Org-Mode](#org-mode)
+  * [Basic](#basic)
+  * [Tables](#tables)
+  * [Links](#links)
+  * [Subtrees](#subtrees)
+  * [TODO-Lists](#todo-lists)
+  * [Tags](#tags)
+  * [Timestamps](#timestamps)
+    + [Agenda-Timestamp](#agenda-timestamp)
+    + [Point-On-Timestamp](#point-on-timestamp)
+  * [Archiving](#archiving)
+  * [Agenda-View](#agenda-view)
+    + [Agenda-Dispatcher](#agenda-dispatcher)
+
+
+- [Campo-Entrenamiento-Emacs](#campo-entrenamiento-emacs)
+  * [Movimiento](#movimiento)
+    + [Modo-Occur](#modo-occur)
+- [Edición](#edición)
+- [Especial](#especial)
+  * [Comandos-Term](#comandos-term)
+  * [Comandos-EWW](#comandos-eww)
+  * [Comandos-Dired](#comandos-dired)
+  * [Ayuda](#ayuda)
+  * [Reemplazo](#reemplazo)
+  * [Mode-Flyspell](#modo-flyspell)
+- [Modo-Org](#modo-org)
+  * [Básico](#básico)
+  * [Tablas](#tablas)
+  * [Enlaces](#enlaces)
+  * [Subárboles](#Subárboles)
+  * [Listas-TODO](#listas-todo)
+  * [Etiquetas](#etiquetas)
+  * [Marcas-De-Tiempo](#marcas-de-tiempo)
+    + [Marca-De-Tiempo-Agenda](#marca-de-tiempo-agenda)
+    + [Punto-En-Marca-De-Tiempo](#punto-en-marca-de-tiempo)
+  * [Archivando](#archivando)
+  * [Vista-De-Agenda](#vista-de-agenda)
+    + [Despachador-de-Agenda](#despachador-de-agenda)
+
+
+# Emacs-Bootcamp
 
 Emacs Military Training Program.
 
@@ -117,7 +169,7 @@ M-x occur RET => Start the occur mode.
 
 M-x multi-occur-in-matching-buffers => Start the multi-occur search.
 
-### Occur Mode Commands
+### Occur-Mode
 
 The following list of commands must be executed inside an Occur Mode buffer:
 
@@ -317,7 +369,7 @@ OR
 M-x package-install
 
 
-## Special Commands
+## Special
 
 C-x C-f => Find a file.
 
@@ -356,14 +408,14 @@ C-x d => Starts Dired.
 C-x C-f /ssh:user@remotehost:/file.txt => Starts TRAMP connection.
 
 
-### 'term' Commands
+### term-commands
 
 C-c C-j => Enables term-line-mode.
 
 C-c C-k => Enables term-char-mode.
 
 
-### EWW Commands
+### EWW-commands
 
 M-<RET> => Opens the URL under the point on a new buffer.
 
@@ -382,7 +434,7 @@ w => Copy the current URL to the kill ring.
 M-C (Capital C and not Control) => Toggle colors.
 
 
-### Dired Commands
+### Dired-Commands
 
 plus sign => Create a new directory.
 
@@ -425,7 +477,7 @@ D => Deletes the marked items.
 F => Visit the marked items. This command REQUIRES 'dired-x'.
 
 
-### On a Help Menu Buffer
+### Help
 
 SPC => Scroll down the help menu.
 
@@ -443,7 +495,7 @@ k => Show documentation that describes a command (by typing
 q => Quits the help menu.
 
 
-### On a Find and Replace Buffer
+### Replace
 
 y => Change the current search match (say yes) and move to the next.
 
@@ -454,14 +506,324 @@ n => Don't change the current match (say no) and move to the next.
 q => Quit the find-and-replace.
 
 
-### When Flyspell Mode is enabled
+### Flyspell-Mode
 
 C-M-i => Autocorrect the word before the point.
 
+## Org-Mode
+
+### Basic
+
+      - TAB => Cycle through heading states: folded > child > subtree.
+
+      - C-u C-u RET => Restarts to initial visibility.
+
+      - C-u C-u C-u RET => Show all including drawers.
+
+      - M-RET => Insert a new heading, item or row.
+
+      - C-RET => Insert a new heading at the end.
+
+      - M-UP / M-DOWN => Switch the current item with the previous/next one.
+
+      - M-LEFT => Promotes the current heading one level up.
+
+      - M-RIGHT => Demotes the current heading one level down.
+
+      - C-c ^ => Order same level entries.
+
+      - C-c * => Turn normal line into a heading.
+
+      - Add TODO to a heading => Turn heading into a TODO item.
+
+      - M-S RET => Add a new TODO entry below the current one.
+
+      - C-c / => Build sparse tree.
+
+      - M-g n => Jump to next sparse tree.
+
+      - M-g p => Jump to previous sparse tree.
+
+      - C-c C-c => Remove highlights.
+
+      - M-RET => Insert a new heading, item or row.
+
+      - C-S-RET => Insert a new checklist item.
+
+      - S-UP/S-DOWN => Jump to previous/next item on the list.
+
+      - S-LEFT, S-RIGHT => Change the type of list.
+
+      - M-LEFT, M-RIGHT => Increment or decrement the level of identation.
+
+      - C-c C-x d => Inserts a new drawer.
+
+      - <c TAB => Insert a center text block.
+
+      - <e TAB => Insert an example block.
+
+      - <l TAB => Insert a latex block.
+
+      - <s TAB => Insert a code block.
+
+      - <q TAB => Insert a quote block.
+
+      - <v TAB => Insert a verse block.
+
+      - C-c C-c => Execute code on source code block.
+
+      - C-c c => Capture command.
+
+      - C-c C-e => Call the Export Dispatcher.
+
+### Tables
+
+       - C-c C-c => Aligns a table.
+
+       - TAB, RET => Aligns a table and moves to the next field.
+
+       - S-TAB => Aligns a table and moves to the previous field.
+
+       - C-c | => Transforms a selected region into a table.
+
+       - C-c - => Inserts a new horizontal rule under the current line.
+
+       - C-c <SPC> => Clear the field under the point.
+
+       - M-a => Move the point to the beggining of the current field.
+
+       - M-e => Move the point to the end of the current field.
+
+       - M-LEFT, M-RIGHT => Move the current column to the left/right.
+
+       - M-UP, M-DOWN => Move the current row up/down.
+
+       - M-S-LEFT => Kill the current column.
+
+       - M-S-RIGHT => Insert new column to the right.
+
+       - M-S-UP => Kill the current row.
+
+       - M-S-DOWN => Insert a new row above the current row.
+
+       - C-c ^ => Order the table rows.
+
+       - C-c + => Sums all the items on the current column or in the
+         rectangle defined by the current region.
+
+       - S-RET => If the current field is empty copy it from the first non empty
+         field.
+
+       - C-c ` => Edits the current field on another buffer. Useful for long
+         fields that are not fully visible.
+
+       - M-x org-table-export => Exports a table to a file.
+
+       - M-x org-table-import => Imports a file as a table.
+
+       - C-c = => Installs a formula on the current table cell.
+
+       - C-c * => Recomputes the current row.
+
+       - C-u C-c * => Recomputes the whole table.
+
+       - M-x orgtbl-ascii-plot => Plots a table using text histograms.
+
+       - M-x org-plot/gnuplot => Plots a table using Gnuplot, needs Gnuplot
+         to be installed.
+
+
+### Links
+
+     - C-c l => Store link that can later be pasted using C-c C-l.
+
+     - C-c C-l => If the point is on an empty line, paste a stored link. If
+       the point is over a link, edits the link.
+
+     - C-c C-o => If the point is on a link, save the current position
+       on the mark ring and JUMP to the link.
+
+     - C-c & => Jump back to the saved mark.
+
+     - C-c % => Add current position to the mark ring.
+
+     - C-u C-c C-l => Insert a link to a file.
+
+     - C-c C-x C-n => Jump to next link on the buffer.
+
+     - C-c C-x C-p => Jump to previous link on the buffer.
+
+### Subtrees
+
+     - TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the current heading (current subtree).
+
+     - S-TAB => Cycle between the states 'folded' > 'child' > 'subtree' on
+       the whole tree (all the org document).
+
+     - C-u C-u TAB => Restarts to the startup visibility.
+
+     - C-u C-u C-u TAB => Show all including drawers.
+
+     - C-c C-r => Reveal command, reveals the context around the point.
+
+     - C-c C-k => Exposes all tree headings.
+
+     - C-c TAB => Expose all subtree direct children.
+
+     - C-c C-x b => Show the subtree in an indirect buffer.
+
+     - C-c C-x v => Copy the visible subtree text.
+
+     - C-c C-n => Next visible heading.
+
+     - C-c C-p => Previous visible heading.
+
+     - C-c C-f => Next heading on the same level.
+
+     - C-c C-u => One heading level up.
+
+### TODO-Lists
+
+     - C-c C-t => Rotate the TODO state: 'unmarked', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Change the TODO item state.
+
+     - C-c / t => Display all TODO items in a sparsed tree, folds all the
+       buffer and show all 'TODOs' not marked as 'DONE'.
+
+     - C-c / T => Search for a specific TODO item.
+
+     - S-M-RET => Inserts a new TODO below the current one.
+
+     - C-c , => Set priority.
+
+     - S-UP / S-DOWN => Increase/Decrease priority.
+
+     - C-c C-x C-b => Toggle checkbox status.
+
+     - M-S-RET => Insert a new checkbox item.
+
+     - C-c C-x o => Toggle 'ORDERED' property, this is used if the
+       checkboxes needs to be turned on using a particular sequence.
+
+     - C-c # => Updates the 'statistic cookie'.
+
+### Tags
+
+     - C-c C-c => Add tags to a heading.
+
+     - C-c \ => Builds a sparse tree with all headings that matches with
+       a tags search.
+
+     - C-c C-x p => Insert a property.
+
+     - C-u M-x => Insert property on the current drawer.
+
+     - C-c C-c d => Deletes a property.
+
+     - C-c C-c D => Deletes a property globally.
+
+     - S-RIGHT, S-LEFT => Change the property by cycling on the allowed
+       values.
+
+     - C-c C-c => When the point is over a property, execute the property
+       commands.
+
+     - C-c C-c c => Compute a property at the point.
+
+     - C-c \ => Build a sparsed tree with all matching entries.
+
+     - C-c / p  => Build a sparsed tree based on a property value.
+
+### Timestamps
+
+     - C-c . => Prompts for a date and inserts a timestamp.
+
+     - C-c ! => Inserts a inactive timestamp.
+
+     - C-c < => Inserts today's date.
+
+     - C-c C-o => Access the agenda for the given timestamp.
+
+     - C-c C-d => Insert 'DEADLINE'. This will be listed on the agenda.
+
+     - C-c C-s => Insert 'SCHEDULED'.
+
+     - C-c / d => Build a sparsed tree with all deadlines.
+
+     - C-c / b => Build a sparsed tree with all deadlines previous to
+       a given date.
+
+     - C-c C-x C-i => Starts the clock for the current item.
+
+     - C-c C-x C-o => Inserts another timestamp on the same location where
+       the clock was started before (stops the clock).
+
+     - C-c C-x C-x => Reclock the last clocked time.
+
+     - C-c C-x C-e => Updates the effort estimate.
+
+     - C-c C-y => Recomputes the time.
+
+     - C-c C-t => Changes a TODO task to DONE and stops the clock.
+
+     - C-c C-x C-q => Cancels the current clock.
+
+     - C-c C-x C-j => Jump to the currently clocked heading.
+
+     - C-c C-x C-d => Displays the time of each subtree.
+
+#### Agenda-Timestamp
+
+     - q => Quits the Agenda timestamp view.
+
+     - S-UP, S-DOWN, S-RIGHT, S-LEFT => Move on the calendar.
+
+     - M-S-RIGHT, M-S-LEFT => Move to the next/previous month.
+
+     - M-S-UP, M-S-DOWN => Move to the next/previous year.
+
+     - <, > => Scroll a month on the calendar.
+
+#### Point-On-Timestamp
+
+     - S-UP, S-DOWN => Increases or decreases the year, month, day, hour or
+       minute depending on the portion of the timestamp where the point is
+       located.
+
+### Archiving
+
+     - C-c C-x C-a => Archive the current entry.
+
+     - C-c $ => Archive the current subtree.
+
+### Agenda-View
+
+     - C-c a => Agenda View Command.
+
+#### Agenda-Dispatcher
+
+     - a => Create an agenda.
+
+     - t => Create a TODO list.
+
+     - T => Create a list of headings matching a regular expression.
+
+     - s => Search.
+
+     - / => Multi-occur.
+
+     - q => Quit the Agenda Dispatcher.
+
+     - n => Move to next agenda entry.
+
+     - p => Move to previous agenda entry.
 
 
 
-# Campo de entrenamiento de Emacs
+
+# Campo-Entrenamiento-Emacs
 
 Programa de entrenamiento militar para Emacs.
 
@@ -581,7 +943,7 @@ M-x occur RET => Iniciar el modo occur.
 
 M-x multi-occur-in-matching-buffers => Iniciar la búqueda multi-occur.
 
-### Comandos del Modo Occur
+### Modo-Occur
 
 La siguiente lista de comandos debe ejecutar dentro de un buffer en modo
 Occur:
@@ -784,7 +1146,7 @@ M-x p-ins RET nombre-paquete RET => Instala un paquete.
 M-x package-install
 
 
-### En un buffer de Menú de Ayuda
+### Ayuda
 
 SPC => Hacer scroll hacia abajo en el menú de ayuda.
 
@@ -802,7 +1164,7 @@ k => Muestra documentación que describe un comando (al digitar
 q => Quita el menú de ayuda.
 
 
-### En un buffer de Búsqueda y Reemplazo
+### Reemplazo
 
 y => Cambie la coincidencia de búsqueda actual (decir sí) y moverse a la
      próxima.
@@ -814,17 +1176,12 @@ n => No cambie la coincidencia actual (diga no) y muévase a la siguiente.
 q => Quitar la búsqueda y reemplazo.
 
 
-### Cuando el Modo Flyspell está habilitado
+### Modo-Flyspell
 
 C-M-i => Auto-corregir la palabra antes del punto.
 
 
-## Teclazos Especiales
-
-La lista de todos los teclazos usados en las misiones especiales se
-muestra a continuación.
-
-### Teclazos de Emacs
+## Especial
 
 C-x C-f => Encontrar un archivo.
 
@@ -865,14 +1222,14 @@ C-x d => Inicia Dired.
 C-x C-f /ssh:user@remotehost:/file.txt => Inicia una conexión TRAMP.
 
 
-### Teclazos de 'term'
+### Comandos-Term
 
 C-c C-j => Habilita el modo term-line-mode.
 
 C-c C-k => Habilitar el modo term-char-mode.
 
 
-### Teclazos de EWW
+### Comandos-EWW
 
 M-<RET> => Abre el URL bajo el punto en un nuevo buffer.
 
@@ -891,7 +1248,7 @@ w => Copiar el URL actual al anillo kill.
 M-C (Capital C and not Control) => Habilitar/Deshabilitar los colores.
 
 
-### Teclazos de Dired
+### Modo-Dired
 
 símbolo de más => Crear un nuevo directorio.
 
@@ -932,3 +1289,318 @@ M => Ejecuta chmod en los ítems marcados.
 D => Borra los ítems marcados.
 
 F => Visita los ítems marcados. Este comando REQUIERE 'dired-x'.
+
+
+## Modo-Org
+
+### Básico
+
+      - TAB => Ciclar a través de los estados de encabezado: 'doblado' >
+        'hijo' > 'subárbol'.
+
+      - C-u C-u RET => Reiniciar a la visibilidad inicial.
+
+      - C-u C-u C-u RET => Mostrar todo incluidos los cajones.
+
+      - M-RET => Insertar un nuevo encabezado, ítem o fila.
+
+      - C-RET => Insertar un nuevo encabezado al final.
+
+      - M-UP / M-DOWN => Intercambiar el ítem actual con el próximo/previo.
+
+      - M-LEFT => Promueve el encabezado actual un nivel.
+
+      - M-RIGHT => Degrada el encabezado un nivel.
+
+      - C-c ^ => Ordena entradas en el mismo nivel.
+
+      - C-c * => Convierte una línea normal en un encabezado.
+
+      - Add TODO to a heading => Convierte un encabezado en un ítem TODO.
+
+      - M-S RET => Agrega un nuevo ítem TODO bajo el actual.
+
+      - C-c / => Construir un árbol esparcido.
+
+      - M-g n => Saltar al próximo árbol esparcido.
+
+      - M-g p => Saltar al árbol esparcido previo.
+
+      - C-c C-c => Remover el resaltado.
+
+      - M-RET => Insertar un nuevo encabezado, ítem o fila.
+
+      - C-S-RET => Insertar un nuevo ítem de checklist.
+
+      - S-UP/S-DOWN => Saltar al previo/próximo ítem de la lista.
+
+      - S-LEFT, S-RIGHT => Cambiar el tipo de lista.
+
+      - M-LEFT, M-RIGHT => Incrementar o decrementar el nivel de indentación.
+
+      - C-c C-x d => Insertar un nuevo cajón.
+
+      - <c TAB => Insertar un bloque de centrado.
+
+      - <e TAB => Insertar un bloque de ejemplo.
+
+      - <l TAB => Insertar un bloque de latex.
+
+      - <s TAB => Insertar un bloque de código.
+
+      - <q TAB => Insertar un bloque de cita.
+
+      - <v TAB => Insertar un bloque de verso.
+
+      - C-c C-c => Ejecutar código en un bloque de código.
+
+      - C-c c => Comando de Captura.
+
+      - C-c C-e => Llamar al despachador de exportación.
+
+### Tablas
+
+       - C-c C-c => Alinear una tabla.
+
+       - TAB, RET => Alinea una tabla y se mueve al próximo campo.
+
+       - S-TAB => Alinea una tabla y se mueve el campo previo.
+
+       - C-c | => Transforma la región seleccionada en una tabla.
+
+       - C-c - => Inserta una nueva regla horizontal bajo el punto.
+
+       - C-c <SPC> => Limpiar el campo bajo el punto.
+
+       - M-a => Mover el punto al principio del campo actual.
+
+       - M-e => Mover el punto al final del campo actual.
+
+       - M-LEFT, M-RIGHT => Mover la columna actual a la izquierda/derecha.
+
+       - M-UP, M-DOWN => Mover la fila actual hacia arriba/abajo.
+
+       - M-S-LEFT => Matar la columna actual.
+
+       - M-S-RIGHT => Insertar una nueva columna a la derecha.
+
+       - M-S-UP => Matar la fila actual.
+
+       - M-S-DOWN => Insertar una nueva fila sobre la actual.
+
+       - C-c ^ => Ordenar las filas de la tabla.
+
+       - C-c + => Sumar todos los ítems en la columna actual o en el
+         rectángulo definido por la región actual.
+
+       - S-RET => Si el campo actual está vacío, cópielo del primer campo
+         no vacío.
+
+       - C-c ` => Edita el campo actual en otro buffer. Útil para campos
+         muy largos que no son completamente visibles.
+
+       - M-x org-table-export => Exporta una tabla a un archivo.
+
+       - M-x org-table-import => Importa un archivo como una tabla.
+
+       - C-c = => Instala una fórmula en la celda actual de la tabla.
+
+       - C-c * => Recomputar la fila actual.
+
+       - C-u C-c * => Recomputar la tabla completa.
+
+       - M-x orgtbl-ascii-plot => Graficar una tabla usando histogramas.
+
+       - M-x org-plot/gnuplot => Graficar una tabla usando Gnuplot, necesita
+         Gnuplot.
+
+### Enlaces
+
+     - C-c l => Almacenar un enlace que luego puede pegarse usando C-c C-l.
+
+     - C-c C-l => Si el punto está en un línea vacía, pega un enlace
+       almacenado. Si el punto está sobre un enlace, edita el enlace.
+
+     - C-c C-o => Si el punto está en un enlace, guarda la posición actual
+       en el anillo de marcas y SALTA al enlace.
+
+     - C-c & => Saltar a la marca guardada.
+
+     - C-c % => Agrega la posición actual al anillo de marcas.
+
+     - C-u C-c C-l => Inserta un enlace a un archivo.
+
+     - C-c C-x C-n => Salta al próximo enlace en el buffer.
+
+     - C-c C-x C-p => Salta al enlace previo en el buffer.
+
+### Subárboles
+
+     - TAB => Ciclar entre los estados 'doblado' > 'hijos' > 'subárbol'
+       del encabezado actual.
+
+     - S-TAB => Ciclar entre los estados 'doblado' > 'hijos' > 'subárbol'
+       en todo el árbol (el documento completo).
+
+     - C-u C-u TAB => Reinicia a la visibilidad inicial.
+
+     - C-u C-u C-u TAB => Mostrar todo incluidos los cajones.
+
+     - C-c C-r => Comando de revelar, revela el contexto alrededor del punto.
+
+     - C-c C-k => Expone todos los encabezados de un subárbol.
+
+     - C-c TAB => Expone todos los hijos directos de un encabezado.
+
+     - C-c C-x b => Muestra el subárbol en un buffer indirecto.
+
+     - C-c C-x v => Copiar el texto visible del subárbol.
+
+     - C-c C-n => Próximo encabezado visible.
+
+     - C-c C-p => Encabezado visible previo.
+
+     - C-c C-f => Próximo encabezado en el mismo nivel.
+
+     - C-c C-u => Un encabezado arriba.
+
+### Listas-TODO
+
+     - C-c C-t => Rotar los estados TODO: 'desmarcado', 'TODO', 'DONE'.
+
+     - S-RIGHT / S-LEFT => Cambiar el estado del ítem TODO.
+
+     - C-c / t => Desplegar todos los ítems TODO en un árbol esparcido y
+       despliega todos los 'TODOs' no marcados como 'DONE'.
+
+     - C-c / T => Busca por un ítem TODO específico.
+
+     - S-M-RET => Inserta un nuevo TODO bajo el actual.
+
+     - C-c , => Establece la prioridad·
+
+     - S-UP / S-DOWN => Incrementa/Decrementa la prioridad.
+
+     - C-c C-x C-b => Habilita o deshabilita un checkbox.
+
+     - M-S-RET => Inserta un nuevo ítem de checkbox.
+
+     - C-c C-x o => Habilita la propiedad 'ORDERED' que es usada cuando
+       los checkboxes necesitan encenderse en una secuencia particular.
+
+     - C-c # => Actualiza la 'galleta estadística'.
+
+### Etiquetas
+
+     - C-c C-c => Agrega etiquetas a un encabezado.
+
+     - C-c \ => Construye un árbol esparcido con todos los encabezados que
+       concuerdan con un búsqueda de etiquetas.
+
+     - C-c C-x p => Inserta una propiedad.
+
+     - C-u M-x => Inserta una propiedad en el cajón actual.
+
+     - C-c C-c d => Borra una propiedad.
+
+     - C-c C-c D => Borra una propiedad globalmente.
+
+     - S-RIGHT, S-LEFT => Cambiar la propiedad ciclando en los valores
+       permitidos.
+
+     - C-c C-c => Cuando el punto está encima de una propiedad, ejecute
+       los comandos de la propiedad.
+
+     - C-c C-c c => Computa una propiedad en el punto.
+
+     - C-c \ => Construir un árbol esparcido con todas las entradas que
+       concuerden.
+
+     - C-c / p  => Construir un árbol esparcido basado en el valor de una
+       propiedad.
+
+### Marcas-de-Tiempo
+
+     - C-c . => Pregunta por una fecha e inserta una marca de tiempo.
+
+     - C-c ! => Inserta una marca de tiempo inactiva.
+
+     - C-c < => Inserta la fecha de hoy.
+
+     - C-c C-o => Accesa la agenda para la marca de tiempo dada.
+
+     - C-c C-d => Inserta un 'DEADLINE'. Esto se listará en la agenda.
+
+     - C-c C-s => Inserta un 'SCHEDULED'.
+
+     - C-c / d => Construye un árbol esparcido con todos los deadlines.
+
+     - C-c / b => Construye un árbol esparcido con todos los deadlines
+       previos a una fecha dada.
+
+     - C-c C-x C-i => Inicia el reloj para el ítem actual.
+
+     - C-c C-x C-o => Inserta otra marca de tiempo en la misma ubicación
+       adonde el reloj fue iniciado antes).
+
+     - C-c C-x C-x => Volver a tomar el último tiempo tomado.
+
+     - C-c C-x C-e => Actualiza el estimado de esfuerzo.
+
+     - C-c C-y => Recomputa el tiempo.
+
+     - C-c C-t => Cambia una tarea TODO a DONE y detiene el reloj.
+
+     - C-c C-x C-q => Cancela el reloj actual.
+
+     - C-c C-x C-j => Salta al encabezado al que se le está tomando el
+       tiempo actualmente.
+
+     - C-c C-x C-d => Despliega el tiempo en cada subárbol.
+
+#### Marca-De-Tiempo-Agenda
+
+     - q => Quita la vista de Agenda.
+
+     - S-UP, S-DOWN, S-RIGHT, S-LEFT => Moverse en el calendario.
+
+     - M-S-RIGHT, M-S-LEFT => Moverse al próximo/previo mes.
+
+     - M-S-UP, M-S-DOWN => Moverse al próximo/previo año.
+
+     - <, > => Hacer scroll de un mes en el calendario.
+
+#### Punto-En-Marca-De-Tiempo
+
+     - S-UP, S-DOWN => Incrementa o decremente el año, mes día, hora o
+       minuto dependiendo de la porción de la marca de tiempo en donde el
+       punto esté ubicado.
+
+### Archivando
+
+     - C-c C-x C-a => Archiva la entrada actual.
+
+     - C-c $ => Archiva el subárbol actual.
+
+### Vista-De-Agenda
+
+     - C-c a => Comando de Vista de Agenda.
+
+#### Despachador-Agenda
+
+     - a => Crea una agenda.
+
+     - t => Crea una lista TODO.
+
+     - T => Crear una lista de encabezados que concuerdan con una expresión
+       regular.
+
+     - s => Buscar.
+
+     - / => Multi-occur.
+
+     - q => Quitar el despachador de Agenda.
+
+     - n => Moverse a la próxima entrada de la agenda.
+
+     - p => Moverse a la entrada previa de la agenda.
