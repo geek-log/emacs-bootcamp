@@ -10,7 +10,7 @@ Misión #25: Usando Enlaces
 Resumen
 ............................................................................
 
-En esta misión aprenderás como manipular enlances usando Org-Mode.
+En esta misión aprenderás como manipular enlaces usando Org-Mode.
 
 Requerimientos
 ............................................................................
@@ -26,7 +26,7 @@ Misión
 
    * Descripción
 
-     Para agregra un enlace a un documento org, la siguiente sintaxis es
+     Para agregrar un enlace a un documento org, la siguiente sintaxis es
      usada:
      
          [[ENLACE][DESCRIPCIÓN
