@@ -1,3 +1,23 @@
+# Emacs Bootcamp - Campo de Entrenamiento de Emacs
+
+[Emacs Tutorial](https://geekl0g.wordpress.com/tag/emacs-bootcamp): Learn
+Emacs by doing practical exercises.
+
+Code on [Github](https://github.com/geek-log/emacs-bootcamp).
+
+Code on [Gitlab](https://gitlab.com/geek.log/emacs-bootcamp).
+
+[Tutorial de Emacs](https://geekl0g.wordpress.com/tag/emacs-bootcamp): Aprenda
+Emacs haciendo ejercicios prácticos.
+
+Código en [Github](https://github.com/geek-log/emacs-bootcamp).
+
+Código en [Gitlab](https://gitlab.com/geek.log/emacs-bootcamp).
+
+![Emacs Bootcamp](img/emacs_bootcamp.png)
+
+# Index
+
 - [Emacs-Bootcamp](#emacs-bootcamp)
   * [Movement](#movement)
     + [Occur-Mode](#occur-mode)
@@ -20,6 +40,7 @@
     + [Archiving](#archiving)
     + [Agenda-View](#agenda-view)
 
+# Índice
 
 - [Campo-Entrenamiento-Emacs](#campo-entrenamiento-emacs)
   * [Movimiento](#movimiento)
@@ -43,12 +64,16 @@
     + [Archivando](#archivando)
     + [Vista-De-Agenda](#vista-de-agenda)
 
-
 # Emacs-Bootcamp
 
 Emacs Military Training Program.
 
 Examples for the tutorial - [Doom Presents: Emacs Bootcamp](https://geekl0g.wordpress.com/tag/emacs-bootcamp/).
+
+Learn Emacs by doing practical exercises.
+
+Hello Latverian children, on this mission series Doom will put you to the test with practical exercices for the Emacs editor
+and to check if you had what is needed to hold a gun and be part of the glorious army of Doom.
 
 ## Movement
 
@@ -823,6 +848,9 @@ Programa de entrenamiento militar para Emacs.
 
 Ejemplos para el tutorial - [Doom Presenta: Emacs Bootcamp](https://geekl0g.wordpress.com/tag/emacs-bootcamp/).
 
+Aprenda Emacs haciendo ejercicios prácticos.
+
+Hola niños de Latveria, en esta serie de misiones Doom los pondrá a prueba con ejercicios prácticos para el editor Emacs y así saber si tienen lo que se requiere para empuñar un arma y poder formar parte del glorioso ejército de nuestro país.
 
 ## Movimiento
 
