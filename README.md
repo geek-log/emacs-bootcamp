@@ -1626,3 +1626,7 @@ F => Visita los ítems marcados. Este comando REQUIERE 'dired-x'.
      - n => Moverse a la próxima entrada de la agenda.
 
      - p => Moverse a la entrada previa de la agenda.
+
+The Travelling Vaudeville Villain
+
+![author](img/author.png)
